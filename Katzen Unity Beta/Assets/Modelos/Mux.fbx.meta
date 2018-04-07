@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 730c1d34ce2ce104aa99539e894264fc
+timeCreated: 1523019475
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Mux_Anelar_A_Dir_jnt
+    100004: Mux_Anelar_A_Esq_jnt
+    100006: Mux_Anelar_B_Dir_jnt
+    100008: Mux_Anelar_B_Esq_jnt
+    100010: Mux_Anelar_C_Dir_jnt
+    100012: Mux_Anelar_C_Esq_jnt
+    100014: Mux_Bacia_A_jnt
+    100016: Mux_Bacia_B_jnt
+    100018: Mux_Braco_A_Dir_jnt
+    100020: Mux_Braco_A_Esq_jnt
+    100022: Mux_Braco_B_Dir_jnt
+    100024: Mux_Braco_B_Esq_jnt
+    100026: Mux_Cabeca_A_jnt
+    100028: Mux_Cabeca_B_jnt
+    100030: Mux_Cabelo_A_Dir_jnt
+    100032: Mux_Cabelo_A_Esq_jnt
+    100034: Mux_Cabelo_B_Dir_jnt
+    100036: Mux_Cabelo_B_Esq_jnt
+    100038: Mux_Cabelo_C_Dir_jnt
+    100040: Mux_Cabelo_C_Esq_jnt
+    100042: Mux_Cabelo_D_Dir_jnt
+    100044: Mux_Cabelo_D_Esq_jnt
+    100046: Mux_Col_A_jnt
+    100048: Mux_Col_B_jnt
+    100050: Mux_Col_C_jnt
+    100052: Mux_Col_D_jnt
+    100054: Mux_Geo_Corpo
+    100056: Mux_Geo_grp
+    100058: Mux_Indicador_A_Dir_jnt
+    100060: Mux_Indicador_A_Esq_jnt
+    100062: Mux_Indicador_B_Dir_jnt
+    100064: Mux_Indicador_B_Esq_jnt
+    100066: Mux_Indicador_C_Dir_jnt
+    100068: Mux_Indicador_C_Esq_jnt
+    100070: Mux_Mand_A_jnt
+    100072: Mux_Mao_A_Dir_jnt
+    100074: Mux_Mao_A_Esq_jnt
+    100076: Mux_Mao_B_Dir_jnt
+    100078: Mux_Mao_B_Esq_jnt
+    100080: Mux_Medio_A_Dir_jnt
+    100082: Mux_Medio_A_Esq_jnt
+    100084: Mux_Medio_B_Dir_jnt
+    100086: Mux_Medio_B_Esq_jnt
+    100088: Mux_Medio_C_Dir_jnt
+    100090: Mux_Medio_C_Esq_jnt
+    100092: Mux_Minimo_A_Dir_jnt
+    100094: Mux_Minimo_A_Esq_jnt
+    100096: Mux_Minimo_B_Dir_jnt
+    100098: Mux_Minimo_B_Esq_jnt
+    100100: Mux_Minimo_C_Dir_jnt
+    100102: Mux_Minimo_C_Esq_jnt
+    100104: Mux_Ombro_Dir_jnt
+    100106: Mux_Ombro_Esq_jnt
+    100108: Mux_Orelha_Dir_A_jnt
+    100110: Mux_Orelha_Esq_A_jnt
+    100112: Mux_Pe_Dir_A_jnt
+    100114: Mux_Pe_Dir_B_jnt
+    100116: Mux_Pe_Esq_A_jnt
+    100118: Mux_Pe_Esq_B_jnt
+    100120: Mux_Perna_Dir_A_jnt
+    100122: Mux_Perna_Dir_B_jnt
+    100124: Mux_Perna_Esq_A_jnt
+    100126: Mux_Perna_Esq_B_jnt
+    100128: Mux_Polegar_A_Dir_jnt
+    100130: Mux_Polegar_A_Esq_jnt
+    100132: Mux_Polegar_B_Dir_jnt
+    100134: Mux_Polegar_B_Esq_jnt
+    100136: Mux_Polegar_C_Dir_jnt
+    100138: Mux_Polegar_C_Esq_jnt
+    100140: Mux_Rig_grp
+    100142: Mux_Root_jnt
+    400000: //RootNode
+    400002: Mux_Anelar_A_Dir_jnt
+    400004: Mux_Anelar_A_Esq_jnt
+    400006: Mux_Anelar_B_Dir_jnt
+    400008: Mux_Anelar_B_Esq_jnt
+    400010: Mux_Anelar_C_Dir_jnt
+    400012: Mux_Anelar_C_Esq_jnt
+    400014: Mux_Bacia_A_jnt
+    400016: Mux_Bacia_B_jnt
+    400018: Mux_Braco_A_Dir_jnt
+    400020: Mux_Braco_A_Esq_jnt
+    400022: Mux_Braco_B_Dir_jnt
+    400024: Mux_Braco_B_Esq_jnt
+    400026: Mux_Cabeca_A_jnt
+    400028: Mux_Cabeca_B_jnt
+    400030: Mux_Cabelo_A_Dir_jnt
+    400032: Mux_Cabelo_A_Esq_jnt
+    400034: Mux_Cabelo_B_Dir_jnt
+    400036: Mux_Cabelo_B_Esq_jnt
+    400038: Mux_Cabelo_C_Dir_jnt
+    400040: Mux_Cabelo_C_Esq_jnt
+    400042: Mux_Cabelo_D_Dir_jnt
+    400044: Mux_Cabelo_D_Esq_jnt
+    400046: Mux_Col_A_jnt
+    400048: Mux_Col_B_jnt
+    400050: Mux_Col_C_jnt
+    400052: Mux_Col_D_jnt
+    400054: Mux_Geo_Corpo
+    400056: Mux_Geo_grp
+    400058: Mux_Indicador_A_Dir_jnt
+    400060: Mux_Indicador_A_Esq_jnt
+    400062: Mux_Indicador_B_Dir_jnt
+    400064: Mux_Indicador_B_Esq_jnt
+    400066: Mux_Indicador_C_Dir_jnt
+    400068: Mux_Indicador_C_Esq_jnt
+    400070: Mux_Mand_A_jnt
+    400072: Mux_Mao_A_Dir_jnt
+    400074: Mux_Mao_A_Esq_jnt
+    400076: Mux_Mao_B_Dir_jnt
+    400078: Mux_Mao_B_Esq_jnt
+    400080: Mux_Medio_A_Dir_jnt
+    400082: Mux_Medio_A_Esq_jnt
+    400084: Mux_Medio_B_Dir_jnt
+    400086: Mux_Medio_B_Esq_jnt
+    400088: Mux_Medio_C_Dir_jnt
+    400090: Mux_Medio_C_Esq_jnt
+    400092: Mux_Minimo_A_Dir_jnt
+    400094: Mux_Minimo_A_Esq_jnt
+    400096: Mux_Minimo_B_Dir_jnt
+    400098: Mux_Minimo_B_Esq_jnt
+    400100: Mux_Minimo_C_Dir_jnt
+    400102: Mux_Minimo_C_Esq_jnt
+    400104: Mux_Ombro_Dir_jnt
+    400106: Mux_Ombro_Esq_jnt
+    400108: Mux_Orelha_Dir_A_jnt
+    400110: Mux_Orelha_Esq_A_jnt
+    400112: Mux_Pe_Dir_A_jnt
+    400114: Mux_Pe_Dir_B_jnt
+    400116: Mux_Pe_Esq_A_jnt
+    400118: Mux_Pe_Esq_B_jnt
+    400120: Mux_Perna_Dir_A_jnt
+    400122: Mux_Perna_Dir_B_jnt
+    400124: Mux_Perna_Esq_A_jnt
+    400126: Mux_Perna_Esq_B_jnt
+    400128: Mux_Polegar_A_Dir_jnt
+    400130: Mux_Polegar_A_Esq_jnt
+    400132: Mux_Polegar_B_Dir_jnt
+    400134: Mux_Polegar_B_Esq_jnt
+    400136: Mux_Polegar_C_Dir_jnt
+    400138: Mux_Polegar_C_Esq_jnt
+    400140: Mux_Rig_grp
+    400142: Mux_Root_jnt
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
