@@ -1,8 +1,7 @@
-# Yellow Submarine - Against Other Songs
+# Katzen - Uma Singela Aventura
 Descrições
 
 # Nome compledo dos integrantes do projeto:
-
 * Raul Peres Cardoso
 
 # Imagens do jogo:
