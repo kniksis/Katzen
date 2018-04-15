@@ -79,18 +79,18 @@ public class CameraOrbital : MonoBehaviour {
 			y = ClampAngle(y, yMinLimit, yMaxLimit);
 
 		Quaternion rotacao = Quaternion.Euler(y, x, 0);
-		alvo[indice].transform.rotation = Quaternion.Lerp(rotacao, Quaternion.Euler(0.0f, 0.0f, 0.0f), VelocidadeCamera * Time.deltaTime);
+		alvo[indice].transform.rotation = Quaternion.Lerp(rotacao, Quaternion.Euler(0.0f, 0.0f, 0.0f), VelocidadeCamera * Time.smoothDeltaTime);
 		//distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
 		Vector3 camPosRotacao = posicoes[indice].transform.position;
 
 		if (!Physics.Linecast(alvo[indice].transform.position, camPosRotacao))
 		{
-			transform.position = Vector3.Slerp(transform.position, camPosRotacao, VelocidadeCamera * Time.deltaTime);
+			transform.position = Vector3.Lerp(transform.position, camPosRotacao, VelocidadeCamera * Time.smoothDeltaTime);
 		}
 		else if (Physics.Linecast(alvo[indice].transform.position, camPosRotacao, out hit))
 		{
-			transform.position = Vector3.Slerp(transform.position, hit.point, (VelocidadeCamera * MultiCamVelo) * Time.deltaTime);
+			transform.position = Vector3.Lerp(transform.position, hit.point, (VelocidadeCamera * MultiCamVelo) * Time.smoothDeltaTime);
 		}
 
 		if (RotacionarNoJogador)
