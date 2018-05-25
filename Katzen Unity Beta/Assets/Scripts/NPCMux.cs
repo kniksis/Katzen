@@ -9,12 +9,14 @@ public class NPCMux : MonoBehaviour {
 	public Vector3 DisHeroi;
 	public Text Fala;
 	bool DesativaMissao;
+	public GameObject FundoFala;
 	public GameObject Player;
 
 	// Use this for initialization
 	void Start () {
 		DesativaMissao = false;
 		Player = GameObject.Find("Katzen");
+		FundoFala.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -25,9 +27,11 @@ public class NPCMux : MonoBehaviour {
 
 			DisHeroi = DisHeroi - transform.position;
 			Fala.text = "";
+			FundoFala.SetActive(false);
 
 			if (DisHeroi.magnitude < 2)
 			{
+				FundoFala.SetActive(true);
 				Fala.text = "Aperte Enter para aceitar a missão";
 
 				if (Input.GetKeyDown(KeyCode.Return))

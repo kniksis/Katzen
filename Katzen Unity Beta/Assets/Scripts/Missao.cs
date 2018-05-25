@@ -8,6 +8,7 @@ public class Missao : MonoBehaviour {
 	int ObjetivoAtual;
 	string[] Missoes;
 	public Text TextoMissao;
+	public GameObject FundoFala;
 	float Distancia;
 	public Vector3 Posicao;
 	public GameObject[] PosicoesCopo;
@@ -15,13 +16,19 @@ public class Missao : MonoBehaviour {
 	public GameObject BrejaPrefab;
 	GameObject Bar;
 	public bool BrejaCriado;
+	GameObject gameManagerGO;
+	GameManager gmScript;
 
 	// Use this for initialization
 
 	void Start () {
-        ObjetivoAtual = 0;
+		gameManagerGO = GameObject.Find("Manager");
+		gmScript = gameManagerGO.GetComponent<GameManager>();
+
+		ObjetivoAtual = 0;
 		NPC = GameObject.Find("Mux");
 		Bar = GameObject.Find("PontoInicioMissaoBar");
+		FundoFala = GameObject.Find("ImgFundoFala");
 
 		Missoes = new string[4];
 
@@ -112,7 +119,9 @@ public class Missao : MonoBehaviour {
 				{
 					ObjetivoAtual = 4;
 					TextoMissao.text = "";
-					//Destroy(gameObject.GetComponent(Missao));
+					FundoFala.SetActive(false);
+					gmScript.AddMoney(6);
+					Destroy(GetComponent<Missao>());
 				}
 			}
 		}

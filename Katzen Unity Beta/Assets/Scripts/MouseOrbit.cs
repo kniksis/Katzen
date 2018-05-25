@@ -22,7 +22,7 @@ public class MouseOrbit : MonoBehaviour
 	public float SmoothFactor = 0.5f;
 	private RaycastHit hit;
 
-	private Rigidbody rigidbody;
+	private Rigidbody rb;
 
 	public bool RotacionarCam;
 
@@ -36,12 +36,12 @@ public class MouseOrbit : MonoBehaviour
 		x = angles.y;
 		y = angles.x;
 
-		rigidbody = GetComponent<Rigidbody>();
+		rb = GetComponent<Rigidbody>();
 
 		// Make the rigid body not change rotation
-		if (rigidbody != null)
+		if (rb != null)
 		{
-			rigidbody.freezeRotation = true;
+			rb.freezeRotation = true;
 		}
 	}
 
