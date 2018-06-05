@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	public int municao;
 	[SerializeField]
-	int money;
+	public int money;
 
 	[SerializeField]
 	Text lifenumber;
@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		life = 3;
 		SetLife();
 		SetMoney();
 		SetMunicao();
@@ -86,10 +85,10 @@ public class GameManager : MonoBehaviour
 	public void SetLife()
 	{
 		lifenumber.text = life.ToString();
-        if(life <= 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
+		if (life <= 0)
+		{
+			SceneManager.LoadScene("GameOver");
+		}
 	}
 
 	public void AddLife(int LifeDesejada)
