@@ -43,16 +43,25 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	public GameObject respawnPoit;
 
-	GameObject playerInstance;
+	[SerializeField]
+	GameObject InventarioHUD;
+
+	[SerializeField]
+	public GameObject ItemProximoHUD;
+
+	public GameObject playerInstance;
 	
 	public bool playerVivo;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 		SetLife();
 		SetMoney();
 		SetMunicao();
+
+		InventarioHUD.active = false;
+		ItemProximoHUD.active = false;
 
 		if (instance != null)
 		{
@@ -68,8 +77,16 @@ public class GameManager : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		if (Input.GetKeyDown("i") && InventarioHUD.active == false)
+		{
+			InventarioHUD.active = true;
+		}
+		else if (Input.GetKeyDown("i") && InventarioHUD.active == true)
+		{
+			InventarioHUD.active = false;
+		}
 	}
 
 	private void InstanciarJogador()
@@ -135,5 +152,6 @@ public class GameManager : MonoBehaviour
 	public void AddMunicao(int MunicaoDesejada)
 	{
 		municao += MunicaoDesejada;
+		SetMunicao();
 	}
 }

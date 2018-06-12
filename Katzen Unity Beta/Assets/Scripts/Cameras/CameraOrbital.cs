@@ -120,14 +120,14 @@ public class CameraOrbital : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (Input.GetKeyDown("e") && indice < (posicoes.Length - 1))
+		/*if (Input.GetKeyDown("e") && indice < (posicoes.Length - 1))
 		{
 			indice++;
 		}
 		else if (Input.GetKeyDown("e") && indice >= (posicoes.Length - 1))
 		{
 			indice = 0;
-		}
+		}*/
 	}
 	
 	public static float ClampAngle(float angle, float min, float max)
