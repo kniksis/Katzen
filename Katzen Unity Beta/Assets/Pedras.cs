@@ -12,12 +12,17 @@ public class Pedras : MonoBehaviour {
 	[SerializeField]
 	public int quantidadeItemNum;
 	bool esbarrou;
+	public Image spriteRender;
+	[SerializeField]
+	Sprite sprites;
+
 
 	// Use this for initialization
 	void Awake () {
 		gameManagerGO = GameObject.Find("Manager");
 		quantidadeItemText = GameObject.Find("Canvas/ImgItemProximo/ImgFundoItem/TextQuantidadeItem").GetComponent<Text>();
 		gmScript = gameManagerGO.GetComponent<GameManager>();
+		spriteRender = GameObject.Find("Canvas/ImgItemProximo/ImgFundoItem/ImgItem").GetComponent<Image>();
 		esbarrou = false;
 	}
 
@@ -37,6 +42,7 @@ public class Pedras : MonoBehaviour {
 		{
 			esbarrou = true;
 			gmScript.ItemProximoHUD.active = true;
+			spriteRender.sprite = sprites;
 			quantidadeItemText.text = quantidadeItemNum.ToString();
 		}
 	}
