@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 	public GameObject respawnPoit;
 
 	[SerializeField]
-	GameObject InventarioHUD;
+	public GameObject InventarioHUD;
 
 	[SerializeField]
 	public GameObject ItemProximoHUD;
@@ -82,10 +82,17 @@ public class GameManager : MonoBehaviour
 		if (Input.GetKeyDown("i") && InventarioHUD.active == false)
 		{
 			InventarioHUD.active = true;
+			Cursor.lockState = CursorLockMode.None;
 		}
 		else if (Input.GetKeyDown("i") && InventarioHUD.active == true)
 		{
 			InventarioHUD.active = false;
+			Cursor.lockState = CursorLockMode.Locked;
+		}
+
+		if (Input.GetButton("Fire1")  && Cursor.lockState == CursorLockMode.None && InventarioHUD.active == false)
+		{
+			Cursor.lockState = CursorLockMode.Locked;
 		}
 	}
 

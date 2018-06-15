@@ -21,10 +21,9 @@ public class JogAtirar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		fire = Input.GetButton("Fire1");
 
-		if (fire && gmScript.municao > 0)
+		if (fire && gmScript.municao > 0 && gmScript.InventarioHUD.active != true)
 		{
 			if (Time.time > nextFire)
 			{

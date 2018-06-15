@@ -8,6 +8,11 @@ public class FadePorColisao : MonoBehaviour {
 	[SerializeField]
 	TrocarNivelPorColisao TCScript;
 
+	[SerializeField]
+	GameObject LevelLoaderGO;
+	[SerializeField]
+	LevelLoader LLScript;
+
 	public Animator animator;
 
 	private string carregarNivel;
@@ -15,6 +20,8 @@ public class FadePorColisao : MonoBehaviour {
 	{
 		TrocarColGO = GameObject.Find("Pequena_Floresta/Cross/Base");
 		TCScript = TrocarColGO.GetComponent<TrocarNivelPorColisao>();
+		LevelLoaderGO = GameObject.Find("Loader");
+		LLScript = LevelLoaderGO.GetComponent<LevelLoader>();
 	}
 
 	void Update()
@@ -37,7 +44,6 @@ public class FadePorColisao : MonoBehaviour {
 
 	public void OnFadeComplete()
 	{
-
-		SceneManager.LoadScene("Menu");
+		LLScript.LoadLevel("Menu");
 	}
 }
