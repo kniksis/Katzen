@@ -2,6 +2,7 @@
 Descrições
 
 # Nome compledo dos integrantes do projeto:
+* Alison Takeshi Yamashita
 * Raul Peres Cardoso
 
 # Imagens do jogo:
