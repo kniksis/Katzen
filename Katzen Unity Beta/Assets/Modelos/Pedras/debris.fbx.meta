@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: e6610fa787ac1574292818e142118cb8
-timeCreated: 1528837670
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -1008,6 +1006,7 @@ ModelImporter:
     10800000: Light
     10800002: Light_1
     10800004: Light_2
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -1027,6 +1026,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
