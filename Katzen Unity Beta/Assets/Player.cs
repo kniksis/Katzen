@@ -26,5 +26,10 @@ public class Player : MonoBehaviour {
 		{
 			SceneManager.LoadScene("GameOver");
 		}
+
+		if (collision.CompareTag("WallJump"))
+		{
+			SceneManager.LoadScene("NivelWallJump");
+		}
 	}
 }
