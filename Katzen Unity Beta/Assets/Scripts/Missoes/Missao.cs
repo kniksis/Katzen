@@ -120,7 +120,6 @@ public class Missao : MonoBehaviour {
 					ObjetivoAtual = 4;
 					TextoMissao.text = "";
 					FundoFala.SetActive(false);
-					gmScript.AddMoney(6);
 					Destroy(GetComponent<Missao>());
 				}
 			}

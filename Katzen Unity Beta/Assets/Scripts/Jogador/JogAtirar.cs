@@ -23,7 +23,7 @@ public class JogAtirar : MonoBehaviour {
 	void Update () {
 		fire = Input.GetButton("Fire1");
 
-		if (fire && gmScript.municao > 0 && gmScript.InventarioHUD.active != true)
+		/*if (fire && gmScript.municao > 0 && gmScript.InventarioHUD.active != true)
 		{
 			if (Time.time > nextFire)
 			{
@@ -31,6 +31,6 @@ public class JogAtirar : MonoBehaviour {
 				Instantiate(tiroInimigo, respawnTiro.position, respawnTiro.rotation);
 				gmScript.DecreaseMunicao();
 			}
-		}
+		}*/
 	}
 }

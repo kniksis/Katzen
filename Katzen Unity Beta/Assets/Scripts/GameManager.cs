@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,19 +23,22 @@ public class GameManager : MonoBehaviour
 	}
 
 	[SerializeField]
-	public int life;
-	[SerializeField]
+	public float life;
+
+    [SerializeField]
+    public float estamina;
+
+    [SerializeField]
 	public int municao;
-	[SerializeField]
-	public int money;
 
-	[SerializeField]
-	Text lifenumber;
+    [SerializeField]
+    Slider lifeslider;
 
-	[SerializeField]
-	Text moneynumber;
+    [SerializeField]
+    Slider estaminaslider;
 
-	[SerializeField]
+
+    [SerializeField]
 	Text municaonumber;
 
 	[SerializeField]
@@ -42,12 +46,6 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField]
 	public GameObject respawnPoit;
-
-	[SerializeField]
-	public GameObject InventarioHUD;
-
-	[SerializeField]
-	public GameObject ItemProximoHUD;
 
 	public GameObject playerInstance;
 	
@@ -57,11 +55,8 @@ public class GameManager : MonoBehaviour
 	void Awake ()
 	{
 		SetLife();
-		SetMoney();
+        SetEstamina();
 		SetMunicao();
-
-		InventarioHUD.active = false;
-		ItemProximoHUD.active = false;
 
 		if (instance != null)
 		{
@@ -75,26 +70,24 @@ public class GameManager : MonoBehaviour
 
 		InstanciarJogador();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		if (Input.GetKeyDown("i") && InventarioHUD.active == false)
-		{
-			InventarioHUD.active = true;
-			Cursor.lockState = CursorLockMode.None;
-		}
-		else if (Input.GetKeyDown("i") && InventarioHUD.active == true)
-		{
-			InventarioHUD.active = false;
-			Cursor.lockState = CursorLockMode.Locked;
-		}
 
-		if (Input.GetButton("Fire1")  && Cursor.lockState == CursorLockMode.None && InventarioHUD.active == false)
-		{
-			Cursor.lockState = CursorLockMode.Locked;
-		}
-	}
+    private void SetEstamina()
+    {
+        if(estamina <= 0)
+        {
+            DecreaseLife(0.1f);
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        //Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.Locked;
+
+        lifeslider.value = life;
+        estaminaslider.value = estamina;
+    }
 
 	private void InstanciarJogador()
 	{
@@ -108,41 +101,22 @@ public class GameManager : MonoBehaviour
 
 	public void SetLife()
 	{
-		lifenumber.text = life.ToString();
 		if (life <= 0)
 		{
 			SceneManager.LoadScene("GameOver");
 		}
 	}
 
-	public void AddLife(int LifeDesejada)
+	public void AddLife(float LifeDesejada)
 	{
 		life += LifeDesejada;
 		SetLife();
 	}
 
-	public void DecreaseLife(int LifeDesejada)
+	public void DecreaseLife(float LifeDesejada)
 	{
 		life -= LifeDesejada;
 		SetLife();
-	}
-
-
-	public void SetMoney()
-	{
-		moneynumber.text = money.ToString();
-	}
-
-	public void AddMoney(int MoneyDesejada)
-	{
-		money += MoneyDesejada;
-		SetMoney();
-	}
-
-	public void DecreaseMoney(int MoneyDesejada)
-	{
-		money -= MoneyDesejada;
-		SetMoney();
 	}
 	
 	public void SetMunicao()

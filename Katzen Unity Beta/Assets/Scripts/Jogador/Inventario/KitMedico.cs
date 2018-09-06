@@ -42,7 +42,7 @@ public class KitMedico : MonoBehaviour {
 		if (Input.GetKey("e") && esbarrou == true)
 		{
 			gmScript.AddLife(quantidadeItemNum);
-			gmScript.ItemProximoHUD.active = false;
+			//gmScript.ItemProximoHUD.active = false;
 			invScript.AddItem(PFItem, quantidadeItemNum);
 			Destroy(gameObject);
 		}
@@ -53,7 +53,7 @@ public class KitMedico : MonoBehaviour {
 		if (collision.CompareTag("Player"))
 		{
 			esbarrou = true;
-			gmScript.ItemProximoHUD.active = true;
+			//gmScript.ItemProximoHUD.active = true;
 			spriteRender.sprite = sprites;
 			quantidadeItemText.text = quantidadeItemNum.ToString();
 		}
@@ -64,7 +64,7 @@ public class KitMedico : MonoBehaviour {
 		if (collision.CompareTag("Player"))
 		{
 			esbarrou = false;
-			gmScript.ItemProximoHUD.active = false;
+			//gmScript.ItemProximoHUD.active = false;
 		}
 	}
 

@@ -24,8 +24,6 @@ public class LoadPlayer : MonoBehaviour {
 			gmScript.SetLife();
 			gmScript.municao = PlayerPrefs.GetInt("SaveMunicao");
 			gmScript.SetMunicao();
-			gmScript.money = PlayerPrefs.GetInt("SaveMoney");
-			gmScript.SetMoney();
 		}
     }
 
@@ -39,9 +37,8 @@ public class LoadPlayer : MonoBehaviour {
             PlayerPrefs.SetFloat("ShY", transform.position.y);
             */
             PlayerPrefsX.SetVector3("Save1", transform.position);
-			PlayerPrefs.SetInt("SaveLife", gmScript.life);
+			//PlayerPrefs.SetInt("SaveLife", gmScript.life);
 			PlayerPrefs.SetInt("SaveMunicao", gmScript.municao);
-			PlayerPrefs.SetInt("SaveMoney", gmScript.money);
 
 			PlayerPrefs.Save();
 

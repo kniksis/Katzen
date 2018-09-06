@@ -43,7 +43,7 @@ public class Pedras : MonoBehaviour {
 		if (Input.GetKey("e") && esbarrou == true)
 		{
 			gmScript.AddMunicao(quantidadeItemNum);
-			gmScript.ItemProximoHUD.active = false;
+			//gmScript.ItemProximoHUD.active = false;
 			invScript.AddItem(PFItem, quantidadeItemNum);
 			Destroy(gameObject);
 		}
@@ -54,7 +54,7 @@ public class Pedras : MonoBehaviour {
 		if (collision.CompareTag("Player"))
 		{
 			esbarrou = true;
-			gmScript.ItemProximoHUD.active = true;
+			//gmScript.ItemProximoHUD.active = true;
 			spriteRender.sprite = sprites;
 			quantidadeItemText.text = quantidadeItemNum.ToString();
 		}
@@ -65,7 +65,7 @@ public class Pedras : MonoBehaviour {
 		if (collision.CompareTag("Player"))
 		{
 			esbarrou = false;
-			gmScript.ItemProximoHUD.active = false;
+			//gmScript.ItemProximoHUD.active = false;
 		}
 	}
 
