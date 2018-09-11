@@ -384,7 +384,12 @@ ModelImporter:
     9500000: //RootNode
     13700000: KatzenGeo
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KatzenCompleto9_2_KatzenCompleto3_5_OlhosLentes1
+    second: {fileID: 2100000, guid: eafc34d8cc9924d4cb85243c0ee4d21a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

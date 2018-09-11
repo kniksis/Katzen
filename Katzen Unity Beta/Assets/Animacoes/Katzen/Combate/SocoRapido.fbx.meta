@@ -357,17 +357,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: e020871801943804ba79ec7b0ef0b305, type: 2}
+    second: {fileID: 2100000, guid: 6d9a6895a07ea2940b1ee8cdb9cd1625, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Scene_Material
-    second: {fileID: 2100000, guid: 37556d2722aad7d438de622ec79b8dc4, type: 2}
+    second: {fileID: 2100000, guid: 5e002e5da9c521b45b97caa083d12f15, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Scene_Material2
-    second: {fileID: 2100000, guid: 527de4475d413a045907c9455dea7b67, type: 2}
+    second: {fileID: 2100000, guid: 02827d2a7779b734691fb2799b7cf794, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -411,10 +411,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0

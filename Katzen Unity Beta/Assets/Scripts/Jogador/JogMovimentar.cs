@@ -6,39 +6,60 @@ public class JogMovimentar : MonoBehaviour {
 
 	public Animator anim;
 	CharacterController charctrl;
-	float turnangle;
-	public float runvelocity;
-	bool attackKey;
-	bool kickKey;
+	
+	public float fowardVelocity;
+    float turnangle;
+    public float jumpVel = 25;
+    public float distToGrounded = 0.1f;
+    public LayerMask ground;
+    public float downAccel = 0.75f;
+
+    bool attackKey;
+    public float AttackChargeTimer = 0;
 	bool runKey;
-	Vector3 playermovement;
+    public string FORWARD_AXIS = "Vertical";
+    public string TURN_AXIS = "Horizontal";
+    public string JUMP_AXIS = "Jump";
+
+    Vector3 velocity = Vector3.zero;
+    Vector3 playermovement;
+
+    float forwardInput, turnInput, jumpInput;
 
     public GameObject HandPosition;
 
-    public GameObject footRanimator;
-    public GameObject footLanimator;
-    float footRweight = 0;
-    float footLweight = 0;
-    Vector3 footRposition;
-    Vector3 footLposition;
-    Vector3 footRrotation;
-    Vector3 footLrotation;
-    Vector3 localvelocity;
+        public GameObject footRanimator;
+        public GameObject footLanimator;
+        float footRweight = 0;
+        float footLweight = 0;
+        Vector3 footRposition;
+        Vector3 footLposition;
+        Vector3 footRrotation;
+        Vector3 footLrotation;
+        Vector3 localvelocity;
+        public float ikVeloMin;
+        public float ikYOffset;
+
+    bool Grounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, distToGrounded, ground);
+    }
 
     // Use this for initialization
     void Start()
 	{
 		charctrl = GetComponent<CharacterController>();
 		anim = GetComponent<Animator>();
+        charctrl = GetComponent<CharacterController>();
 	}
 
 	void PlayerInput()
 	{
-		turnangle = Input.GetAxis("Horizontal");
-		playermovement = new Vector3(0, 0, Input.GetAxis("Vertical") * runvelocity);
-		attackKey = Input.GetButton("Fire1");
-		kickKey = Input.GetButton("Fire2");
-		runKey = Input.GetButton("Run");
+		turnangle = Input.GetAxis(TURN_AXIS);
+        //playermovement = new Vector3(0, 0, Input.GetAxis(FORWARD_AXIS) * fowardVelocity);
+        runKey = Input.GetButton("Run");
+        attackKey = Input.GetButton("Fire1");
+        jumpInput = Input.GetAxisRaw(JUMP_AXIS);
 	}
 
 	void PlayerControl()
@@ -48,7 +69,26 @@ public class JogMovimentar : MonoBehaviour {
 		charctrl.SimpleMove(globalmov);
 	}
 
-	void AnimatorControl()
+    void PuloControl()
+    {
+        if (jumpInput > 0 && Grounded())
+        {
+            Debug.Log("pular");
+            playermovement.y = jumpVel;
+            Debug.Log("pulou");
+        }
+
+        if (jumpInput == 0 && Grounded())
+        {
+            playermovement.y = 0;
+        }
+        else
+        {
+            playermovement.y -= downAccel;
+        }
+    }
+
+    void AnimatorControl()
 	{
 		localvelocity = transform.InverseTransformDirection(charctrl.velocity);
 		anim.SetFloat("velocity", localvelocity.z);
@@ -60,20 +100,34 @@ public class JogMovimentar : MonoBehaviour {
 		if (attackKey)
 		{
 			anim.SetBool("Attack", true);
+
 		}
 		else
 		{
 			anim.SetBool("Attack", false);
 		}
 
-		if (kickKey)
-		{
-			anim.SetBool("Kick", true);
-		}
-		else
-		{
-			anim.SetBool("Kick", false);
-		}
+        if (attackKey)
+        {
+            AttackChargeTimer += Time.deltaTime;
+        }
+
+        if (!attackKey && (AttackChargeTimer > 0.5f))
+        {
+            anim.SetBool("HoldAttack", true);
+            AttackChargeTimer = 0;
+        }
+
+        else
+        {
+
+            anim.SetBool("HoldAttack", false);
+        }
+
+        if (!attackKey && (AttackChargeTimer < 0.5f))
+        {
+            AttackChargeTimer = 0;
+        }
 	}
 
     private void OnAnimatorIK(int layerIndex)
@@ -86,15 +140,18 @@ public class JogMovimentar : MonoBehaviour {
         anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, footRweight);
         anim.SetIKPosition(AvatarIKGoal.RightFoot, footRposition);
         anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, footRweight);
-        anim.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation)*Quaternion.EulerAngles(0, footRanimator.transform.rotation.eulerAngles.z + footRanimator.transform.rotation.eulerAngles.x, 0));
+        //anim.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation) * Quaternion.EulerAngles(0, footRanimator.transform.rotation.eulerAngles.z + footRanimator.transform.rotation.eulerAngles.x, 0));
+        anim.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation) * Quaternion.Euler(0, footRanimator.transform.right.y, 0));
 
         anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, footLweight);
         anim.SetIKPosition(AvatarIKGoal.LeftFoot, footLposition);
+        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, footLweight);
+        anim.SetIKRotation(AvatarIKGoal.LeftFoot, Quaternion.LookRotation(footLrotation) * Quaternion.Euler(0, footLanimator.transform.right.y, 0));
     }
 
     void FootPlacementR()
     {
-        if (Mathf.Abs(localvelocity.z) < 0.5f && Mathf.Abs(turnangle) < 0.5f)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin)
         {
             Vector3 raylocationR = footRanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -103,7 +160,7 @@ public class JogMovimentar : MonoBehaviour {
             if (Physics.Raycast(raylocationR, Vector3.down, out hit))
             {
                 footRweight = Mathf.Lerp(footRweight, 1, Time.fixedDeltaTime * 10);
-                footRposition = new Vector3(footRanimator.transform.position.x, hit.point.y + 0.05f, footRanimator.transform.position.z);
+                footRposition = new Vector3(footRanimator.transform.position.x, hit.point.y + ikYOffset, footRanimator.transform.position.z);
                 
                 footRrotation = Vector3.Cross(transform.right, hit.normal);
             }
@@ -117,7 +174,7 @@ public class JogMovimentar : MonoBehaviour {
 
     void FootPlacementL()
     {
-        if (Mathf.Abs(localvelocity.z) < 0.5f && Mathf.Abs(turnangle) < 0.5f)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin)
         {
             Vector3 raylocationL = footLanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -126,7 +183,9 @@ public class JogMovimentar : MonoBehaviour {
             if (Physics.Raycast(raylocationL, Vector3.down, out hit))
             {
                 footLweight = Mathf.Lerp(footLweight, 1, Time.fixedDeltaTime * 10);
-                footLposition = new Vector3(footLanimator.transform.position.x, hit.point.y + 0.05f, footLanimator.transform.position.z);
+                footLposition = new Vector3(footLanimator.transform.position.x, hit.point.y + ikYOffset, footLanimator.transform.position.z);
+                
+                footLrotation = Vector3.Cross(transform.right, hit.normal);
             }
         }
 
@@ -140,24 +199,29 @@ public class JogMovimentar : MonoBehaviour {
 	{
 		if (runKey)
 		{
-			runvelocity = 4.0f;
+			fowardVelocity = 4.0f;
 		}
 		else
 		{
-			runvelocity = 1.0f;
+			fowardVelocity = 1.0f;
 		}
 	}
+
 
 	private void FixedUpdate()
 	{
 		PlayerInput();
-		PlayerControl();
-		AnimatorControl();
+        PuloControl();
+        PlayerControl();
+
+        playermovement.z = Input.GetAxis(FORWARD_AXIS) * fowardVelocity;
+        AnimatorControl();
 		CombatControl();
 		RunControl();
         FootPlacementR();
         FootPlacementL();
-	}
+
+    }
 
 	// Update is called once per frame
 	void Update()
