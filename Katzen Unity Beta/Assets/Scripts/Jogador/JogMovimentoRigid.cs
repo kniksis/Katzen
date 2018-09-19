@@ -137,11 +137,17 @@ public class JogMovimentoRigid : MonoBehaviour
 
         //peito = transform.TransformDirection(0.0f, 1.0f, 1.0f);
 
-            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward*0.5f, Color.blue);
-        //if (Physics.Raycast(peitoInicio.transform.position, Vector3.forward*0.5f, wallDistance))
-        //{
-        //    Debug.Log("Olha ai o, panaca, bateu!");
-        //}
+        
+        if (Physics.Raycast(peitoInicio.transform.position, peitoInicio.transform.forward*0.5f, wallDistance))
+        {
+            Debug.Log("Olha ai o, panaca, bateu!");
+            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward*wallDistance , Color.blue);
+        }
+
+        else
+        {
+            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward * 0.5f, Color.white);
+        }
     }
 
     void AnimatorControl(Vector3 move)
@@ -255,8 +261,10 @@ public class JogMovimentoRigid : MonoBehaviour
         Vector3 OtherSize;
         for (int i = 0; i < collision.contacts.Length; i++)
         {
-            if(Math.Abs(collision.contacts[i].point.y - StepOffset) <= 0.001)
+            if(Math.Abs(collision.contacts[i].point.y) <= StepOffset)
             {
+                //bug quando tenta subir a escada
+                //fazer o transform.position com Lerp
                 transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
             }
         }
