@@ -102,18 +102,19 @@ public class CameraOrbital : MonoBehaviour {
 		if (RotacionarNoJogador)
 		{
 			alvo[indice].transform.rotation = rotacao;
-		} 
-			
+		}
 
-		//posicoes[indice].transform.rotation = rotacao;
-		//Vector3 negDistance = new Vector3(0.0f, 0.0f, Mathf.Lerp(5, -distance, VelocidadeCamera * Time.deltaTime));
-		//Vector3 position = rotacao * negDistance + alvo[indice].transform.position;
-		
-		//transform.rotation = rotacao;
-		//transform.position = position;
-		// transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
+        Debug.DrawLine(transform.position, alvo[indice].transform.position, Color.red);
 
-		if (LookAtPlayer || RotacionarNoJogador)
+        //posicoes[indice].transform.rotation = rotacao;
+        //Vector3 negDistance = new Vector3(0.0f, 0.0f, Mathf.Lerp(5, -distance, VelocidadeCamera * Time.deltaTime));
+        //Vector3 position = rotacao * negDistance + alvo[indice].transform.position;
+
+        //transform.rotation = rotacao;
+        //transform.position = position;
+        // transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
+
+        if (LookAtPlayer || RotacionarNoJogador)
 		{
 			transform.LookAt(alvo[indice].transform);
 		}

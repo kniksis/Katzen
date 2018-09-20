@@ -6,17 +6,32 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class JogMovimentoRigid : MonoBehaviour
 {
+    public enum Mode
+    {
+        AndarNormal = 0,
+        AndarMirando = 1,
+        Escorregar = 2
+    }
+
+    public Mode action = Mode.AndarNormal;
 
     public Animator anim;
     public Rigidbody rb;
+    public Collider myColl;
     bool isGrounded;
     public Transform cameraOrb;
     private Vector3 cameraOrbForward;
     Vector3 move;
     float wallDistance = 0;
     public Transform peitoInicio;
-    public Transform peitoFim;
     public float StepOffset;
+    public float WallOffset;
+    public bool Jump;
+    private int numJumps = 0;
+    private int maxJumps = 2;
+    public bool controlJumpDirection;
+    public bool Agarrou;
+    public bool Escorregou;
 
     public float fowardVelocity;
     public float turnangle;
@@ -33,7 +48,7 @@ public class JogMovimentoRigid : MonoBehaviour
     public string VERTICAL_BT_NAME;
 
     [SerializeField] float m_GroundCheckDistance = 0.1f;
-    
+
 
     public GameObject footRanimator;
     public GameObject footLanimator;
@@ -48,37 +63,65 @@ public class JogMovimentoRigid : MonoBehaviour
     public float ikYOffset;
 
     // Use this for initialization
-    void Start () {
+    void Awake()
+    {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        myColl = GetComponent<CapsuleCollider>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
-        if(Camera.main != null)
+        if (Camera.main != null)
         {
             cameraOrb = Camera.main.transform;
         }
+        Jump = false;
+        Agarrou = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-        PuloParede();
+    // Update is called once per frame
+    void Update()
+    {
+        PlayerInput();
+        PlayerControl();
+        if (Input.GetButtonDown("testetecla"))
+        {
+            Debug.Log("RRR");
+        }
+
+        if(Escorregou)
+        {
+            action = Mode.Escorregar;
+        }
+
+        else
+        {
+            action = Mode.AndarNormal;
+        }
     }
 
     private void FixedUpdate()
     {
-        PlayerInput();
-        if (isGrounded)
-        {
-            //Mover();
-            Pular();
-        }
-        AnimatorControl(Vector3.zero);
+
         FootPlacementR();
         FootPlacementL();
         CheckGroundStatus();
-        MoverControle();
-        PuloParede();
+        switch (action)
+        {
+            case Mode.AndarNormal:
+                AnimatorControlWalkNornal(Vector3.zero);
+                MoverNormalControle();
+                PuloParede();
+                JumpFixed();
+                MoveInJumpCharacter();
+                Grab();
+                break;
+            case Mode.AndarMirando:
+                AnimatorControlWalk8Way(Vector3.zero);
+                break;
+            case Mode.Escorregar:
+                EscorregarControle();
+                break;
+        }
     }
 
     private void PlayerInput()
@@ -86,9 +129,17 @@ public class JogMovimentoRigid : MonoBehaviour
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
     }
 
+    private void PlayerControl()
+    {
+        if (jumpInput)
+        {
+            Jump = true;
+        }
+    }
+
     private void Mover()
     {
-        if(move.magnitude > 1.0f)
+        if (move.magnitude > 1.0f)
         {
             move.Normalize();
         }
@@ -97,15 +148,22 @@ public class JogMovimentoRigid : MonoBehaviour
         turnangle = Mathf.Atan2(move.x, move.z);
         fowardVelocity = move.z;
 
-        AnimatorControl(move);
+        AnimatorControlWalkNornal(move);
     }
 
-    private void MoverControle()
+    void EscorregarControle()
+    {
+        rb.AddForce(transform.forward * 3, ForceMode.Force);
+        anim.Play("SlideFall");
+    }
+
+
+    private void MoverNormalControle()
     {
         horizontalInput = CrossPlatformInputManager.GetAxis(HORIZONTAL_BT_NAME);
         verticalInput = CrossPlatformInputManager.GetAxis(VERTICAL_BT_NAME);
 
-        if(cameraOrb != null)
+        if (cameraOrb != null)
         {
             cameraOrbForward = Vector3.Scale(cameraOrb.forward, new Vector3(1, 0, 1)).normalized;
             move = verticalInput * cameraOrbForward + horizontalInput * cameraOrb.right;
@@ -119,43 +177,102 @@ public class JogMovimentoRigid : MonoBehaviour
         Mover();
     }
 
-    private void Pular()
+    private void JumpFixed()
     {
-        if(jumpInput)
+        if (Jump)
         {
+            JumpCharacter();
+        }
+    }
+
+    void JumpCharacter()
+    {
+        if (isGrounded)
+        {
+            numJumps = 0;
+            controlJumpDirection = false;
+        }
+        if (isGrounded || numJumps < maxJumps)
+        {
+            if (!isGrounded)
+            {
+                anim.Play("PuloDuplo");
+                controlJumpDirection = true;
+            }
+            else
+            {
+                anim.Play("PuloSubindo");
+            }
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
+            numJumps += 1;
+        }
+        Jump = false;
+    }
+
+    void MoveInJumpCharacter()
+    {
+        if (controlJumpDirection)
+        {
+            rb.AddForce(Vector3.forward * horizontalInput * jumpforce, ForceMode.Acceleration);
+            rb.AddForce(Vector3.right * verticalInput * jumpforce, ForceMode.Acceleration);
         }
     }
 
     private void PuloParede()
     {
-        //RaycastHit hit = Physics.Linecast(peito.transform.position, -Vector3.up);
+        RaycastHit hit;
         //wallDistance = Mathf.Abs(hit.point.y - transform.position.y);
 
         //RaycastHit hitf = Physics.Raycast(transform.position - Vector3.up * 0.15f, transform.forward);
         //Debug.DrawRay(transform.position - Vector3.up * 0.15f, transform.forward);
 
         //peito = transform.TransformDirection(0.0f, 1.0f, 1.0f);
-
-        
-        if (Physics.Raycast(peitoInicio.transform.position, peitoInicio.transform.forward*0.5f, wallDistance))
+        if (Physics.Raycast(peitoInicio.transform.position, peitoInicio.transform.forward * WallOffset, out hit, WallOffset))
         {
-            Debug.Log("Olha ai o, panaca, bateu!");
-            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward*wallDistance , Color.blue);
+            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward * WallOffset, Color.blue);
+            if (!isGrounded)
+            {
+
+                if (Jump)
+                {
+                    rb.AddForce(transform.up * jumpforce * 2, ForceMode.Impulse);
+                    rb.AddForce(-transform.forward * jumpforce / 1.3f, ForceMode.Impulse);
+                    anim.Play("ParedePulo");
+                }
+
+                else
+                {
+                    rb.AddForce(transform.forward * 10, ForceMode.Acceleration);
+                    anim.Play("ParedeLoop");
+                }
+            }
         }
 
         else
         {
-            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward * 0.5f, Color.white);
+            Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward * WallOffset, Color.white);
         }
     }
 
-    void AnimatorControl(Vector3 move)
+    void Grab()
+    {
+        if (rb.velocity.y < 0 && !isGrounded)
+        {
+            if (Agarrou)
+            {
+                rb.AddForce(transform.forward * 12, ForceMode.Acceleration);
+
+                Debug.Log("Caindooooo!!");
+            }
+        }
+    }
+
+    void AnimatorControlWalkNornal(Vector3 move)
     {
         anim.SetFloat("velocity", fowardVelocity, 0.1f, Time.deltaTime);
         anim.SetFloat("turn", turnangle, 0.1f, Time.deltaTime);
 
-        if(isGrounded && move.magnitude > 0)
+        if (isGrounded && move.magnitude > 0)
         {
             anim.speed = m_AnimSpeedMultiplier;
         }
@@ -167,13 +284,13 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
+    void AnimatorControlWalk8Way(Vector3 move)
+    {
+
+    }
+
     private void OnAnimatorIK(int layerIndex)
     {
-        /*anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1);
-        anim.SetIKPosition(AvatarIKGoal.LeftHand, HandPosition.transform.position);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1);
-        anim.SetIKRotation(AvatarIKGoal.LeftHand, HandPosition.transform.rotation);*/
-
         anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, footRweight);
         anim.SetIKPosition(AvatarIKGoal.RightFoot, footRposition);
         anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, footRweight);
@@ -188,7 +305,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementR()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && !Jump)
         {
             Vector3 raylocationR = footRanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -211,7 +328,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementL()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && !Jump)
         {
             Vector3 raylocationL = footLanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -257,16 +374,37 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Collider OtherCollider;
-        Vector3 OtherSize;
         for (int i = 0; i < collision.contacts.Length; i++)
         {
-            if(Math.Abs(collision.contacts[i].point.y) <= StepOffset)
+            //Debug.Log(collision.contacts[i].point.y);
+            if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
             {
-                //bug quando tenta subir a escada
-                //fazer o transform.position com Lerp
                 transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+                //Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+                //transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
             }
+        }
+
+        if (collision.gameObject.tag == "Grab")
+        {
+            Agarrou = true;
+        }
+        else
+        {
+            Agarrou = false;
+        }
+
+        if (collision.gameObject.tag == "SlideArea")
+        {
+            Escorregou = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "SlideArea")
+        {
+            Escorregou = false;
         }
     }
 }
