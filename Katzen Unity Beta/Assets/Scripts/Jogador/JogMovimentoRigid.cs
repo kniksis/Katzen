@@ -87,16 +87,6 @@ public class JogMovimentoRigid : MonoBehaviour
         {
             Debug.Log("RRR");
         }
-
-        if(Escorregou)
-        {
-            action = Mode.Escorregar;
-        }
-
-        else
-        {
-            action = Mode.AndarNormal;
-        }
     }
 
     private void FixedUpdate()
@@ -110,13 +100,15 @@ public class JogMovimentoRigid : MonoBehaviour
             case Mode.AndarNormal:
                 AnimatorControlWalkNornal(Vector3.zero);
                 MoverNormalControle();
+
                 PuloParede();
                 JumpFixed();
                 MoveInJumpCharacter();
-                Grab();
                 break;
             case Mode.AndarMirando:
-                AnimatorControlWalk8Way(Vector3.zero);
+                AnimatorControlWalk8Way();
+                MoverMirando();
+
                 break;
             case Mode.Escorregar:
                 EscorregarControle();
@@ -127,6 +119,8 @@ public class JogMovimentoRigid : MonoBehaviour
     private void PlayerInput()
     {
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
+        horizontalInput = CrossPlatformInputManager.GetAxis(HORIZONTAL_BT_NAME);
+        verticalInput = CrossPlatformInputManager.GetAxis(VERTICAL_BT_NAME);
     }
 
     private void PlayerControl()
@@ -137,7 +131,7 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
-    private void Mover()
+    private void MoverNormal()
     {
         if (move.magnitude > 1.0f)
         {
@@ -151,6 +145,13 @@ public class JogMovimentoRigid : MonoBehaviour
         AnimatorControlWalkNornal(move);
     }
 
+    private void MoverMirando()
+    {
+        Debug.Log(verticalInput);
+        
+        rb.AddForce(transform.forward * verticalInput * 20, ForceMode.Force);
+    }
+
     void EscorregarControle()
     {
         rb.AddForce(transform.forward * 3, ForceMode.Force);
@@ -160,9 +161,6 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void MoverNormalControle()
     {
-        horizontalInput = CrossPlatformInputManager.GetAxis(HORIZONTAL_BT_NAME);
-        verticalInput = CrossPlatformInputManager.GetAxis(VERTICAL_BT_NAME);
-
         if (cameraOrb != null)
         {
             cameraOrbForward = Vector3.Scale(cameraOrb.forward, new Vector3(1, 0, 1)).normalized;
@@ -174,7 +172,7 @@ public class JogMovimentoRigid : MonoBehaviour
             move = verticalInput * Vector3.forward + horizontalInput * Vector3.right;
         }
 
-        Mover();
+        MoverNormal();
     }
 
     private void JumpFixed()
@@ -254,19 +252,6 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
-    void Grab()
-    {
-        if (rb.velocity.y < 0 && !isGrounded)
-        {
-            if (Agarrou)
-            {
-                rb.AddForce(transform.forward * 12, ForceMode.Acceleration);
-
-                Debug.Log("Caindooooo!!");
-            }
-        }
-    }
-
     void AnimatorControlWalkNornal(Vector3 move)
     {
         anim.SetFloat("velocity", fowardVelocity, 0.1f, Time.deltaTime);
@@ -284,9 +269,10 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
-    void AnimatorControlWalk8Way(Vector3 move)
+    void AnimatorControlWalk8Way()
     {
-
+            localvelocity = transform.InverseTransformDirection(rb.velocity);
+            anim.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
     }
 
     private void OnAnimatorIK(int layerIndex)
@@ -305,7 +291,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementR()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && !Jump)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && isGrounded)
         {
             Vector3 raylocationR = footRanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -328,7 +314,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementL()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && !Jump)
+        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && isGrounded)
         {
             Vector3 raylocationL = footLanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -374,25 +360,16 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        for (int i = 0; i < collision.contacts.Length; i++)
-        {
-            //Debug.Log(collision.contacts[i].point.y);
-            if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
-            {
-                transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
-                //Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
-                //transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
-            }
-        }
-
-        if (collision.gameObject.tag == "Grab")
-        {
-            Agarrou = true;
-        }
-        else
-        {
-            Agarrou = false;
-        }
+        //for (int i = 0; i < collision.contacts.Length; i++)
+        //{
+        //    //Debug.Log(collision.contacts[i].point.y);
+        //    if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
+        //    {
+        //        transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+        //        //Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+        //        //transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
+        //    }
+        //}
 
         if (collision.gameObject.tag == "SlideArea")
         {
