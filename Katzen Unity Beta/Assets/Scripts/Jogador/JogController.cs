@@ -43,7 +43,6 @@ public class JogController : MonoBehaviour
 	void Update () {
         GetInput();
         PlayerInput();
-            Debug.Log(input.x);
         if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1)
         {
             return;
@@ -55,6 +54,14 @@ public class JogController : MonoBehaviour
         //}
         CalculateDirection();
         Rotate();
+    }
+
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1)
+        {
+            return;
+        }
         Move();
     }
 

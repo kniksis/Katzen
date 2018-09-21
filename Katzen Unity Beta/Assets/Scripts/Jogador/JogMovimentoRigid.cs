@@ -25,6 +25,7 @@ public class JogMovimentoRigid : MonoBehaviour
     float wallDistance = 0;
     public Transform peitoInicio;
     public float StepOffset;
+    public float minStepOffset;
     public float WallOffset;
     public bool Jump;
     private int numJumps = 0;
@@ -211,8 +212,8 @@ public class JogMovimentoRigid : MonoBehaviour
     {
         if (controlJumpDirection)
         {
-            rb.AddForce(Vector3.forward * horizontalInput * jumpforce, ForceMode.Acceleration);
-            rb.AddForce(Vector3.right * verticalInput * jumpforce, ForceMode.Acceleration);
+            rb.AddForce(transform.forward * verticalInput * jumpforce, ForceMode.Force);
+            rb.AddForce(transform.right * horizontalInput * jumpforce, ForceMode.Force);
         }
     }
 
@@ -358,18 +359,26 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        //for (int i = 0; i < collision.contacts.Length; i++)
-        //{
-        //    //Debug.Log(collision.contacts[i].point.y);
-        //    if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
-        //    {
-        //        transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
-        //        //Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
-        //        //transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
-        //    }
-        //}
+        for (int i = 0; i < collision.contacts.Length; i++)
+        {
+            Debug.Log(collision.contacts[i].point.y);
+            //if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
+            //{
+            //    transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+            //    //Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
+            //    //transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
+            //}
+            float localOffset = collision.contacts[i].point.y - transform.position.y;
+            
+            if (Math.Abs(localOffset) <= StepOffset && localOffset > minStepOffset)
+            {
+                //transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
+                Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
+            }
+        }
 
         if (collision.gameObject.tag == "SlideArea")
         {
