@@ -21,6 +21,8 @@ public class JogMovimentoRigid : MonoBehaviour
     bool isGrounded;
     public Transform cameraOrb;
     private Vector3 cameraOrbForward;
+    Quaternion targetRotation;
+    float angle;
     Vector3 move;
     float wallDistance = 0;
     public Transform peitoInicio;
@@ -31,12 +33,18 @@ public class JogMovimentoRigid : MonoBehaviour
     private int numJumps = 0;
     private int maxJumps = 2;
     public bool controlJumpDirection;
-    public bool Agarrou;
+    public bool walk;
     public bool Escorregou;
 
     public float fowardVelocity;
+    [Range(0f, 1f)] [SerializeField] float WalkVelocity;
+    [Range(0f, 2f)] [SerializeField] float RunVelocity;
+    [Range(0f, 1f)] [SerializeField] float NormalVelocity;
     public float turnangle;
+    public float turnSpeed;
     public float jumpforce;
+
+    public float MoveSpeedMulti = 1.0f;
     Vector3 m_GroundNormal;
     float m_OrigGroundCheckDistance;
     float m_AnimSpeedMultiplier = 1;
@@ -50,7 +58,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     [SerializeField] float m_GroundCheckDistance = 0.1f;
 
-
+    [Header("Variaveis de IK")]
     public GameObject footRanimator;
     public GameObject footLanimator;
     float footRweight = 0;
@@ -76,32 +84,34 @@ public class JogMovimentoRigid : MonoBehaviour
             cameraOrb = Camera.main.transform;
         }
         Jump = false;
-        Agarrou = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerInput();
         PlayerControl();
-        if (Input.GetButtonDown("testetecla"))
-        {
-            Debug.Log("RRR");
-        }
+
+        PlayerInput();
+        AnimatorControlWalkNornal(Vector3.zero);
+        MoverNormalControle();
+
+        CheckGroundStatus();
     }
 
     private void FixedUpdate()
     {
-
         FootPlacementR();
         FootPlacementL();
-        CheckGroundStatus();
+
         switch (action)
         {
             case Mode.AndarNormal:
-                AnimatorControlWalkNornal(Vector3.zero);
-                MoverNormalControle();
-
+                if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)
+                {
+                    return;
+                }
+                CalculateDirection();
+                Rotate();
                 PuloParede();
                 JumpFixed();
                 MoveInJumpCharacter();
@@ -120,8 +130,8 @@ public class JogMovimentoRigid : MonoBehaviour
     private void PlayerInput()
     {
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
-        horizontalInput = CrossPlatformInputManager.GetAxis(HORIZONTAL_BT_NAME);
-        verticalInput = CrossPlatformInputManager.GetAxis(VERTICAL_BT_NAME);
+        horizontalInput = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
+        verticalInput = Input.GetAxisRaw(VERTICAL_BT_NAME);
     }
 
     private void PlayerControl()
@@ -132,24 +142,8 @@ public class JogMovimentoRigid : MonoBehaviour
         }
     }
 
-    private void MoverNormal()
-    {
-        if (move.magnitude > 1.0f)
-        {
-            move.Normalize();
-        }
-        move = transform.InverseTransformDirection(move);
-        move = Vector3.ProjectOnPlane(move, m_GroundNormal);
-        turnangle = Mathf.Atan2(move.x, move.z);
-        fowardVelocity = move.z;
-
-        AnimatorControlWalkNornal(move);
-    }
-
     private void MoverMirando()
     {
-        Debug.Log(verticalInput);
-        
         rb.AddForce(transform.forward * verticalInput * 20, ForceMode.Force);
     }
 
@@ -160,7 +154,7 @@ public class JogMovimentoRigid : MonoBehaviour
     }
 
 
-    private void MoverNormalControle()
+    public void MoverNormalControle()
     {
         if (cameraOrb != null)
         {
@@ -173,7 +167,52 @@ public class JogMovimentoRigid : MonoBehaviour
             move = verticalInput * Vector3.forward + horizontalInput * Vector3.right;
         }
 
-        MoverNormal();
+        move *= NormalVelocity;
+
+        if (Input.GetButton("Walk"))
+        {
+            Debug.Log("Walk");
+            move *= WalkVelocity;
+        }
+
+        if (Input.GetButton("Run"))
+        {
+            Debug.Log("Run");
+            move *= RunVelocity;
+        }
+
+
+        MoverNormal(move);
+    }
+
+    public void MoverNormal(Vector3 move)
+    {
+        if (move.magnitude > 1.0f)
+        {
+            move.Normalize();
+        }
+
+        move = transform.InverseTransformDirection(move);
+        CheckGroundStatus();
+        move = Vector3.ProjectOnPlane(move, m_GroundNormal);
+        //turnangle = Mathf.Atan2(move.x, move.z);
+        fowardVelocity = move.z;
+        AnimatorControlWalkNornal(move);
+    }
+
+    void CalculateDirection()
+    {
+        //Relativa a rotação da camera
+        //ngle = Mathf.Atan2(move.x, move.z);
+        angle = Mathf.Atan2(horizontalInput, verticalInput);
+        angle = Mathf.Rad2Deg * angle;//converte para graus
+        angle += cameraOrb.eulerAngles.y;
+    }
+
+    void Rotate()
+    {
+        targetRotation = Quaternion.Euler(0, angle, 0);//converte para quaternion
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     private void JumpFixed()
@@ -200,6 +239,7 @@ public class JogMovimentoRigid : MonoBehaviour
             }
             else
             {
+                controlJumpDirection = true;
                 anim.Play("PuloSubindo");
             }
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
@@ -220,12 +260,7 @@ public class JogMovimentoRigid : MonoBehaviour
     private void PuloParede()
     {
         RaycastHit hit;
-        //wallDistance = Mathf.Abs(hit.point.y - transform.position.y);
 
-        //RaycastHit hitf = Physics.Raycast(transform.position - Vector3.up * 0.15f, transform.forward);
-        //Debug.DrawRay(transform.position - Vector3.up * 0.15f, transform.forward);
-
-        //peito = transform.TransformDirection(0.0f, 1.0f, 1.0f);
         if (Physics.Raycast(peitoInicio.transform.position, peitoInicio.transform.forward * WallOffset, out hit, WallOffset))
         {
             Debug.DrawRay(peitoInicio.transform.position, peitoInicio.transform.forward * WallOffset, Color.blue);
@@ -255,6 +290,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void AnimatorControlWalkNornal(Vector3 move)
     {
+        float angleangle = angle;
         anim.SetFloat("velocity", fowardVelocity, 0.1f, Time.deltaTime);
         anim.SetFloat("turn", turnangle, 0.1f, Time.deltaTime);
 
@@ -276,6 +312,16 @@ public class JogMovimentoRigid : MonoBehaviour
             anim.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
     }
 
+    public void OnAnimatorMove()
+    {
+        if(isGrounded && Time.deltaTime > 0)
+        {
+            Vector3 v = (anim.deltaPosition * MoveSpeedMulti) / Time.deltaTime;
+            v.y = rb.velocity.y;
+            rb.velocity = v;
+        }
+    }
+
     private void OnAnimatorIK(int layerIndex)
     {
         anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, footRweight);
@@ -292,7 +338,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementR()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && isGrounded)
+        if (Mathf.Abs(fowardVelocity) < ikVeloMin && Mathf.Abs(horizontalInput) < ikVeloMin && isGrounded)
         {
             Vector3 raylocationR = footRanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -315,7 +361,8 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementL()
     {
-        if (Mathf.Abs(localvelocity.z) < ikVeloMin && Mathf.Abs(turnangle) < ikVeloMin && isGrounded)
+        Debug.Log(fowardVelocity);
+        if (Mathf.Abs(fowardVelocity) < ikVeloMin && Mathf.Abs(horizontalInput) < ikVeloMin && isGrounded)
         {
             Vector3 raylocationL = footLanimator.transform.position + Vector3.up;
             RaycastHit hit;
@@ -339,12 +386,8 @@ public class JogMovimentoRigid : MonoBehaviour
     void CheckGroundStatus()
     {
         RaycastHit hitInfo;
-#if UNITY_EDITOR
-        // helper to visualise the ground check ray in the scene view
         Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
-#endif
-        // 0.1f is a small offset to start the ray from inside the character
-        // it is also good to note that the transform position in the sample assets is at the base of the character
+
         if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
         {
             m_GroundNormal = hitInfo.normal;
@@ -363,7 +406,6 @@ public class JogMovimentoRigid : MonoBehaviour
     {
         for (int i = 0; i < collision.contacts.Length; i++)
         {
-            Debug.Log(collision.contacts[i].point.y);
             //if (Math.Abs(collision.contacts[i].point.y - StepOffset) <= StepOffset)
             //{
             //    transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y, transform.position.z);
@@ -378,19 +420,6 @@ public class JogMovimentoRigid : MonoBehaviour
                 Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
             }
-        }
-
-        if (collision.gameObject.tag == "SlideArea")
-        {
-            Escorregou = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "SlideArea")
-        {
-            Escorregou = false;
         }
     }
 }

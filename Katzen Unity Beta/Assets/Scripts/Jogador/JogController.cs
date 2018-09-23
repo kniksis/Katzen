@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -15,8 +16,11 @@ public class JogController : MonoBehaviour
 
     public float fowardVelocity = 10;
     public float turnSpeed = 10;
+    public float StepOffset;
+    public float minStepOffset;
 
     Vector3 input;
+    Vector3 move;
     bool jumpInput;
     float horizontalInput;
     float verticalInput;
@@ -35,64 +39,46 @@ public class JogController : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
     }
 
-    void Start () {
+    void Start()
+    {
         cam = Camera.main.transform;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        GetInput();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
         PlayerInput();
+
         if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1)
         {
             return;
         }
-
-        //if (Mathf.Abs(horizontalInput) < 1 && Mathf.Abs(verticalInput) < 1)
-        //{
-        //    return;
-        //}
+        
         CalculateDirection();
         Rotate();
+        Move();
     }
 
     private void FixedUpdate()
     {
-        if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1)
-        {
-            return;
-        }
-        Move();
+        
     }
 
     private void PlayerInput()
     {
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
+        input.x = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
+        input.y = CrossPlatformInputManager.GetAxisRaw(VERTICAL_BT_NAME);
         horizontalInput = CrossPlatformInputManager.GetAxis(HORIZONTAL_BT_NAME);
         verticalInput = CrossPlatformInputManager.GetAxis(VERTICAL_BT_NAME);
-    }
-
-    void GetInput()
-    {
-        switch (action)
-        {
-            case Mode.AndarNormal:
-                input.x = Input.GetAxisRaw("Horizontal");
-                input.y = Input.GetAxisRaw("Vertical");
-                break;
-
-            case Mode.AndarMirando:
-                input.x = Input.GetAxisRaw("Horizontal");
-                input.z = Input.GetAxisRaw("Vertical");
-                break;
-        }
     }
 
     void CalculateDirection()
     {
         //Relativa a rotação da camera
         //angle = Mathf.Atan2(input.x, input.y);
-        angle = Mathf.Atan2(horizontalInput, verticalInput);
+        angle = Mathf.Atan2(input.x, input.y);
         angle = Mathf.Rad2Deg * angle;//converte para graus
         angle += cam.eulerAngles.y;
     }
@@ -105,16 +91,27 @@ public class JogController : MonoBehaviour
 
     void Move()
     {
-        switch(action)
+        transform.position += transform.forward * fowardVelocity * Time.deltaTime;
+    }
+
+        void MoverXY()
+    {
+        rb.AddForce(transform.forward * fowardVelocity * verticalInput / Time.deltaTime);
+        rb.AddForce(transform.right * fowardVelocity * horizontalInput / Time.deltaTime);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        for (int i = 0; i < collision.contacts.Length; i++)
         {
-            case Mode.AndarNormal:
-                //transform.position += transform.forward * fowardVelocity * Time.deltaTime;
-                rb.AddForce(transform.forward * fowardVelocity, ForceMode.Force);
-            break;
-            case Mode.AndarMirando:
-                //transform.position += transform.forward * fowardVelocity * Time.deltaTime;
-                rb.AddForce(transform.forward * fowardVelocity, ForceMode.Force);
-            break;
+            float localOffset = collision.contacts[i].point.y - transform.position.y;
+
+            if (Math.Abs(localOffset) <= StepOffset && localOffset > minStepOffset)
+            {
+                //transform.position = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
+                Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
+            }
         }
     }
 }
