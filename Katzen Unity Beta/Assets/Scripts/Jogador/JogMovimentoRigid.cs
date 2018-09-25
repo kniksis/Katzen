@@ -15,6 +15,15 @@ public class JogMovimentoRigid : MonoBehaviour
 
     public Mode action = Mode.AndarNormal;
 
+    public enum Combat
+    {
+        Garras = 0,
+        Estilingue = 1
+    }
+
+    public Combat combate = Combat.Garras;
+
+    [Header("Componentes")]
     public Animator anim;
     public Rigidbody rb;
     public Collider myColl;
@@ -22,19 +31,23 @@ public class JogMovimentoRigid : MonoBehaviour
     public Transform cameraOrb;
     private Vector3 cameraOrbForward;
     Quaternion targetRotation;
+
+    [Header("Movimentos")]
     float angle;
     Vector3 move;
     float wallDistance = 0;
     public Transform peitoInicio;
-    public float StepOffset;
-    public float minStepOffset;
-    public float WallOffset;
     public bool Jump;
     private int numJumps = 0;
     private int maxJumps = 2;
     public bool controlJumpDirection;
     public bool walk;
-    public bool Escorregou;
+    public bool equilibrar;
+
+    [Header("StepOffset")]
+    public float StepOffset;
+    public float minStepOffset;
+    public float WallOffset;
 
     public float fowardVelocity;
     [Range(0f, 1f)] [SerializeField] float WalkVelocity;
@@ -49,16 +62,21 @@ public class JogMovimentoRigid : MonoBehaviour
     float m_OrigGroundCheckDistance;
     float m_AnimSpeedMultiplier = 1;
 
+    [Header("Input's")]
     bool jumpInput;
     float horizontalInput;
     float verticalInput;
+    bool garraTrocaInput;
+    bool estilingueTrocaInput;
     public string JUMP_BT_NAME;
     public string HORIZONTAL_BT_NAME;
     public string VERTICAL_BT_NAME;
+    public string GARRA_BT_NAME;
+    public string ESTILINGUE_BT_NAME;
 
     [SerializeField] float m_GroundCheckDistance = 0.1f;
 
-    [Header("Variaveis de IK")]
+    [Header("IK's")]
     public GameObject footRanimator;
     public GameObject footLanimator;
     float footRweight = 0;
@@ -94,10 +112,10 @@ public class JogMovimentoRigid : MonoBehaviour
         PlayerInput();
         AnimatorControlWalkNornal(Vector3.zero);
         MoverNormalControle();
+        TrocarArmas();
 
         CheckGroundStatus();
     }
-
     private void FixedUpdate()
     {
         FootPlacementR();
@@ -132,6 +150,13 @@ public class JogMovimentoRigid : MonoBehaviour
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
         horizontalInput = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
         verticalInput = Input.GetAxisRaw(VERTICAL_BT_NAME);
+    }
+
+
+    private void TrocarArmas()
+    {
+        garraTrocaInput = Input.GetButtonDown(GARRA_BT_NAME);
+        estilingueTrocaInput = Input.GetButtonDown(ESTILINGUE_BT_NAME);
     }
 
     private void PlayerControl()
@@ -171,13 +196,11 @@ public class JogMovimentoRigid : MonoBehaviour
 
         if (Input.GetButton("Walk"))
         {
-            Debug.Log("Walk");
             move *= WalkVelocity;
         }
 
         if (Input.GetButton("Run"))
         {
-            Debug.Log("Run");
             move *= RunVelocity;
         }
 
@@ -361,7 +384,6 @@ public class JogMovimentoRigid : MonoBehaviour
 
     void FootPlacementL()
     {
-        Debug.Log(fowardVelocity);
         if (Mathf.Abs(fowardVelocity) < ikVeloMin && Mathf.Abs(horizontalInput) < ikVeloMin && isGrounded)
         {
             Vector3 raylocationL = footLanimator.transform.position + Vector3.up;
@@ -420,6 +442,24 @@ public class JogMovimentoRigid : MonoBehaviour
                 Vector3 endPos = new Vector3(transform.position.x, collision.contacts[i].point.y + 0.05f, transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, endPos, 1000.9f);
             }
+        }
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Grab")
+        {
+            anim.SetBool("Equilibrar", true);
+            anim.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Grab")
+        {
+            anim.SetBool("Equilibrar", false);
         }
     }
 }
