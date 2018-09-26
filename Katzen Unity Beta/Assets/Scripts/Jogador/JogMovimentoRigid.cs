@@ -24,13 +24,18 @@ public class JogMovimentoRigid : MonoBehaviour
     public Combat combate = Combat.Garras;
 
     [Header("Componentes")]
-    public Animator anim;
+    public Animator animJog;
+    public Animator animHUDArmas;
     public Rigidbody rb;
     public Collider myColl;
     bool isGrounded;
     public Transform cameraOrb;
     private Vector3 cameraOrbForward;
     Quaternion targetRotation;
+    [SerializeField]
+    GameObject cameraGO;
+    [SerializeField]
+    CameraOrbital camScript;
 
     [Header("Movimentos")]
     float angle;
@@ -62,17 +67,19 @@ public class JogMovimentoRigid : MonoBehaviour
     float m_OrigGroundCheckDistance;
     float m_AnimSpeedMultiplier = 1;
 
-    [Header("Input's")]
+    [Header("IK's")]
     bool jumpInput;
+    bool MirarInput;
     float horizontalInput;
     float verticalInput;
-    bool garraTrocaInput;
-    bool estilingueTrocaInput;
+    float TrocaArmaInput;
+    float AtirarInput;
     public string JUMP_BT_NAME;
     public string HORIZONTAL_BT_NAME;
     public string VERTICAL_BT_NAME;
-    public string GARRA_BT_NAME;
-    public string ESTILINGUE_BT_NAME;
+    public string TROCA_ARMA_BT_NAME;
+    public string MIRAR_BT_NAME;
+    public string ATIRAR_BT_NAME;
 
     [SerializeField] float m_GroundCheckDistance = 0.1f;
 
@@ -93,7 +100,7 @@ public class JogMovimentoRigid : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        animJog = GetComponent<Animator>();
         myColl = GetComponent<CapsuleCollider>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
@@ -102,6 +109,9 @@ public class JogMovimentoRigid : MonoBehaviour
             cameraOrb = Camera.main.transform;
         }
         Jump = false;
+
+        cameraGO = GameObject.Find("Main Camera");
+        camScript = cameraGO.GetComponent<CameraOrbital>();
     }
 
     // Update is called once per frame
@@ -110,12 +120,32 @@ public class JogMovimentoRigid : MonoBehaviour
         PlayerControl();
 
         PlayerInput();
-        AnimatorControlWalkNornal(Vector3.zero);
-        MoverNormalControle();
+
+        switch (action)
+        {
+            case Mode.AndarNormal:
+                AnimatorControlWalkNornal(Vector3.zero);
+                MoverNormalControle();
+                break;
+            case Mode.AndarMirando:
+                AnimatorControlWalk8Way();
+                break;
+        }
         TrocarArmas();
 
         CheckGroundStatus();
+        
+        switch (combate)
+        {
+            case Combat.Estilingue:
+                Mirar();
+                break;
+            case Combat.Garras:
+
+                break;
+        }
     }
+
     private void FixedUpdate()
     {
         FootPlacementR();
@@ -137,7 +167,8 @@ public class JogMovimentoRigid : MonoBehaviour
             case Mode.AndarMirando:
                 AnimatorControlWalk8Way();
                 MoverMirando();
-
+                CalculateDirectionMira();
+                Rotate();
                 break;
             case Mode.Escorregar:
                 EscorregarControle();
@@ -150,13 +181,56 @@ public class JogMovimentoRigid : MonoBehaviour
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
         horizontalInput = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
         verticalInput = Input.GetAxisRaw(VERTICAL_BT_NAME);
+        TrocaArmaInput = Input.GetAxis(TROCA_ARMA_BT_NAME);
+        AtirarInput = Input.GetAxis(ATIRAR_BT_NAME);
+        MirarInput = Input.GetButton(MIRAR_BT_NAME);
     }
 
 
     private void TrocarArmas()
     {
-        garraTrocaInput = Input.GetButtonDown(GARRA_BT_NAME);
-        estilingueTrocaInput = Input.GetButtonDown(ESTILINGUE_BT_NAME);
+        animHUDArmas.SetFloat("ForcaEstilingue", AtirarInput);
+        if (TrocaArmaInput > 0 && combate == Combat.Garras)
+        {
+            animHUDArmas.SetBool("Armado", true);
+            animJog.SetBool("Armado", true);
+            animJog.SetLayerWeight(3, 1.0f);
+            animJog.CrossFade("PickGun", Time.deltaTime);
+            combate = Combat.Estilingue;
+        }
+
+        if (TrocaArmaInput < 0 && combate == Combat.Estilingue)
+        {
+            animHUDArmas.SetBool("Armado", false);
+            animJog.SetBool("Armado", false);
+            animJog.SetLayerWeight(3, 1.0f);
+            animJog.CrossFade("PutGun", Time.deltaTime);
+            combate = Combat.Garras;
+        }
+    }
+
+    public void Mirar()
+    {
+        if (MirarInput)
+        {
+            animJog.SetLayerWeight(3, 1.0f);
+            animJog.SetLayerWeight(4, 1.0f);
+            animJog.SetBool("Mirar", true);
+            action = Mode.AndarMirando;
+        }
+
+        else
+        {
+            animJog.SetLayerWeight(3, 0.0f);
+            animJog.SetLayerWeight(4, 0.0f);
+            animJog.SetBool("Mirar", false);
+            action = Mode.AndarNormal;
+        }
+    }
+
+    public void zeraPesoLayerAim()
+    {
+        animJog.SetLayerWeight(3, 0.0f);
     }
 
     private void PlayerControl()
@@ -169,13 +243,14 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void MoverMirando()
     {
-        rb.AddForce(transform.forward * verticalInput * 20, ForceMode.Force);
+        animJog.SetFloat("MoveX", horizontalInput);
+        animJog.SetFloat("MoveZ", verticalInput);
     }
 
     void EscorregarControle()
     {
         rb.AddForce(transform.forward * 3, ForceMode.Force);
-        anim.Play("SlideFall");
+        animJog.Play("SlideFall");
     }
 
 
@@ -232,6 +307,14 @@ public class JogMovimentoRigid : MonoBehaviour
         angle += cameraOrb.eulerAngles.y;
     }
 
+    void CalculateDirectionMira()
+    {
+        //Relativa a rotação da camera
+        angle = Mathf.Atan2(0,0);
+        angle = Mathf.Rad2Deg * angle;//converte para graus
+        angle += cameraOrb.eulerAngles.y;
+    }
+
     void Rotate()
     {
         targetRotation = Quaternion.Euler(0, angle, 0);//converte para quaternion
@@ -257,13 +340,13 @@ public class JogMovimentoRigid : MonoBehaviour
         {
             if (!isGrounded)
             {
-                anim.Play("PuloDuplo");
+                animJog.Play("PuloDuplo");
                 controlJumpDirection = true;
             }
             else
             {
                 controlJumpDirection = true;
-                anim.Play("PuloSubindo");
+                animJog.Play("PuloSubindo");
             }
             rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             numJumps += 1;
@@ -294,13 +377,13 @@ public class JogMovimentoRigid : MonoBehaviour
                 {
                     rb.AddForce(transform.up * jumpforce * 2, ForceMode.Impulse);
                     rb.AddForce(-transform.forward * jumpforce / 1.3f, ForceMode.Impulse);
-                    anim.Play("ParedePulo");
+                    animJog.Play("ParedePulo");
                 }
 
                 else
                 {
                     rb.AddForce(transform.forward * 10, ForceMode.Acceleration);
-                    anim.Play("ParedeLoop");
+                    animJog.Play("ParedeLoop");
                 }
             }
         }
@@ -314,32 +397,33 @@ public class JogMovimentoRigid : MonoBehaviour
     void AnimatorControlWalkNornal(Vector3 move)
     {
         float angleangle = angle;
-        anim.SetFloat("velocity", fowardVelocity, 0.1f, Time.deltaTime);
-        anim.SetFloat("turn", turnangle, 0.1f, Time.deltaTime);
+        animJog.SetFloat("velocity", fowardVelocity, 0.1f, Time.deltaTime);
+        animJog.SetFloat("turn", turnangle, 0.1f, Time.deltaTime);
 
         if (isGrounded && move.magnitude > 0)
         {
-            anim.speed = m_AnimSpeedMultiplier;
+            animJog.speed = m_AnimSpeedMultiplier;
         }
 
         else
         {
             // don't use that while airborne
-            anim.speed = 1;
+            animJog.speed = 1;
         }
     }
 
     void AnimatorControlWalk8Way()
     {
             localvelocity = transform.InverseTransformDirection(rb.velocity);
-            anim.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
+            animJog.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
+        animJog.SetFloat("MiraX", camScript.y);
     }
 
     public void OnAnimatorMove()
     {
         if(isGrounded && Time.deltaTime > 0)
         {
-            Vector3 v = (anim.deltaPosition * MoveSpeedMulti) / Time.deltaTime;
+            Vector3 v = (animJog.deltaPosition * MoveSpeedMulti) / Time.deltaTime;
             v.y = rb.velocity.y;
             rb.velocity = v;
         }
@@ -347,16 +431,16 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void OnAnimatorIK(int layerIndex)
     {
-        anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, footRweight);
-        anim.SetIKPosition(AvatarIKGoal.RightFoot, footRposition);
-        anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, footRweight);
+        animJog.SetIKPositionWeight(AvatarIKGoal.RightFoot, footRweight);
+        animJog.SetIKPosition(AvatarIKGoal.RightFoot, footRposition);
+        animJog.SetIKRotationWeight(AvatarIKGoal.RightFoot, footRweight);
         //anim.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation) * Quaternion.EulerAngles(0, footRanimator.transform.rotation.eulerAngles.z + footRanimator.transform.rotation.eulerAngles.x, 0));
-        anim.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation) * Quaternion.Euler(0, footRanimator.transform.right.y, 0));
+        animJog.SetIKRotation(AvatarIKGoal.RightFoot, Quaternion.LookRotation(footRrotation) * Quaternion.Euler(0, footRanimator.transform.right.y, 0));
 
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, footLweight);
-        anim.SetIKPosition(AvatarIKGoal.LeftFoot, footLposition);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, footLweight);
-        anim.SetIKRotation(AvatarIKGoal.LeftFoot, Quaternion.LookRotation(footLrotation) * Quaternion.Euler(0, footLanimator.transform.right.y, 0));
+        animJog.SetIKPositionWeight(AvatarIKGoal.LeftFoot, footLweight);
+        animJog.SetIKPosition(AvatarIKGoal.LeftFoot, footLposition);
+        animJog.SetIKRotationWeight(AvatarIKGoal.LeftFoot, footLweight);
+        animJog.SetIKRotation(AvatarIKGoal.LeftFoot, Quaternion.LookRotation(footLrotation) * Quaternion.Euler(0, footLanimator.transform.right.y, 0));
     }
 
     void FootPlacementR()
@@ -414,13 +498,13 @@ public class JogMovimentoRigid : MonoBehaviour
         {
             m_GroundNormal = hitInfo.normal;
             isGrounded = true;
-            anim.applyRootMotion = true;
+            animJog.applyRootMotion = true;
         }
         else
         {
             isGrounded = false;
             m_GroundNormal = Vector3.up;
-            anim.applyRootMotion = false;
+            animJog.applyRootMotion = false;
         }
     }
 
@@ -450,8 +534,8 @@ public class JogMovimentoRigid : MonoBehaviour
     {
         if (other.tag == "Grab")
         {
-            anim.SetBool("Equilibrar", true);
-            anim.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
+            animJog.SetBool("Equilibrar", true);
+            animJog.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
         }
     }
 
@@ -459,7 +543,7 @@ public class JogMovimentoRigid : MonoBehaviour
     {
         if (other.tag == "Grab")
         {
-            anim.SetBool("Equilibrar", false);
+            animJog.SetBool("Equilibrar", false);
         }
     }
 }

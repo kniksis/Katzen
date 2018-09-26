@@ -19,7 +19,7 @@ public class CameraOrbital : MonoBehaviour {
 	public float distanceMax = 15f;
 
 	float x = 0.0f;
-	float y = 0.0f;
+	public float y = 0.0f;
 
 	private RaycastHit hit;
 
@@ -80,7 +80,6 @@ public class CameraOrbital : MonoBehaviour {
 		{
 			x += Input.GetAxis(GiroX) * xSpeed * 0.02f;
 			y -= Input.GetAxis(GiroY) * ySpeed * 0.02f;
-
 		}
 			y = ClampAngle(y, yMinLimit, yMaxLimit);
 
