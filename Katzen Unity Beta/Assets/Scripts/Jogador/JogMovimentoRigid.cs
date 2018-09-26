@@ -156,7 +156,7 @@ public class JogMovimentoRigid : MonoBehaviour
             case Mode.AndarNormal:
                 if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)
                 {
-                    return;
+                   // return;
                 }
                 CalculateDirection();
                 Rotate();
@@ -179,11 +179,13 @@ public class JogMovimentoRigid : MonoBehaviour
     private void PlayerInput()
     {
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
-        horizontalInput = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
-        verticalInput = Input.GetAxisRaw(VERTICAL_BT_NAME);
+        horizontalInput = Input.GetAxis(HORIZONTAL_BT_NAME);
+        verticalInput = Input.GetAxis(VERTICAL_BT_NAME);
         TrocaArmaInput = Input.GetAxis(TROCA_ARMA_BT_NAME);
         AtirarInput = Input.GetAxis(ATIRAR_BT_NAME);
         MirarInput = Input.GetButton(MIRAR_BT_NAME);
+
+        Debug.Log(horizontalInput +" "+ verticalInput);
     }
 
 
@@ -192,18 +194,18 @@ public class JogMovimentoRigid : MonoBehaviour
         animHUDArmas.SetFloat("ForcaEstilingue", AtirarInput);
         if (TrocaArmaInput > 0 && combate == Combat.Garras)
         {
+            animJog.SetLayerWeight(3, 1.0f);
             animHUDArmas.SetBool("Armado", true);
             animJog.SetBool("Armado", true);
-            animJog.SetLayerWeight(3, 1.0f);
             animJog.CrossFade("PickGun", Time.deltaTime);
             combate = Combat.Estilingue;
         }
 
         if (TrocaArmaInput < 0 && combate == Combat.Estilingue)
         {
+            animJog.SetLayerWeight(3, 1.0f);
             animHUDArmas.SetBool("Armado", false);
             animJog.SetBool("Armado", false);
-            animJog.SetLayerWeight(3, 1.0f);
             animJog.CrossFade("PutGun", Time.deltaTime);
             combate = Combat.Garras;
         }
@@ -219,9 +221,9 @@ public class JogMovimentoRigid : MonoBehaviour
             action = Mode.AndarMirando;
         }
 
-        else
+        if (!MirarInput)
         {
-            animJog.SetLayerWeight(3, 0.0f);
+            //animJog.SetLayerWeight(3, 0.0f);
             animJog.SetLayerWeight(4, 0.0f);
             animJog.SetBool("Mirar", false);
             action = Mode.AndarNormal;
