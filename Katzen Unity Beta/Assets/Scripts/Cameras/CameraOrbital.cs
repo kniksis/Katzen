@@ -43,11 +43,7 @@ public class CameraOrbital : MonoBehaviour {
 
 
 	void Start()
-	{
-        Cursor.lockState = CursorLockMode.Locked;
-
-
-
+	{   
         Vector3 angles = transform.eulerAngles;
 		x = angles.y;
 		y = angles.x;
@@ -134,12 +130,6 @@ public class CameraOrbital : MonoBehaviour {
 		{
 			indice = 0;
 		}*/
-
-
-        if (Input.GetKey(KeyCode.Escape) && Cursor.lockState == CursorLockMode.Locked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 	
 	public static float ClampAngle(float angle, float min, float max)

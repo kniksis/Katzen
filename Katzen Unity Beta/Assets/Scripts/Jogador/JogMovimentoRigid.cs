@@ -154,9 +154,9 @@ public class JogMovimentoRigid : MonoBehaviour
         switch (action)
         {
             case Mode.AndarNormal:
-                if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)
+                if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)//Faz giro por mouse não influenciar o giro do personagem quando ele estiver parado, precisa ser desativado caso o input seja por controle Xbox
                 {
-                   // return;
+                   return;
                 }
                 CalculateDirection();
                 Rotate();
@@ -179,13 +179,11 @@ public class JogMovimentoRigid : MonoBehaviour
     private void PlayerInput()
     {
         jumpInput = Input.GetButtonDown(JUMP_BT_NAME);
-        horizontalInput = Input.GetAxis(HORIZONTAL_BT_NAME);
-        verticalInput = Input.GetAxis(VERTICAL_BT_NAME);
+        horizontalInput = Input.GetAxisRaw(HORIZONTAL_BT_NAME);
+        verticalInput = Input.GetAxisRaw(VERTICAL_BT_NAME);
         TrocaArmaInput = Input.GetAxis(TROCA_ARMA_BT_NAME);
         AtirarInput = Input.GetAxis(ATIRAR_BT_NAME);
         MirarInput = Input.GetButton(MIRAR_BT_NAME);
-
-        Debug.Log(horizontalInput +" "+ verticalInput);
     }
 
 
