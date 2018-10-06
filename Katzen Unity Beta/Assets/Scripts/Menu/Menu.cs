@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
+    [SerializeField]
+    string Nivel1;
+
 	public void CarregarNivel1()
 	{
-		SceneManager.LoadScene("NivelBeta");
+		SceneManager.LoadScene(Nivel1);
 	}
 
 	public void CarregarMenu()

@@ -154,12 +154,16 @@ public class JogMovimentoRigid : MonoBehaviour
         switch (action)
         {
             case Mode.AndarNormal:
-                if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)//Faz giro por mouse não influenciar o giro do personagem quando ele estiver parado, precisa ser desativado caso o input seja por controle Xbox
+                //if (Mathf.Abs(verticalInput) < 1 && Mathf.Abs(horizontalInput) < 1)//Faz giro por mouse não influenciar o giro do personagem quando ele estiver parado, precisa ser desativado caso o input seja por controle Xbox
+                //{
+                //    //return;
+                //}
+
+                if (verticalInput != 0 || horizontalInput != 0)
                 {
-                   return;
+                    CalculateDirection();
+                    Rotate();
                 }
-                CalculateDirection();
-                Rotate();
                 PuloParede();
                 JumpFixed();
                 MoveInJumpCharacter();
@@ -301,16 +305,16 @@ public class JogMovimentoRigid : MonoBehaviour
     void CalculateDirection()
     {
         //Relativa a rotação da camera
-        //ngle = Mathf.Atan2(move.x, move.z);
+        //angle = Mathf.Atan2(move.x, move.z);
         angle = Mathf.Atan2(horizontalInput, verticalInput);
         angle = Mathf.Rad2Deg * angle;//converte para graus
         angle += cameraOrb.eulerAngles.y;
     }
 
-    void CalculateDirectionMira()
+    void CalculateDirectionMira()//Trava a mira do jogador para a direção da camera
     {
         //Relativa a rotação da camera
-        angle = Mathf.Atan2(0,0);
+        angle = Mathf.Atan2(0, 0);
         angle = Mathf.Rad2Deg * angle;//converte para graus
         angle += cameraOrb.eulerAngles.y;
     }
