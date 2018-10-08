@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AtirarNoJogador : MonoBehaviour {
-	
+
+    GameObjectPool gop;
 	[SerializeField]
 	GameObject jogEntrouMiraGO;
 	[SerializeField]
 	JogEntrouMira jemScript;
-
-	static public AtirarNoJogador Instancia;
+    
 
 	public float fireRate = 0.5f;
 	public float nextFire = 0.0f;
 	public Transform respawnTiro;
-
-	public GameObject tiroInimigoPrefab;
-	public int Quantidade;
-	List<GameObject> ListaObjetos;
+    
 
 	public bool atirar;
 
@@ -29,45 +26,29 @@ public class AtirarNoJogador : MonoBehaviour {
 		jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
 
 		atirar = false;
-
-		Instancia = this;
-		ListaObjetos = new List<GameObject>();
-		for (int i = 0; i < Quantidade; i++)
-		{
-			GameObject temp = (GameObject)GameObject.Instantiate(tiroInimigoPrefab);
-			temp.SetActive(false);
-			temp.name = tiroInimigoPrefab.name + "_" + i.ToString("000");
-			ListaObjetos.Add(temp);
-		}
 	}
 
 	void Start () {
+        gop = GameObjectPool.Instancia;
 	}
-
-	public GameObject ObterObjeto()
-	{
-		GameObject retorno = null;
-		for (int i = 0; i < ListaObjetos.Count; i++)
-		{
-			if (ListaObjetos[i].activeInHierarchy == false)
-			{
-				retorno = ListaObjetos[i];
-				break;
-			}
-		}
-		return retorno;
-	}
-
+    
 	// Update is called once per frame
 	void Update () {
 		//atirar = false;
 		if (jemScript.jogEntrou == true)
 		{
-			atirar = false;
+			//atirar = false;
 			if (Time.time > nextFire)
 			{
 				nextFire = Time.time + fireRate;
-				atirar = true;
+                //atirar = true;
+                GameObject temp = gop.ObterObjeto();
+                if(temp != null)
+                {
+                    temp.transform.position = respawnTiro.transform.position;
+                    temp.transform.rotation = respawnTiro.transform.rotation;
+                    temp.SetActive(true);
+                }
 			}
 		}
 	}

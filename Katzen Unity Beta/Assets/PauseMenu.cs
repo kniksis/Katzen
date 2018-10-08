@@ -74,6 +74,16 @@ public class PauseMenu : MonoBehaviour {
         {
             Pause();
         }
+
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            if(Time.timeScale == 1.0f)
+            Time.timeScale = 0.2f;
+            else
+            {
+                Time.timeScale = 1.0f;
+            }
+        }
     }
 
     public void Pause()

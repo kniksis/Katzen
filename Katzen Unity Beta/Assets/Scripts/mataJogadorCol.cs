@@ -19,10 +19,11 @@ public class mataJogadorCol : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            gameObject.SetActive(false);
             gmScript.DecreaseLife(dano);
         }
     }

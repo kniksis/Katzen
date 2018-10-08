@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class MoverTiro : MonoBehaviour {
 
-	public float speed;
+	public float tiroForca;
 	public float tempoDeVida;
 	public float tempoDeVidaMax;
+    public Rigidbody rb;
 
 	// Use this for initialization
 	void Start ()
 	{
-
+        rb = GetComponent<Rigidbody>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void OnEnable()
+    {
+        rb.AddForce(transform.forward * tiroForca, ForceMode.Impulse);
+    }
+
+    private void OnDisable()
+    {
+        tempoDeVida = 0;
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
-		transform.position += transform.forward * Time.fixedDeltaTime * speed;
 		tempoDeVida += 1.0f * Time.fixedDeltaTime;
 
 		if (tempoDeVida > tempoDeVidaMax)

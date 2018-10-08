@@ -19,7 +19,7 @@ public class AtirarMain : MonoBehaviour {
 
 	void Start ()
 	{
-        gop = AtirarNoJogador.Instancia;
+        //gop = AtirarNoJogador.Instancia;
 	}
 	
 	// Update is called once per frame
@@ -29,12 +29,12 @@ public class AtirarMain : MonoBehaviour {
 		{
 			Debug.Log("To atirando, seu Animal!");
 
-			GameObject temp = gop.ObterObjeto();
-            if(temp != null)
-            {
-                temp.transform.position = anjScript.respawnTiro.position;
-                temp.SetActive(true);
-            }
+			//GameObject temp = gop.ObterObjeto();
+   //         if(temp != null)
+   //         {
+   //             temp.transform.position = anjScript.respawnTiro.position;
+   //             temp.SetActive(true);
+   //         }
         }
 	}
 }

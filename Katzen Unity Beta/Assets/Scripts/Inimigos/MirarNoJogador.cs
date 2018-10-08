@@ -9,6 +9,7 @@ public class MirarNoJogador : MonoBehaviour
 	[SerializeField]
 	JogEntrouMira jemScript;
 
+    public GameObject PlayerTransform;
 	public Transform targetTR;
 	public float delayGiro = 5;
 
@@ -16,6 +17,8 @@ public class MirarNoJogador : MonoBehaviour
 	{
 		jogEntrouMiraGO = GameObject.Find("MiraInimigo");
 		jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
+        PlayerTransform = GameObject.FindGameObjectWithTag("Player");
+        targetTR = PlayerTransform.transform;
 	}
 	// Use this for initialization
 
