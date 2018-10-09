@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class ConversaNeiriel01 : MonoBehaviour {
 
@@ -17,8 +18,10 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public Sprite[] expressoesP1;
     public Sprite[] expressoesP2;
 
+    public string TextoArquivo;
+
     public Text textoFala;
-    public string[] falas; 
+    public string[] falas;
 
     [SerializeField]
     public enum Fala
@@ -31,6 +34,7 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        TextoArquivo = File.ReadAllText("Assets\\Falas\\Cena01_Neiriel_Katzen.txt");
         animPainelP1.SetBool("foco", true);
         animPainelP2.SetBool("foco", false);
         animPainelFala.SetBool("abrirFalas", true);
@@ -40,8 +44,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        lerTextoArquivo();
+    }
 
     public void trocarFala()
     {
@@ -68,5 +72,10 @@ public class ConversaNeiriel01 : MonoBehaviour {
             textoFala.text = falas[1];
             fala = Fala.FalaNeiriel;
         }
+    }
+
+    void lerTextoArquivo()
+    {
+        
     }
 }
