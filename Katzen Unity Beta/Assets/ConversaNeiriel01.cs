@@ -17,8 +17,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     public Sprite[] expressoesP1;
     public Sprite[] expressoesP2;
-
-    public string TextoArquivo;
+    
+    public TextAsset textFile;
 
     public Text textoFala;
     public string[] falas;
@@ -34,7 +34,19 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        TextoArquivo = File.ReadAllText("Assets\\Falas\\Cena01_Neiriel_Katzen.txt");
+        textFile = Resources.Load<TextAsset>("Falas/Cena01_Neiriel_Katzen");
+        string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
+        falas = new string[linhasArquivo.Length];
+        int contadorFala = 0;
+        foreach (string linha in linhasArquivo)
+        {
+            string[] valoresLinha = linha.Split('\t'); // quebra o caracte de TAB entre a numeração e o texto;
+            // valoresLinha[0] // valor do indice da fala
+            // valoresLinha[1] // conteúdo/texto da fala
+            // int indiceFala = int.Parse(valoresLinha[0]);
+            falas[contadorFala] = valoresLinha[1];
+            contadorFala = contadorFala + 1;
+        }
         animPainelP1.SetBool("foco", true);
         animPainelP2.SetBool("foco", false);
         animPainelFala.SetBool("abrirFalas", true);
