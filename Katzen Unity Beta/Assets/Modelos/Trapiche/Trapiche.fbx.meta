@@ -1,0 +1,3691 @@
+fileFormatVersion: 2
+guid: 17eef135dba580e4fb591abc694f7d77
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Batente
+    100002: Batente 1
+    100004: Batente 2
+    100006: DegrauEscada
+    100008: DegrauEscada1
+    100010: DegrauEscada10
+    100012: DegrauEscada11
+    100014: DegrauEscada12
+    100016: DegrauEscada13
+    100018: DegrauEscada14
+    100020: DegrauEscada2
+    100022: DegrauEscada3
+    100024: DegrauEscada4
+    100026: DegrauEscada5
+    100028: DegrauEscada6
+    100030: DegrauEscada7
+    100032: DegrauEscada8
+    100034: DegrauEscada9
+    100036: Escada
+    100038: EstacaGrade1
+    100040: EstacaGrade1 1
+    100042: EstacaGrade1 10
+    100044: EstacaGrade1 11
+    100046: EstacaGrade1 12
+    100048: EstacaGrade1 13
+    100050: EstacaGrade1 14
+    100052: EstacaGrade1 15
+    100054: EstacaGrade1 16
+    100056: EstacaGrade1 17
+    100058: EstacaGrade1 18
+    100060: EstacaGrade1 19
+    100062: EstacaGrade1 2
+    100064: EstacaGrade1 20
+    100066: EstacaGrade1 21
+    100068: EstacaGrade1 22
+    100070: EstacaGrade1 23
+    100072: EstacaGrade1 24
+    100074: EstacaGrade1 25
+    100076: EstacaGrade1 26
+    100078: EstacaGrade1 27
+    100080: EstacaGrade1 28
+    100082: EstacaGrade1 29
+    100084: EstacaGrade1 3
+    100086: EstacaGrade1 30
+    100088: EstacaGrade1 31
+    100090: EstacaGrade1 32
+    100092: EstacaGrade1 33
+    100094: EstacaGrade1 34
+    100096: EstacaGrade1 35
+    100098: EstacaGrade1 36
+    100100: EstacaGrade1 37
+    100102: EstacaGrade1 38
+    100104: EstacaGrade1 39
+    100106: EstacaGrade1 4
+    100108: EstacaGrade1 40
+    100110: EstacaGrade1 41
+    100112: EstacaGrade1 42
+    100114: EstacaGrade1 43
+    100116: EstacaGrade1 44
+    100118: EstacaGrade1 45
+    100120: EstacaGrade1 46
+    100122: EstacaGrade1 47
+    100124: EstacaGrade1 48
+    100126: EstacaGrade1 49
+    100128: EstacaGrade1 5
+    100130: EstacaGrade1 50
+    100132: EstacaGrade1 51
+    100134: EstacaGrade1 52
+    100136: EstacaGrade1 53
+    100138: EstacaGrade1 54
+    100140: EstacaGrade1 55
+    100142: EstacaGrade1 56
+    100144: EstacaGrade1 57
+    100146: EstacaGrade1 58
+    100148: EstacaGrade1 59
+    100150: EstacaGrade1 6
+    100152: EstacaGrade1 7
+    100154: EstacaGrade1 8
+    100156: EstacaGrade1 9
+    100158: EstacaGrade2
+    100160: EstacaGrade2 1
+    100162: EstacaGrade2 2
+    100164: EstacaGrade2 3
+    100166: EstacaGrade2 4
+    100168: EstacaGrade2 5
+    100170: EstacaGrade2 6
+    100172: EstacaGrade3
+    100174: EstacaGrade3 1
+    100176: EstacaGrade3 2
+    100178: EstacaGrade3 3
+    100180: EstacaGrade3 4
+    100182: EstacaGrade3 5
+    100184: EstacaGrade3 6
+    100186: EstacaGrade4
+    100188: EstacaGrade4 1
+    100190: EstacaGrade4 2
+    100192: EstacaGrade4 3
+    100194: EstacaGrade4 4
+    100196: EstacaGrade4 5
+    100198: EstacaGrade4 6
+    100200: Fundo
+    100202: Fundo 1
+    100204: Fundo 2
+    100206: Fundo 3
+    100208: Fundo 4
+    100210: Fundo 5
+    100212: Fundo 6
+    100214: Fundo 7
+    100216: Fundo 8
+    100218: Grade1
+    100220: Grade10
+    100222: Grade11
+    100224: Grade12
+    100226: Grade13
+    100228: Grade14
+    100230: Grade15
+    100232: Grade16
+    100234: Grade19
+    100236: Grade2
+    100238: Grade20
+    100240: Grade21
+    100242: Grade22
+    100244: Grade23
+    100246: Grade24
+    100248: Grade25
+    100250: Grade26
+    100252: Grade27
+    100254: Grade28
+    100256: Grade29
+    100258: Grade3
+    100260: Grade30
+    100262: Grade31
+    100264: Grade32
+    100266: Grade33
+    100268: Grade34
+    100270: Grade35
+    100272: Grade36
+    100274: Grade37
+    100276: Grade38
+    100278: Grade39
+    100280: Grade4
+    100282: Grade40
+    100284: Grade41
+    100286: Grade42
+    100288: Grade43
+    100290: Grade44
+    100292: Grade45
+    100294: Grade46
+    100296: Grade47
+    100298: Grade48
+    100300: Grade49
+    100302: Grade5
+    100304: Grade50
+    100306: Grade51
+    100308: Grade52
+    100310: Grade53
+    100312: Grade54
+    100314: Grade55
+    100316: Grade56
+    100318: Grade57
+    100320: Grade58
+    100322: Grade6
+    100324: Grade7
+    100326: Grade8
+    100328: Grade9
+    100330: GradeInferior
+    100332: GradeInferior 1
+    100334: GradeInferior 10
+    100336: GradeInferior 11
+    100338: GradeInferior 12
+    100340: GradeInferior 13
+    100342: GradeInferior 14
+    100344: GradeInferior 15
+    100346: GradeInferior 16
+    100348: GradeInferior 17
+    100350: GradeInferior 18
+    100352: GradeInferior 19
+    100354: GradeInferior 2
+    100356: GradeInferior 20
+    100358: GradeInferior 21
+    100360: GradeInferior 22
+    100362: GradeInferior 23
+    100364: GradeInferior 24
+    100366: GradeInferior 25
+    100368: GradeInferior 26
+    100370: GradeInferior 27
+    100372: GradeInferior 28
+    100374: GradeInferior 29
+    100376: GradeInferior 3
+    100378: GradeInferior 30
+    100380: GradeInferior 31
+    100382: GradeInferior 32
+    100384: GradeInferior 33
+    100386: GradeInferior 34
+    100388: GradeInferior 35
+    100390: GradeInferior 36
+    100392: GradeInferior 37
+    100394: GradeInferior 38
+    100396: GradeInferior 39
+    100398: GradeInferior 4
+    100400: GradeInferior 40
+    100402: GradeInferior 41
+    100404: GradeInferior 42
+    100406: GradeInferior 43
+    100408: GradeInferior 44
+    100410: GradeInferior 45
+    100412: GradeInferior 46
+    100414: GradeInferior 47
+    100416: GradeInferior 48
+    100418: GradeInferior 49
+    100420: GradeInferior 5
+    100422: GradeInferior 50
+    100424: GradeInferior 51
+    100426: GradeInferior 52
+    100428: GradeInferior 53
+    100430: GradeInferior 54
+    100432: GradeInferior 55
+    100434: GradeInferior 56
+    100436: GradeInferior 57
+    100438: GradeInferior 58
+    100440: GradeInferior 59
+    100442: GradeInferior 6
+    100444: GradeInferior 60
+    100446: GradeInferior 7
+    100448: GradeInferior 8
+    100450: GradeInferior 9
+    100452: GradeInferior1
+    100454: GradeInferior1 1
+    100456: GradeInferior1 2
+    100458: GradeInferior1 3
+    100460: GradeInferior1 4
+    100462: GradeInferior1 5
+    100464: GradeInferior1 6
+    100466: GradeInferior2
+    100468: GradeInferior2 1
+    100470: GradeInferior2 2
+    100472: GradeInferior2 3
+    100474: GradeInferior2 4
+    100476: GradeInferior2 5
+    100478: GradeInferior2 6
+    100480: GradeInferior3
+    100482: GradeInferior3 1
+    100484: GradeInferior3 2
+    100486: GradeInferior3 3
+    100488: GradeInferior3 4
+    100490: GradeInferior3 5
+    100492: GradeInferior3 6
+    100494: Grades
+    100496: GradeSuperior
+    100498: GradeSuperior 1
+    100500: GradeSuperior 10
+    100502: GradeSuperior 11
+    100504: GradeSuperior 12
+    100506: GradeSuperior 13
+    100508: GradeSuperior 14
+    100510: GradeSuperior 15
+    100512: GradeSuperior 16
+    100514: GradeSuperior 17
+    100516: GradeSuperior 18
+    100518: GradeSuperior 19
+    100520: GradeSuperior 2
+    100522: GradeSuperior 20
+    100524: GradeSuperior 21
+    100526: GradeSuperior 22
+    100528: GradeSuperior 23
+    100530: GradeSuperior 24
+    100532: GradeSuperior 25
+    100534: GradeSuperior 26
+    100536: GradeSuperior 27
+    100538: GradeSuperior 28
+    100540: GradeSuperior 29
+    100542: GradeSuperior 3
+    100544: GradeSuperior 30
+    100546: GradeSuperior 31
+    100548: GradeSuperior 32
+    100550: GradeSuperior 33
+    100552: GradeSuperior 34
+    100554: GradeSuperior 35
+    100556: GradeSuperior 36
+    100558: GradeSuperior 37
+    100560: GradeSuperior 38
+    100562: GradeSuperior 39
+    100564: GradeSuperior 4
+    100566: GradeSuperior 40
+    100568: GradeSuperior 41
+    100570: GradeSuperior 42
+    100572: GradeSuperior 43
+    100574: GradeSuperior 44
+    100576: GradeSuperior 45
+    100578: GradeSuperior 46
+    100580: GradeSuperior 47
+    100582: GradeSuperior 48
+    100584: GradeSuperior 49
+    100586: GradeSuperior 5
+    100588: GradeSuperior 50
+    100590: GradeSuperior 51
+    100592: GradeSuperior 52
+    100594: GradeSuperior 53
+    100596: GradeSuperior 54
+    100598: GradeSuperior 55
+    100600: GradeSuperior 56
+    100602: GradeSuperior 57
+    100604: GradeSuperior 58
+    100606: GradeSuperior 59
+    100608: GradeSuperior 6
+    100610: GradeSuperior 60
+    100612: GradeSuperior 7
+    100614: GradeSuperior 8
+    100616: GradeSuperior 9
+    100618: GradeSuperior1
+    100620: GradeSuperior1 1
+    100622: GradeSuperior1 2
+    100624: GradeSuperior1 3
+    100626: GradeSuperior1 4
+    100628: GradeSuperior1 5
+    100630: GradeSuperior1 6
+    100632: GradeSuperior2
+    100634: GradeSuperior2 1
+    100636: GradeSuperior2 2
+    100638: GradeSuperior2 3
+    100640: GradeSuperior2 4
+    100642: GradeSuperior2 5
+    100644: GradeSuperior2 6
+    100646: GradeSuperior3
+    100648: GradeSuperior3 1
+    100650: GradeSuperior3 2
+    100652: GradeSuperior3 3
+    100654: GradeSuperior3 4
+    100656: GradeSuperior3 5
+    100658: GradeSuperior3 6
+    100660: group1
+    100662: group2
+    100664: JanelaDupla
+    100666: JanelaDupla1
+    100668: JanelaDupla2
+    100670: JanelaDupla3
+    100672: JanelaDupla4
+    100674: JanelaDupla5
+    100676: JanelaDupla6
+    100678: JanelaUnica
+    100680: JanelaUnica1
+    100682: Lado1
+    100684: Lado1 1
+    100686: Lado1 2
+    100688: Lado1 3
+    100690: Lado1 4
+    100692: Lado1 5
+    100694: Lado1 6
+    100696: Lado2
+    100698: Lado2 1
+    100700: Lado2 2
+    100702: Lado2 3
+    100704: Lado2 4
+    100706: Lado2 5
+    100708: Lado2 6
+    100710: LadoTelhado
+    100712: LadoTelhado 1
+    100714: LadoTelhado 2
+    100716: LadoTelhado 3
+    100718: LadoTelhado1
+    100720: LadoTelhado1 1
+    100722: LadoTelhado1 2
+    100724: LadoTelhado2
+    100726: LadoUnico
+    100728: LadoUnico 1
+    100730: ParedesCasa
+    100732: PartePonte1
+    100734: PartePonte2
+    100736: PartePonte3
+    100738: PartePonte4
+    100740: PartePonte5
+    100742: PartePonte6
+    100744: PartePonte7
+    100746: pCube1
+    100748: pCube1 1
+    100750: pCube2
+    100752: pCube2 1
+    100754: pCube2 2
+    100756: pCube2 3
+    100758: pCube2 4
+    100760: pCube2 5
+    100762: pCube2 6
+    100764: PilastrasDiagonais
+    100766: PilastrasDiagonais 1
+    100768: PilastrasDiagonais1
+    100770: PilastrasDiagonais10
+    100772: PilastrasDiagonais11
+    100774: PilastrasDiagonais12
+    100776: PilastrasDiagonais13
+    100778: PilastrasDiagonais14
+    100780: PilastrasDiagonais15
+    100782: PilastrasDiagonais16
+    100784: PilastrasDiagonais17
+    100786: PilastrasDiagonais18
+    100788: PilastrasDiagonais19
+    100790: PilastrasDiagonais2
+    100792: PilastrasDiagonais20
+    100794: PilastrasDiagonais21
+    100796: PilastrasDiagonais22
+    100798: PilastrasDiagonais23
+    100800: PilastrasDiagonais24
+    100802: PilastrasDiagonais25
+    100804: PilastrasDiagonais26
+    100806: PilastrasDiagonais27
+    100808: PilastrasDiagonais28
+    100810: PilastrasDiagonais29
+    100812: PilastrasDiagonais3
+    100814: PilastrasDiagonais4
+    100816: PilastrasDiagonais5
+    100818: PilastrasDiagonais6
+    100820: PilastrasDiagonais7
+    100822: PilastrasDiagonais8
+    100824: PilastrasDiagonais9
+    100826: PilastrasHorizntais
+    100828: PilastrasVerticais
+    100830: PilastraTelhado
+    100832: PilastraTelhado 1
+    100834: PilastraTelhado 2
+    100836: PilastraTelhado 3
+    100838: PilastraTelhado 4
+    100840: PilastraTelhado 5
+    100842: PilastraTelhado 6
+    100844: PilastraTelhado1
+    100846: PilastraTelhado1 1
+    100848: PilastraTelhado1 2
+    100850: PilastraTelhado1 3
+    100852: PilastraTelhado1 4
+    100854: PilastraTelhado1 5
+    100856: PilastraTelhado1 6
+    100858: PilastraTelhado10
+    100860: PilastraTelhado10 1
+    100862: PilastraTelhado11
+    100864: PilastraTelhado11 1
+    100866: PilastraTelhado12
+    100868: PilastraTelhado12 1
+    100870: PilastraTelhado13
+    100872: PilastraTelhado13 1
+    100874: PilastraTelhado14
+    100876: PilastraTelhado14 1
+    100878: PilastraTelhado14 2
+    100880: PilastraTelhado14 3
+    100882: PilastraTelhado14 4
+    100884: PilastraTelhado14 5
+    100886: PilastraTelhado14 6
+    100888: PilastraTelhado15
+    100890: PilastraTelhado15 1
+    100892: PilastraTelhado15 2
+    100894: PilastraTelhado15 3
+    100896: PilastraTelhado15 4
+    100898: PilastraTelhado15 5
+    100900: PilastraTelhado15 6
+    100902: PilastraTelhado16
+    100904: PilastraTelhado16 1
+    100906: PilastraTelhado16 2
+    100908: PilastraTelhado16 3
+    100910: PilastraTelhado16 4
+    100912: PilastraTelhado16 5
+    100914: PilastraTelhado16 6
+    100916: PilastraTelhado17
+    100918: PilastraTelhado17 1
+    100920: PilastraTelhado17 2
+    100922: PilastraTelhado17 3
+    100924: PilastraTelhado17 4
+    100926: PilastraTelhado17 5
+    100928: PilastraTelhado17 6
+    100930: PilastraTelhado18
+    100932: PilastraTelhado18 1
+    100934: PilastraTelhado18 2
+    100936: PilastraTelhado18 3
+    100938: PilastraTelhado18 4
+    100940: PilastraTelhado18 5
+    100942: PilastraTelhado18 6
+    100944: PilastraTelhado19
+    100946: PilastraTelhado19 1
+    100948: PilastraTelhado19 2
+    100950: PilastraTelhado19 3
+    100952: PilastraTelhado19 4
+    100954: PilastraTelhado19 5
+    100956: PilastraTelhado19 6
+    100958: PilastraTelhado2
+    100960: PilastraTelhado2 1
+    100962: PilastraTelhado2 2
+    100964: PilastraTelhado2 3
+    100966: PilastraTelhado2 4
+    100968: PilastraTelhado2 5
+    100970: PilastraTelhado2 6
+    100972: PilastraTelhado20
+    100974: PilastraTelhado20 1
+    100976: PilastraTelhado20 2
+    100978: PilastraTelhado20 3
+    100980: PilastraTelhado20 4
+    100982: PilastraTelhado20 5
+    100984: PilastraTelhado20 6
+    100986: PilastraTelhado22
+    100988: PilastraTelhado22 1
+    100990: PilastraTelhado22 2
+    100992: PilastraTelhado22 3
+    100994: PilastraTelhado22 4
+    100996: PilastraTelhado22 5
+    100998: PilastraTelhado22 6
+    101000: PilastraTelhado23
+    101002: PilastraTelhado23 1
+    101004: PilastraTelhado23 2
+    101006: PilastraTelhado23 3
+    101008: PilastraTelhado23 4
+    101010: PilastraTelhado23 5
+    101012: PilastraTelhado23 6
+    101014: PilastraTelhado24
+    101016: PilastraTelhado24 1
+    101018: PilastraTelhado24 2
+    101020: PilastraTelhado24 3
+    101022: PilastraTelhado24 4
+    101024: PilastraTelhado24 5
+    101026: PilastraTelhado24 6
+    101028: PilastraTelhado25
+    101030: PilastraTelhado25 1
+    101032: PilastraTelhado25 2
+    101034: PilastraTelhado25 3
+    101036: PilastraTelhado25 4
+    101038: PilastraTelhado25 5
+    101040: PilastraTelhado25 6
+    101042: PilastraTelhado26
+    101044: PilastraTelhado26 1
+    101046: PilastraTelhado26 2
+    101048: PilastraTelhado26 3
+    101050: PilastraTelhado26 4
+    101052: PilastraTelhado26 5
+    101054: PilastraTelhado26 6
+    101056: PilastraTelhado3
+    101058: PilastraTelhado3 1
+    101060: PilastraTelhado3 2
+    101062: PilastraTelhado4
+    101064: PilastraTelhado4 1
+    101066: PilastraTelhado4 2
+    101068: PilastraTelhado4 3
+    101070: PilastraTelhado4 4
+    101072: PilastraTelhado4 5
+    101074: PilastraTelhado4 6
+    101076: PilastraTelhado5
+    101078: PilastraTelhado5 1
+    101080: PilastraTelhado5 2
+    101082: PilastraTelhado5 3
+    101084: PilastraTelhado5 4
+    101086: PilastraTelhado6
+    101088: PilastraTelhado6 1
+    101090: PilastraTelhado7
+    101092: PilastraTelhado7 1
+    101094: PilastraTelhado8
+    101096: PilastraTelhado8 1
+    101098: PilastraTelhado9
+    101100: PilastraTelhado9 1
+    101102: PilastraVertical
+    101104: PilastraVertical10
+    101106: PilastraVertical11
+    101108: PilastraVertical12
+    101110: PilastraVertical13
+    101112: PilastraVertical14
+    101114: PilastraVertical15
+    101116: PilastraVertical16
+    101118: PilastraVertical17
+    101120: PilastraVertical18
+    101122: PilastraVertical19
+    101124: PilastraVertical20
+    101126: PilastraVertical21
+    101128: PilastraVertical22
+    101130: PilastraVertical23
+    101132: PilastraVertical23 1
+    101134: PilastraVertical23 2
+    101136: PilastraVertical23 3
+    101138: PilastraVertical23 4
+    101140: PilastraVertical23 5
+    101142: PilastraVertical23 6
+    101144: PilastraVertical24
+    101146: PilastraVertical24 1
+    101148: PilastraVertical24 2
+    101150: PilastraVertical24 3
+    101152: PilastraVertical24 4
+    101154: PilastraVertical24 5
+    101156: PilastraVertical24 6
+    101158: PilastraVertical3
+    101160: PilastraVertical37
+    101162: PilastraVertical38
+    101164: PilastraVertical39
+    101166: PilastraVertical4
+    101168: PilastraVertical40
+    101170: PilastraVertical41
+    101172: PilastraVertical42
+    101174: PilastraVertical43
+    101176: PilastraVertical44
+    101178: PilastraVertical45
+    101180: PilastraVertical46
+    101182: PilastraVertical47
+    101184: PilastraVertical48
+    101186: PilastraVertical49
+    101188: PilastraVertical5
+    101190: PilastraVertical51
+    101192: PilastraVertical53
+    101194: PilastraVertical54
+    101196: PilastraVertical55
+    101198: PilastraVertical56
+    101200: PilastraVertical6
+    101202: PilastraVertical67
+    101204: PilastraVertical67 1
+    101206: PilastraVertical67 2
+    101208: PilastraVertical67 3
+    101210: PilastraVertical67 4
+    101212: PilastraVertical67 5
+    101214: PilastraVertical67 6
+    101216: PilastraVertical68
+    101218: PilastraVertical68 1
+    101220: PilastraVertical68 2
+    101222: PilastraVertical68 3
+    101224: PilastraVertical68 4
+    101226: PilastraVertical68 5
+    101228: PilastraVertical68 6
+    101230: PilastraVertical69
+    101232: PilastraVertical69 1
+    101234: PilastraVertical69 10
+    101236: PilastraVertical69 11
+    101238: PilastraVertical69 12
+    101240: PilastraVertical69 13
+    101242: PilastraVertical69 14
+    101244: PilastraVertical69 15
+    101246: PilastraVertical69 16
+    101248: PilastraVertical69 17
+    101250: PilastraVertical69 18
+    101252: PilastraVertical69 19
+    101254: PilastraVertical69 2
+    101256: PilastraVertical69 20
+    101258: PilastraVertical69 21
+    101260: PilastraVertical69 22
+    101262: PilastraVertical69 3
+    101264: PilastraVertical69 4
+    101266: PilastraVertical69 5
+    101268: PilastraVertical69 6
+    101270: PilastraVertical69 7
+    101272: PilastraVertical69 8
+    101274: PilastraVertical69 9
+    101276: PilastraVertical7
+    101278: PilastraVertical70
+    101280: PilastraVertical70 1
+    101282: PilastraVertical70 10
+    101284: PilastraVertical70 11
+    101286: PilastraVertical70 12
+    101288: PilastraVertical70 13
+    101290: PilastraVertical70 14
+    101292: PilastraVertical70 15
+    101294: PilastraVertical70 16
+    101296: PilastraVertical70 17
+    101298: PilastraVertical70 18
+    101300: PilastraVertical70 19
+    101302: PilastraVertical70 2
+    101304: PilastraVertical70 20
+    101306: PilastraVertical70 21
+    101308: PilastraVertical70 22
+    101310: PilastraVertical70 23
+    101312: PilastraVertical70 24
+    101314: PilastraVertical70 25
+    101316: PilastraVertical70 26
+    101318: PilastraVertical70 27
+    101320: PilastraVertical70 28
+    101322: PilastraVertical70 29
+    101324: PilastraVertical70 3
+    101326: PilastraVertical70 30
+    101328: PilastraVertical70 31
+    101330: PilastraVertical70 32
+    101332: PilastraVertical70 33
+    101334: PilastraVertical70 4
+    101336: PilastraVertical70 5
+    101338: PilastraVertical70 6
+    101340: PilastraVertical70 7
+    101342: PilastraVertical70 8
+    101344: PilastraVertical70 9
+    101346: PilastraVertical71
+    101348: PilastraVertical71 1
+    101350: PilastraVertical71 2
+    101352: PilastraVertical71 3
+    101354: PilastraVertical71 4
+    101356: PilastraVertical71 5
+    101358: PilastraVertical71 6
+    101360: PilastraVertical71 7
+    101362: PilastraVertical72
+    101364: PilastraVertical72 1
+    101366: PilastraVertical72 2
+    101368: PilastraVertical73
+    101370: PilastraVertical74
+    101372: PilastraVertical75
+    101374: PilastraVertical76
+    101376: PilastraVertical77
+    101378: PilastraVertical78
+    101380: PilastraVertical79
+    101382: PilastraVertical8
+    101384: PilastraVertical80
+    101386: PilastraVertical81
+    101388: PilastraVertical82
+    101390: PilastraVertical83
+    101392: PilastraVertical83 1
+    101394: PilastraVertical83 2
+    101396: PilastraVertical83 3
+    101398: PilastraVertical83 4
+    101400: PilastraVertical83 5
+    101402: PilastraVertical83 6
+    101404: PilastraVertical84
+    101406: PilastraVertical84 1
+    101408: PilastraVertical84 2
+    101410: PilastraVertical84 3
+    101412: PilastraVertical84 4
+    101414: PilastraVertical84 5
+    101416: PilastraVertical84 6
+    101418: PilastraVertical85
+    101420: PilastraVertical85 1
+    101422: PilastraVertical85 2
+    101424: PilastraVertical85 3
+    101426: PilastraVertical85 4
+    101428: PilastraVertical85 5
+    101430: PilastraVertical85 6
+    101432: PilastraVertical86
+    101434: PilastraVertical86 1
+    101436: PilastraVertical86 2
+    101438: PilastraVertical86 3
+    101440: PilastraVertical86 4
+    101442: PilastraVertical86 5
+    101444: PilastraVertical86 6
+    101446: PilastraVertical87
+    101448: PilastraVertical87 1
+    101450: PilastraVertical87 2
+    101452: PilastraVertical87 3
+    101454: PilastraVertical87 4
+    101456: PilastraVertical87 5
+    101458: PilastraVertical87 6
+    101460: PilastraVertical88
+    101462: PilastraVertical88 1
+    101464: PilastraVertical88 2
+    101466: PilastraVertical88 3
+    101468: PilastraVertical88 4
+    101470: PilastraVertical88 5
+    101472: PilastraVertical88 6
+    101474: PilastraVertical89
+    101476: PilastraVertical89 1
+    101478: PilastraVertical89 2
+    101480: PilastraVertical89 3
+    101482: PilastraVertical89 4
+    101484: PilastraVertical89 5
+    101486: PilastraVertical89 6
+    101488: PilastraVertical9
+    101490: PilastraVertical90
+    101492: PilastraVertical90 1
+    101494: PilastraVertical90 2
+    101496: PilastraVertical90 3
+    101498: PilastraVertical90 4
+    101500: PilastraVertical90 5
+    101502: PilastraVertical90 6
+    101504: PilastraVertical91
+    101506: PilastraVertical92
+    101508: PisoCasa
+    101510: PisoCasa1
+    101512: PisoPonte1
+    101514: PisoPonte1 1
+    101516: PisoPonte1 2
+    101518: PisoPonte1 3
+    101520: PisoPonte1 4
+    101522: PisoPonte1 5
+    101524: PisoPonte1 6
+    101526: PisoTrapiche
+    101528: Porta
+    101530: Porta 1
+    101532: Porta 2
+    101534: Porta 3
+    101536: Porta2
+    101538: Porta3
+    101540: Portas_e_Janelas
+    101542: Telhado
+    101544: Telhado 1
+    101546: Telhado1
+    101548: Telhado2
+    101550: Telhado3
+    101552: TelhadoPalha1
+    101554: TelhadoPalha1 1
+    101556: TelhadoPalha1 2
+    101558: TelhadoPalha1 3
+    101560: TelhadoPalha1 4
+    101562: TelhadoPalha1 5
+    101564: TelhadoPalha1 6
+    101566: TelhadoPalha1 7
+    101568: TelhadoPalha1 8
+    101570: TelhadoPalha2
+    101572: TelhadoPalha2 1
+    101574: TelhadoPalha2 2
+    101576: TelhadoPalha2 3
+    101578: TelhadoPalha2 4
+    101580: TelhadoPalha2 5
+    101582: TelhadoPalha2 6
+    101584: TelhadoPalha3
+    101586: TelhadoPalha3 1
+    101588: TelhadoPalha3 2
+    101590: TelhadoPalha3 3
+    101592: TelhadoPalha3 4
+    101594: TelhadoPalha3 5
+    101596: TelhadoPalha3 6
+    101598: TelhadoPalha4
+    101600: TelhadoPalha5
+    101602: TelhadoPalha6
+    101604: TelhadoPalha7
+    101606: TelhadoPalha8
+    101608: //RootNode
+    400000: Batente
+    400002: Batente 1
+    400004: Batente 2
+    400006: DegrauEscada
+    400008: DegrauEscada1
+    400010: DegrauEscada10
+    400012: DegrauEscada11
+    400014: DegrauEscada12
+    400016: DegrauEscada13
+    400018: DegrauEscada14
+    400020: DegrauEscada2
+    400022: DegrauEscada3
+    400024: DegrauEscada4
+    400026: DegrauEscada5
+    400028: DegrauEscada6
+    400030: DegrauEscada7
+    400032: DegrauEscada8
+    400034: DegrauEscada9
+    400036: Escada
+    400038: EstacaGrade1
+    400040: EstacaGrade1 1
+    400042: EstacaGrade1 10
+    400044: EstacaGrade1 11
+    400046: EstacaGrade1 12
+    400048: EstacaGrade1 13
+    400050: EstacaGrade1 14
+    400052: EstacaGrade1 15
+    400054: EstacaGrade1 16
+    400056: EstacaGrade1 17
+    400058: EstacaGrade1 18
+    400060: EstacaGrade1 19
+    400062: EstacaGrade1 2
+    400064: EstacaGrade1 20
+    400066: EstacaGrade1 21
+    400068: EstacaGrade1 22
+    400070: EstacaGrade1 23
+    400072: EstacaGrade1 24
+    400074: EstacaGrade1 25
+    400076: EstacaGrade1 26
+    400078: EstacaGrade1 27
+    400080: EstacaGrade1 28
+    400082: EstacaGrade1 29
+    400084: EstacaGrade1 3
+    400086: EstacaGrade1 30
+    400088: EstacaGrade1 31
+    400090: EstacaGrade1 32
+    400092: EstacaGrade1 33
+    400094: EstacaGrade1 34
+    400096: EstacaGrade1 35
+    400098: EstacaGrade1 36
+    400100: EstacaGrade1 37
+    400102: EstacaGrade1 38
+    400104: EstacaGrade1 39
+    400106: EstacaGrade1 4
+    400108: EstacaGrade1 40
+    400110: EstacaGrade1 41
+    400112: EstacaGrade1 42
+    400114: EstacaGrade1 43
+    400116: EstacaGrade1 44
+    400118: EstacaGrade1 45
+    400120: EstacaGrade1 46
+    400122: EstacaGrade1 47
+    400124: EstacaGrade1 48
+    400126: EstacaGrade1 49
+    400128: EstacaGrade1 5
+    400130: EstacaGrade1 50
+    400132: EstacaGrade1 51
+    400134: EstacaGrade1 52
+    400136: EstacaGrade1 53
+    400138: EstacaGrade1 54
+    400140: EstacaGrade1 55
+    400142: EstacaGrade1 56
+    400144: EstacaGrade1 57
+    400146: EstacaGrade1 58
+    400148: EstacaGrade1 59
+    400150: EstacaGrade1 6
+    400152: EstacaGrade1 7
+    400154: EstacaGrade1 8
+    400156: EstacaGrade1 9
+    400158: EstacaGrade2
+    400160: EstacaGrade2 1
+    400162: EstacaGrade2 2
+    400164: EstacaGrade2 3
+    400166: EstacaGrade2 4
+    400168: EstacaGrade2 5
+    400170: EstacaGrade2 6
+    400172: EstacaGrade3
+    400174: EstacaGrade3 1
+    400176: EstacaGrade3 2
+    400178: EstacaGrade3 3
+    400180: EstacaGrade3 4
+    400182: EstacaGrade3 5
+    400184: EstacaGrade3 6
+    400186: EstacaGrade4
+    400188: EstacaGrade4 1
+    400190: EstacaGrade4 2
+    400192: EstacaGrade4 3
+    400194: EstacaGrade4 4
+    400196: EstacaGrade4 5
+    400198: EstacaGrade4 6
+    400200: Fundo
+    400202: Fundo 1
+    400204: Fundo 2
+    400206: Fundo 3
+    400208: Fundo 4
+    400210: Fundo 5
+    400212: Fundo 6
+    400214: Fundo 7
+    400216: Fundo 8
+    400218: Grade1
+    400220: Grade10
+    400222: Grade11
+    400224: Grade12
+    400226: Grade13
+    400228: Grade14
+    400230: Grade15
+    400232: Grade16
+    400234: Grade19
+    400236: Grade2
+    400238: Grade20
+    400240: Grade21
+    400242: Grade22
+    400244: Grade23
+    400246: Grade24
+    400248: Grade25
+    400250: Grade26
+    400252: Grade27
+    400254: Grade28
+    400256: Grade29
+    400258: Grade3
+    400260: Grade30
+    400262: Grade31
+    400264: Grade32
+    400266: Grade33
+    400268: Grade34
+    400270: Grade35
+    400272: Grade36
+    400274: Grade37
+    400276: Grade38
+    400278: Grade39
+    400280: Grade4
+    400282: Grade40
+    400284: Grade41
+    400286: Grade42
+    400288: Grade43
+    400290: Grade44
+    400292: Grade45
+    400294: Grade46
+    400296: Grade47
+    400298: Grade48
+    400300: Grade49
+    400302: Grade5
+    400304: Grade50
+    400306: Grade51
+    400308: Grade52
+    400310: Grade53
+    400312: Grade54
+    400314: Grade55
+    400316: Grade56
+    400318: Grade57
+    400320: Grade58
+    400322: Grade6
+    400324: Grade7
+    400326: Grade8
+    400328: Grade9
+    400330: GradeInferior
+    400332: GradeInferior 1
+    400334: GradeInferior 10
+    400336: GradeInferior 11
+    400338: GradeInferior 12
+    400340: GradeInferior 13
+    400342: GradeInferior 14
+    400344: GradeInferior 15
+    400346: GradeInferior 16
+    400348: GradeInferior 17
+    400350: GradeInferior 18
+    400352: GradeInferior 19
+    400354: GradeInferior 2
+    400356: GradeInferior 20
+    400358: GradeInferior 21
+    400360: GradeInferior 22
+    400362: GradeInferior 23
+    400364: GradeInferior 24
+    400366: GradeInferior 25
+    400368: GradeInferior 26
+    400370: GradeInferior 27
+    400372: GradeInferior 28
+    400374: GradeInferior 29
+    400376: GradeInferior 3
+    400378: GradeInferior 30
+    400380: GradeInferior 31
+    400382: GradeInferior 32
+    400384: GradeInferior 33
+    400386: GradeInferior 34
+    400388: GradeInferior 35
+    400390: GradeInferior 36
+    400392: GradeInferior 37
+    400394: GradeInferior 38
+    400396: GradeInferior 39
+    400398: GradeInferior 4
+    400400: GradeInferior 40
+    400402: GradeInferior 41
+    400404: GradeInferior 42
+    400406: GradeInferior 43
+    400408: GradeInferior 44
+    400410: GradeInferior 45
+    400412: GradeInferior 46
+    400414: GradeInferior 47
+    400416: GradeInferior 48
+    400418: GradeInferior 49
+    400420: GradeInferior 5
+    400422: GradeInferior 50
+    400424: GradeInferior 51
+    400426: GradeInferior 52
+    400428: GradeInferior 53
+    400430: GradeInferior 54
+    400432: GradeInferior 55
+    400434: GradeInferior 56
+    400436: GradeInferior 57
+    400438: GradeInferior 58
+    400440: GradeInferior 59
+    400442: GradeInferior 6
+    400444: GradeInferior 60
+    400446: GradeInferior 7
+    400448: GradeInferior 8
+    400450: GradeInferior 9
+    400452: GradeInferior1
+    400454: GradeInferior1 1
+    400456: GradeInferior1 2
+    400458: GradeInferior1 3
+    400460: GradeInferior1 4
+    400462: GradeInferior1 5
+    400464: GradeInferior1 6
+    400466: GradeInferior2
+    400468: GradeInferior2 1
+    400470: GradeInferior2 2
+    400472: GradeInferior2 3
+    400474: GradeInferior2 4
+    400476: GradeInferior2 5
+    400478: GradeInferior2 6
+    400480: GradeInferior3
+    400482: GradeInferior3 1
+    400484: GradeInferior3 2
+    400486: GradeInferior3 3
+    400488: GradeInferior3 4
+    400490: GradeInferior3 5
+    400492: GradeInferior3 6
+    400494: Grades
+    400496: GradeSuperior
+    400498: GradeSuperior 1
+    400500: GradeSuperior 10
+    400502: GradeSuperior 11
+    400504: GradeSuperior 12
+    400506: GradeSuperior 13
+    400508: GradeSuperior 14
+    400510: GradeSuperior 15
+    400512: GradeSuperior 16
+    400514: GradeSuperior 17
+    400516: GradeSuperior 18
+    400518: GradeSuperior 19
+    400520: GradeSuperior 2
+    400522: GradeSuperior 20
+    400524: GradeSuperior 21
+    400526: GradeSuperior 22
+    400528: GradeSuperior 23
+    400530: GradeSuperior 24
+    400532: GradeSuperior 25
+    400534: GradeSuperior 26
+    400536: GradeSuperior 27
+    400538: GradeSuperior 28
+    400540: GradeSuperior 29
+    400542: GradeSuperior 3
+    400544: GradeSuperior 30
+    400546: GradeSuperior 31
+    400548: GradeSuperior 32
+    400550: GradeSuperior 33
+    400552: GradeSuperior 34
+    400554: GradeSuperior 35
+    400556: GradeSuperior 36
+    400558: GradeSuperior 37
+    400560: GradeSuperior 38
+    400562: GradeSuperior 39
+    400564: GradeSuperior 4
+    400566: GradeSuperior 40
+    400568: GradeSuperior 41
+    400570: GradeSuperior 42
+    400572: GradeSuperior 43
+    400574: GradeSuperior 44
+    400576: GradeSuperior 45
+    400578: GradeSuperior 46
+    400580: GradeSuperior 47
+    400582: GradeSuperior 48
+    400584: GradeSuperior 49
+    400586: GradeSuperior 5
+    400588: GradeSuperior 50
+    400590: GradeSuperior 51
+    400592: GradeSuperior 52
+    400594: GradeSuperior 53
+    400596: GradeSuperior 54
+    400598: GradeSuperior 55
+    400600: GradeSuperior 56
+    400602: GradeSuperior 57
+    400604: GradeSuperior 58
+    400606: GradeSuperior 59
+    400608: GradeSuperior 6
+    400610: GradeSuperior 60
+    400612: GradeSuperior 7
+    400614: GradeSuperior 8
+    400616: GradeSuperior 9
+    400618: GradeSuperior1
+    400620: GradeSuperior1 1
+    400622: GradeSuperior1 2
+    400624: GradeSuperior1 3
+    400626: GradeSuperior1 4
+    400628: GradeSuperior1 5
+    400630: GradeSuperior1 6
+    400632: GradeSuperior2
+    400634: GradeSuperior2 1
+    400636: GradeSuperior2 2
+    400638: GradeSuperior2 3
+    400640: GradeSuperior2 4
+    400642: GradeSuperior2 5
+    400644: GradeSuperior2 6
+    400646: GradeSuperior3
+    400648: GradeSuperior3 1
+    400650: GradeSuperior3 2
+    400652: GradeSuperior3 3
+    400654: GradeSuperior3 4
+    400656: GradeSuperior3 5
+    400658: GradeSuperior3 6
+    400660: group1
+    400662: group2
+    400664: JanelaDupla
+    400666: JanelaDupla1
+    400668: JanelaDupla2
+    400670: JanelaDupla3
+    400672: JanelaDupla4
+    400674: JanelaDupla5
+    400676: JanelaDupla6
+    400678: JanelaUnica
+    400680: JanelaUnica1
+    400682: Lado1
+    400684: Lado1 1
+    400686: Lado1 2
+    400688: Lado1 3
+    400690: Lado1 4
+    400692: Lado1 5
+    400694: Lado1 6
+    400696: Lado2
+    400698: Lado2 1
+    400700: Lado2 2
+    400702: Lado2 3
+    400704: Lado2 4
+    400706: Lado2 5
+    400708: Lado2 6
+    400710: LadoTelhado
+    400712: LadoTelhado 1
+    400714: LadoTelhado 2
+    400716: LadoTelhado 3
+    400718: LadoTelhado1
+    400720: LadoTelhado1 1
+    400722: LadoTelhado1 2
+    400724: LadoTelhado2
+    400726: LadoUnico
+    400728: LadoUnico 1
+    400730: ParedesCasa
+    400732: PartePonte1
+    400734: PartePonte2
+    400736: PartePonte3
+    400738: PartePonte4
+    400740: PartePonte5
+    400742: PartePonte6
+    400744: PartePonte7
+    400746: pCube1
+    400748: pCube1 1
+    400750: pCube2
+    400752: pCube2 1
+    400754: pCube2 2
+    400756: pCube2 3
+    400758: pCube2 4
+    400760: pCube2 5
+    400762: pCube2 6
+    400764: PilastrasDiagonais
+    400766: PilastrasDiagonais 1
+    400768: PilastrasDiagonais1
+    400770: PilastrasDiagonais10
+    400772: PilastrasDiagonais11
+    400774: PilastrasDiagonais12
+    400776: PilastrasDiagonais13
+    400778: PilastrasDiagonais14
+    400780: PilastrasDiagonais15
+    400782: PilastrasDiagonais16
+    400784: PilastrasDiagonais17
+    400786: PilastrasDiagonais18
+    400788: PilastrasDiagonais19
+    400790: PilastrasDiagonais2
+    400792: PilastrasDiagonais20
+    400794: PilastrasDiagonais21
+    400796: PilastrasDiagonais22
+    400798: PilastrasDiagonais23
+    400800: PilastrasDiagonais24
+    400802: PilastrasDiagonais25
+    400804: PilastrasDiagonais26
+    400806: PilastrasDiagonais27
+    400808: PilastrasDiagonais28
+    400810: PilastrasDiagonais29
+    400812: PilastrasDiagonais3
+    400814: PilastrasDiagonais4
+    400816: PilastrasDiagonais5
+    400818: PilastrasDiagonais6
+    400820: PilastrasDiagonais7
+    400822: PilastrasDiagonais8
+    400824: PilastrasDiagonais9
+    400826: PilastrasHorizntais
+    400828: PilastrasVerticais
+    400830: PilastraTelhado
+    400832: PilastraTelhado 1
+    400834: PilastraTelhado 2
+    400836: PilastraTelhado 3
+    400838: PilastraTelhado 4
+    400840: PilastraTelhado 5
+    400842: PilastraTelhado 6
+    400844: PilastraTelhado1
+    400846: PilastraTelhado1 1
+    400848: PilastraTelhado1 2
+    400850: PilastraTelhado1 3
+    400852: PilastraTelhado1 4
+    400854: PilastraTelhado1 5
+    400856: PilastraTelhado1 6
+    400858: PilastraTelhado10
+    400860: PilastraTelhado10 1
+    400862: PilastraTelhado11
+    400864: PilastraTelhado11 1
+    400866: PilastraTelhado12
+    400868: PilastraTelhado12 1
+    400870: PilastraTelhado13
+    400872: PilastraTelhado13 1
+    400874: PilastraTelhado14
+    400876: PilastraTelhado14 1
+    400878: PilastraTelhado14 2
+    400880: PilastraTelhado14 3
+    400882: PilastraTelhado14 4
+    400884: PilastraTelhado14 5
+    400886: PilastraTelhado14 6
+    400888: PilastraTelhado15
+    400890: PilastraTelhado15 1
+    400892: PilastraTelhado15 2
+    400894: PilastraTelhado15 3
+    400896: PilastraTelhado15 4
+    400898: PilastraTelhado15 5
+    400900: PilastraTelhado15 6
+    400902: PilastraTelhado16
+    400904: PilastraTelhado16 1
+    400906: PilastraTelhado16 2
+    400908: PilastraTelhado16 3
+    400910: PilastraTelhado16 4
+    400912: PilastraTelhado16 5
+    400914: PilastraTelhado16 6
+    400916: PilastraTelhado17
+    400918: PilastraTelhado17 1
+    400920: PilastraTelhado17 2
+    400922: PilastraTelhado17 3
+    400924: PilastraTelhado17 4
+    400926: PilastraTelhado17 5
+    400928: PilastraTelhado17 6
+    400930: PilastraTelhado18
+    400932: PilastraTelhado18 1
+    400934: PilastraTelhado18 2
+    400936: PilastraTelhado18 3
+    400938: PilastraTelhado18 4
+    400940: PilastraTelhado18 5
+    400942: PilastraTelhado18 6
+    400944: PilastraTelhado19
+    400946: PilastraTelhado19 1
+    400948: PilastraTelhado19 2
+    400950: PilastraTelhado19 3
+    400952: PilastraTelhado19 4
+    400954: PilastraTelhado19 5
+    400956: PilastraTelhado19 6
+    400958: PilastraTelhado2
+    400960: PilastraTelhado2 1
+    400962: PilastraTelhado2 2
+    400964: PilastraTelhado2 3
+    400966: PilastraTelhado2 4
+    400968: PilastraTelhado2 5
+    400970: PilastraTelhado2 6
+    400972: PilastraTelhado20
+    400974: PilastraTelhado20 1
+    400976: PilastraTelhado20 2
+    400978: PilastraTelhado20 3
+    400980: PilastraTelhado20 4
+    400982: PilastraTelhado20 5
+    400984: PilastraTelhado20 6
+    400986: PilastraTelhado22
+    400988: PilastraTelhado22 1
+    400990: PilastraTelhado22 2
+    400992: PilastraTelhado22 3
+    400994: PilastraTelhado22 4
+    400996: PilastraTelhado22 5
+    400998: PilastraTelhado22 6
+    401000: PilastraTelhado23
+    401002: PilastraTelhado23 1
+    401004: PilastraTelhado23 2
+    401006: PilastraTelhado23 3
+    401008: PilastraTelhado23 4
+    401010: PilastraTelhado23 5
+    401012: PilastraTelhado23 6
+    401014: PilastraTelhado24
+    401016: PilastraTelhado24 1
+    401018: PilastraTelhado24 2
+    401020: PilastraTelhado24 3
+    401022: PilastraTelhado24 4
+    401024: PilastraTelhado24 5
+    401026: PilastraTelhado24 6
+    401028: PilastraTelhado25
+    401030: PilastraTelhado25 1
+    401032: PilastraTelhado25 2
+    401034: PilastraTelhado25 3
+    401036: PilastraTelhado25 4
+    401038: PilastraTelhado25 5
+    401040: PilastraTelhado25 6
+    401042: PilastraTelhado26
+    401044: PilastraTelhado26 1
+    401046: PilastraTelhado26 2
+    401048: PilastraTelhado26 3
+    401050: PilastraTelhado26 4
+    401052: PilastraTelhado26 5
+    401054: PilastraTelhado26 6
+    401056: PilastraTelhado3
+    401058: PilastraTelhado3 1
+    401060: PilastraTelhado3 2
+    401062: PilastraTelhado4
+    401064: PilastraTelhado4 1
+    401066: PilastraTelhado4 2
+    401068: PilastraTelhado4 3
+    401070: PilastraTelhado4 4
+    401072: PilastraTelhado4 5
+    401074: PilastraTelhado4 6
+    401076: PilastraTelhado5
+    401078: PilastraTelhado5 1
+    401080: PilastraTelhado5 2
+    401082: PilastraTelhado5 3
+    401084: PilastraTelhado5 4
+    401086: PilastraTelhado6
+    401088: PilastraTelhado6 1
+    401090: PilastraTelhado7
+    401092: PilastraTelhado7 1
+    401094: PilastraTelhado8
+    401096: PilastraTelhado8 1
+    401098: PilastraTelhado9
+    401100: PilastraTelhado9 1
+    401102: PilastraVertical
+    401104: PilastraVertical10
+    401106: PilastraVertical11
+    401108: PilastraVertical12
+    401110: PilastraVertical13
+    401112: PilastraVertical14
+    401114: PilastraVertical15
+    401116: PilastraVertical16
+    401118: PilastraVertical17
+    401120: PilastraVertical18
+    401122: PilastraVertical19
+    401124: PilastraVertical20
+    401126: PilastraVertical21
+    401128: PilastraVertical22
+    401130: PilastraVertical23
+    401132: PilastraVertical23 1
+    401134: PilastraVertical23 2
+    401136: PilastraVertical23 3
+    401138: PilastraVertical23 4
+    401140: PilastraVertical23 5
+    401142: PilastraVertical23 6
+    401144: PilastraVertical24
+    401146: PilastraVertical24 1
+    401148: PilastraVertical24 2
+    401150: PilastraVertical24 3
+    401152: PilastraVertical24 4
+    401154: PilastraVertical24 5
+    401156: PilastraVertical24 6
+    401158: PilastraVertical3
+    401160: PilastraVertical37
+    401162: PilastraVertical38
+    401164: PilastraVertical39
+    401166: PilastraVertical4
+    401168: PilastraVertical40
+    401170: PilastraVertical41
+    401172: PilastraVertical42
+    401174: PilastraVertical43
+    401176: PilastraVertical44
+    401178: PilastraVertical45
+    401180: PilastraVertical46
+    401182: PilastraVertical47
+    401184: PilastraVertical48
+    401186: PilastraVertical49
+    401188: PilastraVertical5
+    401190: PilastraVertical51
+    401192: PilastraVertical53
+    401194: PilastraVertical54
+    401196: PilastraVertical55
+    401198: PilastraVertical56
+    401200: PilastraVertical6
+    401202: PilastraVertical67
+    401204: PilastraVertical67 1
+    401206: PilastraVertical67 2
+    401208: PilastraVertical67 3
+    401210: PilastraVertical67 4
+    401212: PilastraVertical67 5
+    401214: PilastraVertical67 6
+    401216: PilastraVertical68
+    401218: PilastraVertical68 1
+    401220: PilastraVertical68 2
+    401222: PilastraVertical68 3
+    401224: PilastraVertical68 4
+    401226: PilastraVertical68 5
+    401228: PilastraVertical68 6
+    401230: PilastraVertical69
+    401232: PilastraVertical69 1
+    401234: PilastraVertical69 10
+    401236: PilastraVertical69 11
+    401238: PilastraVertical69 12
+    401240: PilastraVertical69 13
+    401242: PilastraVertical69 14
+    401244: PilastraVertical69 15
+    401246: PilastraVertical69 16
+    401248: PilastraVertical69 17
+    401250: PilastraVertical69 18
+    401252: PilastraVertical69 19
+    401254: PilastraVertical69 2
+    401256: PilastraVertical69 20
+    401258: PilastraVertical69 21
+    401260: PilastraVertical69 22
+    401262: PilastraVertical69 3
+    401264: PilastraVertical69 4
+    401266: PilastraVertical69 5
+    401268: PilastraVertical69 6
+    401270: PilastraVertical69 7
+    401272: PilastraVertical69 8
+    401274: PilastraVertical69 9
+    401276: PilastraVertical7
+    401278: PilastraVertical70
+    401280: PilastraVertical70 1
+    401282: PilastraVertical70 10
+    401284: PilastraVertical70 11
+    401286: PilastraVertical70 12
+    401288: PilastraVertical70 13
+    401290: PilastraVertical70 14
+    401292: PilastraVertical70 15
+    401294: PilastraVertical70 16
+    401296: PilastraVertical70 17
+    401298: PilastraVertical70 18
+    401300: PilastraVertical70 19
+    401302: PilastraVertical70 2
+    401304: PilastraVertical70 20
+    401306: PilastraVertical70 21
+    401308: PilastraVertical70 22
+    401310: PilastraVertical70 23
+    401312: PilastraVertical70 24
+    401314: PilastraVertical70 25
+    401316: PilastraVertical70 26
+    401318: PilastraVertical70 27
+    401320: PilastraVertical70 28
+    401322: PilastraVertical70 29
+    401324: PilastraVertical70 3
+    401326: PilastraVertical70 30
+    401328: PilastraVertical70 31
+    401330: PilastraVertical70 32
+    401332: PilastraVertical70 33
+    401334: PilastraVertical70 4
+    401336: PilastraVertical70 5
+    401338: PilastraVertical70 6
+    401340: PilastraVertical70 7
+    401342: PilastraVertical70 8
+    401344: PilastraVertical70 9
+    401346: PilastraVertical71
+    401348: PilastraVertical71 1
+    401350: PilastraVertical71 2
+    401352: PilastraVertical71 3
+    401354: PilastraVertical71 4
+    401356: PilastraVertical71 5
+    401358: PilastraVertical71 6
+    401360: PilastraVertical71 7
+    401362: PilastraVertical72
+    401364: PilastraVertical72 1
+    401366: PilastraVertical72 2
+    401368: PilastraVertical73
+    401370: PilastraVertical74
+    401372: PilastraVertical75
+    401374: PilastraVertical76
+    401376: PilastraVertical77
+    401378: PilastraVertical78
+    401380: PilastraVertical79
+    401382: PilastraVertical8
+    401384: PilastraVertical80
+    401386: PilastraVertical81
+    401388: PilastraVertical82
+    401390: PilastraVertical83
+    401392: PilastraVertical83 1
+    401394: PilastraVertical83 2
+    401396: PilastraVertical83 3
+    401398: PilastraVertical83 4
+    401400: PilastraVertical83 5
+    401402: PilastraVertical83 6
+    401404: PilastraVertical84
+    401406: PilastraVertical84 1
+    401408: PilastraVertical84 2
+    401410: PilastraVertical84 3
+    401412: PilastraVertical84 4
+    401414: PilastraVertical84 5
+    401416: PilastraVertical84 6
+    401418: PilastraVertical85
+    401420: PilastraVertical85 1
+    401422: PilastraVertical85 2
+    401424: PilastraVertical85 3
+    401426: PilastraVertical85 4
+    401428: PilastraVertical85 5
+    401430: PilastraVertical85 6
+    401432: PilastraVertical86
+    401434: PilastraVertical86 1
+    401436: PilastraVertical86 2
+    401438: PilastraVertical86 3
+    401440: PilastraVertical86 4
+    401442: PilastraVertical86 5
+    401444: PilastraVertical86 6
+    401446: PilastraVertical87
+    401448: PilastraVertical87 1
+    401450: PilastraVertical87 2
+    401452: PilastraVertical87 3
+    401454: PilastraVertical87 4
+    401456: PilastraVertical87 5
+    401458: PilastraVertical87 6
+    401460: PilastraVertical88
+    401462: PilastraVertical88 1
+    401464: PilastraVertical88 2
+    401466: PilastraVertical88 3
+    401468: PilastraVertical88 4
+    401470: PilastraVertical88 5
+    401472: PilastraVertical88 6
+    401474: PilastraVertical89
+    401476: PilastraVertical89 1
+    401478: PilastraVertical89 2
+    401480: PilastraVertical89 3
+    401482: PilastraVertical89 4
+    401484: PilastraVertical89 5
+    401486: PilastraVertical89 6
+    401488: PilastraVertical9
+    401490: PilastraVertical90
+    401492: PilastraVertical90 1
+    401494: PilastraVertical90 2
+    401496: PilastraVertical90 3
+    401498: PilastraVertical90 4
+    401500: PilastraVertical90 5
+    401502: PilastraVertical90 6
+    401504: PilastraVertical91
+    401506: PilastraVertical92
+    401508: PisoCasa
+    401510: PisoCasa1
+    401512: PisoPonte1
+    401514: PisoPonte1 1
+    401516: PisoPonte1 2
+    401518: PisoPonte1 3
+    401520: PisoPonte1 4
+    401522: PisoPonte1 5
+    401524: PisoPonte1 6
+    401526: PisoTrapiche
+    401528: Porta
+    401530: Porta 1
+    401532: Porta 2
+    401534: Porta 3
+    401536: Porta2
+    401538: Porta3
+    401540: Portas_e_Janelas
+    401542: Telhado
+    401544: Telhado 1
+    401546: Telhado1
+    401548: Telhado2
+    401550: Telhado3
+    401552: TelhadoPalha1
+    401554: TelhadoPalha1 1
+    401556: TelhadoPalha1 2
+    401558: TelhadoPalha1 3
+    401560: TelhadoPalha1 4
+    401562: TelhadoPalha1 5
+    401564: TelhadoPalha1 6
+    401566: TelhadoPalha1 7
+    401568: TelhadoPalha1 8
+    401570: TelhadoPalha2
+    401572: TelhadoPalha2 1
+    401574: TelhadoPalha2 2
+    401576: TelhadoPalha2 3
+    401578: TelhadoPalha2 4
+    401580: TelhadoPalha2 5
+    401582: TelhadoPalha2 6
+    401584: TelhadoPalha3
+    401586: TelhadoPalha3 1
+    401588: TelhadoPalha3 2
+    401590: TelhadoPalha3 3
+    401592: TelhadoPalha3 4
+    401594: TelhadoPalha3 5
+    401596: TelhadoPalha3 6
+    401598: TelhadoPalha4
+    401600: TelhadoPalha5
+    401602: TelhadoPalha6
+    401604: TelhadoPalha7
+    401606: TelhadoPalha8
+    401608: //RootNode
+    2100000: Madeira2
+    2100002: Madeira3
+    2100004: Palha
+    2100006: Madeira5
+    2100008: Porta1
+    2100010: Madeira4
+    2300000: Batente
+    2300002: Batente 1
+    2300004: Batente 2
+    2300006: DegrauEscada
+    2300008: DegrauEscada1
+    2300010: DegrauEscada10
+    2300012: DegrauEscada11
+    2300014: DegrauEscada12
+    2300016: DegrauEscada13
+    2300018: DegrauEscada14
+    2300020: DegrauEscada2
+    2300022: DegrauEscada3
+    2300024: DegrauEscada4
+    2300026: DegrauEscada5
+    2300028: DegrauEscada6
+    2300030: DegrauEscada7
+    2300032: DegrauEscada8
+    2300034: DegrauEscada9
+    2300036: EstacaGrade1
+    2300038: EstacaGrade1 1
+    2300040: EstacaGrade1 10
+    2300042: EstacaGrade1 11
+    2300044: EstacaGrade1 12
+    2300046: EstacaGrade1 13
+    2300048: EstacaGrade1 14
+    2300050: EstacaGrade1 15
+    2300052: EstacaGrade1 16
+    2300054: EstacaGrade1 17
+    2300056: EstacaGrade1 18
+    2300058: EstacaGrade1 19
+    2300060: EstacaGrade1 2
+    2300062: EstacaGrade1 20
+    2300064: EstacaGrade1 21
+    2300066: EstacaGrade1 22
+    2300068: EstacaGrade1 23
+    2300070: EstacaGrade1 24
+    2300072: EstacaGrade1 25
+    2300074: EstacaGrade1 26
+    2300076: EstacaGrade1 27
+    2300078: EstacaGrade1 28
+    2300080: EstacaGrade1 29
+    2300082: EstacaGrade1 3
+    2300084: EstacaGrade1 30
+    2300086: EstacaGrade1 31
+    2300088: EstacaGrade1 32
+    2300090: EstacaGrade1 33
+    2300092: EstacaGrade1 34
+    2300094: EstacaGrade1 35
+    2300096: EstacaGrade1 36
+    2300098: EstacaGrade1 37
+    2300100: EstacaGrade1 38
+    2300102: EstacaGrade1 39
+    2300104: EstacaGrade1 4
+    2300106: EstacaGrade1 40
+    2300108: EstacaGrade1 41
+    2300110: EstacaGrade1 42
+    2300112: EstacaGrade1 43
+    2300114: EstacaGrade1 44
+    2300116: EstacaGrade1 45
+    2300118: EstacaGrade1 46
+    2300120: EstacaGrade1 47
+    2300122: EstacaGrade1 48
+    2300124: EstacaGrade1 49
+    2300126: EstacaGrade1 5
+    2300128: EstacaGrade1 50
+    2300130: EstacaGrade1 51
+    2300132: EstacaGrade1 52
+    2300134: EstacaGrade1 53
+    2300136: EstacaGrade1 54
+    2300138: EstacaGrade1 55
+    2300140: EstacaGrade1 56
+    2300142: EstacaGrade1 57
+    2300144: EstacaGrade1 58
+    2300146: EstacaGrade1 59
+    2300148: EstacaGrade1 6
+    2300150: EstacaGrade1 7
+    2300152: EstacaGrade1 8
+    2300154: EstacaGrade1 9
+    2300156: EstacaGrade2
+    2300158: EstacaGrade2 1
+    2300160: EstacaGrade2 2
+    2300162: EstacaGrade2 3
+    2300164: EstacaGrade2 4
+    2300166: EstacaGrade2 5
+    2300168: EstacaGrade2 6
+    2300170: EstacaGrade3
+    2300172: EstacaGrade3 1
+    2300174: EstacaGrade3 2
+    2300176: EstacaGrade3 3
+    2300178: EstacaGrade3 4
+    2300180: EstacaGrade3 5
+    2300182: EstacaGrade3 6
+    2300184: EstacaGrade4
+    2300186: EstacaGrade4 1
+    2300188: EstacaGrade4 2
+    2300190: EstacaGrade4 3
+    2300192: EstacaGrade4 4
+    2300194: EstacaGrade4 5
+    2300196: EstacaGrade4 6
+    2300198: GradeInferior
+    2300200: GradeInferior 1
+    2300202: GradeInferior 10
+    2300204: GradeInferior 11
+    2300206: GradeInferior 12
+    2300208: GradeInferior 13
+    2300210: GradeInferior 14
+    2300212: GradeInferior 15
+    2300214: GradeInferior 16
+    2300216: GradeInferior 17
+    2300218: GradeInferior 18
+    2300220: GradeInferior 19
+    2300222: GradeInferior 2
+    2300224: GradeInferior 20
+    2300226: GradeInferior 21
+    2300228: GradeInferior 22
+    2300230: GradeInferior 23
+    2300232: GradeInferior 24
+    2300234: GradeInferior 25
+    2300236: GradeInferior 26
+    2300238: GradeInferior 27
+    2300240: GradeInferior 28
+    2300242: GradeInferior 29
+    2300244: GradeInferior 3
+    2300246: GradeInferior 30
+    2300248: GradeInferior 31
+    2300250: GradeInferior 32
+    2300252: GradeInferior 33
+    2300254: GradeInferior 34
+    2300256: GradeInferior 35
+    2300258: GradeInferior 36
+    2300260: GradeInferior 37
+    2300262: GradeInferior 38
+    2300264: GradeInferior 39
+    2300266: GradeInferior 4
+    2300268: GradeInferior 40
+    2300270: GradeInferior 41
+    2300272: GradeInferior 42
+    2300274: GradeInferior 43
+    2300276: GradeInferior 44
+    2300278: GradeInferior 45
+    2300280: GradeInferior 46
+    2300282: GradeInferior 47
+    2300284: GradeInferior 48
+    2300286: GradeInferior 49
+    2300288: GradeInferior 5
+    2300290: GradeInferior 50
+    2300292: GradeInferior 51
+    2300294: GradeInferior 52
+    2300296: GradeInferior 53
+    2300298: GradeInferior 54
+    2300300: GradeInferior 55
+    2300302: GradeInferior 56
+    2300304: GradeInferior 57
+    2300306: GradeInferior 58
+    2300308: GradeInferior 59
+    2300310: GradeInferior 6
+    2300312: GradeInferior 60
+    2300314: GradeInferior 7
+    2300316: GradeInferior 8
+    2300318: GradeInferior 9
+    2300320: GradeInferior1
+    2300322: GradeInferior1 1
+    2300324: GradeInferior1 2
+    2300326: GradeInferior1 3
+    2300328: GradeInferior1 4
+    2300330: GradeInferior1 5
+    2300332: GradeInferior1 6
+    2300334: GradeInferior2
+    2300336: GradeInferior2 1
+    2300338: GradeInferior2 2
+    2300340: GradeInferior2 3
+    2300342: GradeInferior2 4
+    2300344: GradeInferior2 5
+    2300346: GradeInferior2 6
+    2300348: GradeInferior3
+    2300350: GradeInferior3 1
+    2300352: GradeInferior3 2
+    2300354: GradeInferior3 3
+    2300356: GradeInferior3 4
+    2300358: GradeInferior3 5
+    2300360: GradeInferior3 6
+    2300362: GradeSuperior
+    2300364: GradeSuperior 1
+    2300366: GradeSuperior 10
+    2300368: GradeSuperior 11
+    2300370: GradeSuperior 12
+    2300372: GradeSuperior 13
+    2300374: GradeSuperior 14
+    2300376: GradeSuperior 15
+    2300378: GradeSuperior 16
+    2300380: GradeSuperior 17
+    2300382: GradeSuperior 18
+    2300384: GradeSuperior 19
+    2300386: GradeSuperior 2
+    2300388: GradeSuperior 20
+    2300390: GradeSuperior 21
+    2300392: GradeSuperior 22
+    2300394: GradeSuperior 23
+    2300396: GradeSuperior 24
+    2300398: GradeSuperior 25
+    2300400: GradeSuperior 26
+    2300402: GradeSuperior 27
+    2300404: GradeSuperior 28
+    2300406: GradeSuperior 29
+    2300408: GradeSuperior 3
+    2300410: GradeSuperior 30
+    2300412: GradeSuperior 31
+    2300414: GradeSuperior 32
+    2300416: GradeSuperior 33
+    2300418: GradeSuperior 34
+    2300420: GradeSuperior 35
+    2300422: GradeSuperior 36
+    2300424: GradeSuperior 37
+    2300426: GradeSuperior 38
+    2300428: GradeSuperior 39
+    2300430: GradeSuperior 4
+    2300432: GradeSuperior 40
+    2300434: GradeSuperior 41
+    2300436: GradeSuperior 42
+    2300438: GradeSuperior 43
+    2300440: GradeSuperior 44
+    2300442: GradeSuperior 45
+    2300444: GradeSuperior 46
+    2300446: GradeSuperior 47
+    2300448: GradeSuperior 48
+    2300450: GradeSuperior 49
+    2300452: GradeSuperior 5
+    2300454: GradeSuperior 50
+    2300456: GradeSuperior 51
+    2300458: GradeSuperior 52
+    2300460: GradeSuperior 53
+    2300462: GradeSuperior 54
+    2300464: GradeSuperior 55
+    2300466: GradeSuperior 56
+    2300468: GradeSuperior 57
+    2300470: GradeSuperior 58
+    2300472: GradeSuperior 59
+    2300474: GradeSuperior 6
+    2300476: GradeSuperior 60
+    2300478: GradeSuperior 7
+    2300480: GradeSuperior 8
+    2300482: GradeSuperior 9
+    2300484: GradeSuperior1
+    2300486: GradeSuperior1 1
+    2300488: GradeSuperior1 2
+    2300490: GradeSuperior1 3
+    2300492: GradeSuperior1 4
+    2300494: GradeSuperior1 5
+    2300496: GradeSuperior1 6
+    2300498: GradeSuperior2
+    2300500: GradeSuperior2 1
+    2300502: GradeSuperior2 2
+    2300504: GradeSuperior2 3
+    2300506: GradeSuperior2 4
+    2300508: GradeSuperior2 5
+    2300510: GradeSuperior2 6
+    2300512: GradeSuperior3
+    2300514: GradeSuperior3 1
+    2300516: GradeSuperior3 2
+    2300518: GradeSuperior3 3
+    2300520: GradeSuperior3 4
+    2300522: GradeSuperior3 5
+    2300524: GradeSuperior3 6
+    2300526: ParedesCasa
+    2300528: pCube1
+    2300530: pCube1 1
+    2300532: pCube2
+    2300534: pCube2 1
+    2300536: pCube2 2
+    2300538: pCube2 3
+    2300540: pCube2 4
+    2300542: pCube2 5
+    2300544: pCube2 6
+    2300546: PilastraTelhado
+    2300548: PilastraTelhado 1
+    2300550: PilastraTelhado 2
+    2300552: PilastraTelhado 3
+    2300554: PilastraTelhado 4
+    2300556: PilastraTelhado 5
+    2300558: PilastraTelhado 6
+    2300560: PilastraTelhado1
+    2300562: PilastraTelhado1 1
+    2300564: PilastraTelhado1 2
+    2300566: PilastraTelhado1 3
+    2300568: PilastraTelhado1 4
+    2300570: PilastraTelhado1 5
+    2300572: PilastraTelhado1 6
+    2300574: PilastraTelhado10
+    2300576: PilastraTelhado10 1
+    2300578: PilastraTelhado11
+    2300580: PilastraTelhado11 1
+    2300582: PilastraTelhado12
+    2300584: PilastraTelhado12 1
+    2300586: PilastraTelhado13
+    2300588: PilastraTelhado13 1
+    2300590: PilastraTelhado14
+    2300592: PilastraTelhado14 1
+    2300594: PilastraTelhado14 2
+    2300596: PilastraTelhado14 3
+    2300598: PilastraTelhado14 4
+    2300600: PilastraTelhado14 5
+    2300602: PilastraTelhado14 6
+    2300604: PilastraTelhado15
+    2300606: PilastraTelhado15 1
+    2300608: PilastraTelhado15 2
+    2300610: PilastraTelhado15 3
+    2300612: PilastraTelhado15 4
+    2300614: PilastraTelhado15 5
+    2300616: PilastraTelhado15 6
+    2300618: PilastraTelhado16
+    2300620: PilastraTelhado16 1
+    2300622: PilastraTelhado16 2
+    2300624: PilastraTelhado16 3
+    2300626: PilastraTelhado16 4
+    2300628: PilastraTelhado16 5
+    2300630: PilastraTelhado16 6
+    2300632: PilastraTelhado17
+    2300634: PilastraTelhado17 1
+    2300636: PilastraTelhado17 2
+    2300638: PilastraTelhado17 3
+    2300640: PilastraTelhado17 4
+    2300642: PilastraTelhado17 5
+    2300644: PilastraTelhado17 6
+    2300646: PilastraTelhado18
+    2300648: PilastraTelhado18 1
+    2300650: PilastraTelhado18 2
+    2300652: PilastraTelhado18 3
+    2300654: PilastraTelhado18 4
+    2300656: PilastraTelhado18 5
+    2300658: PilastraTelhado18 6
+    2300660: PilastraTelhado19
+    2300662: PilastraTelhado19 1
+    2300664: PilastraTelhado19 2
+    2300666: PilastraTelhado19 3
+    2300668: PilastraTelhado19 4
+    2300670: PilastraTelhado19 5
+    2300672: PilastraTelhado19 6
+    2300674: PilastraTelhado2
+    2300676: PilastraTelhado2 1
+    2300678: PilastraTelhado2 2
+    2300680: PilastraTelhado2 3
+    2300682: PilastraTelhado2 4
+    2300684: PilastraTelhado2 5
+    2300686: PilastraTelhado2 6
+    2300688: PilastraTelhado20
+    2300690: PilastraTelhado20 1
+    2300692: PilastraTelhado20 2
+    2300694: PilastraTelhado20 3
+    2300696: PilastraTelhado20 4
+    2300698: PilastraTelhado20 5
+    2300700: PilastraTelhado20 6
+    2300702: PilastraTelhado22
+    2300704: PilastraTelhado22 1
+    2300706: PilastraTelhado22 2
+    2300708: PilastraTelhado22 3
+    2300710: PilastraTelhado22 4
+    2300712: PilastraTelhado22 5
+    2300714: PilastraTelhado22 6
+    2300716: PilastraTelhado23
+    2300718: PilastraTelhado23 1
+    2300720: PilastraTelhado23 2
+    2300722: PilastraTelhado23 3
+    2300724: PilastraTelhado23 4
+    2300726: PilastraTelhado23 5
+    2300728: PilastraTelhado23 6
+    2300730: PilastraTelhado24
+    2300732: PilastraTelhado24 1
+    2300734: PilastraTelhado24 2
+    2300736: PilastraTelhado24 3
+    2300738: PilastraTelhado24 4
+    2300740: PilastraTelhado24 5
+    2300742: PilastraTelhado24 6
+    2300744: PilastraTelhado25
+    2300746: PilastraTelhado25 1
+    2300748: PilastraTelhado25 2
+    2300750: PilastraTelhado25 3
+    2300752: PilastraTelhado25 4
+    2300754: PilastraTelhado25 5
+    2300756: PilastraTelhado25 6
+    2300758: PilastraTelhado26
+    2300760: PilastraTelhado26 1
+    2300762: PilastraTelhado26 2
+    2300764: PilastraTelhado26 3
+    2300766: PilastraTelhado26 4
+    2300768: PilastraTelhado26 5
+    2300770: PilastraTelhado26 6
+    2300772: PilastraTelhado3
+    2300774: PilastraTelhado3 1
+    2300776: PilastraTelhado3 2
+    2300778: PilastraTelhado4
+    2300780: PilastraTelhado4 1
+    2300782: PilastraTelhado4 2
+    2300784: PilastraTelhado4 3
+    2300786: PilastraTelhado4 4
+    2300788: PilastraTelhado4 5
+    2300790: PilastraTelhado4 6
+    2300792: PilastraTelhado5
+    2300794: PilastraTelhado5 1
+    2300796: PilastraTelhado5 2
+    2300798: PilastraTelhado5 3
+    2300800: PilastraTelhado5 4
+    2300802: PilastraTelhado6
+    2300804: PilastraTelhado6 1
+    2300806: PilastraTelhado7
+    2300808: PilastraTelhado7 1
+    2300810: PilastraTelhado8
+    2300812: PilastraTelhado8 1
+    2300814: PilastraTelhado9
+    2300816: PilastraTelhado9 1
+    2300818: PilastraVertical
+    2300820: PilastraVertical10
+    2300822: PilastraVertical11
+    2300824: PilastraVertical12
+    2300826: PilastraVertical13
+    2300828: PilastraVertical14
+    2300830: PilastraVertical15
+    2300832: PilastraVertical16
+    2300834: PilastraVertical17
+    2300836: PilastraVertical18
+    2300838: PilastraVertical19
+    2300840: PilastraVertical20
+    2300842: PilastraVertical21
+    2300844: PilastraVertical22
+    2300846: PilastraVertical23
+    2300848: PilastraVertical23 1
+    2300850: PilastraVertical23 2
+    2300852: PilastraVertical23 3
+    2300854: PilastraVertical23 4
+    2300856: PilastraVertical23 5
+    2300858: PilastraVertical23 6
+    2300860: PilastraVertical24
+    2300862: PilastraVertical24 1
+    2300864: PilastraVertical24 2
+    2300866: PilastraVertical24 3
+    2300868: PilastraVertical24 4
+    2300870: PilastraVertical24 5
+    2300872: PilastraVertical24 6
+    2300874: PilastraVertical3
+    2300876: PilastraVertical37
+    2300878: PilastraVertical38
+    2300880: PilastraVertical39
+    2300882: PilastraVertical4
+    2300884: PilastraVertical40
+    2300886: PilastraVertical41
+    2300888: PilastraVertical42
+    2300890: PilastraVertical43
+    2300892: PilastraVertical44
+    2300894: PilastraVertical45
+    2300896: PilastraVertical46
+    2300898: PilastraVertical47
+    2300900: PilastraVertical48
+    2300902: PilastraVertical49
+    2300904: PilastraVertical5
+    2300906: PilastraVertical51
+    2300908: PilastraVertical53
+    2300910: PilastraVertical54
+    2300912: PilastraVertical55
+    2300914: PilastraVertical56
+    2300916: PilastraVertical6
+    2300918: PilastraVertical67
+    2300920: PilastraVertical67 1
+    2300922: PilastraVertical67 2
+    2300924: PilastraVertical67 3
+    2300926: PilastraVertical67 4
+    2300928: PilastraVertical67 5
+    2300930: PilastraVertical67 6
+    2300932: PilastraVertical68
+    2300934: PilastraVertical68 1
+    2300936: PilastraVertical68 2
+    2300938: PilastraVertical68 3
+    2300940: PilastraVertical68 4
+    2300942: PilastraVertical68 5
+    2300944: PilastraVertical68 6
+    2300946: PilastraVertical69
+    2300948: PilastraVertical69 1
+    2300950: PilastraVertical69 10
+    2300952: PilastraVertical69 11
+    2300954: PilastraVertical69 12
+    2300956: PilastraVertical69 13
+    2300958: PilastraVertical69 14
+    2300960: PilastraVertical69 15
+    2300962: PilastraVertical69 16
+    2300964: PilastraVertical69 17
+    2300966: PilastraVertical69 18
+    2300968: PilastraVertical69 19
+    2300970: PilastraVertical69 2
+    2300972: PilastraVertical69 20
+    2300974: PilastraVertical69 21
+    2300976: PilastraVertical69 22
+    2300978: PilastraVertical69 3
+    2300980: PilastraVertical69 4
+    2300982: PilastraVertical69 5
+    2300984: PilastraVertical69 6
+    2300986: PilastraVertical69 7
+    2300988: PilastraVertical69 8
+    2300990: PilastraVertical69 9
+    2300992: PilastraVertical7
+    2300994: PilastraVertical70
+    2300996: PilastraVertical70 1
+    2300998: PilastraVertical70 10
+    2301000: PilastraVertical70 11
+    2301002: PilastraVertical70 12
+    2301004: PilastraVertical70 13
+    2301006: PilastraVertical70 14
+    2301008: PilastraVertical70 15
+    2301010: PilastraVertical70 16
+    2301012: PilastraVertical70 17
+    2301014: PilastraVertical70 18
+    2301016: PilastraVertical70 19
+    2301018: PilastraVertical70 2
+    2301020: PilastraVertical70 20
+    2301022: PilastraVertical70 21
+    2301024: PilastraVertical70 22
+    2301026: PilastraVertical70 23
+    2301028: PilastraVertical70 24
+    2301030: PilastraVertical70 25
+    2301032: PilastraVertical70 26
+    2301034: PilastraVertical70 27
+    2301036: PilastraVertical70 28
+    2301038: PilastraVertical70 29
+    2301040: PilastraVertical70 3
+    2301042: PilastraVertical70 30
+    2301044: PilastraVertical70 31
+    2301046: PilastraVertical70 32
+    2301048: PilastraVertical70 33
+    2301050: PilastraVertical70 4
+    2301052: PilastraVertical70 5
+    2301054: PilastraVertical70 6
+    2301056: PilastraVertical70 7
+    2301058: PilastraVertical70 8
+    2301060: PilastraVertical70 9
+    2301062: PilastraVertical71
+    2301064: PilastraVertical71 1
+    2301066: PilastraVertical71 2
+    2301068: PilastraVertical71 3
+    2301070: PilastraVertical71 4
+    2301072: PilastraVertical71 5
+    2301074: PilastraVertical71 6
+    2301076: PilastraVertical71 7
+    2301078: PilastraVertical72
+    2301080: PilastraVertical72 1
+    2301082: PilastraVertical72 2
+    2301084: PilastraVertical73
+    2301086: PilastraVertical74
+    2301088: PilastraVertical75
+    2301090: PilastraVertical76
+    2301092: PilastraVertical77
+    2301094: PilastraVertical78
+    2301096: PilastraVertical79
+    2301098: PilastraVertical8
+    2301100: PilastraVertical80
+    2301102: PilastraVertical81
+    2301104: PilastraVertical82
+    2301106: PilastraVertical83
+    2301108: PilastraVertical83 1
+    2301110: PilastraVertical83 2
+    2301112: PilastraVertical83 3
+    2301114: PilastraVertical83 4
+    2301116: PilastraVertical83 5
+    2301118: PilastraVertical83 6
+    2301120: PilastraVertical84
+    2301122: PilastraVertical84 1
+    2301124: PilastraVertical84 2
+    2301126: PilastraVertical84 3
+    2301128: PilastraVertical84 4
+    2301130: PilastraVertical84 5
+    2301132: PilastraVertical84 6
+    2301134: PilastraVertical85
+    2301136: PilastraVertical85 1
+    2301138: PilastraVertical85 2
+    2301140: PilastraVertical85 3
+    2301142: PilastraVertical85 4
+    2301144: PilastraVertical85 5
+    2301146: PilastraVertical85 6
+    2301148: PilastraVertical86
+    2301150: PilastraVertical86 1
+    2301152: PilastraVertical86 2
+    2301154: PilastraVertical86 3
+    2301156: PilastraVertical86 4
+    2301158: PilastraVertical86 5
+    2301160: PilastraVertical86 6
+    2301162: PilastraVertical87
+    2301164: PilastraVertical87 1
+    2301166: PilastraVertical87 2
+    2301168: PilastraVertical87 3
+    2301170: PilastraVertical87 4
+    2301172: PilastraVertical87 5
+    2301174: PilastraVertical87 6
+    2301176: PilastraVertical88
+    2301178: PilastraVertical88 1
+    2301180: PilastraVertical88 2
+    2301182: PilastraVertical88 3
+    2301184: PilastraVertical88 4
+    2301186: PilastraVertical88 5
+    2301188: PilastraVertical88 6
+    2301190: PilastraVertical89
+    2301192: PilastraVertical89 1
+    2301194: PilastraVertical89 2
+    2301196: PilastraVertical89 3
+    2301198: PilastraVertical89 4
+    2301200: PilastraVertical89 5
+    2301202: PilastraVertical89 6
+    2301204: PilastraVertical9
+    2301206: PilastraVertical90
+    2301208: PilastraVertical90 1
+    2301210: PilastraVertical90 2
+    2301212: PilastraVertical90 3
+    2301214: PilastraVertical90 4
+    2301216: PilastraVertical90 5
+    2301218: PilastraVertical90 6
+    2301220: PilastraVertical91
+    2301222: PilastraVertical92
+    2301224: PisoCasa
+    2301226: PisoCasa1
+    2301228: PisoPonte1
+    2301230: PisoPonte1 1
+    2301232: PisoPonte1 2
+    2301234: PisoPonte1 3
+    2301236: PisoPonte1 4
+    2301238: PisoPonte1 5
+    2301240: PisoPonte1 6
+    2301242: PisoTrapiche
+    2301244: Porta 1
+    2301246: Porta 2
+    2301248: Porta 3
+    2301250: TelhadoPalha1
+    2301252: TelhadoPalha1 1
+    2301254: TelhadoPalha1 2
+    2301256: TelhadoPalha1 3
+    2301258: TelhadoPalha1 4
+    2301260: TelhadoPalha1 5
+    2301262: TelhadoPalha1 6
+    2301264: TelhadoPalha1 7
+    2301266: TelhadoPalha1 8
+    2301268: TelhadoPalha2
+    2301270: TelhadoPalha2 1
+    2301272: TelhadoPalha2 2
+    2301274: TelhadoPalha2 3
+    2301276: TelhadoPalha2 4
+    2301278: TelhadoPalha2 5
+    2301280: TelhadoPalha2 6
+    2301282: TelhadoPalha3
+    2301284: TelhadoPalha3 1
+    2301286: TelhadoPalha3 2
+    2301288: TelhadoPalha3 3
+    2301290: TelhadoPalha3 4
+    2301292: TelhadoPalha3 5
+    2301294: TelhadoPalha3 6
+    2301296: TelhadoPalha4
+    2301298: TelhadoPalha5
+    2301300: TelhadoPalha6
+    2301302: TelhadoPalha7
+    2301304: TelhadoPalha8
+    3300000: Batente
+    3300002: Batente 1
+    3300004: Batente 2
+    3300006: DegrauEscada
+    3300008: DegrauEscada1
+    3300010: DegrauEscada10
+    3300012: DegrauEscada11
+    3300014: DegrauEscada12
+    3300016: DegrauEscada13
+    3300018: DegrauEscada14
+    3300020: DegrauEscada2
+    3300022: DegrauEscada3
+    3300024: DegrauEscada4
+    3300026: DegrauEscada5
+    3300028: DegrauEscada6
+    3300030: DegrauEscada7
+    3300032: DegrauEscada8
+    3300034: DegrauEscada9
+    3300036: EstacaGrade1
+    3300038: EstacaGrade1 1
+    3300040: EstacaGrade1 10
+    3300042: EstacaGrade1 11
+    3300044: EstacaGrade1 12
+    3300046: EstacaGrade1 13
+    3300048: EstacaGrade1 14
+    3300050: EstacaGrade1 15
+    3300052: EstacaGrade1 16
+    3300054: EstacaGrade1 17
+    3300056: EstacaGrade1 18
+    3300058: EstacaGrade1 19
+    3300060: EstacaGrade1 2
+    3300062: EstacaGrade1 20
+    3300064: EstacaGrade1 21
+    3300066: EstacaGrade1 22
+    3300068: EstacaGrade1 23
+    3300070: EstacaGrade1 24
+    3300072: EstacaGrade1 25
+    3300074: EstacaGrade1 26
+    3300076: EstacaGrade1 27
+    3300078: EstacaGrade1 28
+    3300080: EstacaGrade1 29
+    3300082: EstacaGrade1 3
+    3300084: EstacaGrade1 30
+    3300086: EstacaGrade1 31
+    3300088: EstacaGrade1 32
+    3300090: EstacaGrade1 33
+    3300092: EstacaGrade1 34
+    3300094: EstacaGrade1 35
+    3300096: EstacaGrade1 36
+    3300098: EstacaGrade1 37
+    3300100: EstacaGrade1 38
+    3300102: EstacaGrade1 39
+    3300104: EstacaGrade1 4
+    3300106: EstacaGrade1 40
+    3300108: EstacaGrade1 41
+    3300110: EstacaGrade1 42
+    3300112: EstacaGrade1 43
+    3300114: EstacaGrade1 44
+    3300116: EstacaGrade1 45
+    3300118: EstacaGrade1 46
+    3300120: EstacaGrade1 47
+    3300122: EstacaGrade1 48
+    3300124: EstacaGrade1 49
+    3300126: EstacaGrade1 5
+    3300128: EstacaGrade1 50
+    3300130: EstacaGrade1 51
+    3300132: EstacaGrade1 52
+    3300134: EstacaGrade1 53
+    3300136: EstacaGrade1 54
+    3300138: EstacaGrade1 55
+    3300140: EstacaGrade1 56
+    3300142: EstacaGrade1 57
+    3300144: EstacaGrade1 58
+    3300146: EstacaGrade1 59
+    3300148: EstacaGrade1 6
+    3300150: EstacaGrade1 7
+    3300152: EstacaGrade1 8
+    3300154: EstacaGrade1 9
+    3300156: EstacaGrade2
+    3300158: EstacaGrade2 1
+    3300160: EstacaGrade2 2
+    3300162: EstacaGrade2 3
+    3300164: EstacaGrade2 4
+    3300166: EstacaGrade2 5
+    3300168: EstacaGrade2 6
+    3300170: EstacaGrade3
+    3300172: EstacaGrade3 1
+    3300174: EstacaGrade3 2
+    3300176: EstacaGrade3 3
+    3300178: EstacaGrade3 4
+    3300180: EstacaGrade3 5
+    3300182: EstacaGrade3 6
+    3300184: EstacaGrade4
+    3300186: EstacaGrade4 1
+    3300188: EstacaGrade4 2
+    3300190: EstacaGrade4 3
+    3300192: EstacaGrade4 4
+    3300194: EstacaGrade4 5
+    3300196: EstacaGrade4 6
+    3300198: GradeInferior
+    3300200: GradeInferior 1
+    3300202: GradeInferior 10
+    3300204: GradeInferior 11
+    3300206: GradeInferior 12
+    3300208: GradeInferior 13
+    3300210: GradeInferior 14
+    3300212: GradeInferior 15
+    3300214: GradeInferior 16
+    3300216: GradeInferior 17
+    3300218: GradeInferior 18
+    3300220: GradeInferior 19
+    3300222: GradeInferior 2
+    3300224: GradeInferior 20
+    3300226: GradeInferior 21
+    3300228: GradeInferior 22
+    3300230: GradeInferior 23
+    3300232: GradeInferior 24
+    3300234: GradeInferior 25
+    3300236: GradeInferior 26
+    3300238: GradeInferior 27
+    3300240: GradeInferior 28
+    3300242: GradeInferior 29
+    3300244: GradeInferior 3
+    3300246: GradeInferior 30
+    3300248: GradeInferior 31
+    3300250: GradeInferior 32
+    3300252: GradeInferior 33
+    3300254: GradeInferior 34
+    3300256: GradeInferior 35
+    3300258: GradeInferior 36
+    3300260: GradeInferior 37
+    3300262: GradeInferior 38
+    3300264: GradeInferior 39
+    3300266: GradeInferior 4
+    3300268: GradeInferior 40
+    3300270: GradeInferior 41
+    3300272: GradeInferior 42
+    3300274: GradeInferior 43
+    3300276: GradeInferior 44
+    3300278: GradeInferior 45
+    3300280: GradeInferior 46
+    3300282: GradeInferior 47
+    3300284: GradeInferior 48
+    3300286: GradeInferior 49
+    3300288: GradeInferior 5
+    3300290: GradeInferior 50
+    3300292: GradeInferior 51
+    3300294: GradeInferior 52
+    3300296: GradeInferior 53
+    3300298: GradeInferior 54
+    3300300: GradeInferior 55
+    3300302: GradeInferior 56
+    3300304: GradeInferior 57
+    3300306: GradeInferior 58
+    3300308: GradeInferior 59
+    3300310: GradeInferior 6
+    3300312: GradeInferior 60
+    3300314: GradeInferior 7
+    3300316: GradeInferior 8
+    3300318: GradeInferior 9
+    3300320: GradeInferior1
+    3300322: GradeInferior1 1
+    3300324: GradeInferior1 2
+    3300326: GradeInferior1 3
+    3300328: GradeInferior1 4
+    3300330: GradeInferior1 5
+    3300332: GradeInferior1 6
+    3300334: GradeInferior2
+    3300336: GradeInferior2 1
+    3300338: GradeInferior2 2
+    3300340: GradeInferior2 3
+    3300342: GradeInferior2 4
+    3300344: GradeInferior2 5
+    3300346: GradeInferior2 6
+    3300348: GradeInferior3
+    3300350: GradeInferior3 1
+    3300352: GradeInferior3 2
+    3300354: GradeInferior3 3
+    3300356: GradeInferior3 4
+    3300358: GradeInferior3 5
+    3300360: GradeInferior3 6
+    3300362: GradeSuperior
+    3300364: GradeSuperior 1
+    3300366: GradeSuperior 10
+    3300368: GradeSuperior 11
+    3300370: GradeSuperior 12
+    3300372: GradeSuperior 13
+    3300374: GradeSuperior 14
+    3300376: GradeSuperior 15
+    3300378: GradeSuperior 16
+    3300380: GradeSuperior 17
+    3300382: GradeSuperior 18
+    3300384: GradeSuperior 19
+    3300386: GradeSuperior 2
+    3300388: GradeSuperior 20
+    3300390: GradeSuperior 21
+    3300392: GradeSuperior 22
+    3300394: GradeSuperior 23
+    3300396: GradeSuperior 24
+    3300398: GradeSuperior 25
+    3300400: GradeSuperior 26
+    3300402: GradeSuperior 27
+    3300404: GradeSuperior 28
+    3300406: GradeSuperior 29
+    3300408: GradeSuperior 3
+    3300410: GradeSuperior 30
+    3300412: GradeSuperior 31
+    3300414: GradeSuperior 32
+    3300416: GradeSuperior 33
+    3300418: GradeSuperior 34
+    3300420: GradeSuperior 35
+    3300422: GradeSuperior 36
+    3300424: GradeSuperior 37
+    3300426: GradeSuperior 38
+    3300428: GradeSuperior 39
+    3300430: GradeSuperior 4
+    3300432: GradeSuperior 40
+    3300434: GradeSuperior 41
+    3300436: GradeSuperior 42
+    3300438: GradeSuperior 43
+    3300440: GradeSuperior 44
+    3300442: GradeSuperior 45
+    3300444: GradeSuperior 46
+    3300446: GradeSuperior 47
+    3300448: GradeSuperior 48
+    3300450: GradeSuperior 49
+    3300452: GradeSuperior 5
+    3300454: GradeSuperior 50
+    3300456: GradeSuperior 51
+    3300458: GradeSuperior 52
+    3300460: GradeSuperior 53
+    3300462: GradeSuperior 54
+    3300464: GradeSuperior 55
+    3300466: GradeSuperior 56
+    3300468: GradeSuperior 57
+    3300470: GradeSuperior 58
+    3300472: GradeSuperior 59
+    3300474: GradeSuperior 6
+    3300476: GradeSuperior 60
+    3300478: GradeSuperior 7
+    3300480: GradeSuperior 8
+    3300482: GradeSuperior 9
+    3300484: GradeSuperior1
+    3300486: GradeSuperior1 1
+    3300488: GradeSuperior1 2
+    3300490: GradeSuperior1 3
+    3300492: GradeSuperior1 4
+    3300494: GradeSuperior1 5
+    3300496: GradeSuperior1 6
+    3300498: GradeSuperior2
+    3300500: GradeSuperior2 1
+    3300502: GradeSuperior2 2
+    3300504: GradeSuperior2 3
+    3300506: GradeSuperior2 4
+    3300508: GradeSuperior2 5
+    3300510: GradeSuperior2 6
+    3300512: GradeSuperior3
+    3300514: GradeSuperior3 1
+    3300516: GradeSuperior3 2
+    3300518: GradeSuperior3 3
+    3300520: GradeSuperior3 4
+    3300522: GradeSuperior3 5
+    3300524: GradeSuperior3 6
+    3300526: ParedesCasa
+    3300528: pCube1
+    3300530: pCube1 1
+    3300532: pCube2
+    3300534: pCube2 1
+    3300536: pCube2 2
+    3300538: pCube2 3
+    3300540: pCube2 4
+    3300542: pCube2 5
+    3300544: pCube2 6
+    3300546: PilastraTelhado
+    3300548: PilastraTelhado 1
+    3300550: PilastraTelhado 2
+    3300552: PilastraTelhado 3
+    3300554: PilastraTelhado 4
+    3300556: PilastraTelhado 5
+    3300558: PilastraTelhado 6
+    3300560: PilastraTelhado1
+    3300562: PilastraTelhado1 1
+    3300564: PilastraTelhado1 2
+    3300566: PilastraTelhado1 3
+    3300568: PilastraTelhado1 4
+    3300570: PilastraTelhado1 5
+    3300572: PilastraTelhado1 6
+    3300574: PilastraTelhado10
+    3300576: PilastraTelhado10 1
+    3300578: PilastraTelhado11
+    3300580: PilastraTelhado11 1
+    3300582: PilastraTelhado12
+    3300584: PilastraTelhado12 1
+    3300586: PilastraTelhado13
+    3300588: PilastraTelhado13 1
+    3300590: PilastraTelhado14
+    3300592: PilastraTelhado14 1
+    3300594: PilastraTelhado14 2
+    3300596: PilastraTelhado14 3
+    3300598: PilastraTelhado14 4
+    3300600: PilastraTelhado14 5
+    3300602: PilastraTelhado14 6
+    3300604: PilastraTelhado15
+    3300606: PilastraTelhado15 1
+    3300608: PilastraTelhado15 2
+    3300610: PilastraTelhado15 3
+    3300612: PilastraTelhado15 4
+    3300614: PilastraTelhado15 5
+    3300616: PilastraTelhado15 6
+    3300618: PilastraTelhado16
+    3300620: PilastraTelhado16 1
+    3300622: PilastraTelhado16 2
+    3300624: PilastraTelhado16 3
+    3300626: PilastraTelhado16 4
+    3300628: PilastraTelhado16 5
+    3300630: PilastraTelhado16 6
+    3300632: PilastraTelhado17
+    3300634: PilastraTelhado17 1
+    3300636: PilastraTelhado17 2
+    3300638: PilastraTelhado17 3
+    3300640: PilastraTelhado17 4
+    3300642: PilastraTelhado17 5
+    3300644: PilastraTelhado17 6
+    3300646: PilastraTelhado18
+    3300648: PilastraTelhado18 1
+    3300650: PilastraTelhado18 2
+    3300652: PilastraTelhado18 3
+    3300654: PilastraTelhado18 4
+    3300656: PilastraTelhado18 5
+    3300658: PilastraTelhado18 6
+    3300660: PilastraTelhado19
+    3300662: PilastraTelhado19 1
+    3300664: PilastraTelhado19 2
+    3300666: PilastraTelhado19 3
+    3300668: PilastraTelhado19 4
+    3300670: PilastraTelhado19 5
+    3300672: PilastraTelhado19 6
+    3300674: PilastraTelhado2
+    3300676: PilastraTelhado2 1
+    3300678: PilastraTelhado2 2
+    3300680: PilastraTelhado2 3
+    3300682: PilastraTelhado2 4
+    3300684: PilastraTelhado2 5
+    3300686: PilastraTelhado2 6
+    3300688: PilastraTelhado20
+    3300690: PilastraTelhado20 1
+    3300692: PilastraTelhado20 2
+    3300694: PilastraTelhado20 3
+    3300696: PilastraTelhado20 4
+    3300698: PilastraTelhado20 5
+    3300700: PilastraTelhado20 6
+    3300702: PilastraTelhado22
+    3300704: PilastraTelhado22 1
+    3300706: PilastraTelhado22 2
+    3300708: PilastraTelhado22 3
+    3300710: PilastraTelhado22 4
+    3300712: PilastraTelhado22 5
+    3300714: PilastraTelhado22 6
+    3300716: PilastraTelhado23
+    3300718: PilastraTelhado23 1
+    3300720: PilastraTelhado23 2
+    3300722: PilastraTelhado23 3
+    3300724: PilastraTelhado23 4
+    3300726: PilastraTelhado23 5
+    3300728: PilastraTelhado23 6
+    3300730: PilastraTelhado24
+    3300732: PilastraTelhado24 1
+    3300734: PilastraTelhado24 2
+    3300736: PilastraTelhado24 3
+    3300738: PilastraTelhado24 4
+    3300740: PilastraTelhado24 5
+    3300742: PilastraTelhado24 6
+    3300744: PilastraTelhado25
+    3300746: PilastraTelhado25 1
+    3300748: PilastraTelhado25 2
+    3300750: PilastraTelhado25 3
+    3300752: PilastraTelhado25 4
+    3300754: PilastraTelhado25 5
+    3300756: PilastraTelhado25 6
+    3300758: PilastraTelhado26
+    3300760: PilastraTelhado26 1
+    3300762: PilastraTelhado26 2
+    3300764: PilastraTelhado26 3
+    3300766: PilastraTelhado26 4
+    3300768: PilastraTelhado26 5
+    3300770: PilastraTelhado26 6
+    3300772: PilastraTelhado3
+    3300774: PilastraTelhado3 1
+    3300776: PilastraTelhado3 2
+    3300778: PilastraTelhado4
+    3300780: PilastraTelhado4 1
+    3300782: PilastraTelhado4 2
+    3300784: PilastraTelhado4 3
+    3300786: PilastraTelhado4 4
+    3300788: PilastraTelhado4 5
+    3300790: PilastraTelhado4 6
+    3300792: PilastraTelhado5
+    3300794: PilastraTelhado5 1
+    3300796: PilastraTelhado5 2
+    3300798: PilastraTelhado5 3
+    3300800: PilastraTelhado5 4
+    3300802: PilastraTelhado6
+    3300804: PilastraTelhado6 1
+    3300806: PilastraTelhado7
+    3300808: PilastraTelhado7 1
+    3300810: PilastraTelhado8
+    3300812: PilastraTelhado8 1
+    3300814: PilastraTelhado9
+    3300816: PilastraTelhado9 1
+    3300818: PilastraVertical
+    3300820: PilastraVertical10
+    3300822: PilastraVertical11
+    3300824: PilastraVertical12
+    3300826: PilastraVertical13
+    3300828: PilastraVertical14
+    3300830: PilastraVertical15
+    3300832: PilastraVertical16
+    3300834: PilastraVertical17
+    3300836: PilastraVertical18
+    3300838: PilastraVertical19
+    3300840: PilastraVertical20
+    3300842: PilastraVertical21
+    3300844: PilastraVertical22
+    3300846: PilastraVertical23
+    3300848: PilastraVertical23 1
+    3300850: PilastraVertical23 2
+    3300852: PilastraVertical23 3
+    3300854: PilastraVertical23 4
+    3300856: PilastraVertical23 5
+    3300858: PilastraVertical23 6
+    3300860: PilastraVertical24
+    3300862: PilastraVertical24 1
+    3300864: PilastraVertical24 2
+    3300866: PilastraVertical24 3
+    3300868: PilastraVertical24 4
+    3300870: PilastraVertical24 5
+    3300872: PilastraVertical24 6
+    3300874: PilastraVertical3
+    3300876: PilastraVertical37
+    3300878: PilastraVertical38
+    3300880: PilastraVertical39
+    3300882: PilastraVertical4
+    3300884: PilastraVertical40
+    3300886: PilastraVertical41
+    3300888: PilastraVertical42
+    3300890: PilastraVertical43
+    3300892: PilastraVertical44
+    3300894: PilastraVertical45
+    3300896: PilastraVertical46
+    3300898: PilastraVertical47
+    3300900: PilastraVertical48
+    3300902: PilastraVertical49
+    3300904: PilastraVertical5
+    3300906: PilastraVertical51
+    3300908: PilastraVertical53
+    3300910: PilastraVertical54
+    3300912: PilastraVertical55
+    3300914: PilastraVertical56
+    3300916: PilastraVertical6
+    3300918: PilastraVertical67
+    3300920: PilastraVertical67 1
+    3300922: PilastraVertical67 2
+    3300924: PilastraVertical67 3
+    3300926: PilastraVertical67 4
+    3300928: PilastraVertical67 5
+    3300930: PilastraVertical67 6
+    3300932: PilastraVertical68
+    3300934: PilastraVertical68 1
+    3300936: PilastraVertical68 2
+    3300938: PilastraVertical68 3
+    3300940: PilastraVertical68 4
+    3300942: PilastraVertical68 5
+    3300944: PilastraVertical68 6
+    3300946: PilastraVertical69
+    3300948: PilastraVertical69 1
+    3300950: PilastraVertical69 10
+    3300952: PilastraVertical69 11
+    3300954: PilastraVertical69 12
+    3300956: PilastraVertical69 13
+    3300958: PilastraVertical69 14
+    3300960: PilastraVertical69 15
+    3300962: PilastraVertical69 16
+    3300964: PilastraVertical69 17
+    3300966: PilastraVertical69 18
+    3300968: PilastraVertical69 19
+    3300970: PilastraVertical69 2
+    3300972: PilastraVertical69 20
+    3300974: PilastraVertical69 21
+    3300976: PilastraVertical69 22
+    3300978: PilastraVertical69 3
+    3300980: PilastraVertical69 4
+    3300982: PilastraVertical69 5
+    3300984: PilastraVertical69 6
+    3300986: PilastraVertical69 7
+    3300988: PilastraVertical69 8
+    3300990: PilastraVertical69 9
+    3300992: PilastraVertical7
+    3300994: PilastraVertical70
+    3300996: PilastraVertical70 1
+    3300998: PilastraVertical70 10
+    3301000: PilastraVertical70 11
+    3301002: PilastraVertical70 12
+    3301004: PilastraVertical70 13
+    3301006: PilastraVertical70 14
+    3301008: PilastraVertical70 15
+    3301010: PilastraVertical70 16
+    3301012: PilastraVertical70 17
+    3301014: PilastraVertical70 18
+    3301016: PilastraVertical70 19
+    3301018: PilastraVertical70 2
+    3301020: PilastraVertical70 20
+    3301022: PilastraVertical70 21
+    3301024: PilastraVertical70 22
+    3301026: PilastraVertical70 23
+    3301028: PilastraVertical70 24
+    3301030: PilastraVertical70 25
+    3301032: PilastraVertical70 26
+    3301034: PilastraVertical70 27
+    3301036: PilastraVertical70 28
+    3301038: PilastraVertical70 29
+    3301040: PilastraVertical70 3
+    3301042: PilastraVertical70 30
+    3301044: PilastraVertical70 31
+    3301046: PilastraVertical70 32
+    3301048: PilastraVertical70 33
+    3301050: PilastraVertical70 4
+    3301052: PilastraVertical70 5
+    3301054: PilastraVertical70 6
+    3301056: PilastraVertical70 7
+    3301058: PilastraVertical70 8
+    3301060: PilastraVertical70 9
+    3301062: PilastraVertical71
+    3301064: PilastraVertical71 1
+    3301066: PilastraVertical71 2
+    3301068: PilastraVertical71 3
+    3301070: PilastraVertical71 4
+    3301072: PilastraVertical71 5
+    3301074: PilastraVertical71 6
+    3301076: PilastraVertical71 7
+    3301078: PilastraVertical72
+    3301080: PilastraVertical72 1
+    3301082: PilastraVertical72 2
+    3301084: PilastraVertical73
+    3301086: PilastraVertical74
+    3301088: PilastraVertical75
+    3301090: PilastraVertical76
+    3301092: PilastraVertical77
+    3301094: PilastraVertical78
+    3301096: PilastraVertical79
+    3301098: PilastraVertical8
+    3301100: PilastraVertical80
+    3301102: PilastraVertical81
+    3301104: PilastraVertical82
+    3301106: PilastraVertical83
+    3301108: PilastraVertical83 1
+    3301110: PilastraVertical83 2
+    3301112: PilastraVertical83 3
+    3301114: PilastraVertical83 4
+    3301116: PilastraVertical83 5
+    3301118: PilastraVertical83 6
+    3301120: PilastraVertical84
+    3301122: PilastraVertical84 1
+    3301124: PilastraVertical84 2
+    3301126: PilastraVertical84 3
+    3301128: PilastraVertical84 4
+    3301130: PilastraVertical84 5
+    3301132: PilastraVertical84 6
+    3301134: PilastraVertical85
+    3301136: PilastraVertical85 1
+    3301138: PilastraVertical85 2
+    3301140: PilastraVertical85 3
+    3301142: PilastraVertical85 4
+    3301144: PilastraVertical85 5
+    3301146: PilastraVertical85 6
+    3301148: PilastraVertical86
+    3301150: PilastraVertical86 1
+    3301152: PilastraVertical86 2
+    3301154: PilastraVertical86 3
+    3301156: PilastraVertical86 4
+    3301158: PilastraVertical86 5
+    3301160: PilastraVertical86 6
+    3301162: PilastraVertical87
+    3301164: PilastraVertical87 1
+    3301166: PilastraVertical87 2
+    3301168: PilastraVertical87 3
+    3301170: PilastraVertical87 4
+    3301172: PilastraVertical87 5
+    3301174: PilastraVertical87 6
+    3301176: PilastraVertical88
+    3301178: PilastraVertical88 1
+    3301180: PilastraVertical88 2
+    3301182: PilastraVertical88 3
+    3301184: PilastraVertical88 4
+    3301186: PilastraVertical88 5
+    3301188: PilastraVertical88 6
+    3301190: PilastraVertical89
+    3301192: PilastraVertical89 1
+    3301194: PilastraVertical89 2
+    3301196: PilastraVertical89 3
+    3301198: PilastraVertical89 4
+    3301200: PilastraVertical89 5
+    3301202: PilastraVertical89 6
+    3301204: PilastraVertical9
+    3301206: PilastraVertical90
+    3301208: PilastraVertical90 1
+    3301210: PilastraVertical90 2
+    3301212: PilastraVertical90 3
+    3301214: PilastraVertical90 4
+    3301216: PilastraVertical90 5
+    3301218: PilastraVertical90 6
+    3301220: PilastraVertical91
+    3301222: PilastraVertical92
+    3301224: PisoCasa
+    3301226: PisoCasa1
+    3301228: PisoPonte1
+    3301230: PisoPonte1 1
+    3301232: PisoPonte1 2
+    3301234: PisoPonte1 3
+    3301236: PisoPonte1 4
+    3301238: PisoPonte1 5
+    3301240: PisoPonte1 6
+    3301242: PisoTrapiche
+    3301244: Porta 1
+    3301246: Porta 2
+    3301248: Porta 3
+    3301250: TelhadoPalha1
+    3301252: TelhadoPalha1 1
+    3301254: TelhadoPalha1 2
+    3301256: TelhadoPalha1 3
+    3301258: TelhadoPalha1 4
+    3301260: TelhadoPalha1 5
+    3301262: TelhadoPalha1 6
+    3301264: TelhadoPalha1 7
+    3301266: TelhadoPalha1 8
+    3301268: TelhadoPalha2
+    3301270: TelhadoPalha2 1
+    3301272: TelhadoPalha2 2
+    3301274: TelhadoPalha2 3
+    3301276: TelhadoPalha2 4
+    3301278: TelhadoPalha2 5
+    3301280: TelhadoPalha2 6
+    3301282: TelhadoPalha3
+    3301284: TelhadoPalha3 1
+    3301286: TelhadoPalha3 2
+    3301288: TelhadoPalha3 3
+    3301290: TelhadoPalha3 4
+    3301292: TelhadoPalha3 5
+    3301294: TelhadoPalha3 6
+    3301296: TelhadoPalha4
+    3301298: TelhadoPalha5
+    3301300: TelhadoPalha6
+    3301302: TelhadoPalha7
+    3301304: TelhadoPalha8
+    4300000: PilastraVertical23
+    4300002: PilastraVertical24
+    4300004: PilastraVertical68
+    4300006: GradeInferior
+    4300008: GradeSuperior
+    4300010: GradeInferior1
+    4300012: GradeSuperior1
+    4300014: EstacaGrade1
+    4300016: PilastraVertical83
+    4300018: GradeSuperior2
+    4300020: EstacaGrade2
+    4300022: PilastraVertical85
+    4300024: PilastraVertical86
+    4300026: PilastraVertical84
+    4300028: GradeSuperior3
+    4300030: GradeInferior2
+    4300032: GradeInferior3
+    4300034: PilastraVertical70
+    4300036: PilastraVertical69
+    4300038: PilastraVertical87
+    4300040: PilastraVertical88
+    4300042: PilastraVertical67
+    4300044: PisoPonte1
+    4300046: EstacaGrade3
+    4300048: EstacaGrade4
+    4300050: PilastraVertical89
+    4300052: PilastraVertical90
+    4300054: PilastraVertical23
+    4300056: PilastraVertical24
+    4300058: PilastraVertical68
+    4300060: GradeInferior
+    4300062: GradeSuperior
+    4300064: GradeInferior1
+    4300066: GradeSuperior1
+    4300068: EstacaGrade1
+    4300070: PilastraVertical83
+    4300072: GradeSuperior2
+    4300074: EstacaGrade2
+    4300076: PilastraVertical85
+    4300078: PilastraVertical86
+    4300080: PilastraVertical84
+    4300082: GradeSuperior3
+    4300084: GradeInferior2
+    4300086: GradeInferior3
+    4300088: PilastraVertical70
+    4300090: PilastraVertical69
+    4300092: PilastraVertical87
+    4300094: PilastraVertical88
+    4300096: PilastraVertical67
+    4300098: PisoPonte1
+    4300100: EstacaGrade3
+    4300102: EstacaGrade4
+    4300104: PilastraVertical89
+    4300106: PilastraVertical90
+    4300108: PilastraVertical23
+    4300110: PilastraVertical24
+    4300112: PilastraVertical68
+    4300114: GradeInferior
+    4300116: GradeSuperior
+    4300118: GradeInferior1
+    4300120: GradeSuperior1
+    4300122: EstacaGrade1
+    4300124: PilastraVertical83
+    4300126: GradeSuperior2
+    4300128: EstacaGrade2
+    4300130: PilastraVertical85
+    4300132: PilastraVertical86
+    4300134: PilastraVertical84
+    4300136: GradeSuperior3
+    4300138: GradeInferior2
+    4300140: GradeInferior3
+    4300142: PilastraVertical70
+    4300144: PilastraVertical69
+    4300146: PilastraVertical87
+    4300148: PilastraVertical88
+    4300150: PilastraVertical67
+    4300152: PisoPonte1
+    4300154: EstacaGrade3
+    4300156: EstacaGrade4
+    4300158: PilastraVertical89
+    4300160: PilastraVertical90
+    4300162: PilastraVertical23
+    4300164: PilastraVertical24
+    4300166: PilastraVertical68
+    4300168: GradeInferior
+    4300170: GradeSuperior
+    4300172: GradeInferior1
+    4300174: GradeSuperior1
+    4300176: EstacaGrade1
+    4300178: PilastraVertical83
+    4300180: GradeSuperior2
+    4300182: EstacaGrade2
+    4300184: PilastraVertical85
+    4300186: PilastraVertical86
+    4300188: PilastraVertical84
+    4300190: GradeSuperior3
+    4300192: GradeInferior2
+    4300194: GradeInferior3
+    4300196: PilastraVertical70
+    4300198: PilastraVertical69
+    4300200: PilastraVertical87
+    4300202: PilastraVertical88
+    4300204: PilastraVertical67
+    4300206: PisoPonte1
+    4300208: EstacaGrade3
+    4300210: EstacaGrade4
+    4300212: PilastraVertical89
+    4300214: PilastraVertical90
+    4300216: PilastraVertical23
+    4300218: PilastraVertical24
+    4300220: PilastraVertical68
+    4300222: GradeInferior
+    4300224: GradeSuperior
+    4300226: GradeInferior1
+    4300228: GradeSuperior1
+    4300230: EstacaGrade1
+    4300232: PilastraVertical83
+    4300234: GradeSuperior2
+    4300236: EstacaGrade2
+    4300238: PilastraVertical85
+    4300240: PilastraVertical86
+    4300242: PilastraVertical84
+    4300244: GradeSuperior3
+    4300246: GradeInferior2
+    4300248: GradeInferior3
+    4300250: PilastraVertical70
+    4300252: PilastraVertical69
+    4300254: PilastraVertical87
+    4300256: PilastraVertical88
+    4300258: PilastraVertical67
+    4300260: PisoPonte1
+    4300262: EstacaGrade3
+    4300264: EstacaGrade4
+    4300266: PilastraVertical89
+    4300268: PilastraVertical90
+    4300270: PilastraVertical23
+    4300272: PilastraVertical24
+    4300274: PilastraVertical68
+    4300276: GradeInferior
+    4300278: GradeSuperior
+    4300280: GradeInferior1
+    4300282: GradeSuperior1
+    4300284: EstacaGrade1
+    4300286: PilastraVertical83
+    4300288: GradeSuperior2
+    4300290: EstacaGrade2
+    4300292: PilastraVertical85
+    4300294: PilastraVertical86
+    4300296: PilastraVertical84
+    4300298: GradeSuperior3
+    4300300: GradeInferior2
+    4300302: GradeInferior3
+    4300304: PilastraVertical70
+    4300306: PilastraVertical69
+    4300308: PilastraVertical87
+    4300310: PilastraVertical88
+    4300312: PilastraVertical67
+    4300314: PisoPonte1
+    4300316: EstacaGrade3
+    4300318: EstacaGrade4
+    4300320: PilastraVertical89
+    4300322: PilastraVertical90
+    4300324: PilastraTelhado13
+    4300326: PilastraTelhado12
+    4300328: PilastraTelhado9
+    4300330: PilastraTelhado10
+    4300332: PilastraTelhado11
+    4300334: pCube1
+    4300336: TelhadoPalha1
+    4300338: PilastraTelhado5
+    4300340: PilastraTelhado7
+    4300342: PilastraTelhado8
+    4300344: PilastraTelhado6
+    4300346: TelhadoPalha2
+    4300348: PilastraTelhado18
+    4300350: PilastraTelhado22
+    4300352: PilastraTelhado19
+    4300354: PilastraTelhado26
+    4300356: PilastraTelhado25
+    4300358: TelhadoPalha3
+    4300360: PilastraTelhado23
+    4300362: PilastraTelhado24
+    4300364: PilastraTelhado20
+    4300366: PilastraTelhado15
+    4300368: PilastraTelhado17
+    4300370: pCube2
+    4300372: PilastraTelhado16
+    4300374: PilastraTelhado14
+    4300376: TelhadoPalha2
+    4300378: PilastraTelhado18
+    4300380: PilastraTelhado22
+    4300382: PilastraTelhado19
+    4300384: PilastraTelhado26
+    4300386: PilastraTelhado25
+    4300388: TelhadoPalha3
+    4300390: PilastraTelhado23
+    4300392: PilastraTelhado24
+    4300394: PilastraTelhado20
+    4300396: PilastraTelhado15
+    4300398: PilastraTelhado17
+    4300400: pCube2
+    4300402: PilastraTelhado16
+    4300404: PilastraTelhado14
+    4300406: TelhadoPalha2
+    4300408: PilastraTelhado18
+    4300410: PilastraTelhado22
+    4300412: PilastraTelhado19
+    4300414: PilastraTelhado26
+    4300416: PilastraTelhado25
+    4300418: TelhadoPalha3
+    4300420: PilastraTelhado23
+    4300422: PilastraTelhado24
+    4300424: PilastraTelhado20
+    4300426: PilastraTelhado15
+    4300428: PilastraTelhado17
+    4300430: pCube2
+    4300432: PilastraTelhado16
+    4300434: PilastraTelhado14
+    4300436: TelhadoPalha2
+    4300438: PilastraTelhado18
+    4300440: PilastraTelhado22
+    4300442: PilastraTelhado19
+    4300444: PilastraTelhado26
+    4300446: TelhadoPalha5
+    4300448: PilastraTelhado25
+    4300450: TelhadoPalha3
+    4300452: PilastraTelhado23
+    4300454: PilastraTelhado24
+    4300456: PilastraTelhado20
+    4300458: TelhadoPalha6
+    4300460: PilastraTelhado15
+    4300462: PilastraTelhado17
+    4300464: pCube2
+    4300466: PilastraTelhado16
+    4300468: PilastraTelhado14
+    4300470: TelhadoPalha2
+    4300472: PilastraTelhado18
+    4300474: PilastraTelhado22
+    4300476: PilastraTelhado19
+    4300478: PilastraTelhado26
+    4300480: TelhadoPalha7
+    4300482: PilastraTelhado25
+    4300484: TelhadoPalha3
+    4300486: PilastraTelhado23
+    4300488: PilastraTelhado24
+    4300490: PilastraTelhado20
+    4300492: TelhadoPalha8
+    4300494: PilastraTelhado15
+    4300496: PilastraTelhado17
+    4300498: pCube2
+    4300500: PilastraTelhado16
+    4300502: PilastraTelhado14
+    4300504: TelhadoPalha2
+    4300506: PilastraTelhado18
+    4300508: PilastraTelhado22
+    4300510: PilastraTelhado19
+    4300512: PilastraTelhado26
+    4300514: TelhadoPalha4
+    4300516: PilastraTelhado25
+    4300518: TelhadoPalha3
+    4300520: PilastraTelhado23
+    4300522: PilastraTelhado24
+    4300524: PilastraTelhado20
+    4300526: PilastraTelhado15
+    4300528: PilastraTelhado17
+    4300530: pCube2
+    4300532: PilastraTelhado16
+    4300534: PilastraTelhado14
+    4300536: PilastraTelhado13
+    4300538: PilastraTelhado12
+    4300540: PilastraTelhado9
+    4300542: PilastraTelhado10
+    4300544: PilastraTelhado11
+    4300546: pCube1
+    4300548: TelhadoPalha1
+    4300550: PilastraTelhado5
+    4300552: PilastraTelhado7
+    4300554: PilastraTelhado8
+    4300556: PilastraTelhado6
+    4300558: TelhadoPalha2
+    4300560: PilastraTelhado18
+    4300562: PilastraTelhado22
+    4300564: PilastraTelhado19
+    4300566: PilastraTelhado26
+    4300568: PilastraTelhado25
+    4300570: TelhadoPalha3
+    4300572: PilastraTelhado23
+    4300574: PilastraTelhado24
+    4300576: PilastraTelhado20
+    4300578: PilastraTelhado15
+    4300580: PilastraTelhado17
+    4300582: pCube2
+    4300584: PilastraTelhado16
+    4300586: PilastraTelhado14
+    4300588: TelhadoPalha1
+    4300590: PilastraTelhado1
+    4300592: PilastraTelhado2
+    4300594: PilastraTelhado5
+    4300596: PilastraTelhado3
+    4300598: PilastraTelhado4
+    4300600: PilastraTelhado
+    4300602: TelhadoPalha1
+    4300604: PilastraTelhado1
+    4300606: PilastraTelhado2
+    4300608: PilastraTelhado5
+    4300610: PilastraTelhado3
+    4300612: PilastraTelhado4
+    4300614: PilastraTelhado
+    4300616: TelhadoPalha1
+    4300618: PilastraTelhado1
+    4300620: PilastraTelhado2
+    4300622: PilastraTelhado5
+    4300624: PilastraTelhado3
+    4300626: PilastraTelhado4
+    4300628: PilastraTelhado
+    4300630: TelhadoPalha1
+    4300632: PilastraTelhado1
+    4300634: PilastraTelhado2
+    4300636: PilastraTelhado4
+    4300638: PilastraTelhado
+    4300640: TelhadoPalha1
+    4300642: PilastraTelhado1
+    4300644: PilastraTelhado2
+    4300646: PilastraTelhado4
+    4300648: PilastraTelhado
+    4300650: TelhadoPalha1
+    4300652: PilastraTelhado1
+    4300654: PilastraTelhado2
+    4300656: PilastraTelhado4
+    4300658: PilastraTelhado
+    4300660: TelhadoPalha1
+    4300662: PilastraTelhado1
+    4300664: PilastraTelhado2
+    4300666: PilastraTelhado4
+    4300668: PilastraTelhado
+    4300670: DegrauEscada
+    4300672: DegrauEscada1
+    4300674: DegrauEscada2
+    4300676: DegrauEscada3
+    4300678: DegrauEscada4
+    4300680: DegrauEscada5
+    4300682: DegrauEscada6
+    4300684: DegrauEscada7
+    4300686: DegrauEscada8
+    4300688: DegrauEscada9
+    4300690: DegrauEscada10
+    4300692: DegrauEscada11
+    4300694: DegrauEscada12
+    4300696: DegrauEscada13
+    4300698: DegrauEscada14
+    4300700: PilastraVertical23
+    4300702: PilastraVertical24
+    4300704: PilastraVertical68
+    4300706: GradeInferior
+    4300708: GradeSuperior
+    4300710: GradeInferior1
+    4300712: GradeSuperior1
+    4300714: EstacaGrade1
+    4300716: PilastraVertical83
+    4300718: GradeSuperior2
+    4300720: EstacaGrade2
+    4300722: PilastraVertical85
+    4300724: PilastraVertical86
+    4300726: PilastraVertical84
+    4300728: GradeSuperior3
+    4300730: GradeInferior2
+    4300732: GradeInferior3
+    4300734: PilastraVertical70
+    4300736: PilastraVertical69
+    4300738: PilastraVertical87
+    4300740: PilastraVertical88
+    4300742: PilastraVertical67
+    4300744: PisoPonte1
+    4300746: EstacaGrade3
+    4300748: EstacaGrade4
+    4300750: PilastraVertical89
+    4300752: PilastraVertical90
+    4300754: Batente
+    4300756: Porta
+    4300758: Batente
+    4300760: Porta
+    4300762: Batente
+    4300764: Porta
+    4300766: PisoCasa1
+    4300768: PisoTrapiche
+    4300770: PisoCasa
+    4300772: EstacaGrade1
+    4300774: GradeSuperior
+    4300776: GradeInferior
+    4300778: EstacaGrade1
+    4300780: GradeSuperior
+    4300782: GradeInferior
+    4300784: EstacaGrade1
+    4300786: GradeSuperior
+    4300788: GradeInferior
+    4300790: EstacaGrade1
+    4300792: GradeSuperior
+    4300794: GradeInferior
+    4300796: EstacaGrade1
+    4300798: GradeSuperior
+    4300800: GradeInferior
+    4300802: EstacaGrade1
+    4300804: GradeSuperior
+    4300806: GradeInferior
+    4300808: EstacaGrade1
+    4300810: GradeSuperior
+    4300812: GradeInferior
+    4300814: EstacaGrade1
+    4300816: GradeSuperior
+    4300818: GradeInferior
+    4300820: EstacaGrade1
+    4300822: GradeSuperior
+    4300824: GradeInferior
+    4300826: EstacaGrade1
+    4300828: GradeSuperior
+    4300830: GradeInferior
+    4300832: EstacaGrade1
+    4300834: GradeSuperior
+    4300836: GradeInferior
+    4300838: EstacaGrade1
+    4300840: GradeSuperior
+    4300842: GradeInferior
+    4300844: EstacaGrade1
+    4300846: GradeSuperior
+    4300848: GradeInferior
+    4300850: EstacaGrade1
+    4300852: GradeSuperior
+    4300854: GradeInferior
+    4300856: EstacaGrade1
+    4300858: GradeSuperior
+    4300860: GradeInferior
+    4300862: EstacaGrade1
+    4300864: GradeSuperior
+    4300866: GradeInferior
+    4300868: EstacaGrade1
+    4300870: GradeSuperior
+    4300872: GradeInferior
+    4300874: EstacaGrade1
+    4300876: GradeSuperior
+    4300878: GradeInferior
+    4300880: EstacaGrade1
+    4300882: GradeSuperior
+    4300884: GradeInferior
+    4300886: EstacaGrade1
+    4300888: GradeSuperior
+    4300890: GradeInferior
+    4300892: EstacaGrade1
+    4300894: GradeSuperior
+    4300896: GradeInferior
+    4300898: EstacaGrade1
+    4300900: GradeSuperior
+    4300902: GradeInferior
+    4300904: EstacaGrade1
+    4300906: GradeSuperior
+    4300908: GradeInferior
+    4300910: EstacaGrade1
+    4300912: GradeSuperior
+    4300914: GradeInferior
+    4300916: EstacaGrade1
+    4300918: GradeSuperior
+    4300920: GradeInferior
+    4300922: EstacaGrade1
+    4300924: GradeSuperior
+    4300926: GradeInferior
+    4300928: EstacaGrade1
+    4300930: GradeSuperior
+    4300932: GradeInferior
+    4300934: EstacaGrade1
+    4300936: GradeSuperior
+    4300938: GradeInferior
+    4300940: EstacaGrade1
+    4300942: GradeSuperior
+    4300944: GradeInferior
+    4300946: EstacaGrade1
+    4300948: GradeSuperior
+    4300950: GradeInferior
+    4300952: EstacaGrade1
+    4300954: GradeSuperior
+    4300956: GradeInferior
+    4300958: EstacaGrade1
+    4300960: GradeSuperior
+    4300962: GradeInferior
+    4300964: EstacaGrade1
+    4300966: GradeSuperior
+    4300968: GradeInferior
+    4300970: EstacaGrade1
+    4300972: GradeSuperior
+    4300974: GradeInferior
+    4300976: EstacaGrade1
+    4300978: GradeSuperior
+    4300980: GradeInferior
+    4300982: EstacaGrade1
+    4300984: GradeSuperior
+    4300986: GradeInferior
+    4300988: EstacaGrade1
+    4300990: GradeSuperior
+    4300992: GradeInferior
+    4300994: EstacaGrade1
+    4300996: GradeSuperior
+    4300998: GradeInferior
+    4301000: EstacaGrade1
+    4301002: GradeSuperior
+    4301004: GradeInferior
+    4301006: EstacaGrade1
+    4301008: GradeSuperior
+    4301010: GradeInferior
+    4301012: EstacaGrade1
+    4301014: GradeSuperior
+    4301016: GradeInferior
+    4301018: EstacaGrade1
+    4301020: GradeSuperior
+    4301022: GradeInferior
+    4301024: EstacaGrade1
+    4301026: GradeSuperior
+    4301028: GradeInferior
+    4301030: EstacaGrade1
+    4301032: GradeSuperior
+    4301034: GradeInferior
+    4301036: EstacaGrade1
+    4301038: GradeSuperior
+    4301040: GradeInferior
+    4301042: EstacaGrade1
+    4301044: GradeSuperior
+    4301046: GradeInferior
+    4301048: EstacaGrade1
+    4301050: GradeSuperior
+    4301052: GradeInferior
+    4301054: EstacaGrade1
+    4301056: GradeSuperior
+    4301058: GradeInferior
+    4301060: EstacaGrade1
+    4301062: GradeSuperior
+    4301064: GradeInferior
+    4301066: GradeSuperior
+    4301068: GradeInferior
+    4301070: EstacaGrade1
+    4301072: GradeSuperior
+    4301074: GradeInferior
+    4301076: EstacaGrade1
+    4301078: GradeSuperior
+    4301080: GradeInferior
+    4301082: EstacaGrade1
+    4301084: GradeSuperior
+    4301086: GradeInferior
+    4301088: EstacaGrade1
+    4301090: GradeSuperior
+    4301092: GradeInferior
+    4301094: ParedesCasa
+    4301096: PilastraVertical82
+    4301098: PilastraVertical81
+    4301100: PilastraVertical80
+    4301102: PilastraVertical79
+    4301104: PilastraVertical78
+    4301106: PilastraVertical77
+    4301108: PilastraVertical76
+    4301110: PilastraVertical70
+    4301112: PilastraVertical72
+    4301114: PilastraVertical70
+    4301116: PilastraVertical72
+    4301118: PilastraVertical70
+    4301120: PilastraVertical72
+    4301122: PilastraVertical69
+    4301124: PilastraVertical70
+    4301126: PilastraVertical70
+    4301128: PilastraVertical71
+    4301130: PilastraVertical70
+    4301132: PilastraVertical71
+    4301134: PilastraVertical70
+    4301136: PilastraVertical71
+    4301138: PilastraVertical70
+    4301140: PilastraVertical71
+    4301142: PilastraVertical70
+    4301144: PilastraVertical71
+    4301146: PilastraVertical70
+    4301148: PilastraVertical71
+    4301150: PilastraVertical70
+    4301152: PilastraVertical71
+    4301154: PilastraVertical70
+    4301156: PilastraVertical71
+    4301158: PilastraVertical69
+    4301160: PilastraVertical70
+    4301162: PilastraVertical69
+    4301164: PilastraVertical70
+    4301166: PilastraVertical69
+    4301168: PilastraVertical70
+    4301170: PilastraVertical69
+    4301172: PilastraVertical70
+    4301174: PilastraVertical69
+    4301176: PilastraVertical70
+    4301178: PilastraVertical69
+    4301180: PilastraVertical70
+    4301182: PilastraVertical69
+    4301184: PilastraVertical70
+    4301186: PilastraVertical69
+    4301188: PilastraVertical70
+    4301190: PilastraVertical69
+    4301192: PilastraVertical70
+    4301194: PilastraVertical69
+    4301196: PilastraVertical70
+    4301198: PilastraVertical69
+    4301200: PilastraVertical70
+    4301202: PilastraVertical69
+    4301204: PilastraVertical70
+    4301206: PilastraVertical69
+    4301208: PilastraVertical70
+    4301210: PilastraVertical69
+    4301212: PilastraVertical70
+    4301214: PilastraVertical91
+    4301216: PilastraVertical92
+    4301218: PilastraVertical69
+    4301220: PilastraVertical70
+    4301222: PilastraVertical75
+    4301224: PilastraVertical56
+    4301226: PilastraVertical55
+    4301228: PilastraVertical54
+    4301230: PilastraVertical53
+    4301232: PilastraVertical51
+    4301234: PilastraVertical49
+    4301236: PilastraVertical48
+    4301238: PilastraVertical47
+    4301240: PilastraVertical46
+    4301242: PilastraVertical45
+    4301244: PilastraVertical44
+    4301246: PilastraVertical43
+    4301248: PilastraVertical42
+    4301250: PilastraVertical41
+    4301252: PilastraVertical40
+    4301254: PilastraVertical39
+    4301256: PilastraVertical38
+    4301258: PilastraVertical37
+    4301260: PilastraVertical22
+    4301262: PilastraVertical21
+    4301264: PilastraVertical20
+    4301266: PilastraVertical19
+    4301268: PilastraVertical18
+    4301270: PilastraVertical17
+    4301272: PilastraVertical16
+    4301274: PilastraVertical15
+    4301276: PilastraVertical14
+    4301278: PilastraVertical13
+    4301280: PilastraVertical12
+    4301282: PilastraVertical11
+    4301284: PilastraVertical10
+    4301286: PilastraVertical9
+    4301288: PilastraVertical8
+    4301290: PilastraVertical7
+    4301292: PilastraVertical6
+    4301294: PilastraVertical5
+    4301296: PilastraVertical4
+    4301298: PilastraVertical3
+    4301300: PilastraVertical
+    4301302: PilastraVertical73
+    4301304: PilastraVertical74
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madeira2
+    second: {fileID: 2100000, guid: 7476d21c18c59674baebd1fa3e6eed39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madeira3
+    second: {fileID: 2100000, guid: 4b5d13b4ae41e9245957bafb0ff42944, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madeira4
+    second: {fileID: 2100000, guid: dcb7097d714aad349bbc5e7d0caba365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madeira5
+    second: {fileID: 2100000, guid: e72524141645362419747f4270ef018f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palha
+    second: {fileID: 2100000, guid: 6862d00ac80228a4d83ef02ecd8e0a90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porta1
+    second: {fileID: 2100000, guid: 2434847c19518f34f844ae57a8a743f5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
