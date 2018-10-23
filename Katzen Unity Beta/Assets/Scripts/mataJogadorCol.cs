@@ -7,11 +7,13 @@ public class mataJogadorCol : MonoBehaviour {
     public int dano;
     GameObject gameManagerGO;
     GameManager gmScript;
+    public float lifeTime;
 
     // Use this for initialization
     void Start () {
         gameManagerGO = GameObject.Find("Manager");
         gmScript = gameManagerGO.GetComponent<GameManager>();
+        Destroy(gameObject, lifeTime);
     }
 	
 	// Update is called once per frame
@@ -23,8 +25,8 @@ public class mataJogadorCol : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
             gmScript.DecreaseLife(dano);
+            Destroy (gameObject);
         }
     }
 }

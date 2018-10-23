@@ -17,11 +17,13 @@ public class MoverTiro : MonoBehaviour {
 
     private void OnEnable()
     {
+        rb.useGravity = true;
         rb.AddForce(transform.forward * tiroForca, ForceMode.Impulse);
     }
 
     private void OnDisable()
     {
+        rb.useGravity = false;
         tempoDeVida = 0;
     }
 

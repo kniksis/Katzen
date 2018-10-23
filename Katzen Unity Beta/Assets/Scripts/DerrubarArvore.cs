@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DerrubarArvore : MonoBehaviour {
-    public GameObject ColisorArvore;
-    public GameObject Arvore;
-    public float turnSpeed = 50f;
-    public float x = -90;
-    public bool cairArvore;
-
+    public Animator animArvore;
     // Use this for initialization
     void Start () {
-        cairArvore = false;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (cairArvore)
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("TiroJogador"))
         {
-            if (x <= 0)
-            {
-                x += Time.deltaTime * 40;
-                Arvore.transform.rotation = Quaternion.Euler(x, -125, 0);
-            }
+            animArvore.SetBool("DerrubarArvore", true);
         }
     }
 }

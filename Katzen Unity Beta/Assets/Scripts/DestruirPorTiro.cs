@@ -22,7 +22,6 @@ public class DestruirPorTiro : MonoBehaviour {
 	{
 		if(other.CompareTag("TiroJogador"))
 		{
-            daScript.cairArvore = true;
             Destroy(gameObject);
 		}
 	}

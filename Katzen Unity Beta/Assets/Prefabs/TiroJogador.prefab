@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33998668790607022}
   - component: {fileID: 135395591623441326}
   - component: {fileID: 23754056749993596}
-  - component: {fileID: 114384394293939316}
   - component: {fileID: 54948829943363076}
   - component: {fileID: 114716164943093808}
   m_Layer: 0
@@ -102,21 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114384394293939316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1624799932118420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8adea98c28852545bb9fedb0c13c624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiroForca: 0
-  tempoDeVida: 0
-  tempoDeVidaMax: 0
-  rb: {fileID: 0}
 --- !u!114 &114716164943093808
 MonoBehaviour:
   m_ObjectHideFlags: 1

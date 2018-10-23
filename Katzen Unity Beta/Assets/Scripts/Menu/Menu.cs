@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour {
 
 	public void CarregarNivel1()
 	{
-		SceneManager.LoadScene(Nivel1);
+		//SceneManager.LoadScene(Nivel1);
 	}
 
 	public void CarregarMenu()

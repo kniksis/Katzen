@@ -9,11 +9,13 @@ public class AtirarNoJogador : MonoBehaviour {
 	GameObject jogEntrouMiraGO;
 	[SerializeField]
 	JogEntrouMira jemScript;
-    
 
-	public float fireRate = 0.5f;
+    public Rigidbody tiro;
+    public Transform respawnTiro;
+
+    public float fireRate = 0.5f;
 	public float nextFire = 0.0f;
-	public Transform respawnTiro;
+    public float forcaAtual;
     
 
 	public bool atirar;
@@ -42,13 +44,17 @@ public class AtirarNoJogador : MonoBehaviour {
 			{
 				nextFire = Time.time + fireRate;
                 //atirar = true;
-                GameObject temp = gop.ObterObjeto();
-                if(temp != null)
-                {
-                    temp.transform.position = respawnTiro.transform.position;
-                    temp.transform.rotation = respawnTiro.transform.rotation;
-                    temp.SetActive(true);
-                }
+                //GameObject temp = gop.ObterObjeto();
+                //if(temp != null)
+                //{
+                    //temp.transform.position = respawnTiro.transform.position;
+                    //temp.transform.rotation = respawnTiro.transform.rotation;
+                    //temp.SetActive(true);
+
+                    Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
+
+                    tiroInstancia.velocity = forcaAtual * respawnTiro.forward;
+                //}
 			}
 		}
 	}
