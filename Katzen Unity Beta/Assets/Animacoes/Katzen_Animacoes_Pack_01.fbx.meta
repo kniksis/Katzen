@@ -1,0 +1,2859 @@
+fileFormatVersion: 2
+guid: 712b3e6eb136c084296490aa37fda47c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Katzen_Anelar_A_Dir_jnt
+    100002: Katzen_Anelar_A_Esq_jnt
+    100004: Katzen_Anelar_B_Dir_jnt
+    100006: Katzen_Anelar_B_Esq_jnt
+    100008: Katzen_Anelar_C_Dir_jnt
+    100010: Katzen_Anelar_C_Esq_jnt
+    100012: Katzen_Anelar_D_Dir_jnt_FIM
+    100014: Katzen_Anelar_D_Esq_jnt_FIM
+    100016: //RootNode
+    100018: Katzen_Braco_A_dir_crv_FK
+    100020: Katzen_Braco_A_dir_crv_FK_grp
+    100022: Katzen_Braco_A_Dir_jnt
+    100024: Katzen_Braco_A_Dir_jnt_FK
+    100026: Katzen_Braco_A_Dir_jnt_IK
+    100028: Katzen_Braco_A_esq_crv_FK
+    100030: Katzen_Braco_A_esq_crv_FK_grp
+    100032: Katzen_Braco_A_Esq_jnt
+    100034: Katzen_Braco_A_Esq_jnt_FK
+    100036: Katzen_Braco_A_Esq_jnt_IK
+    100038: Katzen_Braco_B_Dir_jnt
+    100040: Katzen_Braco_B_Dir_jnt_FK
+    100042: Katzen_Braco_B_Dir_jnt_IK
+    100044: Katzen_Braco_B_Esq_jnt
+    100046: Katzen_Braco_B_Esq_jnt_FK
+    100048: Katzen_Braco_B_Esq_jnt_IK
+    100050: Katzen_Cabeca_A_jnt
+    100052: Katzen_Cabeca_B_jnt
+    100054: Katzen_Cabeca_C_jnt_FIM
+    100056: Katzen_Calda_A_jnt
+    100058: Katzen_Calda_B_jnt
+    100060: Katzen_Calda_C_jnt
+    100062: Katzen_Calda_D_jnt
+    100064: Katzen_Calda_F_jnt
+    100066: Katzen_Calda_G_jnt
+    100068: Katzen_Calda_H_jnt
+    100070: Katzen_Calda_I_jnt
+    100072: Katzen_Calda_J_jnt_FIM
+    100074: Katzen_Col_A_jnt
+    100076: Katzen_Col_B_jnt
+    100078: Katzen_Col_C_jnt
+    100080: Katzen_Col_D_jnt
+    100082: Katzen_Col_F_jnt
+    100084: Katzen_Costeletas_1_Dir_A_jnt
+    100086: Katzen_Costeletas_1_Esq_A_jnt
+    100088: Katzen_Costeletas_2_Dir_A_jnt
+    100090: Katzen_Costeletas_2_Dir_B_jnt
+    100092: Katzen_Costeletas_2_Dir_B_jnt 1
+    100094: Katzen_Costeletas_2_Dir_C_jnt_FIM
+    100096: Katzen_Costeletas_2_Dir_C_jnt_FIM 1
+    100098: Katzen_Costeletas_2_Esq_A_jnt
+    100100: Katzen_Costeletas_2_Esq_B_jnt
+    100102: Katzen_Costeletas_2_Esq_B_jnt 1
+    100104: Katzen_Costeletas_2_Esq_C_jnt_FIM
+    100106: Katzen_Costeletas_2_Esq_C_jnt_FIM 1
+    100108: Katzen_Costeletas_3_Dir_A_jnt
+    100110: Katzen_Costeletas_3_Dir_B_jnt
+    100112: Katzen_Costeletas_3_Dir_C_jnt_FIM
+    100114: Katzen_Costeletas_3_Esq_A_jnt
+    100116: Katzen_Costeletas_3_Esq_B_jnt
+    100118: Katzen_Costeletas_3_Esq_C_jnt_FIM
+    100120: Katzen_ctrl_barriga_A_crv
+    100122: Katzen_ctrl_barriga_A_crv_grp
+    100124: Katzen_ctrl_barriga_B_crv
+    100126: Katzen_ctrl_barriga_B_crv_grp
+    100128: Katzen_ctrl_boca_crv
+    100130: Katzen_ctrl_boca_crv_grp
+    100132: Katzen_ctrl_cabeca_crv
+    100134: Katzen_ctrl_cabeca_crv_grp
+    100136: Katzen_ctrl_cintura_crv
+    100138: Katzen_ctrl_cintura_crv_grp
+    100140: Katzen_ctrl_cotovelo_dir_crv_FK
+    100142: Katzen_ctrl_cotovelo_dir_crv_FK_grp
+    100144: Katzen_ctrl_cotovelo_esq_crv_FK
+    100146: Katzen_ctrl_cotovelo_esq_crv_FK_grp
+    100148: Katzen_ctrl_dedo_anelar_dir_A_crv
+    100150: Katzen_ctrl_dedo_anelar_dir_A_crv_grp
+    100152: Katzen_ctrl_dedo_anelar_dir_B_crv
+    100154: Katzen_ctrl_dedo_anelar_dir_B_crv_grp
+    100156: Katzen_ctrl_dedo_anelar_dir_C_crv
+    100158: Katzen_ctrl_dedo_anelar_dir_C_crv_grp
+    100160: Katzen_ctrl_dedo_anelar_esq_A_crv
+    100162: Katzen_ctrl_dedo_anelar_esq_A_crv_grp
+    100164: Katzen_ctrl_dedo_anelar_esq_B_crv
+    100166: Katzen_ctrl_dedo_anelar_esq_B_crv_grp
+    100168: Katzen_ctrl_dedo_anelar_esq_C_crv
+    100170: Katzen_ctrl_dedo_anelar_esq_C_crv_grp
+    100172: Katzen_ctrl_dedo_indicador_dir_A_crv
+    100174: Katzen_ctrl_dedo_indicador_dir_A_crv_grp
+    100176: Katzen_ctrl_dedo_indicador_dir_B_crv
+    100178: Katzen_ctrl_dedo_indicador_dir_B_crv_grp
+    100180: Katzen_ctrl_dedo_indicador_dir_C_crv
+    100182: Katzen_ctrl_dedo_indicador_dir_C_crv_grp
+    100184: Katzen_ctrl_dedo_indicador_esq_A_crv
+    100186: Katzen_ctrl_dedo_indicador_esq_A_crv_grp
+    100188: Katzen_ctrl_dedo_indicador_esq_B_crv
+    100190: Katzen_ctrl_dedo_indicador_esq_B_crv_grp
+    100192: Katzen_ctrl_dedo_indicador_esq_C_crv
+    100194: Katzen_ctrl_dedo_indicador_esq_C_crv_grp
+    100196: Katzen_ctrl_dedo_medio_dir_A_crv
+    100198: Katzen_ctrl_dedo_medio_dir_A_crv_grp
+    100200: Katzen_ctrl_dedo_medio_dir_B_crv
+    100202: Katzen_ctrl_dedo_medio_dir_B_crv_grp
+    100204: Katzen_ctrl_dedo_medio_dir_C_crv
+    100206: Katzen_ctrl_dedo_medio_dir_C_crv_grp
+    100208: Katzen_ctrl_dedo_medio_esq_A_crv
+    100210: Katzen_ctrl_dedo_medio_esq_A_crv_grp
+    100212: Katzen_ctrl_dedo_medio_esq_B_crv
+    100214: Katzen_ctrl_dedo_medio_esq_B_crv_grp
+    100216: Katzen_ctrl_dedo_medio_esq_C_crv
+    100218: Katzen_ctrl_dedo_medio_esq_C_crv_grp
+    100220: Katzen_ctrl_dedo_polegar_dir_A_crv
+    100222: Katzen_ctrl_dedo_polegar_dir_A_crv_grp
+    100224: Katzen_ctrl_dedo_polegar_dir_B_crv
+    100226: Katzen_ctrl_dedo_polegar_dir_B_crv_grp
+    100228: Katzen_ctrl_dedo_polegar_dir_C_crv
+    100230: Katzen_ctrl_dedo_polegar_dir_C_crv_grp
+    100232: Katzen_ctrl_dedo_polegar_esq_A_crv
+    100234: Katzen_ctrl_dedo_polegar_esq_A_crv_grp
+    100236: Katzen_ctrl_dedo_polegar_esq_B_crv
+    100238: Katzen_ctrl_dedo_polegar_esq_B_crv_grp
+    100240: Katzen_ctrl_dedo_polegar_esq_C_crv
+    100242: Katzen_ctrl_dedo_polegar_esq_C_crv_grp
+    100244: Katzen_ctrl_mao_dir_crv_grp
+    100246: Katzen_ctrl_mao_esq_crv_grp
+    100248: Katzen_ctrl_master_crv
+    100250: Katzen_ctrl_master_crv_grp
+    100252: Katzen_ctrl_nariz_crv
+    100254: Katzen_ctrl_nariz_crv_grp
+    100256: Katzen_ctrl_olho_dir_crv
+    100258: Katzen_ctrl_olho_dir_crv_gp
+    100260: Katzen_ctrl_olho_esq_crv
+    100262: Katzen_ctrl_olho_esq_crv_gp
+    100264: Katzen_ctrl_olhos_crv
+    100266: Katzen_ctrl_olhos_crv_gp
+    100268: Katzen_ctrl_ombro_dir_crv
+    100270: Katzen_ctrl_ombro_dir_crv_grp
+    100272: Katzen_ctrl_ombro_esq_crv
+    100274: Katzen_ctrl_ombro_esq_crv_grp
+    100276: Katzen_ctrl_peito_A_crv
+    100278: Katzen_ctrl_peito_A_crv_grp
+    100280: Katzen_ctrl_perna_A_dir_crv_FK
+    100282: Katzen_ctrl_perna_A_dir_crv_FK_grp
+    100284: Katzen_ctrl_perna_A_esq_crv_FK
+    100286: Katzen_ctrl_perna_A_esq_crv_FK_grp
+    100288: Katzen_ctrl_perna_B_dir_crv_FK
+    100290: Katzen_ctrl_perna_B_dir_crv_FK_grp
+    100292: Katzen_ctrl_perna_B_esq_crv_FK
+    100294: Katzen_ctrl_perna_B_esq_crv_FK_grp
+    100296: Katzen_ctrl_pescoco_crv
+    100298: Katzen_ctrl_pescoco_crv_grp
+    100300: Katzen_ctrl_pulso_dir_crv_FK
+    100302: Katzen_ctrl_pulso_dir_crv_FK_grp
+    100304: Katzen_ctrl_pulso_dir_crv_IK
+    100306: Katzen_ctrl_pulso_dir_crv_IK_grp
+    100308: Katzen_ctrl_pulso_esq_crv_FK
+    100310: Katzen_ctrl_pulso_esq_crv_FK_grp
+    100312: Katzen_ctrl_pulso_esq_crv_IK
+    100314: Katzen_ctrl_pulso_esq_crv_IK_grp
+    100316: Katzen_ctrl_root_crv
+    100318: Katzen_ctrl_root_crv_grp
+    100320: Katzen_ctrl_shorts_A_dir_crv
+    100322: Katzen_ctrl_shorts_A_dir_crv_grp
+    100324: Katzen_ctrl_shorts_A_esq_crv
+    100326: Katzen_ctrl_shorts_A_esq_crv_grp
+    100328: Katzen_ctrl_shorts_B_dir_crv
+    100330: Katzen_ctrl_shorts_B_dir_crv_grp
+    100332: Katzen_ctrl_shorts_B_esq_crv
+    100334: Katzen_ctrl_shorts_B_esq_crv_grp
+    100336: Katzen_ctrl_shorts_C_dir_crv
+    100338: Katzen_ctrl_shorts_C_dir_crv_grp
+    100340: Katzen_ctrl_shorts_C_esq_crv
+    100342: Katzen_ctrl_shorts_C_esq_crv_grp
+    100344: Katzen_ctrl_shorts_D_dir_crv
+    100346: Katzen_ctrl_shorts_D_dir_crv_grp
+    100348: Katzen_ctrl_shorts_D_esq_crv
+    100350: Katzen_ctrl_shorts_D_esq_crv_grp
+    100352: Katzen_ctrl_shorts_geral_dir_crv
+    100354: Katzen_ctrl_shorts_geral_dir_crv_grp
+    100356: Katzen_ctrl_shorts_geral_esq_crv
+    100358: Katzen_ctrl_shorts_geral_esq_crv_grp
+    100360: Katzen_ctrl_tornozelo_dir_crv_FK
+    100362: Katzen_ctrl_tornozelo_dir_crv_FK_grp
+    100364: Katzen_ctrl_tornozelo_esq_crv_FK
+    100366: Katzen_ctrl_tornozelo_esq_crv_FK_grp
+    100368: Katzen_ctrls
+    100370: Katzen_Dedao_Pe_A_Dir_jnt
+    100372: Katzen_Dedao_Pe_A_Esq_jnt
+    100374: Katzen_Dedao_Pe_B_Dir_jnt
+    100376: Katzen_Dedao_Pe_B_Esq_jnt
+    100378: Katzen_Dedao_Pe_C_Dir_jnt_FIM
+    100380: Katzen_Dedao_Pe_C_Esq_jnt_FIM
+    100382: Katzen_geo
+    100384: Katzen_Geo_grp
+    100386: Katzen_Indicador_A_Dir_jnt
+    100388: Katzen_Indicador_A_Esq_jnt
+    100390: Katzen_Indicador_B_Dir_jnt
+    100392: Katzen_Indicador_B_Esq_jnt
+    100394: Katzen_Indicador_C_Dir_jnt
+    100396: Katzen_Indicador_C_Esq_jnt
+    100398: Katzen_Indicador_D_Dir_jnt_FIM
+    100400: Katzen_Indicador_D_Esq_jnt_FIM
+    100402: Katzen_Indicador_Pe_A_Dir_jnt
+    100404: Katzen_Indicador_Pe_A_Esq_jnt
+    100406: Katzen_Indicador_Pe_B_Dir_jnt
+    100408: Katzen_Indicador_Pe_B_Esq_jnt
+    100410: Katzen_Indicador_Pe_C_Dir_jnt_FIM
+    100412: Katzen_Indicador_Pe_C_Esq_jnt_FIM
+    100414: Katzen_Lingua_A_jnt
+    100416: Katzen_Lingua_B_jnt
+    100418: Katzen_Lingua_C_jnt
+    100420: Katzen_Lingua_D_jnt
+    100422: Katzen_Lingua_F_jnt_FIM
+    100424: Katzen_Mand_A_jnt
+    100426: Katzen_Mand_B_jnt_FIM
+    100428: Katzen_Mao_A_Dir_jnt
+    100430: Katzen_Mao_A_Dir_jnt_FK
+    100432: Katzen_Mao_A_Dir_jnt_IK
+    100434: Katzen_Mao_A_Esq_jnt
+    100436: Katzen_Mao_A_Esq_jnt_FK
+    100438: Katzen_Mao_A_Esq_jnt_IK
+    100440: Katzen_Mao_B_Dir_jnt
+    100442: Katzen_Mao_B_Esq_jnt
+    100444: Katzen_Medio_A_Dir_jnt
+    100446: Katzen_Medio_A_Esq_jnt
+    100448: Katzen_Medio_B_Dir_jnt
+    100450: Katzen_Medio_B_Esq_jnt
+    100452: Katzen_Medio_C_Dir_jnt
+    100454: Katzen_Medio_C_Esq_jnt
+    100456: Katzen_Medio_D_Dir_jnt_FIM
+    100458: Katzen_Medio_D_Esq_jnt_FIM
+    100460: Katzen_Medio_Pe_A_Dir_jnt
+    100462: Katzen_Medio_Pe_A_Esq_jnt
+    100464: Katzen_Medio_Pe_B_Dir_jnt
+    100466: Katzen_Medio_Pe_B_Esq_jnt
+    100468: Katzen_Medio_Pe_C_Dir_jnt_FIM
+    100470: Katzen_Medio_Pe_C_Esq_jnt_FIM
+    100472: Katzen_Olho_Dir_jnt
+    100474: Katzen_Olho_Esq_jnt
+    100476: Katzen_Ombro_Dir_jnt
+    100478: Katzen_Ombro_Esq_jnt
+    100480: Katzen_Orelha_Dir_A_jnt
+    100482: Katzen_Orelha_Dir_B_jnt
+    100484: Katzen_Orelha_Dir_C_jnt
+    100486: Katzen_Orelha_Dir_D_jnt
+    100488: Katzen_Orelha_Dir_E_jnt
+    100490: Katzen_Orelha_Dir_F_jnt_FIM
+    100492: Katzen_Orelha_Esq_A_jnt
+    100494: Katzen_Orelha_Esq_B_jnt
+    100496: Katzen_Orelha_Esq_C_jnt
+    100498: Katzen_Orelha_Esq_D_jnt
+    100500: Katzen_Orelha_Esq_E_jnt
+    100502: Katzen_Orelha_Esq_F_jnt_FIM
+    100504: Katzen_Pe_Dir_A_jnt
+    100506: Katzen_Pe_Dir_A_jnt_FK
+    100508: Katzen_Pe_Dir_A_jnt_IK
+    100510: Katzen_Pe_Dir_B_jnt
+    100512: Katzen_Pe_Dir_B_jnt_IK
+    100514: Katzen_Pe_Dir_C_jnt
+    100516: Katzen_Pe_Dir_C_jnt_IK_FIM
+    100518: Katzen_Pe_Esq_A_jnt
+    100520: Katzen_Pe_Esq_A_jnt_FK
+    100522: Katzen_Pe_Esq_A_jnt_IK
+    100524: Katzen_Pe_Esq_B_jnt
+    100526: Katzen_Pe_Esq_B_jnt_IK
+    100528: Katzen_Pe_Esq_C_jnt
+    100530: Katzen_Pe_Esq_C_jnt_IK_FIM
+    100532: Katzen_Pelos_Braco_A_Dir_jnt
+    100534: Katzen_Pelos_Braco_A_Esq_jnt
+    100536: Katzen_Pelos_Braco_B_Dir_jnt_FIM
+    100538: Katzen_Pelos_Braco_B_Esq_jnt_FIM
+    100540: Katzen_Pelos_Perna_1_A_Dir_jnt
+    100542: Katzen_Pelos_Perna_1_A_Esq_jnt
+    100544: Katzen_Pelos_Perna_1_B_Dir_jnt_FIM
+    100546: Katzen_Pelos_Perna_1_B_Esq_jnt_FIM
+    100548: Katzen_Pelos_Perna_2_B_Dir_jnt
+    100550: Katzen_Pelos_Perna_2_B_Esq_jnt
+    100552: Katzen_Pelos_Perna_2_C_Dir_jnt_FIM
+    100554: Katzen_Pelos_Perna_2_C_Esq_jnt_FIM
+    100556: Katzen_Perna_Dir_A_jnt
+    100558: Katzen_Perna_Dir_A_jnt_FK
+    100560: Katzen_Perna_Dir_A_jnt_IK
+    100562: Katzen_Perna_Dir_B_jnt
+    100564: Katzen_Perna_Dir_B_jnt_FK
+    100566: Katzen_Perna_Dir_B_jnt_IK
+    100568: Katzen_Perna_Esq_A_jnt
+    100570: Katzen_Perna_Esq_A_jnt_FK
+    100572: Katzen_Perna_Esq_A_jnt_IK
+    100574: Katzen_Perna_Esq_B_jnt
+    100576: Katzen_Perna_Esq_B_jnt_FK
+    100578: Katzen_Perna_Esq_B_jnt_IK
+    100580: Katzen_Polegar_A_Dir_jnt
+    100582: Katzen_Polegar_A_Esq_jnt
+    100584: Katzen_Polegar_B_Dir_jnt
+    100586: Katzen_Polegar_B_Esq_jnt
+    100588: Katzen_Polegar_C_Dir_jnt
+    100590: Katzen_Polegar_C_Esq_jnt
+    100592: Katzen_Polegar_D_Dir_jnt_FIM
+    100594: Katzen_Polegar_D_Esq_jnt_FIM
+    100596: Katzen_rig_gp
+    100598: Katzen_Root_jnt
+    100600: Katzen_Shorts_A_A_Dir_jnt
+    100602: Katzen_Shorts_A_A_Esq_jnt
+    100604: Katzen_Shorts_A_B_Dir_jnt
+    100606: Katzen_Shorts_A_B_Esq_jnt
+    100608: Katzen_Shorts_A_C_Dir_jnt
+    100610: Katzen_Shorts_A_C_Esq_jnt
+    100612: Katzen_Shorts_A_D_Dir_jnt
+    100614: Katzen_Shorts_A_D_Esq_jnt
+    100616: Katzen_Shorts_B_A_Dir_jnt
+    100618: Katzen_Shorts_B_A_Esq_jnt
+    100620: Katzen_Shorts_B_B_Dir_jnt
+    100622: Katzen_Shorts_B_B_Esq_jnt
+    100624: Katzen_Shorts_B_C_Dir_jnt
+    100626: Katzen_Shorts_B_C_Esq_jnt
+    100628: Katzen_Shorts_B_D_Dir_jnt
+    100630: Katzen_Shorts_B_D_Esq_jnt
+    100632: Katzen_Topete_B_1_jnt
+    100634: Katzen_Topete_B_2_jnt
+    100636: Katzen_Topete_B_2_jnt1
+    100638: Katzen_Topete_B_2_jnt2
+    100640: Katzen_Topete_B_2_jnt3
+    100642: Katzen_Topete_B_2_jnt4
+    100644: Katzen_Topete_C_1_jnt
+    100646: Katzen_Topete_C_2_jnt
+    100648: Katzen_Topete_C_2_jnt 1
+    100650: Katzen_Topete_C_2_jnt 2
+    100652: Katzen_Topete_C_2_jnt 3
+    100654: Katzen_Topete_C_2_jnt 4
+    100656: Katzen_Topete_C_2_jnt1
+    100658: Katzen_Topete_D_1_jnt_FIM
+    100660: Katzen_Topete_D_2_jnt_FIM
+    100662: Katzen_Topete_D_2_jnt_FIM 1
+    100664: Katzen_Topete_D_2_jnt_FIM 2
+    100666: Katzen_Topete_D_2_jnt_FIM 3
+    100668: Katzen_Topete_D_2_jnt_FIM 4
+    100670: Katzen_Topete_D_2_jnt_FIM 5
+    400000: Katzen_Anelar_A_Dir_jnt
+    400002: Katzen_Anelar_A_Esq_jnt
+    400004: Katzen_Anelar_B_Dir_jnt
+    400006: Katzen_Anelar_B_Esq_jnt
+    400008: Katzen_Anelar_C_Dir_jnt
+    400010: Katzen_Anelar_C_Esq_jnt
+    400012: Katzen_Anelar_D_Dir_jnt_FIM
+    400014: Katzen_Anelar_D_Esq_jnt_FIM
+    400016: //RootNode
+    400018: Katzen_Braco_A_dir_crv_FK
+    400020: Katzen_Braco_A_dir_crv_FK_grp
+    400022: Katzen_Braco_A_Dir_jnt
+    400024: Katzen_Braco_A_Dir_jnt_FK
+    400026: Katzen_Braco_A_Dir_jnt_IK
+    400028: Katzen_Braco_A_esq_crv_FK
+    400030: Katzen_Braco_A_esq_crv_FK_grp
+    400032: Katzen_Braco_A_Esq_jnt
+    400034: Katzen_Braco_A_Esq_jnt_FK
+    400036: Katzen_Braco_A_Esq_jnt_IK
+    400038: Katzen_Braco_B_Dir_jnt
+    400040: Katzen_Braco_B_Dir_jnt_FK
+    400042: Katzen_Braco_B_Dir_jnt_IK
+    400044: Katzen_Braco_B_Esq_jnt
+    400046: Katzen_Braco_B_Esq_jnt_FK
+    400048: Katzen_Braco_B_Esq_jnt_IK
+    400050: Katzen_Cabeca_A_jnt
+    400052: Katzen_Cabeca_B_jnt
+    400054: Katzen_Cabeca_C_jnt_FIM
+    400056: Katzen_Calda_A_jnt
+    400058: Katzen_Calda_B_jnt
+    400060: Katzen_Calda_C_jnt
+    400062: Katzen_Calda_D_jnt
+    400064: Katzen_Calda_F_jnt
+    400066: Katzen_Calda_G_jnt
+    400068: Katzen_Calda_H_jnt
+    400070: Katzen_Calda_I_jnt
+    400072: Katzen_Calda_J_jnt_FIM
+    400074: Katzen_Col_A_jnt
+    400076: Katzen_Col_B_jnt
+    400078: Katzen_Col_C_jnt
+    400080: Katzen_Col_D_jnt
+    400082: Katzen_Col_F_jnt
+    400084: Katzen_Costeletas_1_Dir_A_jnt
+    400086: Katzen_Costeletas_1_Esq_A_jnt
+    400088: Katzen_Costeletas_2_Dir_A_jnt
+    400090: Katzen_Costeletas_2_Dir_B_jnt
+    400092: Katzen_Costeletas_2_Dir_B_jnt 1
+    400094: Katzen_Costeletas_2_Dir_C_jnt_FIM
+    400096: Katzen_Costeletas_2_Dir_C_jnt_FIM 1
+    400098: Katzen_Costeletas_2_Esq_A_jnt
+    400100: Katzen_Costeletas_2_Esq_B_jnt
+    400102: Katzen_Costeletas_2_Esq_B_jnt 1
+    400104: Katzen_Costeletas_2_Esq_C_jnt_FIM
+    400106: Katzen_Costeletas_2_Esq_C_jnt_FIM 1
+    400108: Katzen_Costeletas_3_Dir_A_jnt
+    400110: Katzen_Costeletas_3_Dir_B_jnt
+    400112: Katzen_Costeletas_3_Dir_C_jnt_FIM
+    400114: Katzen_Costeletas_3_Esq_A_jnt
+    400116: Katzen_Costeletas_3_Esq_B_jnt
+    400118: Katzen_Costeletas_3_Esq_C_jnt_FIM
+    400120: Katzen_ctrl_barriga_A_crv
+    400122: Katzen_ctrl_barriga_A_crv_grp
+    400124: Katzen_ctrl_barriga_B_crv
+    400126: Katzen_ctrl_barriga_B_crv_grp
+    400128: Katzen_ctrl_boca_crv
+    400130: Katzen_ctrl_boca_crv_grp
+    400132: Katzen_ctrl_cabeca_crv
+    400134: Katzen_ctrl_cabeca_crv_grp
+    400136: Katzen_ctrl_cintura_crv
+    400138: Katzen_ctrl_cintura_crv_grp
+    400140: Katzen_ctrl_cotovelo_dir_crv_FK
+    400142: Katzen_ctrl_cotovelo_dir_crv_FK_grp
+    400144: Katzen_ctrl_cotovelo_esq_crv_FK
+    400146: Katzen_ctrl_cotovelo_esq_crv_FK_grp
+    400148: Katzen_ctrl_dedo_anelar_dir_A_crv
+    400150: Katzen_ctrl_dedo_anelar_dir_A_crv_grp
+    400152: Katzen_ctrl_dedo_anelar_dir_B_crv
+    400154: Katzen_ctrl_dedo_anelar_dir_B_crv_grp
+    400156: Katzen_ctrl_dedo_anelar_dir_C_crv
+    400158: Katzen_ctrl_dedo_anelar_dir_C_crv_grp
+    400160: Katzen_ctrl_dedo_anelar_esq_A_crv
+    400162: Katzen_ctrl_dedo_anelar_esq_A_crv_grp
+    400164: Katzen_ctrl_dedo_anelar_esq_B_crv
+    400166: Katzen_ctrl_dedo_anelar_esq_B_crv_grp
+    400168: Katzen_ctrl_dedo_anelar_esq_C_crv
+    400170: Katzen_ctrl_dedo_anelar_esq_C_crv_grp
+    400172: Katzen_ctrl_dedo_indicador_dir_A_crv
+    400174: Katzen_ctrl_dedo_indicador_dir_A_crv_grp
+    400176: Katzen_ctrl_dedo_indicador_dir_B_crv
+    400178: Katzen_ctrl_dedo_indicador_dir_B_crv_grp
+    400180: Katzen_ctrl_dedo_indicador_dir_C_crv
+    400182: Katzen_ctrl_dedo_indicador_dir_C_crv_grp
+    400184: Katzen_ctrl_dedo_indicador_esq_A_crv
+    400186: Katzen_ctrl_dedo_indicador_esq_A_crv_grp
+    400188: Katzen_ctrl_dedo_indicador_esq_B_crv
+    400190: Katzen_ctrl_dedo_indicador_esq_B_crv_grp
+    400192: Katzen_ctrl_dedo_indicador_esq_C_crv
+    400194: Katzen_ctrl_dedo_indicador_esq_C_crv_grp
+    400196: Katzen_ctrl_dedo_medio_dir_A_crv
+    400198: Katzen_ctrl_dedo_medio_dir_A_crv_grp
+    400200: Katzen_ctrl_dedo_medio_dir_B_crv
+    400202: Katzen_ctrl_dedo_medio_dir_B_crv_grp
+    400204: Katzen_ctrl_dedo_medio_dir_C_crv
+    400206: Katzen_ctrl_dedo_medio_dir_C_crv_grp
+    400208: Katzen_ctrl_dedo_medio_esq_A_crv
+    400210: Katzen_ctrl_dedo_medio_esq_A_crv_grp
+    400212: Katzen_ctrl_dedo_medio_esq_B_crv
+    400214: Katzen_ctrl_dedo_medio_esq_B_crv_grp
+    400216: Katzen_ctrl_dedo_medio_esq_C_crv
+    400218: Katzen_ctrl_dedo_medio_esq_C_crv_grp
+    400220: Katzen_ctrl_dedo_polegar_dir_A_crv
+    400222: Katzen_ctrl_dedo_polegar_dir_A_crv_grp
+    400224: Katzen_ctrl_dedo_polegar_dir_B_crv
+    400226: Katzen_ctrl_dedo_polegar_dir_B_crv_grp
+    400228: Katzen_ctrl_dedo_polegar_dir_C_crv
+    400230: Katzen_ctrl_dedo_polegar_dir_C_crv_grp
+    400232: Katzen_ctrl_dedo_polegar_esq_A_crv
+    400234: Katzen_ctrl_dedo_polegar_esq_A_crv_grp
+    400236: Katzen_ctrl_dedo_polegar_esq_B_crv
+    400238: Katzen_ctrl_dedo_polegar_esq_B_crv_grp
+    400240: Katzen_ctrl_dedo_polegar_esq_C_crv
+    400242: Katzen_ctrl_dedo_polegar_esq_C_crv_grp
+    400244: Katzen_ctrl_mao_dir_crv_grp
+    400246: Katzen_ctrl_mao_esq_crv_grp
+    400248: Katzen_ctrl_master_crv
+    400250: Katzen_ctrl_master_crv_grp
+    400252: Katzen_ctrl_nariz_crv
+    400254: Katzen_ctrl_nariz_crv_grp
+    400256: Katzen_ctrl_olho_dir_crv
+    400258: Katzen_ctrl_olho_dir_crv_gp
+    400260: Katzen_ctrl_olho_esq_crv
+    400262: Katzen_ctrl_olho_esq_crv_gp
+    400264: Katzen_ctrl_olhos_crv
+    400266: Katzen_ctrl_olhos_crv_gp
+    400268: Katzen_ctrl_ombro_dir_crv
+    400270: Katzen_ctrl_ombro_dir_crv_grp
+    400272: Katzen_ctrl_ombro_esq_crv
+    400274: Katzen_ctrl_ombro_esq_crv_grp
+    400276: Katzen_ctrl_peito_A_crv
+    400278: Katzen_ctrl_peito_A_crv_grp
+    400280: Katzen_ctrl_perna_A_dir_crv_FK
+    400282: Katzen_ctrl_perna_A_dir_crv_FK_grp
+    400284: Katzen_ctrl_perna_A_esq_crv_FK
+    400286: Katzen_ctrl_perna_A_esq_crv_FK_grp
+    400288: Katzen_ctrl_perna_B_dir_crv_FK
+    400290: Katzen_ctrl_perna_B_dir_crv_FK_grp
+    400292: Katzen_ctrl_perna_B_esq_crv_FK
+    400294: Katzen_ctrl_perna_B_esq_crv_FK_grp
+    400296: Katzen_ctrl_pescoco_crv
+    400298: Katzen_ctrl_pescoco_crv_grp
+    400300: Katzen_ctrl_pulso_dir_crv_FK
+    400302: Katzen_ctrl_pulso_dir_crv_FK_grp
+    400304: Katzen_ctrl_pulso_dir_crv_IK
+    400306: Katzen_ctrl_pulso_dir_crv_IK_grp
+    400308: Katzen_ctrl_pulso_esq_crv_FK
+    400310: Katzen_ctrl_pulso_esq_crv_FK_grp
+    400312: Katzen_ctrl_pulso_esq_crv_IK
+    400314: Katzen_ctrl_pulso_esq_crv_IK_grp
+    400316: Katzen_ctrl_root_crv
+    400318: Katzen_ctrl_root_crv_grp
+    400320: Katzen_ctrl_shorts_A_dir_crv
+    400322: Katzen_ctrl_shorts_A_dir_crv_grp
+    400324: Katzen_ctrl_shorts_A_esq_crv
+    400326: Katzen_ctrl_shorts_A_esq_crv_grp
+    400328: Katzen_ctrl_shorts_B_dir_crv
+    400330: Katzen_ctrl_shorts_B_dir_crv_grp
+    400332: Katzen_ctrl_shorts_B_esq_crv
+    400334: Katzen_ctrl_shorts_B_esq_crv_grp
+    400336: Katzen_ctrl_shorts_C_dir_crv
+    400338: Katzen_ctrl_shorts_C_dir_crv_grp
+    400340: Katzen_ctrl_shorts_C_esq_crv
+    400342: Katzen_ctrl_shorts_C_esq_crv_grp
+    400344: Katzen_ctrl_shorts_D_dir_crv
+    400346: Katzen_ctrl_shorts_D_dir_crv_grp
+    400348: Katzen_ctrl_shorts_D_esq_crv
+    400350: Katzen_ctrl_shorts_D_esq_crv_grp
+    400352: Katzen_ctrl_shorts_geral_dir_crv
+    400354: Katzen_ctrl_shorts_geral_dir_crv_grp
+    400356: Katzen_ctrl_shorts_geral_esq_crv
+    400358: Katzen_ctrl_shorts_geral_esq_crv_grp
+    400360: Katzen_ctrl_tornozelo_dir_crv_FK
+    400362: Katzen_ctrl_tornozelo_dir_crv_FK_grp
+    400364: Katzen_ctrl_tornozelo_esq_crv_FK
+    400366: Katzen_ctrl_tornozelo_esq_crv_FK_grp
+    400368: Katzen_ctrls
+    400370: Katzen_Dedao_Pe_A_Dir_jnt
+    400372: Katzen_Dedao_Pe_A_Esq_jnt
+    400374: Katzen_Dedao_Pe_B_Dir_jnt
+    400376: Katzen_Dedao_Pe_B_Esq_jnt
+    400378: Katzen_Dedao_Pe_C_Dir_jnt_FIM
+    400380: Katzen_Dedao_Pe_C_Esq_jnt_FIM
+    400382: Katzen_geo
+    400384: Katzen_Geo_grp
+    400386: Katzen_Indicador_A_Dir_jnt
+    400388: Katzen_Indicador_A_Esq_jnt
+    400390: Katzen_Indicador_B_Dir_jnt
+    400392: Katzen_Indicador_B_Esq_jnt
+    400394: Katzen_Indicador_C_Dir_jnt
+    400396: Katzen_Indicador_C_Esq_jnt
+    400398: Katzen_Indicador_D_Dir_jnt_FIM
+    400400: Katzen_Indicador_D_Esq_jnt_FIM
+    400402: Katzen_Indicador_Pe_A_Dir_jnt
+    400404: Katzen_Indicador_Pe_A_Esq_jnt
+    400406: Katzen_Indicador_Pe_B_Dir_jnt
+    400408: Katzen_Indicador_Pe_B_Esq_jnt
+    400410: Katzen_Indicador_Pe_C_Dir_jnt_FIM
+    400412: Katzen_Indicador_Pe_C_Esq_jnt_FIM
+    400414: Katzen_Lingua_A_jnt
+    400416: Katzen_Lingua_B_jnt
+    400418: Katzen_Lingua_C_jnt
+    400420: Katzen_Lingua_D_jnt
+    400422: Katzen_Lingua_F_jnt_FIM
+    400424: Katzen_Mand_A_jnt
+    400426: Katzen_Mand_B_jnt_FIM
+    400428: Katzen_Mao_A_Dir_jnt
+    400430: Katzen_Mao_A_Dir_jnt_FK
+    400432: Katzen_Mao_A_Dir_jnt_IK
+    400434: Katzen_Mao_A_Esq_jnt
+    400436: Katzen_Mao_A_Esq_jnt_FK
+    400438: Katzen_Mao_A_Esq_jnt_IK
+    400440: Katzen_Mao_B_Dir_jnt
+    400442: Katzen_Mao_B_Esq_jnt
+    400444: Katzen_Medio_A_Dir_jnt
+    400446: Katzen_Medio_A_Esq_jnt
+    400448: Katzen_Medio_B_Dir_jnt
+    400450: Katzen_Medio_B_Esq_jnt
+    400452: Katzen_Medio_C_Dir_jnt
+    400454: Katzen_Medio_C_Esq_jnt
+    400456: Katzen_Medio_D_Dir_jnt_FIM
+    400458: Katzen_Medio_D_Esq_jnt_FIM
+    400460: Katzen_Medio_Pe_A_Dir_jnt
+    400462: Katzen_Medio_Pe_A_Esq_jnt
+    400464: Katzen_Medio_Pe_B_Dir_jnt
+    400466: Katzen_Medio_Pe_B_Esq_jnt
+    400468: Katzen_Medio_Pe_C_Dir_jnt_FIM
+    400470: Katzen_Medio_Pe_C_Esq_jnt_FIM
+    400472: Katzen_Olho_Dir_jnt
+    400474: Katzen_Olho_Esq_jnt
+    400476: Katzen_Ombro_Dir_jnt
+    400478: Katzen_Ombro_Esq_jnt
+    400480: Katzen_Orelha_Dir_A_jnt
+    400482: Katzen_Orelha_Dir_B_jnt
+    400484: Katzen_Orelha_Dir_C_jnt
+    400486: Katzen_Orelha_Dir_D_jnt
+    400488: Katzen_Orelha_Dir_E_jnt
+    400490: Katzen_Orelha_Dir_F_jnt_FIM
+    400492: Katzen_Orelha_Esq_A_jnt
+    400494: Katzen_Orelha_Esq_B_jnt
+    400496: Katzen_Orelha_Esq_C_jnt
+    400498: Katzen_Orelha_Esq_D_jnt
+    400500: Katzen_Orelha_Esq_E_jnt
+    400502: Katzen_Orelha_Esq_F_jnt_FIM
+    400504: Katzen_Pe_Dir_A_jnt
+    400506: Katzen_Pe_Dir_A_jnt_FK
+    400508: Katzen_Pe_Dir_A_jnt_IK
+    400510: Katzen_Pe_Dir_B_jnt
+    400512: Katzen_Pe_Dir_B_jnt_IK
+    400514: Katzen_Pe_Dir_C_jnt
+    400516: Katzen_Pe_Dir_C_jnt_IK_FIM
+    400518: Katzen_Pe_Esq_A_jnt
+    400520: Katzen_Pe_Esq_A_jnt_FK
+    400522: Katzen_Pe_Esq_A_jnt_IK
+    400524: Katzen_Pe_Esq_B_jnt
+    400526: Katzen_Pe_Esq_B_jnt_IK
+    400528: Katzen_Pe_Esq_C_jnt
+    400530: Katzen_Pe_Esq_C_jnt_IK_FIM
+    400532: Katzen_Pelos_Braco_A_Dir_jnt
+    400534: Katzen_Pelos_Braco_A_Esq_jnt
+    400536: Katzen_Pelos_Braco_B_Dir_jnt_FIM
+    400538: Katzen_Pelos_Braco_B_Esq_jnt_FIM
+    400540: Katzen_Pelos_Perna_1_A_Dir_jnt
+    400542: Katzen_Pelos_Perna_1_A_Esq_jnt
+    400544: Katzen_Pelos_Perna_1_B_Dir_jnt_FIM
+    400546: Katzen_Pelos_Perna_1_B_Esq_jnt_FIM
+    400548: Katzen_Pelos_Perna_2_B_Dir_jnt
+    400550: Katzen_Pelos_Perna_2_B_Esq_jnt
+    400552: Katzen_Pelos_Perna_2_C_Dir_jnt_FIM
+    400554: Katzen_Pelos_Perna_2_C_Esq_jnt_FIM
+    400556: Katzen_Perna_Dir_A_jnt
+    400558: Katzen_Perna_Dir_A_jnt_FK
+    400560: Katzen_Perna_Dir_A_jnt_IK
+    400562: Katzen_Perna_Dir_B_jnt
+    400564: Katzen_Perna_Dir_B_jnt_FK
+    400566: Katzen_Perna_Dir_B_jnt_IK
+    400568: Katzen_Perna_Esq_A_jnt
+    400570: Katzen_Perna_Esq_A_jnt_FK
+    400572: Katzen_Perna_Esq_A_jnt_IK
+    400574: Katzen_Perna_Esq_B_jnt
+    400576: Katzen_Perna_Esq_B_jnt_FK
+    400578: Katzen_Perna_Esq_B_jnt_IK
+    400580: Katzen_Polegar_A_Dir_jnt
+    400582: Katzen_Polegar_A_Esq_jnt
+    400584: Katzen_Polegar_B_Dir_jnt
+    400586: Katzen_Polegar_B_Esq_jnt
+    400588: Katzen_Polegar_C_Dir_jnt
+    400590: Katzen_Polegar_C_Esq_jnt
+    400592: Katzen_Polegar_D_Dir_jnt_FIM
+    400594: Katzen_Polegar_D_Esq_jnt_FIM
+    400596: Katzen_rig_gp
+    400598: Katzen_Root_jnt
+    400600: Katzen_Shorts_A_A_Dir_jnt
+    400602: Katzen_Shorts_A_A_Esq_jnt
+    400604: Katzen_Shorts_A_B_Dir_jnt
+    400606: Katzen_Shorts_A_B_Esq_jnt
+    400608: Katzen_Shorts_A_C_Dir_jnt
+    400610: Katzen_Shorts_A_C_Esq_jnt
+    400612: Katzen_Shorts_A_D_Dir_jnt
+    400614: Katzen_Shorts_A_D_Esq_jnt
+    400616: Katzen_Shorts_B_A_Dir_jnt
+    400618: Katzen_Shorts_B_A_Esq_jnt
+    400620: Katzen_Shorts_B_B_Dir_jnt
+    400622: Katzen_Shorts_B_B_Esq_jnt
+    400624: Katzen_Shorts_B_C_Dir_jnt
+    400626: Katzen_Shorts_B_C_Esq_jnt
+    400628: Katzen_Shorts_B_D_Dir_jnt
+    400630: Katzen_Shorts_B_D_Esq_jnt
+    400632: Katzen_Topete_B_1_jnt
+    400634: Katzen_Topete_B_2_jnt
+    400636: Katzen_Topete_B_2_jnt1
+    400638: Katzen_Topete_B_2_jnt2
+    400640: Katzen_Topete_B_2_jnt3
+    400642: Katzen_Topete_B_2_jnt4
+    400644: Katzen_Topete_C_1_jnt
+    400646: Katzen_Topete_C_2_jnt
+    400648: Katzen_Topete_C_2_jnt 1
+    400650: Katzen_Topete_C_2_jnt 2
+    400652: Katzen_Topete_C_2_jnt 3
+    400654: Katzen_Topete_C_2_jnt 4
+    400656: Katzen_Topete_C_2_jnt1
+    400658: Katzen_Topete_D_1_jnt_FIM
+    400660: Katzen_Topete_D_2_jnt_FIM
+    400662: Katzen_Topete_D_2_jnt_FIM 1
+    400664: Katzen_Topete_D_2_jnt_FIM 2
+    400666: Katzen_Topete_D_2_jnt_FIM 3
+    400668: Katzen_Topete_D_2_jnt_FIM 4
+    400670: Katzen_Topete_D_2_jnt_FIM 5
+    2100000: Katzen_Final_PelosBrancos1
+    2100002: Katzen_Final_Nariz
+    2100004: Katzen_Pele_Final
+    2100006: Katzen_Final_Calca
+    2100008: Katzen_Final_PelosBrancos
+    2100010: Katzen_Final_Pele
+    2100012: Katzen_Final_PeleBoca1
+    2100014: Katzen_Final_Cinto
+    2100016: Katzen_Final_Fivela
+    2100018: Katzen_Final_Dente
+    2100020: Katzen_Final_PeleBoca
+    2100022: Default_Material
+    2100024: Katzen_Final_OlhosIrisPreto
+    2100026: Katzen_Final_OlhosIrisVerde
+    2100028: Katzen_Final_OlhosBranco
+    2100030: Katzen_Final_OlhosLentes1
+    4300000: Katzen_geo
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Katzen_geo
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Katzen_Col_A_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Katzen_Mand_A_jnt' is
+      inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Katzen_Ombro_Esq_jnt'
+      has translation animation that will be discarded.\n\t'Katzen_Ombro_Dir_jnt'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Katzen_Root_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Perna_Esq_A_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Perna_Dir_A_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Perna_Esq_B_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Perna_Dir_B_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Pe_Esq_A_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Pe_Dir_A_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Col_B_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Col_C_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Col_F_jnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Cabeca_A_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Ombro_Esq_jnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Ombro_Dir_jnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Braco_A_Esq_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Braco_A_Dir_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Braco_B_Esq_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Braco_B_Dir_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Mao_A_Esq_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Mao_A_Dir_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Pe_Esq_B_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Pe_Dir_B_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Olho_Esq_jnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Olho_Dir_jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Mand_B_jnt_FIM
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_A_Esq_jnt
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_B_Esq_jnt
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_C_Esq_jnt
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_A_Esq_jnt
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_B_Esq_jnt
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_C_Esq_jnt
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_A_Esq_jnt
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_B_Esq_jnt
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_C_Esq_jnt
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_A_Dir_jnt
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_B_Dir_jnt
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Indicador_C_Dir_jnt
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_A_Dir_jnt
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_B_Dir_jnt
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Medio_C_Dir_jnt
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_A_Dir_jnt
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_B_Dir_jnt
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Anelar_C_Dir_jnt
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Col_D_jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_A_Esq_jnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_B_Esq_jnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_C_Esq_jnt
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_A_Dir_jnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_B_Dir_jnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Katzen_Polegar_C_Dir_jnt
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Katzen_Modelo(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrls
+      parentName: Katzen_Modelo(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_master_crv_grp
+      parentName: Katzen_ctrls
+      position: {x: -1.577794e-32, y: 0.55952436, z: 0.0025103488}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_master_crv
+      parentName: Katzen_ctrl_master_crv_grp
+      position: {x: 7.222237e-37, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_mao_dir_crv_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: 0.3054996, y: 0.13551103, z: -0.027722614}
+      rotation: {x: 1.2019249e-16, y: 1, z: -0.000000024797192, w: 0.0000000023776947}
+      scale: {x: 1, y: 1, z: -1}
+    - name: Katzen_ctrl_dedo_anelar_dir_A_crv_grp
+      parentName: Katzen_ctrl_mao_dir_crv_grp
+      position: {x: -0.0640208, y: 0.004461055, z: -0.02385157}
+      rotation: {x: -0.017560557, y: -0.06853935, z: 0.08424552, w: 0.9939299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_dir_A_crv
+      parentName: Katzen_ctrl_dedo_anelar_dir_A_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_dir_B_crv_grp
+      parentName: Katzen_ctrl_dedo_anelar_dir_A_crv
+      position: {x: -0.019568793, y: -0.0006544769, z: -0.0003488307}
+      rotation: {x: 0, y: 0, z: 0.09874445, w: 0.99511284}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_dir_B_crv
+      parentName: Katzen_ctrl_dedo_anelar_dir_B_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -9.992007e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_dir_C_crv_grp
+      parentName: Katzen_ctrl_dedo_anelar_dir_B_crv
+      position: {x: -0.02060271, y: -0.0019848756, z: 0.000646193}
+      rotation: {x: 0, y: 0, z: 0.17084548, w: 0.98529786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_dir_C_crv
+      parentName: Katzen_ctrl_dedo_anelar_dir_C_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_A_crv_grp
+      parentName: Katzen_ctrl_mao_dir_crv_grp
+      position: {x: -0.06270323, y: 0.0024348453, z: 0.024383182}
+      rotation: {x: 0.09488272, y: 0.2280011, z: 0.15723638, w: 0.95618486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_A_crv
+      parentName: Katzen_ctrl_dedo_indicador_dir_A_crv_grp
+      position: {x: 7.105427e-17, y: -1.4210854e-16, z: -7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_B_crv_grp
+      parentName: Katzen_ctrl_dedo_indicador_dir_A_crv
+      position: {x: -0.021345325, y: 0.0035398637, z: 0.000672333}
+      rotation: {x: 0, y: 0, z: 0.1254085, w: 0.9921052}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_B_crv
+      parentName: Katzen_ctrl_dedo_indicador_dir_B_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_C_crv_grp
+      parentName: Katzen_ctrl_dedo_indicador_dir_B_crv
+      position: {x: -0.020236636, y: 0.0043252087, z: 0.0012646382}
+      rotation: {x: 0, y: 0, z: 0.11339848, w: 0.9935496}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_dir_C_crv
+      parentName: Katzen_ctrl_dedo_indicador_dir_C_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -1.0658141e-16}
+      rotation: {x: 0, y: 0, z: 0.2852241, w: 0.95846087}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_A_crv_grp
+      parentName: Katzen_ctrl_mao_dir_crv_grp
+      position: {x: -0.069911934, y: 0.005459629, z: 0.002684788}
+      rotation: {x: -0.028185228, y: 0.00788708, z: 0.100325264, w: 0.9945241}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_A_crv
+      parentName: Katzen_ctrl_dedo_medio_dir_A_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_B_crv_grp
+      parentName: Katzen_ctrl_dedo_medio_dir_A_crv
+      position: {x: -0.02119071, y: -0.0004945126, z: 0.00056333945}
+      rotation: {x: 0, y: 0, z: 0.036603138, w: 0.99932986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_B_crv
+      parentName: Katzen_ctrl_dedo_medio_dir_B_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -1.0769163e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_C_crv_grp
+      parentName: Katzen_ctrl_dedo_medio_dir_B_crv
+      position: {x: -0.020965256, y: -0.0003427277, z: 0.00011631744}
+      rotation: {x: 0, y: 0, z: 0.19702137, w: 0.9803992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_dir_C_crv
+      parentName: Katzen_ctrl_dedo_medio_dir_C_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_A_crv_grp
+      parentName: Katzen_ctrl_mao_dir_crv_grp
+      position: {x: -0.0231392, y: -0.01028049, z: 0.015246916}
+      rotation: {x: 0.6130106, y: 0.54087067, z: 0.055779178, w: 0.5732065}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_A_crv
+      parentName: Katzen_ctrl_dedo_polegar_dir_A_crv_grp
+      position: {x: 7.105427e-17, y: -1.4210854e-16, z: 4.2632563e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_B_crv_grp
+      parentName: Katzen_ctrl_dedo_polegar_dir_A_crv
+      position: {x: -0.020447377, y: 0.008908325, z: -0.0016354634}
+      rotation: {x: 0.01728743, y: -0.12568852, z: -0.08361868, w: 0.98838836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_B_crv
+      parentName: Katzen_ctrl_dedo_polegar_dir_B_crv_grp
+      position: {x: 2.842171e-16, y: 0, z: -4.2632563e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_C_crv_grp
+      parentName: Katzen_ctrl_dedo_polegar_dir_B_crv
+      position: {x: -0.02717399, y: -0.0024169637, z: 0.0015972895}
+      rotation: {x: -0.0011828062, y: 0.025043184, z: 0.13131115, w: 0.99102414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_dir_C_crv
+      parentName: Katzen_ctrl_dedo_polegar_dir_C_crv_grp
+      position: {x: 2.842171e-16, y: -1.4210854e-16, z: -1.4210854e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_mao_esq_crv_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: -0.3054996, y: 0.13551103, z: -0.027722614}
+      rotation: {x: 0.0000002840679, y: -1.5910667e-16, z: 8.890458e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_A_crv_grp
+      parentName: Katzen_ctrl_mao_esq_crv_grp
+      position: {x: -0.0640208, y: 0.00446104, z: -0.023851573}
+      rotation: {x: -0.017560862, y: -0.06853932, z: 0.08424554, w: 0.9939299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_A_crv
+      parentName: Katzen_ctrl_dedo_anelar_esq_A_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_B_crv_grp
+      parentName: Katzen_ctrl_dedo_anelar_esq_A_crv
+      position: {x: -0.019568793, y: -0.0006544769, z: -0.0003488307}
+      rotation: {x: 0, y: 0, z: 0.09874445, w: 0.99511284}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_B_crv
+      parentName: Katzen_ctrl_dedo_anelar_esq_B_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -9.992007e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_C_crv_grp
+      parentName: Katzen_ctrl_dedo_anelar_esq_B_crv
+      position: {x: -0.02060271, y: -0.0019848756, z: 0.000646193}
+      rotation: {x: 0, y: 0, z: 0.17084548, w: 0.98529786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_anelar_esq_C_crv
+      parentName: Katzen_ctrl_dedo_anelar_esq_C_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_A_crv_grp
+      parentName: Katzen_ctrl_mao_esq_crv_grp
+      position: {x: -0.06270323, y: 0.0024348598, z: 0.024383182}
+      rotation: {x: 0.09488243, y: 0.22800116, z: 0.15723632, w: 0.9561849}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_A_crv
+      parentName: Katzen_ctrl_dedo_indicador_esq_A_crv_grp
+      position: {x: 7.105427e-17, y: -1.4210854e-16, z: -7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_B_crv_grp
+      parentName: Katzen_ctrl_dedo_indicador_esq_A_crv
+      position: {x: -0.02134531, y: 0.0035398677, z: 0.00067234103}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_B_crv
+      parentName: Katzen_ctrl_dedo_indicador_esq_B_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_C_crv_grp
+      parentName: Katzen_ctrl_dedo_indicador_esq_B_crv
+      position: {x: -0.020236636, y: 0.0043252087, z: 0.0012646382}
+      rotation: {x: 0, y: 0, z: 0.11339848, w: 0.9935496}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_indicador_esq_C_crv
+      parentName: Katzen_ctrl_dedo_indicador_esq_C_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_A_crv_grp
+      parentName: Katzen_ctrl_mao_esq_crv_grp
+      position: {x: -0.069911934, y: 0.0054596304, z: 0.002684785}
+      rotation: {x: -0.028185535, y: 0.007887114, z: 0.10032526, w: 0.9945241}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_A_crv
+      parentName: Katzen_ctrl_dedo_medio_esq_A_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_B_crv_grp
+      parentName: Katzen_ctrl_dedo_medio_esq_A_crv
+      position: {x: -0.02119071, y: -0.0004945126, z: 0.00056333945}
+      rotation: {x: 0, y: 0, z: 0.036603138, w: 0.99932986}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_B_crv
+      parentName: Katzen_ctrl_dedo_medio_esq_B_crv_grp
+      position: {x: 1.4210854e-16, y: 0, z: -1.0769163e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_C_crv_grp
+      parentName: Katzen_ctrl_dedo_medio_esq_B_crv
+      position: {x: -0.020965256, y: -0.0003427277, z: 0.00011631744}
+      rotation: {x: 0, y: 0, z: 0.19702137, w: 0.9803992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_medio_esq_C_crv
+      parentName: Katzen_ctrl_dedo_medio_esq_C_crv_grp
+      position: {x: 2.1316282e-16, y: -1.4210854e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_A_crv_grp
+      parentName: Katzen_ctrl_mao_esq_crv_grp
+      position: {x: -0.0231392, y: -0.010280482, z: 0.015246923}
+      rotation: {x: 0.6130104, y: 0.54087067, z: 0.05577901, w: 0.57320666}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_A_crv
+      parentName: Katzen_ctrl_dedo_polegar_esq_A_crv_grp
+      position: {x: 7.105427e-17, y: -1.4210854e-16, z: 4.2632563e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_B_crv_grp
+      parentName: Katzen_ctrl_dedo_polegar_esq_A_crv
+      position: {x: -0.020447377, y: 0.008908325, z: -0.0016354634}
+      rotation: {x: 0.01728743, y: -0.12568852, z: -0.08361868, w: 0.98838836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_B_crv
+      parentName: Katzen_ctrl_dedo_polegar_esq_B_crv_grp
+      position: {x: 2.842171e-16, y: 0, z: -4.2632563e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_C_crv_grp
+      parentName: Katzen_ctrl_dedo_polegar_esq_B_crv
+      position: {x: -0.02717399, y: -0.0024169637, z: 0.0015972895}
+      rotation: {x: -0.0011828062, y: 0.025043184, z: 0.13131115, w: 0.99102414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_dedo_polegar_esq_C_crv
+      parentName: Katzen_ctrl_dedo_polegar_esq_C_crv_grp
+      position: {x: 2.842171e-16, y: -1.4210854e-16, z: -1.4210854e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olhos_crv_gp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: 1.2613692e-15, y: 0.29127693, z: 0.38748962}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olhos_crv
+      parentName: Katzen_ctrl_olhos_crv_gp
+      position: {x: 2.0502972e-18, y: -0.00037975723, z: 0.000000008740411}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olho_dir_crv_gp
+      parentName: Katzen_ctrl_olhos_crv
+      position: {x: 0.03953967, y: 0.0006126546, z: 7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olho_dir_crv
+      parentName: Katzen_ctrl_olho_dir_crv_gp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olho_esq_crv_gp
+      parentName: Katzen_ctrl_olhos_crv
+      position: {x: -0.03953967, y: 0.0006126546, z: 7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_olho_esq_crv
+      parentName: Katzen_ctrl_olho_esq_crv_gp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_dir_crv_IK_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: 0.3054996, y: 0.13551101, z: -0.027722614}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_dir_crv_IK
+      parentName: Katzen_ctrl_pulso_dir_crv_IK_grp
+      position: {x: 1.7763567e-16, y: 1.1368684e-15, z: -8.881784e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_esq_crv_IK_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: -0.3054996, y: 0.13551101, z: -0.027722614}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_esq_crv_IK
+      parentName: Katzen_ctrl_pulso_esq_crv_IK_grp
+      position: {x: -1.7763567e-16, y: 1.1368684e-15, z: -1.3322676e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_root_crv_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: -7.222237e-37, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_root_crv
+      parentName: Katzen_ctrl_root_crv_grp
+      position: {x: 7.105643e-17, y: 7.105427e-17, z: -5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_barriga_A_crv_grp
+      parentName: Katzen_ctrl_root_crv
+      position: {x: -7.105643e-17, y: -7.105427e-17, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_barriga_A_crv
+      parentName: Katzen_ctrl_barriga_A_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_barriga_B_crv_grp
+      parentName: Katzen_ctrl_barriga_A_crv
+      position: {x: 3.3991155e-19, y: 0.050888862, z: 0.0015708434}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_barriga_B_crv
+      parentName: Katzen_ctrl_barriga_B_crv_grp
+      position: {x: 3.3991155e-19, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_peito_A_crv_grp
+      parentName: Katzen_ctrl_barriga_B_crv
+      position: {x: 4.8849813e-17, y: 0.046958808, z: -0.0018090319}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_peito_A_crv
+      parentName: Katzen_ctrl_peito_A_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_ombro_dir_crv_grp
+      parentName: Katzen_ctrl_peito_A_crv
+      position: {x: 0.03033047, y: 0.054802094, z: -0.014555777}
+      rotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: -1}
+    - name: Katzen_ctrl_ombro_dir_crv
+      parentName: Katzen_ctrl_ombro_dir_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_dir_crv_FK_grp
+      parentName: Katzen_ctrl_ombro_dir_crv
+      position: {x: -0.066450454, y: -0.012167205, z: -0.009367922}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_dir_crv_FK
+      parentName: Katzen_Braco_A_dir_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cotovelo_dir_crv_FK_grp
+      parentName: Katzen_Braco_A_dir_crv_FK
+      position: {x: -0.107614756, y: -0.00946083, z: -0.013499884}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cotovelo_dir_crv_FK
+      parentName: Katzen_ctrl_cotovelo_dir_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_dir_crv_FK_grp
+      parentName: Katzen_ctrl_cotovelo_dir_crv_FK
+      position: {x: -0.101103954, y: 0.004489288, z: 0.00993916}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_dir_crv_FK
+      parentName: Katzen_ctrl_pulso_dir_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_ombro_esq_crv_grp
+      parentName: Katzen_ctrl_peito_A_crv
+      position: {x: -0.03033047, y: 0.054802094, z: -0.014555777}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_ombro_esq_crv
+      parentName: Katzen_ctrl_ombro_esq_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_esq_crv_FK_grp
+      parentName: Katzen_ctrl_ombro_esq_crv
+      position: {x: -0.066450454, y: -0.012167205, z: -0.009367922}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_esq_crv_FK
+      parentName: Katzen_Braco_A_esq_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cotovelo_esq_crv_FK_grp
+      parentName: Katzen_Braco_A_esq_crv_FK
+      position: {x: -0.107614756, y: -0.00946083, z: -0.013499884}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cotovelo_esq_crv_FK
+      parentName: Katzen_ctrl_cotovelo_esq_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_esq_crv_FK_grp
+      parentName: Katzen_ctrl_cotovelo_esq_crv_FK
+      position: {x: -0.101103954, y: 0.004489288, z: 0.00993916}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pulso_esq_crv_FK
+      parentName: Katzen_ctrl_pulso_esq_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pescoco_crv_grp
+      parentName: Katzen_ctrl_peito_A_crv
+      position: {x: -4.5449148e-17, y: 0.07249008, z: -0.011280421}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_pescoco_crv
+      parentName: Katzen_ctrl_pescoco_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cabeca_crv_grp
+      parentName: Katzen_ctrl_pescoco_crv
+      position: {x: 4.1692496e-19, y: 0.030721588, z: 0.0014634585}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cabeca_crv
+      parentName: Katzen_ctrl_cabeca_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_boca_crv_grp
+      parentName: Katzen_ctrl_cabeca_crv
+      position: {x: -1.4247205e-15, y: 0.040109634, z: 0.0068655205}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_boca_crv
+      parentName: Katzen_ctrl_boca_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_nariz_crv_grp
+      parentName: Katzen_ctrl_cabeca_crv
+      position: {x: -2.3500995e-16, y: 0.05545021, z: 0.13890241}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_nariz_crv
+      parentName: Katzen_ctrl_nariz_crv_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cintura_crv_grp
+      parentName: Katzen_ctrl_root_crv
+      position: {x: -7.105643e-17, y: -7.105427e-17, z: 5.551115e-19}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_cintura_crv
+      parentName: Katzen_ctrl_cintura_crv_grp
+      position: {x: 1.3620689e-15, y: 1.7763568e-15, z: -1.3655743e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_A_dir_crv_FK_grp
+      parentName: Katzen_ctrl_cintura_crv
+      position: {x: 0.0430561, y: -0.071149364, z: -0.004975199}
+      rotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: -1}
+    - name: Katzen_ctrl_perna_A_dir_crv_FK
+      parentName: Katzen_ctrl_perna_A_dir_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_B_dir_crv_FK_grp
+      parentName: Katzen_ctrl_perna_A_dir_crv_FK
+      position: {x: -0.008577599, y: -0.22373101, z: 0.00090451}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_B_dir_crv_FK
+      parentName: Katzen_ctrl_perna_B_dir_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_tornozelo_dir_crv_FK_grp
+      parentName: Katzen_ctrl_perna_B_dir_crv_FK
+      position: {x: -0.0058198976, y: -0.2010918, z: -0.058211457}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_tornozelo_dir_crv_FK
+      parentName: Katzen_ctrl_tornozelo_dir_crv_FK_grp
+      position: {x: -0.000000023841856, y: -0.0000001001358, z: -0.0000000014901163}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_A_esq_crv_FK_grp
+      parentName: Katzen_ctrl_cintura_crv
+      position: {x: -0.0430561, y: -0.071149364, z: -0.004975199}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_A_esq_crv_FK
+      parentName: Katzen_ctrl_perna_A_esq_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_B_esq_crv_FK_grp
+      parentName: Katzen_ctrl_perna_A_esq_crv_FK
+      position: {x: -0.008577599, y: -0.22373101, z: 0.00090451}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_perna_B_esq_crv_FK
+      parentName: Katzen_ctrl_perna_B_esq_crv_FK_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_tornozelo_esq_crv_FK_grp
+      parentName: Katzen_ctrl_perna_B_esq_crv_FK
+      position: {x: -0.0058198976, y: -0.2010918, z: -0.058211457}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_tornozelo_esq_crv_FK
+      parentName: Katzen_ctrl_tornozelo_esq_crv_FK_grp
+      position: {x: -0.000000023841856, y: -0.0000001001358, z: -0.0000000014901163}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_geral_dir_crv_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: 0.0430561, y: -0.071149364, z: -0.004975199}
+      rotation: {x: 0.00047983567, y: -0.01415837, z: -0.0019099093, w: 0.99989784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_geral_dir_crv
+      parentName: Katzen_ctrl_shorts_geral_dir_crv_grp
+      position: {x: 0.0008753649, y: -0.22837323, z: 0.00020679142}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_A_dir_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_dir_crv
+      position: {x: -0.0008753649, y: 0.22837323, z: -0.00020679142}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_A_dir_crv
+      parentName: Katzen_ctrl_shorts_A_dir_crv_grp
+      position: {x: 0.022570524, y: -0.21202387, z: 0.0711315}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_B_dir_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_dir_crv
+      position: {x: -0.0008753649, y: 0.22837323, z: -0.00020679142}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_B_dir_crv
+      parentName: Katzen_ctrl_shorts_B_dir_crv_grp
+      position: {x: 0.07370749, y: -0.21223372, z: 0.00246485}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_C_dir_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_dir_crv
+      position: {x: -0.0008753649, y: 0.22837323, z: -0.00020679142}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_C_dir_crv
+      parentName: Katzen_ctrl_shorts_C_dir_crv_grp
+      position: {x: 0.0064266156, y: -0.21234255, z: -0.06662448}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_D_dir_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_dir_crv
+      position: {x: -0.0008753649, y: 0.22837323, z: -0.00020679142}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_D_dir_crv
+      parentName: Katzen_ctrl_shorts_D_dir_crv_grp
+      position: {x: -0.03693595, y: -0.21290527, z: 0.00246485}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_geral_esq_crv_grp
+      parentName: Katzen_ctrl_master_crv
+      position: {x: -0.0430561, y: -0.071149364, z: -0.004975199}
+      rotation: {x: 0.00047983567, y: 0.01415837, z: 0.0019099093, w: 0.99989784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_geral_esq_crv
+      parentName: Katzen_ctrl_shorts_geral_esq_crv_grp
+      position: {x: -0.023217294, y: -0.228375, z: 0.0020605237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_A_esq_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_esq_crv
+      position: {x: 0.023217294, y: 0.228375, z: -0.0020605237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_A_esq_crv
+      parentName: Katzen_ctrl_shorts_A_esq_crv_grp
+      position: {x: -0.022570524, y: -0.21202387, z: 0.0711315}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_B_esq_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_esq_crv
+      position: {x: 0.023217294, y: 0.228375, z: -0.0020605237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_B_esq_crv
+      parentName: Katzen_ctrl_shorts_B_esq_crv_grp
+      position: {x: -0.07370749, y: -0.21223372, z: 0.00246485}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_C_esq_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_esq_crv
+      position: {x: 0.023217294, y: 0.228375, z: -0.0020605237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_C_esq_crv
+      parentName: Katzen_ctrl_shorts_C_esq_crv_grp
+      position: {x: -0.0064266156, y: -0.21234255, z: -0.06662448}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_D_esq_crv_grp
+      parentName: Katzen_ctrl_shorts_geral_esq_crv
+      position: {x: 0.023217294, y: 0.228375, z: -0.0020605237}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_ctrl_shorts_D_esq_crv
+      parentName: Katzen_ctrl_shorts_D_esq_crv_grp
+      position: {x: 0.03693595, y: -0.21290527, z: 0.00246485}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Geo_grp
+      parentName: Katzen_Modelo(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_geo
+      parentName: Katzen_Geo_grp
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_rig_gp
+      parentName: Katzen_Modelo(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Root_jnt
+      parentName: Katzen_rig_gp
+      position: {x: -1.5777218e-32, y: 0.55952436, z: 0.0025103488}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Calda_A_jnt
+      parentName: Katzen_Root_jnt
+      position: {x: 1.9721521e-32, y: -0.062041495, z: -0.058476012}
+      rotation: {x: -0.29060057, y: -0.64463276, z: 0.29060057, w: 0.64463276}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000005}
+    - name: Katzen_Calda_B_jnt
+      parentName: Katzen_Calda_A_jnt
+      position: {x: -0.03314081, y: 2.842171e-16, z: -8.305317e-18}
+      rotation: {x: -0, y: -0, z: 0.009329259, w: 0.9999565}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999997}
+    - name: Katzen_Calda_C_jnt
+      parentName: Katzen_Calda_B_jnt
+      position: {x: -0.036193617, y: 0, z: -5.4566078e-18}
+      rotation: {x: -0, y: -0, z: 0.0022418795, w: 0.9999975}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Katzen_Calda_D_jnt
+      parentName: Katzen_Calda_C_jnt
+      position: {x: -0.040827923, y: 2.842171e-16, z: -9.718099e-18}
+      rotation: {x: -0, y: -0, z: -0.0018603939, w: 0.99999833}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Katzen_Calda_F_jnt
+      parentName: Katzen_Calda_D_jnt
+      position: {x: -0.047060117, y: 0.0006106004, z: -1.0431631e-17}
+      rotation: {x: -0, y: -0, z: -0.02409844, w: 0.9997096}
+      scale: {x: 1.0000004, y: 1, z: 1.0000007}
+    - name: Katzen_Calda_G_jnt
+      parentName: Katzen_Calda_F_jnt
+      position: {x: -0.048311464, y: 0.0004718371, z: -1.0304459e-17}
+      rotation: {x: -0, y: -0, z: -0.03759718, w: 0.999293}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+    - name: Katzen_Calda_H_jnt
+      parentName: Katzen_Calda_G_jnt
+      position: {x: -0.04339491, y: 0.00017787823, z: -1.1053313e-17}
+      rotation: {x: 0.000000011783216, y: 0.00000006029854, z: -0.038974088, w: 0.9992403}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000005}
+    - name: Katzen_Calda_I_jnt
+      parentName: Katzen_Calda_H_jnt
+      position: {x: -0.04083998, y: 0.00045236832, z: -4.9015865e-18}
+      rotation: {x: -0.000000018562817, y: -0.00000009213446, z: -0.049114745, w: 0.9987932}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000006}
+    - name: Katzen_Calda_J_jnt_FIM
+      parentName: Katzen_Calda_I_jnt
+      position: {x: -0.042404547, y: 0.00050701067, z: -1.5118077e-17}
+      rotation: {x: 0, y: 0, z: -0.05128053, w: 0.9986843}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Col_A_jnt
+      parentName: Katzen_Root_jnt
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Col_B_jnt
+      parentName: Katzen_Col_A_jnt
+      position: {x: 3.3991155e-19, y: 0.050888848, z: 0.0015708436}
+      rotation: {x: -0.01029048, y: -0.01029048, z: -0.70703197, w: 0.7070319}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Katzen_Col_C_jnt
+      parentName: Katzen_Col_B_jnt
+      position: {x: -0.046991546, y: 5.37293e-17, z: -0.0004416342}
+      rotation: {x: 0.0000000018626449, y: -0.1019255, z: 6.984919e-10, w: 0.99479204}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Katzen_Col_D_jnt
+      parentName: Katzen_Col_C_jnt
+      position: {x: -0.03934253, y: -4.5000508e-17, z: 0.003900589}
+      rotation: {x: 0.0000000065300227, y: 0.02785099, z: 0.000000054397734, w: 0.99961215}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.9999998}
+    - name: Katzen_Col_F_jnt
+      parentName: Katzen_Col_D_jnt
+      position: {x: -0.03384408, y: 7.920042e-18, z: -2.842171e-16}
+      rotation: {x: -0.000000017654147, y: -0.000000022351738, z: 0.70710677, w: 0.7071068}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: Katzen_Cabeca_A_jnt
+      parentName: Katzen_Col_F_jnt
+      position: {x: -2.823053e-18, y: 0.029979808, z: 0.0068680607}
+      rotation: {x: -0.4196369, y: 0.5691264, z: -0.41963685, w: 0.5691264}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Katzen_Cabeca_B_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.17044523, y: -0.0053549493, z: -2.1840493e-16}
+      rotation: {x: 0.000000029802317, y: -0.000000029802317, z: 0.9187587, w: 0.39481962}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Katzen_Cabeca_C_jnt_FIM
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: -0.15896434, y: 0.015117152, z: 6.426644e-18}
+      rotation: {x: -0.31313616, y: -0.63399196, z: -0.31313613, w: 0.63399196}
+      scale: {x: 0.99999994, y: 1, z: 1.0000002}
+    - name: Katzen_Topete_B_1_jnt
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: 0.015874235, y: 0.02068351, z: -0.0003496219}
+      rotation: {x: -0.08369002, y: -0.10404504, z: -0.60787094, w: 0.7827283}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000006}
+    - name: Katzen_Topete_C_1_jnt
+      parentName: Katzen_Topete_B_1_jnt
+      position: {x: -0.035807233, y: 1.1368684e-15, z: 1.5987211e-16}
+      rotation: {x: 0.058628727, y: -0.20555529, z: 0.21801984, w: 0.9522484}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000002}
+    - name: Katzen_Topete_D_1_jnt_FIM
+      parentName: Katzen_Topete_C_1_jnt
+      position: {x: -0.06634843, y: -8.5265126e-16, z: 0}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_B_2_jnt
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: -0.0119611425, y: 0.043462794, z: -4.5053818e-17}
+      rotation: {x: -0.000000025160963, y: 0.00000012305264, z: -0.13616419, w: 0.9906863}
+      scale: {x: 1.000001, y: 1.0000004, z: 1.0000008}
+    - name: Katzen_Topete_C_2_jnt
+      parentName: Katzen_Topete_B_2_jnt
+      position: {x: -0.04204783, y: 4.2632563e-16, z: 1.3945962e-17}
+      rotation: {x: 0.0000000041425654, y: -0.00000012916823, z: 0.3728142, w: 0.92790604}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999976}
+    - name: Katzen_Topete_D_2_jnt_FIM
+      parentName: Katzen_Topete_C_2_jnt
+      position: {x: -0.032931473, y: -6.750156e-16, z: 2.0729699e-17}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_C_2_jnt1
+      parentName: Katzen_Topete_B_2_jnt
+      position: {x: -0.027885297, y: -0.0027077135, z: -0.019937659}
+      rotation: {x: -0.12298833, y: -0.4732856, z: -0.24359217, w: 0.83757836}
+      scale: {x: 0.99999976, y: 0.99999976, z: 1.0000001}
+    - name: Katzen_Topete_D_2_jnt_FIM 1
+      parentName: Katzen_Topete_C_2_jnt1
+      position: {x: -0.032931473, y: 0.0053397575, z: 0.0056570834}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_B_2_jnt1
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: 0.013188785, y: 0.014727511, z: 0.010097713}
+      rotation: {x: 0.074635, y: 0.4285963, z: -0.56115896, w: 0.70415586}
+      scale: {x: 1.0000008, y: 1, z: 1.0000012}
+    - name: Katzen_Topete_C_2_jnt 1
+      parentName: Katzen_Topete_B_2_jnt1
+      position: {x: -0.025823759, y: 0.00564291, z: -2.8865798e-16}
+      rotation: {x: -0.000000067055225, y: -0.000000029802322, z: 0.3224219, w: 0.9465961}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.0000004}
+    - name: Katzen_Topete_D_2_jnt_FIM 2
+      parentName: Katzen_Topete_C_2_jnt 1
+      position: {x: -0.032931473, y: 0, z: 4.8849813e-17}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_B_2_jnt2
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: -0.009685539, y: 0.018622477, z: -0.015145156}
+      rotation: {x: 0.021434989, y: -0.54436, z: -0.35359836, w: 0.7603822}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: Katzen_Topete_C_2_jnt 2
+      parentName: Katzen_Topete_B_2_jnt2
+      position: {x: -0.029179117, y: 0.0034571313, z: 0.0030911409}
+      rotation: {x: 0.00000005587935, y: -0, z: 0.32242203, w: 0.9465961}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Topete_D_2_jnt_FIM 3
+      parentName: Katzen_Topete_C_2_jnt 2
+      position: {x: -0.022563094, y: -0.0005043474, z: -0.001529217}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_B_2_jnt3
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: -0.008479375, y: 0.027527584, z: 0.007968683}
+      rotation: {x: 0.13285336, y: 0.29977527, z: -0.43972638, w: 0.83613735}
+      scale: {x: 1.0000011, y: 1.0000004, z: 1.000001}
+    - name: Katzen_Topete_C_2_jnt 3
+      parentName: Katzen_Topete_B_2_jnt3
+      position: {x: -0.024542855, y: 0.004216249, z: 0.002772636}
+      rotation: {x: -0.011098256, y: 0.032583352, z: 0.322231, w: 0.94603515}
+      scale: {x: 0.9999998, y: 0.9999999, z: 1.0000001}
+    - name: Katzen_Topete_D_2_jnt_FIM 4
+      parentName: Katzen_Topete_C_2_jnt 3
+      position: {x: -0.030457396, y: -0.010970422, z: -0.0028178233}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Topete_B_2_jnt4
+      parentName: Katzen_Cabeca_B_jnt
+      position: {x: 0.016144373, y: -0.00023568602, z: 0.012214168}
+      rotation: {x: 0.16657834, y: -0.34048513, z: -0.9210944, w: 0.08891926}
+      scale: {x: 1.0000008, y: 1.0000007, z: 1.0000005}
+    - name: Katzen_Topete_C_2_jnt 4
+      parentName: Katzen_Topete_B_2_jnt4
+      position: {x: -0.016928062, y: 0.0031139366, z: 0.0023939104}
+      rotation: {x: 0.08834788, y: 0.050394014, z: 0.055336557, w: -0.9932739}
+      scale: {x: 1.000001, y: 1.000001, z: 1.0000005}
+    - name: Katzen_Topete_D_2_jnt_FIM 5
+      parentName: Katzen_Topete_C_2_jnt 4
+      position: {x: -0.022182329, y: -2.1316282e-16, z: 1.2434498e-16}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_1_Dir_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.10332861, y: -0.022412693, z: 0.07479491}
+      rotation: {x: 0.39686427, y: 0.07464796, z: 0.87610716, w: 0.26336813}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
+    - name: Katzen_Costeletas_2_Dir_B_jnt
+      parentName: Katzen_Costeletas_1_Dir_A_jnt
+      position: {x: 0.024343707, y: 0.00010753364, z: 0.0006738182}
+      rotation: {x: -0.19476746, y: 0.038519632, z: 0.17288756, w: 0.9647237}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1.0000004}
+    - name: Katzen_Costeletas_2_Dir_C_jnt_FIM
+      parentName: Katzen_Costeletas_2_Dir_B_jnt
+      position: {x: 0.023250539, y: 0.000010497267, z: 0.00000007498064}
+      rotation: {x: -0.11940232, y: 0.13899985, z: -0.69754165, w: 0.6927177}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_1_Esq_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.10332828, y: -0.022412714, z: -0.074794896}
+      rotation: {x: 0.07464796, y: -0.3968643, z: -0.26336813, w: 0.87610716}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1.0000004}
+    - name: Katzen_Costeletas_2_Esq_B_jnt
+      parentName: Katzen_Costeletas_1_Esq_A_jnt
+      position: {x: -0.024343943, y: -0.000107667875, z: -0.0006735084}
+      rotation: {x: -0.17101298, y: 0.043417502, z: 0.17263705, w: 0.96905416}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000004}
+    - name: Katzen_Costeletas_2_Esq_C_jnt_FIM
+      parentName: Katzen_Costeletas_2_Esq_B_jnt
+      position: {x: -0.02325052, y: 0.000029612773, z: -0.000023355686}
+      rotation: {x: -0.10165362, y: 0.08847684, z: -0.7054121, w: 0.695868}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_2_Dir_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.0341318, y: -0.001861112, z: 0.0812947}
+      rotation: {x: 0.73576653, y: -0.047571473, z: 0.25409335, w: -0.62595624}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000014}
+    - name: Katzen_Costeletas_2_Dir_B_jnt 1
+      parentName: Katzen_Costeletas_2_Dir_A_jnt
+      position: {x: 0.020825166, y: 0.002722727, z: 0.0038811397}
+      rotation: {x: 0.011578708, y: -0.056985, z: -0.1877414, w: -0.98049575}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.000001}
+    - name: Katzen_Costeletas_2_Dir_C_jnt_FIM 1
+      parentName: Katzen_Costeletas_2_Dir_B_jnt 1
+      position: {x: 0.028706398, y: -0.0007528821, z: 0.0032394093}
+      rotation: {x: 0, y: 0, z: -0.7000015, w: 0.7141415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_2_Esq_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.03413145, y: -0.0018611545, z: -0.0812947}
+      rotation: {x: -0.047571436, y: -0.7357667, z: 0.625956, w: 0.25409344}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
+    - name: Katzen_Costeletas_2_Esq_B_jnt 1
+      parentName: Katzen_Costeletas_2_Esq_A_jnt
+      position: {x: -0.020824712, y: -0.0027225886, z: -0.0038809746}
+      rotation: {x: -0.011578561, y: 0.056985036, z: 0.1877415, w: 0.98049575}
+      scale: {x: 1.0000008, y: 1.0000011, z: 0.99999994}
+    - name: Katzen_Costeletas_2_Esq_C_jnt_FIM 1
+      parentName: Katzen_Costeletas_2_Esq_B_jnt 1
+      position: {x: -0.028706245, y: 0.0007528685, z: -0.0032393644}
+      rotation: {x: 0, y: 0, z: -0.7000015, w: 0.7141415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_3_Dir_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.022489157, y: -0.03428001, z: 0.059626937}
+      rotation: {x: 0.8920828, y: -0.23162672, z: 0.19923007, w: -0.33293355}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.000001}
+    - name: Katzen_Costeletas_3_Dir_B_jnt
+      parentName: Katzen_Costeletas_3_Dir_A_jnt
+      position: {x: 0.01939071, y: 0.002998872, z: -0.0000009696465}
+      rotation: {x: -0.01157856, y: 0.05698496, z: 0.1877414, w: 0.98049575}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000008}
+    - name: Katzen_Costeletas_3_Dir_C_jnt_FIM
+      parentName: Katzen_Costeletas_3_Dir_B_jnt
+      position: {x: 0.028153768, y: -0.00024058147, z: 0.0018063289}
+      rotation: {x: 0, y: 0, z: -0.7000015, w: 0.7141415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Costeletas_3_Esq_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.02248961, y: -0.034279983, z: -0.059626896}
+      rotation: {x: -0.23162667, y: -0.89208287, z: 0.33293355, w: 0.19922994}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000002}
+    - name: Katzen_Costeletas_3_Esq_B_jnt
+      parentName: Katzen_Costeletas_3_Esq_A_jnt
+      position: {x: -0.019391278, y: -0.0029987046, z: 0.00000067613115}
+      rotation: {x: -0.011578546, y: 0.0569851, z: 0.18774132, w: 0.98049575}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000005}
+    - name: Katzen_Costeletas_3_Esq_C_jnt_FIM
+      parentName: Katzen_Costeletas_3_Esq_B_jnt
+      position: {x: -0.02815391, y: 0.00024067864, z: -0.0018064383}
+      rotation: {x: 0, y: 0, z: -0.7000015, w: 0.7141415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mand_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.040647984, y: -0.0019128963, z: -1.4196146e-15}
+      rotation: {x: -0.000000059604638, y: -0.000000059604638, z: 0.7110882, w: 0.7031029}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: Katzen_Lingua_A_jnt
+      parentName: Katzen_Mand_A_jnt
+      position: {x: -0.045162387, y: -0.028019574, z: -4.821374e-18}
+      rotation: {x: 0.00000009939704, y: 0.000000009664503, z: -0.37130913, w: 0.9285093}
+      scale: {x: 1, y: 1, z: 0.99999946}
+    - name: Katzen_Lingua_B_jnt
+      parentName: Katzen_Lingua_A_jnt
+      position: {x: -0.015, y: 8.5265126e-16, z: -1.7360167e-17}
+      rotation: {x: 0.00000001700353, y: -0.00000003611363, z: 0.11671279, w: 0.99316573}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
+    - name: Katzen_Lingua_C_jnt
+      parentName: Katzen_Lingua_B_jnt
+      position: {x: -0.015, y: -1.4210854e-16, z: 4.440892e-18}
+      rotation: {x: -0.000000042163453, y: 0.000000035104936, z: 0.15909688, w: 0.98726296}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: Katzen_Lingua_D_jnt
+      parentName: Katzen_Lingua_C_jnt
+      position: {x: -0.015, y: -5.684342e-16, z: 4.440892e-18}
+      rotation: {x: 0.0000000021270026, y: -0.0000000019247715, z: 0.09614285, w: 0.9953676}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000004}
+    - name: Katzen_Lingua_F_jnt_FIM
+      parentName: Katzen_Lingua_D_jnt
+      position: {x: -0.015111111, y: 1.4210854e-15, z: 4.440892e-18}
+      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mand_B_jnt_FIM
+      parentName: Katzen_Mand_A_jnt
+      position: {x: -0.105461605, y: -0.016575197, z: -2.4062552e-16}
+      rotation: {x: 0.06789877, y: -0.70383936, z: 0.06789868, w: 0.7038393}
+      scale: {x: 0.99999964, y: 1.0000001, z: 0.9999999}
+    - name: Katzen_Olho_Dir_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.09942851, y: -0.061639484, z: 0.035306662}
+      rotation: {x: 0.46845645, y: -0.5296684, z: 0.4684564, w: 0.5296684}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Katzen_Olho_Esq_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.099428356, y: -0.06163952, z: -0.0353067}
+      rotation: {x: 0.5296684, y: 0.4684564, z: 0.5296684, w: -0.46845645}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Orelha_Dir_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.124585055, y: 0.059575986, z: 0.0625448}
+      rotation: {x: -0.6933948, y: -0.25698757, z: 0.24507116, w: -0.6269779}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000002}
+    - name: Katzen_Orelha_Dir_B_jnt
+      parentName: Katzen_Orelha_Dir_A_jnt
+      position: {x: -0.036760274, y: 4.2632563e-16, z: -1.7763568e-17}
+      rotation: {x: 0.000000029802319, y: 0.086813115, z: -0, w: 0.9962247}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Katzen_Orelha_Dir_C_jnt
+      parentName: Katzen_Orelha_Dir_B_jnt
+      position: {x: -0.036760274, y: -7.105427e-16, z: 3.5527136e-17}
+      rotation: {x: 0.000000008200718, y: 0.10556627, z: -0.00000009218919, w: 0.9944123}
+      scale: {x: 0.9999991, y: 0.9999994, z: 0.99999964}
+    - name: Katzen_Orelha_Dir_D_jnt
+      parentName: Katzen_Orelha_Dir_C_jnt
+      position: {x: -0.036760274, y: 6.3948843e-16, z: -2.1316282e-16}
+      rotation: {x: 0.000000013240346, y: 0.13040875, z: 0.000000028209856, w: 0.9914604}
+      scale: {x: 1.000001, y: 1.0000004, z: 1}
+    - name: Katzen_Orelha_Dir_E_jnt
+      parentName: Katzen_Orelha_Dir_D_jnt
+      position: {x: -0.036760274, y: -2.1316282e-16, z: 7.105427e-16}
+      rotation: {x: -0.00000002352401, y: 0.13631035, z: 0.00000014012004, w: 0.9906662}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000001}
+    - name: Katzen_Orelha_Dir_F_jnt_FIM
+      parentName: Katzen_Orelha_Dir_E_jnt
+      position: {x: -0.03123132, y: -4.2632563e-16, z: -8.5265126e-16}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Orelha_Esq_A_jnt
+      parentName: Katzen_Cabeca_A_jnt
+      position: {x: -0.12458502, y: 0.05957595, z: -0.0625448}
+      rotation: {x: -0.25698584, y: 0.6933953, z: 0.6269785, w: 0.24506992}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000008}
+    - name: Katzen_Orelha_Esq_B_jnt
+      parentName: Katzen_Orelha_Esq_A_jnt
+      position: {x: 0.036760118, y: -0.0000000981646, z: 0.000000062802336}
+      rotation: {x: 0.000000100582824, y: 0.08681061, z: -0.00000019371507, w: 0.9962249}
+      scale: {x: 0.99999964, y: 1, z: 0.9999998}
+    - name: Katzen_Orelha_Esq_C_jnt
+      parentName: Katzen_Orelha_Esq_B_jnt
+      position: {x: 0.036760062, y: 0.00000021200927, z: -0.00000016173898}
+      rotation: {x: 0.000000043284885, y: 0.105571926, z: -0.00000023233818, w: 0.9944117}
+      scale: {x: 1.000001, y: 1, z: 1.0000012}
+    - name: Katzen_Orelha_Esq_D_jnt
+      parentName: Katzen_Orelha_Esq_C_jnt
+      position: {x: 0.036760636, y: 0.00000015126702, z: 0.00000024339866}
+      rotation: {x: -0.0000010352154, y: 0.13040671, z: -0.000008164926, w: 0.9914607}
+      scale: {x: 0.9999993, y: 0.9999999, z: 0.99999946}
+    - name: Katzen_Orelha_Esq_E_jnt
+      parentName: Katzen_Orelha_Esq_D_jnt
+      position: {x: 0.036760233, y: 0.00000031032093, z: -0.000000005680689}
+      rotation: {x: 0.00000006043829, y: 0.13630833, z: 0.000007511492, w: 0.99066645}
+      scale: {x: 1.0000007, y: 0.99999976, z: 1.0000007}
+    - name: Katzen_Orelha_Esq_F_jnt_FIM
+      parentName: Katzen_Orelha_Esq_E_jnt
+      position: {x: 0.0312312, y: -0.00000081461394, z: -0.00000029785596}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Ombro_Dir_jnt
+      parentName: Katzen_Col_D_jnt
+      position: {x: -0.01701299, y: 0.03033047, z: -0.006348792}
+      rotation: {x: 0.11275643, y: 0.017698016, z: 0.7580251, w: 0.64216095}
+      scale: {x: 0.9999998, y: 0.99999976, z: 1.0000001}
+    - name: Katzen_Braco_A_Dir_jnt
+      parentName: Katzen_Ombro_Dir_jnt
+      position: {x: 0.06172634, y: -0.023562554, z: -0.016915126}
+      rotation: {x: 0.98890144, y: -0.114870794, z: -0.094135255, w: -0.0041553997}
+      scale: {x: 0.9999999, y: 1.0000012, z: 1.0000011}
+    - name: Katzen_Braco_B_Dir_jnt
+      parentName: Katzen_Braco_A_Dir_jnt
+      position: {x: 0.108865164, y: -0.00085842225, z: -0.00063882896}
+      rotation: {x: 0.0052271173, y: 0.067171365, z: -0.04477116, w: 0.9967228}
+      scale: {x: 0.99999994, y: 1.0000018, z: 1.0000017}
+    - name: Katzen_Mao_A_Dir_jnt
+      parentName: Katzen_Braco_B_Dir_jnt
+      position: {x: 0.10168898, y: -0.00040295138, z: -0.00038140526}
+      rotation: {x: -0.002618587, y: -0.03044197, z: -0.084467396, w: 0.9959577}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000004}
+    - name: Katzen_Mao_B_Dir_jnt
+      parentName: Katzen_Mao_A_Dir_jnt
+      position: {x: 0.04606864, y: -0.00090611307, z: -0.0005075421}
+      rotation: {x: 0.000000022002489, y: 0.0000000018626445, z: 0.000000067180714,
+        w: 1}
+      scale: {x: 0.99999994, y: 1.000001, z: 1.0000002}
+    - name: Katzen_Anelar_A_Dir_jnt
+      parentName: Katzen_Mao_B_Dir_jnt
+      position: {x: 0.017178066, y: 0.0024140403, z: 0.026678802}
+      rotation: {x: -0.07606632, y: 0.054119524, z: 0.042979456, w: 0.99470496}
+      scale: {x: 1.0000001, y: 0.9999992, z: 0.9999999}
+    - name: Katzen_Anelar_B_Dir_jnt
+      parentName: Katzen_Anelar_A_Dir_jnt
+      position: {x: 0.019569183, y: 0.00065421674, z: 0.00034885155}
+      rotation: {x: 0.000512205, y: -0.01769845, z: 0.0050537796, w: 0.99983054}
+      scale: {x: 0.99999964, y: 1.0000014, z: 1.0000006}
+    - name: Katzen_Anelar_C_Dir_jnt
+      parentName: Katzen_Anelar_B_Dir_jnt
+      position: {x: 0.020602569, y: 0.0019843094, z: -0.00064623094}
+      rotation: {x: -0.0012466314, y: -0.0055755107, z: 0.14485647, w: 0.9894362}
+      scale: {x: 0.9999992, y: 1.0000013, z: 1.0000008}
+    - name: Katzen_Anelar_D_Dir_jnt_FIM
+      parentName: Katzen_Anelar_C_Dir_jnt
+      position: {x: 0.026998129, y: -0.0031385606, z: -0.0016077355}
+      rotation: {x: 0.000000016583398, y: -0.0000000015958299, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Indicador_A_Dir_jnt
+      parentName: Katzen_Mao_B_Dir_jnt
+      position: {x: 0.017464561, y: 0.003511722, z: -0.021603078}
+      rotation: {x: 0.061874263, y: 0.04578108, z: 0.118426114, w: 0.9899752}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000005}
+    - name: Katzen_Indicador_B_Dir_jnt
+      parentName: Katzen_Indicador_A_Dir_jnt
+      position: {x: 0.021345386, y: -0.0035405576, z: -0.00067210605}
+      rotation: {x: -0.004690637, y: -0.008720899, z: 0.061269365, w: 0.99807215}
+      scale: {x: 0.99999976, y: 1.0000014, z: 1.0000012}
+    - name: Katzen_Indicador_C_Dir_jnt
+      parentName: Katzen_Indicador_B_Dir_jnt
+      position: {x: 0.020236429, y: -0.0043251035, z: -0.0012647321}
+      rotation: {x: 0.007753483, y: 0.05220285, z: -0.03892905, w: 0.9978473}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.0000006}
+    - name: Katzen_Indicador_D_Dir_jnt_FIM
+      parentName: Katzen_Indicador_C_Dir_jnt
+      position: {x: 0.026002998, y: -0.0017860304, z: 0.0017333666}
+      rotation: {x: 0.000000029938814, y: -0.0000000028810292, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Medio_A_Dir_jnt
+      parentName: Katzen_Mao_B_Dir_jnt
+      position: {x: 0.024105122, y: 0.0014864824, z: 0.0003910785}
+      rotation: {x: -0.06898181, y: 0.033487383, z: 0.049259193, w: 0.9958382}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1}
+    - name: Katzen_Medio_B_Dir_jnt
+      parentName: Katzen_Medio_A_Dir_jnt
+      position: {x: 0.02119066, y: 0.000493992, z: -0.0005633768}
+      rotation: {x: -0, y: -0, z: 0.036603242, w: 0.9993299}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.000001}
+    - name: Katzen_Medio_C_Dir_jnt
+      parentName: Katzen_Medio_B_Dir_jnt
+      position: {x: 0.020964744, y: 0.0003436128, z: -0.00011625468}
+      rotation: {x: 0.00047213558, y: 0.005444348, z: 0.10408752, w: 0.99455315}
+      scale: {x: 0.9999993, y: 1.0000014, z: 1.0000004}
+    - name: Katzen_Medio_D_Dir_jnt_FIM
+      parentName: Katzen_Medio_C_Dir_jnt
+      position: {x: 0.028343601, y: -0.0033663772, z: 0.0002754918}
+      rotation: {x: 0.0000000143638665, y: -0.0000000013822431, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Polegar_A_Dir_jnt
+      parentName: Katzen_Mao_B_Dir_jnt
+      position: {x: -0.023355922, y: 0.012898088, z: -0.0141173145}
+      rotation: {x: -0.5909131, y: -0.26370463, z: -0.03233829, w: -0.7617321}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+    - name: Katzen_Polegar_B_Dir_jnt
+      parentName: Katzen_Polegar_A_Dir_jnt
+      position: {x: 0.020447223, y: -0.008908406, z: 0.0016355542}
+      rotation: {x: 0.025867777, y: -0.08234626, z: -0.21395771, w: 0.97302216}
+      scale: {x: 1.000001, y: 1.0000006, z: 0.9999994}
+    - name: Katzen_Polegar_C_Dir_jnt
+      parentName: Katzen_Polegar_B_Dir_jnt
+      position: {x: 0.027174339, y: 0.002417205, z: -0.0015977743}
+      rotation: {x: -0.0017226072, y: 0.024510628, z: 0.11602503, w: 0.99294233}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999999}
+    - name: Katzen_Polegar_D_Dir_jnt_FIM
+      parentName: Katzen_Polegar_C_Dir_jnt
+      position: {x: 0.027587255, y: -0.0017168954, z: -0.0003390619}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pelos_Braco_A_Dir_jnt
+      parentName: Katzen_Braco_B_Dir_jnt
+      position: {x: 0.019613013, y: -0.005372834, z: 0.019192612}
+      rotation: {x: 0.13305223, y: -0.10314058, z: -0.018760215, w: 0.9855493}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999997}
+    - name: Katzen_Pelos_Braco_B_Dir_jnt_FIM
+      parentName: Katzen_Pelos_Braco_A_Dir_jnt
+      position: {x: 0.04845548, y: -0.0026789478, z: -0.0033410294}
+      rotation: {x: -0, y: 0.15956281, z: -0.0000000884756, w: 0.9871878}
+      scale: {x: 1.0000002, y: 1.0000011, z: 1.0000007}
+    - name: Katzen_Braco_A_Dir_jnt_FK
+      parentName: Katzen_Ombro_Dir_jnt
+      position: {x: 0.06172634, y: -0.023562554, z: -0.016915126}
+      rotation: {x: 0.98306435, y: -0.13558541, z: -0.123173684, w: -0.00542385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_B_Dir_jnt_FK
+      parentName: Katzen_Braco_A_Dir_jnt_FK
+      position: {x: 0.108865164, y: -0.00085842225, z: -0.00063882896}
+      rotation: {x: 0.0055644647, y: 0.11069521, z: -0.069531925, w: 0.9914035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mao_A_Dir_jnt_FK
+      parentName: Katzen_Braco_B_Dir_jnt_FK
+      position: {x: 0.10168898, y: -0.00040295138, z: -0.00038140526}
+      rotation: {x: -0.0006029534, y: -0.029071597, z: -0.022292815, w: 0.99932855}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_Dir_jnt_IK
+      parentName: Katzen_Ombro_Dir_jnt
+      position: {x: 0.06172634, y: -0.023562554, z: -0.016915126}
+      rotation: {x: 0.95245284, y: -0.1341848, z: -0.103483796, w: -0.2532176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_B_Dir_jnt_IK
+      parentName: Katzen_Braco_A_Dir_jnt_IK
+      position: {x: 0.108865164, y: -0.00085842225, z: -0.00063882896}
+      rotation: {x: 0.0055644647, y: 0.11069521, z: -0.069531925, w: 0.9914035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mao_A_Dir_jnt_IK
+      parentName: Katzen_Braco_B_Dir_jnt_IK
+      position: {x: 0.10168898, y: -0.00040295138, z: -0.00038140526}
+      rotation: {x: -0.24728127, y: -0.05015896, z: -0.041587, w: 0.9667505}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Ombro_Esq_jnt
+      parentName: Katzen_Col_D_jnt
+      position: {x: -0.01701299, y: -0.03033047, z: -0.006348792}
+      rotation: {x: 0.11275643, y: 0.017698016, z: 0.7580251, w: 0.64216095}
+      scale: {x: 0.9999998, y: 0.99999976, z: 1.0000001}
+    - name: Katzen_Braco_A_Esq_jnt
+      parentName: Katzen_Ombro_Esq_jnt
+      position: {x: -0.06818952, y: -0.00035381722, z: -0.0012349258}
+      rotation: {x: 0.0011765208, y: 0.02392809, z: -0.060893077, w: 0.9978568}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Braco_B_Esq_jnt
+      parentName: Katzen_Braco_A_Esq_jnt
+      position: {x: -0.1088648, y: 0.0008585823, z: 0.0006388315}
+      rotation: {x: 0.0052270754, y: 0.0671715, z: -0.044770993, w: 0.99672276}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1.0000001}
+    - name: Katzen_Mao_A_Esq_jnt
+      parentName: Katzen_Braco_B_Esq_jnt
+      position: {x: -0.10168893, y: 0.00040315898, z: 0.00038143166}
+      rotation: {x: -0.0026186262, y: -0.030441768, z: -0.084470585, w: 0.99595743}
+      scale: {x: 1, y: 1.0000001, z: 0.99999976}
+    - name: Katzen_Mao_B_Esq_jnt
+      parentName: Katzen_Mao_A_Esq_jnt
+      position: {x: -0.04606857, y: 0.00090573874, z: 0.00050755276}
+      rotation: {x: -1.1641528e-10, y: -0, z: -0.0000000036852712, w: 1}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999976}
+    - name: Katzen_Anelar_A_Esq_jnt
+      parentName: Katzen_Mao_B_Esq_jnt
+      position: {x: -0.017178943, y: -0.002413687, z: -0.026678922}
+      rotation: {x: -0.07606786, y: 0.054116536, z: 0.042975876, w: 0.99470514}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Katzen_Anelar_B_Esq_jnt
+      parentName: Katzen_Anelar_A_Esq_jnt
+      position: {x: -0.019568793, y: -0.0006544769, z: -0.0003488307}
+      rotation: {x: 0.00051259965, y: -0.017696906, z: 0.005047557, w: 0.99983054}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Katzen_Anelar_C_Esq_jnt
+      parentName: Katzen_Anelar_B_Esq_jnt
+      position: {x: -0.02060271, y: -0.0019848756, z: 0.000646193}
+      rotation: {x: -0.0012453429, y: -0.005573044, z: 0.14488165, w: 0.9894325}
+      scale: {x: 0.9999998, y: 1.0000002, z: 1}
+    - name: Katzen_Anelar_D_Esq_jnt_FIM
+      parentName: Katzen_Anelar_C_Esq_jnt
+      position: {x: -0.026998244, y: 0.0031390584, z: 0.0016077759}
+      rotation: {x: 0, y: 0, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Indicador_A_Esq_jnt
+      parentName: Katzen_Mao_B_Esq_jnt
+      position: {x: -0.017464861, y: -0.0035114726, z: 0.021603024}
+      rotation: {x: 0.061874777, y: 0.045777716, z: 0.118413605, w: 0.9899769}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: Katzen_Indicador_B_Esq_jnt
+      parentName: Katzen_Indicador_A_Esq_jnt
+      position: {x: -0.021345325, y: 0.0035398637, z: 0.000672333}
+      rotation: {x: -0.0046884483, y: -0.008714987, z: 0.06128842, w: 0.9980711}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Katzen_Indicador_C_Esq_jnt
+      parentName: Katzen_Indicador_B_Esq_jnt
+      position: {x: -0.020236636, y: 0.0043252087, z: 0.0012646382}
+      rotation: {x: 0.0077533587, y: 0.05219985, z: -0.038932003, w: 0.9978474}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Indicador_D_Esq_jnt_FIM
+      parentName: Katzen_Indicador_C_Esq_jnt
+      position: {x: -0.026002701, y: 0.0017860066, z: -0.0017332503}
+      rotation: {x: 0, y: 0, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Medio_A_Esq_jnt
+      parentName: Katzen_Mao_B_Esq_jnt
+      position: {x: -0.024105107, y: -0.0014864472, z: -0.00039110042}
+      rotation: {x: -0.068984, y: 0.03348605, z: 0.04925224, w: 0.9958384}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Katzen_Medio_B_Esq_jnt
+      parentName: Katzen_Medio_A_Esq_jnt
+      position: {x: -0.02119071, y: -0.0004945126, z: 0.00056333945}
+      rotation: {x: 0.000000011175868, y: -9.3132235e-10, z: 0.03660327, w: 0.9993299}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Katzen_Medio_C_Esq_jnt
+      parentName: Katzen_Medio_B_Esq_jnt
+      position: {x: -0.020965256, y: -0.0003427277, z: 0.00011631744}
+      rotation: {x: 0.00047230517, y: 0.0054456107, z: 0.10406519, w: 0.99455553}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Katzen_Medio_D_Esq_jnt_FIM
+      parentName: Katzen_Medio_C_Esq_jnt
+      position: {x: -0.028343324, y: 0.0033662266, z: -0.00027550018}
+      rotation: {x: 0, y: 0, z: -0.095788084, w: 0.99540174}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Polegar_A_Esq_jnt
+      parentName: Katzen_Mao_B_Esq_jnt
+      position: {x: 0.023355681, y: -0.012898182, z: 0.014117273}
+      rotation: {x: 0.59091544, y: 0.2637054, z: 0.032335907, w: 0.7617301}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: Katzen_Polegar_B_Esq_jnt
+      parentName: Katzen_Polegar_A_Esq_jnt
+      position: {x: -0.020447377, y: 0.008908325, z: -0.0016354634}
+      rotation: {x: 0.025869986, y: -0.08233917, z: -0.21395175, w: 0.973024}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000001}
+    - name: Katzen_Polegar_C_Esq_jnt
+      parentName: Katzen_Polegar_B_Esq_jnt
+      position: {x: -0.02717399, y: -0.0024169637, z: 0.0015972895}
+      rotation: {x: -0.0017228642, y: 0.024506593, z: 0.11602182, w: 0.99294275}
+      scale: {x: 0.99999946, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Polegar_D_Esq_jnt_FIM
+      parentName: Katzen_Polegar_C_Esq_jnt
+      position: {x: -0.027587235, y: 0.0017169998, z: 0.0003394483}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pelos_Braco_A_Esq_jnt
+      parentName: Katzen_Braco_B_Esq_jnt
+      position: {x: -0.019613191, y: 0.00537243, z: -0.01919261}
+      rotation: {x: 0.13305227, y: -0.10314059, z: -0.018760268, w: 0.9855492}
+      scale: {x: 0.99999994, y: 1.0000002, z: 0.9999997}
+    - name: Katzen_Pelos_Braco_B_Esq_jnt_FIM
+      parentName: Katzen_Pelos_Braco_A_Esq_jnt
+      position: {x: -0.048455905, y: 0.0026787084, z: 0.0033411419}
+      rotation: {x: -0.00000004470348, y: 0.1595629, z: -0.00000006332993, w: 0.9871878}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Katzen_Braco_A_Esq_jnt_FK
+      parentName: Katzen_Ombro_Esq_jnt
+      position: {x: -0.06818952, y: -0.00035381722, z: -0.0012349258}
+      rotation: {x: -0.00021366312, y: -0.0053675584, z: -0.039774317, w: 0.99919426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_B_Esq_jnt_FK
+      parentName: Katzen_Braco_A_Esq_jnt_FK
+      position: {x: -0.1088648, y: 0.0008585823, z: 0.0006388315}
+      rotation: {x: 0.0055644647, y: 0.11069494, z: -0.06953175, w: 0.9914036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mao_A_Esq_jnt_FK
+      parentName: Katzen_Braco_B_Esq_jnt_FK
+      position: {x: -0.10168893, y: 0.00040315898, z: 0.00038143166}
+      rotation: {x: -0.00060008594, y: -0.029071197, z: -0.022292646, w: 0.99932855}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_A_Esq_jnt_IK
+      parentName: Katzen_Ombro_Esq_jnt
+      position: {x: -0.06818952, y: -0.00035381722, z: -0.0012349258}
+      rotation: {x: 0.24529043, y: -0.03300483, z: -0.06503402, w: 0.9667026}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Braco_B_Esq_jnt_IK
+      parentName: Katzen_Braco_A_Esq_jnt_IK
+      position: {x: -0.1088648, y: 0.0008585823, z: 0.0006388315}
+      rotation: {x: 0.005564465, y: 0.110694386, z: -0.06953141, w: 0.99140364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Mao_A_Esq_jnt_IK
+      parentName: Katzen_Braco_B_Esq_jnt_IK
+      position: {x: -0.10168893, y: 0.00040315898, z: 0.00038143166}
+      rotation: {x: -0.24728069, y: -0.05015794, z: -0.041586958, w: 0.96675074}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Dir_A_jnt
+      parentName: Katzen_Root_jnt
+      position: {x: 0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.022438236, y: 0.027101696, z: 0.6969291, w: 0.7162764}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: Katzen_Perna_Dir_B_jnt
+      parentName: Katzen_Perna_Dir_A_jnt
+      position: {x: -0.22292903, y: -0.014737982, z: -0.014676223}
+      rotation: {x: -0.000000009313227, y: -0.19830848, z: -0.000000039581213, w: 0.9801397}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: Katzen_Pe_Dir_A_jnt
+      parentName: Katzen_Perna_Dir_B_jnt
+      position: {x: -0.20886813, y: -0.011690086, z: 0.009889504}
+      rotation: {x: -0.11621434, y: 0.11548026, z: -0.68753755, w: 0.7074254}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Katzen_Pe_Dir_B_jnt
+      parentName: Katzen_Pe_Dir_A_jnt
+      position: {x: 0.004627901, y: -0.0534833, z: 0.053246398}
+      rotation: {x: -0.49846396, y: 0.46523756, z: 0.48759353, w: 0.5452893}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
+    - name: Katzen_Pe_Dir_C_jnt
+      parentName: Katzen_Pe_Dir_B_jnt
+      position: {x: -0.021786967, y: -0.0063797664, z: 0.000093361545}
+      rotation: {x: -0.49871066, y: -0.46671104, z: 0.5148534, w: 0.51806813}
+      scale: {x: 1.0000013, y: 1.0000011, z: 1.0000004}
+    - name: Katzen_Dedao_Pe_A_Dir_jnt
+      parentName: Katzen_Pe_Dir_C_jnt
+      position: {x: 0.017962284, y: -0.01458464, z: 0.015211178}
+      rotation: {x: -0.0011362804, y: -0.84722865, z: 0.017654117, w: 0.53093386}
+      scale: {x: 1.0000007, y: 1.0000014, z: 1.0000012}
+    - name: Katzen_Dedao_Pe_B_Dir_jnt
+      parentName: Katzen_Dedao_Pe_A_Dir_jnt
+      position: {x: 0.02343733, y: -0.0018803767, z: -0.017752009}
+      rotation: {x: -0.00000009324865, y: -0, z: 0.2388943, w: 0.9710456}
+      scale: {x: 1.0000007, y: 1.0000012, z: 1.0000011}
+    - name: Katzen_Dedao_Pe_C_Dir_jnt_FIM
+      parentName: Katzen_Dedao_Pe_B_Dir_jnt
+      position: {x: 0.020795712, y: 0.0019080187, z: -0.01390862}
+      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Indicador_Pe_A_Dir_jnt
+      parentName: Katzen_Pe_Dir_C_jnt
+      position: {x: -0.0052234186, y: -0.014368339, z: 0.020244205}
+      rotation: {x: 0.03837609, y: -0.7179084, z: -0.057653382, w: 0.6926839}
+      scale: {x: 1.0000011, y: 1.0000021, z: 1.0000013}
+    - name: Katzen_Indicador_Pe_B_Dir_jnt
+      parentName: Katzen_Indicador_Pe_A_Dir_jnt
+      position: {x: 0.03332566, y: 0.00057432905, z: 0.005967207}
+      rotation: {x: 0.00000006891786, y: 0.00000008940696, z: 0.34062925, w: 0.94019777}
+      scale: {x: 1.000001, y: 1.0000012, z: 1.0000005}
+    - name: Katzen_Indicador_Pe_C_Dir_jnt_FIM
+      parentName: Katzen_Indicador_Pe_B_Dir_jnt
+      position: {x: 0.026032696, y: 0.00011975501, z: 0.0049550794}
+      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Medio_Pe_A_Dir_jnt
+      parentName: Katzen_Pe_Dir_C_jnt
+      position: {x: -0.024257492, y: -0.013499939, z: 0.00419802}
+      rotation: {x: 0.048782267, y: -0.5707122, z: -0.049162112, w: 0.8182243}
+      scale: {x: 1.0000007, y: 1.0000013, z: 1.0000006}
+    - name: Katzen_Medio_Pe_B_Dir_jnt
+      parentName: Katzen_Medio_Pe_A_Dir_jnt
+      position: {x: 0.019617619, y: -0.00047131514, z: 0.027594859}
+      rotation: {x: 0.00000001862645, y: 0.0000001490116, z: 0.3406291, w: 0.9401978}
+      scale: {x: 1.0000005, y: 0.9999997, z: 1}
+    - name: Katzen_Medio_Pe_C_Dir_jnt_FIM
+      parentName: Katzen_Medio_Pe_B_Dir_jnt
+      position: {x: 0.018910492, y: 0.005241611, z: 0.017809484}
+      rotation: {x: 0.000000017987297, y: 0.7071068, z: -0.000000017987295, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pelos_Perna_1_A_Dir_jnt
+      parentName: Katzen_Perna_Dir_B_jnt
+      position: {x: -0.072882086, y: -0.036916334, z: -0.024480738}
+      rotation: {x: 0.40897676, y: 0.056823768, z: -0.088653214, w: 0.90644896}
+      scale: {x: 1.0000007, y: 1.000001, z: 1.0000001}
+    - name: Katzen_Pelos_Perna_1_B_Dir_jnt_FIM
+      parentName: Katzen_Pelos_Perna_1_A_Dir_jnt
+      position: {x: -0.050720725, y: -0.011301632, z: 0.009177877}
+      rotation: {x: -0.00000011920929, y: 0.08539413, z: -0.00000016391277, w: 0.9963473}
+      scale: {x: 1.0000005, y: 1, z: 1.0000001}
+    - name: Katzen_Pelos_Perna_2_B_Dir_jnt
+      parentName: Katzen_Perna_Dir_B_jnt
+      position: {x: -0.09715868, y: 0.010789408, z: -0.042862635}
+      rotation: {x: 0.41505322, y: 0.13402171, z: -0.053405188, w: 0.89828557}
+      scale: {x: 1.0000007, y: 1.0000005, z: 1.0000002}
+    - name: Katzen_Pelos_Perna_2_C_Dir_jnt_FIM
+      parentName: Katzen_Pelos_Perna_2_B_Dir_jnt
+      position: {x: -0.040598936, y: 0.001041151, z: 0.00049009983}
+      rotation: {x: 0.000000029802322, y: -0.000000007450581, z: -0, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Katzen_Shorts_A_A_Dir_jnt
+      parentName: Katzen_Perna_Dir_A_jnt
+      position: {x: -0.057578567, y: -0.006901656, z: 0.06730072}
+      rotation: {x: 0.7051085, y: -0.05217836, z: -0.0024622583, w: 0.7071728}
+      scale: {x: 1, y: 1, z: 1.0000004}
+    - name: Katzen_Shorts_B_A_Dir_jnt
+      parentName: Katzen_Shorts_A_A_Dir_jnt
+      position: {x: -0.15650362, y: -3.8807207e-10, z: 0.03326587}
+      rotation: {x: -0.00000008940696, y: -0.00000011362134, z: -0.70710677, w: 0.7071068}
+      scale: {x: 1.0000004, y: 0.99999994, z: 0.9999994}
+    - name: Katzen_Shorts_A_B_Dir_jnt
+      parentName: Katzen_Perna_Dir_A_jnt
+      position: {x: -0.051245693, y: -0.06118203, z: -0.0007848605}
+      rotation: {x: -0.001766419, y: -0.035140518, z: -0.029920787, w: 0.99893284}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Katzen_Shorts_B_B_Dir_jnt
+      parentName: Katzen_Shorts_A_B_Dir_jnt
+      position: {x: -0.15756923, y: -0.027783709, z: 0.0000000025809919}
+      rotation: {x: 3.4924597e-10, y: -0.0000000018626451, z: -0.70710677, w: 0.7071069}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Katzen_Shorts_A_C_Dir_jnt
+      parentName: Katzen_Perna_Dir_A_jnt
+      position: {x: -0.04879156, y: -0.0022487547, z: -0.059024937}
+      rotation: {x: -0.70644104, y: -0.04608073, z: -0.052806143, w: 0.7042934}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Katzen_Shorts_B_C_Dir_jnt
+      parentName: Katzen_Shorts_A_C_Dir_jnt
+      position: {x: -0.15955791, y: -0.0000000012977359, z: -0.011885976}
+      rotation: {x: -0, y: -0.000000044703484, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
+    - name: Katzen_Shorts_A_D_Dir_jnt
+      parentName: Katzen_Perna_Dir_A_jnt
+      position: {x: -0.087774456, y: 0.03812848, z: -0.003912593}
+      rotation: {x: 0.9993807, y: -0.00052112306, z: 0.035073344, w: 0.0027994178}
+      scale: {x: 0.99999976, y: 1, z: 1.0000006}
+    - name: Katzen_Shorts_B_D_Dir_jnt
+      parentName: Katzen_Shorts_A_D_Dir_jnt
+      position: {x: -0.12600394, y: 0.0071702823, z: 0.0000000010115002}
+      rotation: {x: -0.0000000037252903, y: -0.0000000024738256, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000001}
+    - name: Katzen_Perna_Dir_A_jnt_FK
+      parentName: Katzen_Root_jnt
+      position: {x: 0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.02243825, y: 0.027101682, z: 0.6969291, w: 0.7162764}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Dir_B_jnt_FK
+      parentName: Katzen_Perna_Dir_A_jnt_FK
+      position: {x: -0.22292903, y: -0.014737982, z: -0.014676223}
+      rotation: {x: -3.1284993e-16, y: -0.19830844, z: -6.329789e-17, w: 0.9801397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Dir_A_jnt_FK
+      parentName: Katzen_Perna_Dir_B_jnt_FK
+      position: {x: -0.20886813, y: -0.011690087, z: 0.009889504}
+      rotation: {x: -0.046342175, y: 0.54496646, z: -0.011791356, w: 0.83709323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Dir_A_jnt_IK
+      parentName: Katzen_Root_jnt
+      position: {x: 0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.031907883, y: 0.016666051, z: 0.6951852, w: 0.71792877}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Dir_B_jnt_IK
+      parentName: Katzen_Perna_Dir_A_jnt_IK
+      position: {x: -0.22292903, y: -0.014737982, z: -0.014676223}
+      rotation: {x: 7.774767e-17, y: -0.19830844, z: -4.3599916e-17, w: 0.9801397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Dir_A_jnt_IK
+      parentName: Katzen_Perna_Dir_B_jnt_IK
+      position: {x: -0.20886813, y: -0.011690087, z: 0.009889504}
+      rotation: {x: -0.03312337, y: 0.5459413, z: -0.006438041, w: 0.83714366}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Dir_B_jnt_IK
+      parentName: Katzen_Pe_Dir_A_jnt_IK
+      position: {x: -0.07474056, y: -0.010869999, z: -0.003570955}
+      rotation: {x: 0, y: 0.331223, z: -0, w: 0.9435525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Dir_C_jnt_IK_FIM
+      parentName: Katzen_Pe_Dir_B_jnt_IK
+      position: {x: -0.021786967, y: -0.0063797664, z: 0.000093361545}
+      rotation: {x: -0.4987107, y: -0.4667109, z: 0.5148534, w: 0.51806813}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Esq_A_jnt
+      parentName: Katzen_Root_jnt
+      position: {x: -0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.02243826, y: 0.027101673, z: 0.6969291, w: 0.7162764}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999999}
+    - name: Katzen_Perna_Esq_B_jnt
+      parentName: Katzen_Perna_Esq_A_jnt
+      position: {x: -0.22339413, y: 0.002410423, z: -0.014805726}
+      rotation: {x: 0.000000013038516, y: -0.19830844, z: 0.000000077532604, w: 0.9801397}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1}
+    - name: Katzen_Pe_Esq_A_jnt
+      parentName: Katzen_Perna_Esq_B_jnt
+      position: {x: -0.20919304, y: -0.000054897995, z: 0.00993122}
+      rotation: {x: -0.1162143, y: 0.115480214, z: -0.68753767, w: 0.70742536}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Katzen_Pe_Esq_B_jnt
+      parentName: Katzen_Pe_Esq_A_jnt
+      position: {x: -0.004627901, y: -0.0534833, z: 0.053246398}
+      rotation: {x: -0.4984639, y: 0.4652375, z: 0.48759356, w: 0.54528934}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000006}
+    - name: Katzen_Pe_Esq_C_jnt
+      parentName: Katzen_Pe_Esq_B_jnt
+      position: {x: -0.022585377, y: 0.0022966017, z: -0.000092116425}
+      rotation: {x: -0.49871063, y: -0.46671095, z: 0.5148535, w: 0.51806813}
+      scale: {x: 1.0000012, y: 1.000001, z: 0.99999994}
+    - name: Katzen_Dedao_Pe_A_Esq_jnt
+      parentName: Katzen_Pe_Esq_C_jnt
+      position: {x: -0.021192955, y: -0.01458464, z: 0.010241207}
+      rotation: {x: -0.0011363475, y: -0.84722865, z: 0.01765391, w: 0.5309338}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+    - name: Katzen_Dedao_Pe_B_Esq_jnt
+      parentName: Katzen_Dedao_Pe_A_Esq_jnt
+      position: {x: 0.029423552, y: -0.0014942652, z: 0.000000068265436}
+      rotation: {x: 0.00000009761423, y: 0.000000059604634, z: 0.23889434, w: 0.9710456}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000005}
+    - name: Katzen_Dedao_Pe_C_Esq_jnt_FIM
+      parentName: Katzen_Dedao_Pe_B_Esq_jnt
+      position: {x: 0.025090873, y: -0.000000010444607, z: -0.00000003722351}
+      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Indicador_Pe_A_Esq_jnt
+      parentName: Katzen_Pe_Esq_C_jnt
+      position: {x: 0.000000071047026, y: -0.014368339, z: 0.02090722}
+      rotation: {x: 0.038376052, y: -0.7179084, z: -0.05765347, w: 0.6926839}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000005}
+    - name: Katzen_Indicador_Pe_B_Esq_jnt
+      parentName: Katzen_Indicador_Pe_A_Esq_jnt
+      position: {x: 0.033850517, y: 0.0008242838, z: 0.000000058085693}
+      rotation: {x: 0.00000010617076, y: 0.0000001490116, z: 0.34062922, w: 0.94019777}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000004}
+    - name: Katzen_Indicador_Pe_C_Esq_jnt_FIM
+      parentName: Katzen_Indicador_Pe_B_Esq_jnt
+      position: {x: 0.026500346, y: -0.000000013858478, z: -0.00000006075608}
+      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Medio_Pe_A_Esq_jnt
+      parentName: Katzen_Pe_Esq_C_jnt
+      position: {x: 0.022439439, y: -0.013499939, z: 0.010125258}
+      rotation: {x: 0.04878231, y: -0.57071227, z: -0.04916226, w: 0.81822425}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000001}
+    - name: Katzen_Medio_Pe_B_Esq_jnt
+      parentName: Katzen_Medio_Pe_A_Esq_jnt
+      position: {x: 0.0338507, y: 0.00082429376, z: -0.00000013124172}
+      rotation: {x: 0.000000141561, y: 0.000000029802315, z: 0.34062925, w: 0.9401977}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Katzen_Medio_Pe_C_Esq_jnt_FIM
+      parentName: Katzen_Medio_Pe_B_Esq_jnt
+      position: {x: 0.026500167, y: 0.00000012616763, z: 0.00000030706445}
+      rotation: {x: 0.000000017987297, y: 0.7071068, z: -0.000000017987295, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pelos_Perna_1_A_Esq_jnt
+      parentName: Katzen_Perna_Esq_B_jnt
+      position: {x: -0.074833475, y: 0.032966174, z: -0.024230186}
+      rotation: {x: 0.40897673, y: 0.05682373, z: -0.08865332, w: 0.906449}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: Katzen_Pelos_Perna_1_B_Esq_jnt_FIM
+      parentName: Katzen_Pelos_Perna_1_A_Esq_jnt
+      position: {x: -0.05270384, y: -0.0022826388, z: -0.0012834391}
+      rotation: {x: 0.000000059604638, y: 0.08539413, z: -0.00000001862645, w: 0.99634725}
+      scale: {x: 1.0000002, y: 1.0000005, z: 0.99999994}
+    - name: Katzen_Pelos_Perna_2_B_Esq_jnt
+      parentName: Katzen_Perna_Esq_B_jnt
+      position: {x: -0.09641377, y: -0.015887022, z: -0.04295828}
+      rotation: {x: 0.41505337, y: 0.13402157, z: -0.053405304, w: 0.8982855}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000004}
+    - name: Katzen_Pelos_Perna_2_C_Esq_jnt_FIM
+      parentName: Katzen_Pelos_Perna_2_B_Esq_jnt
+      position: {x: -0.040578846, y: 0.000000030654714, z: 0.0017190592}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: Katzen_Shorts_A_A_Esq_jnt
+      parentName: Katzen_Perna_Esq_A_jnt
+      position: {x: -0.057895545, y: 0.0047856565, z: 0.06721246}
+      rotation: {x: 0.7051085, y: -0.05217842, z: -0.0024623666, w: 0.7071728}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000004}
+    - name: Katzen_Shorts_B_A_Esq_jnt
+      parentName: Katzen_Shorts_A_A_Esq_jnt
+      position: {x: -0.16, y: -8.191739e-10, z: 0.0000000019790964}
+      rotation: {x: -0.00000008940696, y: 0.00000006332993, z: -0.70710677, w: 0.7071068}
+      scale: {x: 0.9999996, y: 0.99999964, z: 0.9999997}
+    - name: Katzen_Shorts_A_B_Esq_jnt
+      parentName: Katzen_Perna_Esq_A_jnt
+      position: {x: -0.054486096, y: 0.058295768, z: -0.0016871382}
+      rotation: {x: -0.0017664172, y: -0.035140518, z: -0.029920787, w: 0.99893284}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+    - name: Katzen_Shorts_B_B_Esq_jnt
+      parentName: Katzen_Shorts_A_B_Esq_jnt
+      position: {x: -0.15999998, y: 0.000000002522019, z: 0.0000000019769857}
+      rotation: {x: 0.0000000027939677, y: -0, z: -0.70710677, w: 0.7071069}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: Katzen_Shorts_A_C_Esq_jnt
+      parentName: Katzen_Perna_Esq_A_jnt
+      position: {x: -0.048817564, y: -0.0012900919, z: -0.059032183}
+      rotation: {x: -0.7064411, y: -0.04608069, z: -0.052806154, w: 0.7042934}
+      scale: {x: 0.9999998, y: 1.0000006, z: 0.99999994}
+    - name: Katzen_Shorts_B_C_Esq_jnt
+      parentName: Katzen_Shorts_A_C_Esq_jnt
+      position: {x: -0.16, y: -9.1382046e-10, z: 0.0000000017285481}
+      rotation: {x: 0.00000008940696, y: 0.000000055879347, z: -0.7071068, w: 0.70710677}
+      scale: {x: 0.9999995, y: 0.99999994, z: 1.0000002}
+    - name: Katzen_Shorts_A_D_Esq_jnt
+      parentName: Katzen_Perna_Esq_A_jnt
+      position: {x: -0.08557728, y: -0.042884503, z: -0.0033007956}
+      rotation: {x: 0.9993807, y: -0.0005211237, z: 0.035073344, w: 0.0027994197}
+      scale: {x: 0.9999996, y: 0.9999995, z: 1.0000002}
+    - name: Katzen_Shorts_B_D_Esq_jnt
+      parentName: Katzen_Shorts_A_D_Esq_jnt
+      position: {x: -0.12620778, y: -4.5330323e-10, z: 0.000000001243283}
+      rotation: {x: -0, y: 0.0000000024310793, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1}
+    - name: Katzen_Perna_Esq_A_jnt_FK
+      parentName: Katzen_Root_jnt
+      position: {x: -0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.02243825, y: 0.027101682, z: 0.6969291, w: 0.7162764}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Esq_B_jnt_FK
+      parentName: Katzen_Perna_Esq_A_jnt_FK
+      position: {x: -0.22339413, y: 0.002410423, z: -0.014805726}
+      rotation: {x: -5.0652094e-17, y: -0.19830844, z: -1.6953691e-16, w: 0.9801397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Esq_A_jnt_FK
+      parentName: Katzen_Perna_Esq_B_jnt_FK
+      position: {x: -0.20919304, y: -0.000054896926, z: 0.00993122}
+      rotation: {x: -0.046342175, y: 0.54496646, z: -0.011791356, w: 0.83709323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Esq_A_jnt_IK
+      parentName: Katzen_Root_jnt
+      position: {x: -0.0430561, y: -0.07114938, z: -0.004975199}
+      rotation: {x: -0.012276645, y: 0.036862954, z: 0.6985566, w: 0.7144992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Perna_Esq_B_jnt_IK
+      parentName: Katzen_Perna_Esq_A_jnt_IK
+      position: {x: -0.22339413, y: 0.002410423, z: -0.014805726}
+      rotation: {x: -5.3800055e-18, y: -0.19830844, z: 3.67173e-17, w: 0.9801397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Esq_A_jnt_IK
+      parentName: Katzen_Perna_Esq_B_jnt_IK
+      position: {x: -0.20919304, y: -0.000054896926, z: 0.00993122}
+      rotation: {x: -0.05958712, y: 0.5446827, z: -0.017109524, w: 0.8363477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Esq_B_jnt_IK
+      parentName: Katzen_Pe_Esq_A_jnt_IK
+      position: {x: -0.07552558, y: -0.0016552296, z: -0.003194705}
+      rotation: {x: -1.151227e-16, y: 0.331223, z: 3.9885825e-17, w: 0.9435525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Katzen_Pe_Esq_C_jnt_IK_FIM
+      parentName: Katzen_Pe_Esq_B_jnt_IK
+      position: {x: -0.022585377, y: 0.0022966017, z: -0.000092116425}
+      rotation: {x: -0.4987107, y: -0.4667109, z: 0.5148534, w: 0.51806813}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2706919ff43446140b033fd2911d1212,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
