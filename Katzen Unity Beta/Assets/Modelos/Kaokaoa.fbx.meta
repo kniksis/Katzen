@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1d7915183bbd3e4b9a80ffb242c51c8
+guid: 007e89616f8cfb34b8acbc5c0c66768c
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -20,143 +20,200 @@ ModelImporter:
     100028: Kaokaoa_Anelar_Pe_C_Esq_jnt_FIM
     100030: Kaokaoa_Bacia_A_jnt
     100032: Kaokaoa_Bacia_B_jnt
-    100034: Kaokaoa_Braco_A_Dir_jnt
-    100036: Kaokaoa_Braco_A_Dir_jnt_FK
-    100038: Kaokaoa_Braco_A_Dir_jnt_IK
-    100040: Kaokaoa_Braco_A_Esq_jnt
-    100042: Kaokaoa_Braco_A_Esq_jnt_FK
-    100044: Kaokaoa_Braco_A_Esq_jnt_IK
-    100046: Kaokaoa_Braco_B_Dir_jnt
-    100048: Kaokaoa_Braco_B_Dir_jnt_FK
-    100050: Kaokaoa_Braco_B_Dir_jnt_IK
-    100052: Kaokaoa_Braco_B_Esq_jnt
-    100054: Kaokaoa_Braco_B_Esq_jnt_FK
-    100056: Kaokaoa_Braco_B_Esq_jnt_IK
-    100058: Kaokaoa_Cabeca_A_jnt
-    100060: Kaokaoa_Cabeca_B_jnt
-    100062: Kaokaoa_Cabeca_C_jnt_FIM
-    100064: Kaokaoa_Calda_A_jnt
-    100066: Kaokaoa_Calda_B_jnt
-    100068: Kaokaoa_Calda_C_jnt
-    100070: Kaokaoa_Calda_D_jnt
-    100072: Kaokaoa_Calda_E_jnt
-    100074: Kaokaoa_Calda_F_jnt
-    100076: Kaokaoa_Calda_G_jnt
-    100078: Kaokaoa_Calda_H_jnt
-    100080: Kaokaoa_Calda_I_jnt
-    100082: Kaokaoa_Calda_J_jnt
-    100084: Kaokaoa_Calda_K_jnt
-    100086: Kaokaoa_Calda_L_jnt_FIM
-    100088: Kaokaoa_Col_A_jnt
-    100090: Kaokaoa_Col_B_jnt
-    100092: Kaokaoa_Col_C_jnt
-    100094: Kaokaoa_Col_D_jnt
-    100096: Kaokaoa_Col_E_jnt
-    100098: Kaokaoa_Dedao_Pe_A_Dir_jnt
-    100100: Kaokaoa_Dedao_Pe_A_Esq_jnt
-    100102: Kaokaoa_Dedao_Pe_B_Dir_jnt
-    100104: Kaokaoa_Dedao_Pe_B_Esq_jnt
-    100106: Kaokaoa_Dedao_Pe_C_Dir_jnt_FIM
-    100108: Kaokaoa_Dedao_Pe_C_Esq_jnt_FIM
-    100110: Kaokaoa_geo
-    100112: Kaokaoa_geo_gp
-    100114: Kaokaoa_Indicador_A_Dir_jnt
-    100116: Kaokaoa_Indicador_A_Esq_jnt
-    100118: Kaokaoa_Indicador_B_Dir_jnt
-    100120: Kaokaoa_Indicador_B_Esq_jnt
-    100122: Kaokaoa_Indicador_C_Dir_jnt
-    100124: Kaokaoa_Indicador_C_Esq_jnt
-    100126: Kaokaoa_Indicador_D_Dir_jnt_FIM
-    100128: Kaokaoa_Indicador_D_Esq_jnt_FIM
-    100130: Kaokaoa_Indicador_Pe_A_Dir_jnt
-    100132: Kaokaoa_Indicador_Pe_A_Esq_jnt
-    100134: Kaokaoa_Indicador_Pe_B_Dir_jnt
-    100136: Kaokaoa_Indicador_Pe_B_Esq_jnt
-    100138: Kaokaoa_Indicador_Pe_C_Dir_jnt_FIM
-    100140: Kaokaoa_Indicador_Pe_C_Esq_jnt_FIM
-    100142: Kaokaoa_jnt_gp
-    100144: Kaokaoa_Lingua_A_jnt
-    100146: Kaokaoa_Lingua_B_jnt
-    100148: Kaokaoa_Lingua_C_jnt
-    100150: Kaokaoa_Lingua_D_jnt
-    100152: Kaokaoa_Lingua_F_jnt_FIM
-    100154: Kaokaoa_Mao_A_Dir_jnt
-    100156: Kaokaoa_Mao_A_Dir_jnt_FK
-    100158: Kaokaoa_Mao_A_Dir_jnt_IK
-    100160: Kaokaoa_Mao_A_Esq_jnt
-    100162: Kaokaoa_Mao_A_Esq_jnt_FK
-    100164: Kaokaoa_Mao_A_Esq_jnt_IK
-    100166: Kaokaoa_Mao_B_Dir_jnt
-    100168: Kaokaoa_Mao_B_Esq_jnt
-    100170: Kaokaoa_Medio_A_Dir_jnt
-    100172: Kaokaoa_Medio_A_Esq_jnt
-    100174: Kaokaoa_Medio_B_Dir_jnt
-    100176: Kaokaoa_Medio_B_Esq_jnt
-    100178: Kaokaoa_Medio_C_Dir_jnt
-    100180: Kaokaoa_Medio_C_Esq_jnt
-    100182: Kaokaoa_Medio_D_Dir_jnt_FIM
-    100184: Kaokaoa_Medio_D_Esq_jnt_FIM
-    100186: Kaokaoa_Medio_Pe_A_Dir_jnt
-    100188: Kaokaoa_Medio_Pe_A_Esq_jnt
-    100190: Kaokaoa_Medio_Pe_B_Dir_jnt
-    100192: Kaokaoa_Medio_Pe_B_Esq_jnt
-    100194: Kaokaoa_Medio_Pe_C_Dir_jnt_FIM
-    100196: Kaokaoa_Medio_Pe_C_Esq_jnt_FIM
-    100198: Kaokaoa_Minimo_A_Dir_jnt
-    100200: Kaokaoa_Minimo_A_Esq_jnt
-    100202: Kaokaoa_Minimo_B_Dir_jnt
-    100204: Kaokaoa_Minimo_B_Esq_jnt
-    100206: Kaokaoa_Minimo_C_Dir_jnt
-    100208: Kaokaoa_Minimo_C_Esq_jnt
-    100210: Kaokaoa_Minimo_D_Dir_jnt_FIM
-    100212: Kaokaoa_Minimo_D_Esq_jnt_FIM
-    100214: Kaokaoa_Olho_Dir_jnt
-    100216: Kaokaoa_Olho_Esq_jnt
-    100218: Kaokaoa_Ombro_Dir_jnt
-    100220: Kaokaoa_Ombro_Esq_jnt
-    100222: Kaokaoa_Orelha_Dir_A_jnt
-    100224: Kaokaoa_Orelha_Dir_B_jnt
-    100226: Kaokaoa_Orelha_Dir_C_jnt_FIM
-    100228: Kaokaoa_Orelha_Esq_A_jnt
-    100230: Kaokaoa_Orelha_Esq_B_jnt
-    100232: Kaokaoa_Orelha_Esq_C_jnt_FIM
-    100234: Kaokaoa_Pe_Dir_A_jnt
-    100236: Kaokaoa_Pe_Dir_A_jnt_FK
-    100238: Kaokaoa_Pe_Dir_A_jnt_IK
-    100240: Kaokaoa_Pe_Dir_B_jnt
-    100242: Kaokaoa_Pe_Dir_B_jnt_IK
-    100244: Kaokaoa_Pe_Dir_C_jnt
-    100246: Kaokaoa_Pe_Dir_C_jnt_IK
-    100248: Kaokaoa_Pe_Esq_A_jnt
-    100250: Kaokaoa_Pe_Esq_A_jnt_FK
-    100252: Kaokaoa_Pe_Esq_A_jnt_IK
-    100254: Kaokaoa_Pe_Esq_B_jnt
-    100256: Kaokaoa_Pe_Esq_B_jnt_IK
-    100258: Kaokaoa_Pe_Esq_C_jnt
-    100260: Kaokaoa_Pe_Esq_C_jnt_IK
-    100262: Kaokaoa_Perna_Dir_A_jnt
-    100264: Kaokaoa_Perna_Dir_A_jnt_FK
-    100266: Kaokaoa_Perna_Dir_A_jnt_IK
-    100268: Kaokaoa_Perna_Dir_B_jnt
-    100270: Kaokaoa_Perna_Dir_B_jnt_FK
-    100272: Kaokaoa_Perna_Dir_B_jnt_IK
-    100274: Kaokaoa_Perna_Esq_A_jnt
-    100276: Kaokaoa_Perna_Esq_A_jnt_FK
-    100278: Kaokaoa_Perna_Esq_A_jnt_IK
-    100280: Kaokaoa_Perna_Esq_B_jnt
-    100282: Kaokaoa_Perna_Esq_B_jnt_FK
-    100284: Kaokaoa_Perna_Esq_B_jnt_IK
-    100286: Kaokaoa_Polegar_A_Dir_jnt
-    100288: Kaokaoa_Polegar_A_Esq_jnt
-    100290: Kaokaoa_Polegar_B_Dir_jnt
-    100292: Kaokaoa_Polegar_B_Esq_jnt
-    100294: Kaokaoa_Polegar_C_Dir_jnt
-    100296: Kaokaoa_Polegar_C_Esq_jnt
-    100298: Kaokaoa_Polegar_D_Dir_jnt_FIM
-    100300: Kaokaoa_Polegar_D_Esq_jnt_FIM
-    100302: Kaokaoa_Root_jnt
-    100304: Katzen_Mand_A_jnt
-    100306: Katzen_Mand_B_jnt_FIM
+    100034: Kaokaoa_Braco_A_dir_crv_FK
+    100036: Kaokaoa_Braco_A_dir_crv_FK_gp
+    100038: Kaokaoa_Braco_A_Dir_jnt
+    100040: Kaokaoa_Braco_A_Dir_jnt_FK
+    100042: Kaokaoa_Braco_A_Dir_jnt_IK
+    100044: Kaokaoa_Braco_A_esq_crv_FK
+    100046: Kaokaoa_Braco_A_esq_crv_FK_gp
+    100048: Kaokaoa_Braco_A_Esq_jnt
+    100050: Kaokaoa_Braco_A_Esq_jnt_FK
+    100052: Kaokaoa_Braco_A_Esq_jnt_IK
+    100054: Kaokaoa_Braco_B_Dir_jnt
+    100056: Kaokaoa_Braco_B_Dir_jnt_FK
+    100058: Kaokaoa_Braco_B_Dir_jnt_IK
+    100060: Kaokaoa_Braco_B_Esq_jnt
+    100062: Kaokaoa_Braco_B_Esq_jnt_FK
+    100064: Kaokaoa_Braco_B_Esq_jnt_IK
+    100066: Kaokaoa_Cabeca_A_jnt
+    100068: Kaokaoa_Cabeca_B_jnt
+    100070: Kaokaoa_Cabeca_C_jnt_FIM
+    100072: Kaokaoa_Calda_A_jnt
+    100074: Kaokaoa_Calda_B_jnt
+    100076: Kaokaoa_Calda_C_jnt
+    100078: Kaokaoa_Calda_D_jnt
+    100080: Kaokaoa_Calda_E_jnt
+    100082: Kaokaoa_Calda_F_jnt
+    100084: Kaokaoa_Calda_G_jnt
+    100086: Kaokaoa_Calda_H_jnt
+    100088: Kaokaoa_Calda_I_jnt
+    100090: Kaokaoa_Calda_J_jnt
+    100092: Kaokaoa_Calda_K_jnt
+    100094: Kaokaoa_Calda_L_jnt_FIM
+    100096: Kaokaoa_Col_A_jnt
+    100098: Kaokaoa_Col_B_jnt
+    100100: Kaokaoa_Col_C_jnt
+    100102: Kaokaoa_Col_D_jnt
+    100104: Kaokaoa_Col_E_jnt
+    100106: Kaokaoa_ctrl_barriga_crv
+    100108: Kaokaoa_ctrl_barriga_crv_gp
+    100110: Kaokaoa_ctrl_boca_crv
+    100112: Kaokaoa_ctrl_boca_crv_gp
+    100114: Kaokaoa_ctrl_cabeca_crv
+    100116: Kaokaoa_ctrl_cabeca_crv_gp
+    100118: Kaokaoa_ctrl_cintura_crv
+    100120: Kaokaoa_ctrl_cintura_crv_gp
+    100122: Kaokaoa_ctrl_cotovelo_dir_crv_FK
+    100124: Kaokaoa_ctrl_cotovelo_dir_crv_FK_gp
+    100126: Kaokaoa_ctrl_cotovelo_esq_crv_FK
+    100128: Kaokaoa_ctrl_cotovelo_esq_crv_FK_gp
+    100130: Kaokaoa_ctrl_master_crv
+    100132: Kaokaoa_ctrl_master_crv_gp
+    100134: Kaokaoa_ctrl_nariz_crv
+    100136: Kaokaoa_ctrl_nariz_crv_gp
+    100138: Kaokaoa_ctrl_olho_dir_crv
+    100140: Kaokaoa_ctrl_olho_dir_crv_gp
+    100142: Kaokaoa_ctrl_olho_esq_crv
+    100144: Kaokaoa_ctrl_olho_esq_crv_gp
+    100146: Kaokaoa_ctrl_olhos_crv
+    100148: Kaokaoa_ctrl_olhos_crv_gp
+    100150: Kaokaoa_ctrl_ombro_dir_crv
+    100152: Kaokaoa_ctrl_ombro_dir_crv_gp
+    100154: Kaokaoa_ctrl_ombro_esq_crv
+    100156: Kaokaoa_ctrl_ombro_esq_crv_gp
+    100158: Kaokaoa_ctrl_peito_A_crv
+    100160: Kaokaoa_ctrl_peito_A_crv_gp
+    100162: Kaokaoa_ctrl_perna_A_dir_crv_FK
+    100164: Kaokaoa_ctrl_perna_A_dir_crv_FK_gp
+    100166: Kaokaoa_ctrl_perna_A_esq_crv_FK
+    100168: Kaokaoa_ctrl_perna_A_esq_crv_FK_gp
+    100170: Kaokaoa_ctrl_perna_B_dir_crv_FK
+    100172: Kaokaoa_ctrl_perna_B_dir_crv_FK_gp
+    100174: Kaokaoa_ctrl_perna_B_esq_crv_FK
+    100176: Kaokaoa_ctrl_perna_B_esq_crv_FK_gp
+    100178: Kaokaoa_ctrl_pescoco_crv
+    100180: Kaokaoa_ctrl_pescoco_crv_gp
+    100182: Kaokaoa_ctrl_pulso_dir_crv_FK
+    100184: Kaokaoa_ctrl_pulso_dir_crv_FK_gp
+    100186: Kaokaoa_ctrl_pulso_dir_crv_IK
+    100188: Kaokaoa_ctrl_pulso_dir_crv_IK_gp
+    100190: Kaokaoa_ctrl_pulso_esq_crv_FK
+    100192: Kaokaoa_ctrl_pulso_esq_crv_FK_gp
+    100194: Kaokaoa_ctrl_pulso_esq_crv_IK
+    100196: Kaokaoa_ctrl_pulso_esq_crv_IK_gp
+    100198: Kaokaoa_ctrl_root_crv
+    100200: Kaokaoa_ctrl_root_crv_gp
+    100202: Kaokaoa_ctrl_tornozelo_dir_crv_FK
+    100204: Kaokaoa_ctrl_tornozelo_dir_crv_FK_gp
+    100206: Kaokaoa_ctrl_tornozelo_esq_crv_FK
+    100208: Kaokaoa_ctrl_tornozelo_esq_crv_FK_gp
+    100210: Kaokaoa_ctrls
+    100212: Kaokaoa_Dedao_Pe_A_Dir_jnt
+    100214: Kaokaoa_Dedao_Pe_A_Esq_jnt
+    100216: Kaokaoa_Dedao_Pe_B_Dir_jnt
+    100218: Kaokaoa_Dedao_Pe_B_Esq_jnt
+    100220: Kaokaoa_Dedao_Pe_C_Dir_jnt_FIM
+    100222: Kaokaoa_Dedao_Pe_C_Esq_jnt_FIM
+    100224: Kaokaoa_geo
+    100226: Kaokaoa_geo_gp
+    100228: Kaokaoa_Indicador_A_Dir_jnt
+    100230: Kaokaoa_Indicador_A_Esq_jnt
+    100232: Kaokaoa_Indicador_B_Dir_jnt
+    100234: Kaokaoa_Indicador_B_Esq_jnt
+    100236: Kaokaoa_Indicador_C_Dir_jnt
+    100238: Kaokaoa_Indicador_C_Esq_jnt
+    100240: Kaokaoa_Indicador_D_Dir_jnt_FIM
+    100242: Kaokaoa_Indicador_D_Esq_jnt_FIM
+    100244: Kaokaoa_Indicador_Pe_A_Dir_jnt
+    100246: Kaokaoa_Indicador_Pe_A_Esq_jnt
+    100248: Kaokaoa_Indicador_Pe_B_Dir_jnt
+    100250: Kaokaoa_Indicador_Pe_B_Esq_jnt
+    100252: Kaokaoa_Indicador_Pe_C_Dir_jnt_FIM
+    100254: Kaokaoa_Indicador_Pe_C_Esq_jnt_FIM
+    100256: Kaokaoa_jnt_gp
+    100258: Kaokaoa_Lingua_A_jnt
+    100260: Kaokaoa_Lingua_B_jnt
+    100262: Kaokaoa_Lingua_C_jnt
+    100264: Kaokaoa_Lingua_D_jnt
+    100266: Kaokaoa_Lingua_F_jnt_FIM
+    100268: Kaokaoa_Mao_A_Dir_jnt
+    100270: Kaokaoa_Mao_A_Dir_jnt_FK
+    100272: Kaokaoa_Mao_A_Dir_jnt_IK
+    100274: Kaokaoa_Mao_A_Esq_jnt
+    100276: Kaokaoa_Mao_A_Esq_jnt_FK
+    100278: Kaokaoa_Mao_A_Esq_jnt_IK
+    100280: Kaokaoa_Mao_B_Dir_jnt
+    100282: Kaokaoa_Mao_B_Esq_jnt
+    100284: Kaokaoa_Medio_A_Dir_jnt
+    100286: Kaokaoa_Medio_A_Esq_jnt
+    100288: Kaokaoa_Medio_B_Dir_jnt
+    100290: Kaokaoa_Medio_B_Esq_jnt
+    100292: Kaokaoa_Medio_C_Dir_jnt
+    100294: Kaokaoa_Medio_C_Esq_jnt
+    100296: Kaokaoa_Medio_D_Dir_jnt_FIM
+    100298: Kaokaoa_Medio_D_Esq_jnt_FIM
+    100300: Kaokaoa_Medio_Pe_A_Dir_jnt
+    100302: Kaokaoa_Medio_Pe_A_Esq_jnt
+    100304: Kaokaoa_Medio_Pe_B_Dir_jnt
+    100306: Kaokaoa_Medio_Pe_B_Esq_jnt
+    100308: Kaokaoa_Medio_Pe_C_Dir_jnt_FIM
+    100310: Kaokaoa_Medio_Pe_C_Esq_jnt_FIM
+    100312: Kaokaoa_Minimo_A_Dir_jnt
+    100314: Kaokaoa_Minimo_A_Esq_jnt
+    100316: Kaokaoa_Minimo_B_Dir_jnt
+    100318: Kaokaoa_Minimo_B_Esq_jnt
+    100320: Kaokaoa_Minimo_C_Dir_jnt
+    100322: Kaokaoa_Minimo_C_Esq_jnt
+    100324: Kaokaoa_Minimo_D_Dir_jnt_FIM
+    100326: Kaokaoa_Minimo_D_Esq_jnt_FIM
+    100328: Kaokaoa_Olho_Dir_jnt
+    100330: Kaokaoa_Olho_Esq_jnt
+    100332: Kaokaoa_Ombro_Dir_jnt
+    100334: Kaokaoa_Ombro_Esq_jnt
+    100336: Kaokaoa_Orelha_Dir_A_jnt
+    100338: Kaokaoa_Orelha_Dir_B_jnt
+    100340: Kaokaoa_Orelha_Dir_C_jnt_FIM
+    100342: Kaokaoa_Orelha_Esq_A_jnt
+    100344: Kaokaoa_Orelha_Esq_B_jnt
+    100346: Kaokaoa_Orelha_Esq_C_jnt_FIM
+    100348: Kaokaoa_Pe_Dir_A_jnt
+    100350: Kaokaoa_Pe_Dir_A_jnt_FK
+    100352: Kaokaoa_Pe_Dir_A_jnt_IK
+    100354: Kaokaoa_Pe_Dir_B_jnt
+    100356: Kaokaoa_Pe_Dir_B_jnt_IK
+    100358: Kaokaoa_Pe_Dir_C_jnt
+    100360: Kaokaoa_Pe_Dir_C_jnt_IK
+    100362: Kaokaoa_Pe_Esq_A_jnt
+    100364: Kaokaoa_Pe_Esq_A_jnt_FK
+    100366: Kaokaoa_Pe_Esq_A_jnt_IK
+    100368: Kaokaoa_Pe_Esq_B_jnt
+    100370: Kaokaoa_Pe_Esq_B_jnt_IK
+    100372: Kaokaoa_Pe_Esq_C_jnt
+    100374: Kaokaoa_Pe_Esq_C_jnt_IK
+    100376: Kaokaoa_Perna_Dir_A_jnt
+    100378: Kaokaoa_Perna_Dir_A_jnt_FK
+    100380: Kaokaoa_Perna_Dir_A_jnt_IK
+    100382: Kaokaoa_Perna_Dir_B_jnt
+    100384: Kaokaoa_Perna_Dir_B_jnt_FK
+    100386: Kaokaoa_Perna_Dir_B_jnt_IK
+    100388: Kaokaoa_Perna_Esq_A_jnt
+    100390: Kaokaoa_Perna_Esq_A_jnt_FK
+    100392: Kaokaoa_Perna_Esq_A_jnt_IK
+    100394: Kaokaoa_Perna_Esq_B_jnt
+    100396: Kaokaoa_Perna_Esq_B_jnt_FK
+    100398: Kaokaoa_Perna_Esq_B_jnt_IK
+    100400: Kaokaoa_Polegar_A_Dir_jnt
+    100402: Kaokaoa_Polegar_A_Esq_jnt
+    100404: Kaokaoa_Polegar_B_Dir_jnt
+    100406: Kaokaoa_Polegar_B_Esq_jnt
+    100408: Kaokaoa_Polegar_C_Dir_jnt
+    100410: Kaokaoa_Polegar_C_Esq_jnt
+    100412: Kaokaoa_Polegar_D_Dir_jnt_FIM
+    100414: Kaokaoa_Polegar_D_Esq_jnt_FIM
+    100416: Kaokaoa_Root_jnt
+    100418: Katzen_Mand_A_jnt
+    100420: Katzen_Mand_B_jnt_FIM
     400000: //RootNode
     400002: Kaokaoa_Anelar_A_Dir_jnt
     400004: Kaokaoa_Anelar_A_Esq_jnt
@@ -174,166 +231,224 @@ ModelImporter:
     400028: Kaokaoa_Anelar_Pe_C_Esq_jnt_FIM
     400030: Kaokaoa_Bacia_A_jnt
     400032: Kaokaoa_Bacia_B_jnt
-    400034: Kaokaoa_Braco_A_Dir_jnt
-    400036: Kaokaoa_Braco_A_Dir_jnt_FK
-    400038: Kaokaoa_Braco_A_Dir_jnt_IK
-    400040: Kaokaoa_Braco_A_Esq_jnt
-    400042: Kaokaoa_Braco_A_Esq_jnt_FK
-    400044: Kaokaoa_Braco_A_Esq_jnt_IK
-    400046: Kaokaoa_Braco_B_Dir_jnt
-    400048: Kaokaoa_Braco_B_Dir_jnt_FK
-    400050: Kaokaoa_Braco_B_Dir_jnt_IK
-    400052: Kaokaoa_Braco_B_Esq_jnt
-    400054: Kaokaoa_Braco_B_Esq_jnt_FK
-    400056: Kaokaoa_Braco_B_Esq_jnt_IK
-    400058: Kaokaoa_Cabeca_A_jnt
-    400060: Kaokaoa_Cabeca_B_jnt
-    400062: Kaokaoa_Cabeca_C_jnt_FIM
-    400064: Kaokaoa_Calda_A_jnt
-    400066: Kaokaoa_Calda_B_jnt
-    400068: Kaokaoa_Calda_C_jnt
-    400070: Kaokaoa_Calda_D_jnt
-    400072: Kaokaoa_Calda_E_jnt
-    400074: Kaokaoa_Calda_F_jnt
-    400076: Kaokaoa_Calda_G_jnt
-    400078: Kaokaoa_Calda_H_jnt
-    400080: Kaokaoa_Calda_I_jnt
-    400082: Kaokaoa_Calda_J_jnt
-    400084: Kaokaoa_Calda_K_jnt
-    400086: Kaokaoa_Calda_L_jnt_FIM
-    400088: Kaokaoa_Col_A_jnt
-    400090: Kaokaoa_Col_B_jnt
-    400092: Kaokaoa_Col_C_jnt
-    400094: Kaokaoa_Col_D_jnt
-    400096: Kaokaoa_Col_E_jnt
-    400098: Kaokaoa_Dedao_Pe_A_Dir_jnt
-    400100: Kaokaoa_Dedao_Pe_A_Esq_jnt
-    400102: Kaokaoa_Dedao_Pe_B_Dir_jnt
-    400104: Kaokaoa_Dedao_Pe_B_Esq_jnt
-    400106: Kaokaoa_Dedao_Pe_C_Dir_jnt_FIM
-    400108: Kaokaoa_Dedao_Pe_C_Esq_jnt_FIM
-    400110: Kaokaoa_geo
-    400112: Kaokaoa_geo_gp
-    400114: Kaokaoa_Indicador_A_Dir_jnt
-    400116: Kaokaoa_Indicador_A_Esq_jnt
-    400118: Kaokaoa_Indicador_B_Dir_jnt
-    400120: Kaokaoa_Indicador_B_Esq_jnt
-    400122: Kaokaoa_Indicador_C_Dir_jnt
-    400124: Kaokaoa_Indicador_C_Esq_jnt
-    400126: Kaokaoa_Indicador_D_Dir_jnt_FIM
-    400128: Kaokaoa_Indicador_D_Esq_jnt_FIM
-    400130: Kaokaoa_Indicador_Pe_A_Dir_jnt
-    400132: Kaokaoa_Indicador_Pe_A_Esq_jnt
-    400134: Kaokaoa_Indicador_Pe_B_Dir_jnt
-    400136: Kaokaoa_Indicador_Pe_B_Esq_jnt
-    400138: Kaokaoa_Indicador_Pe_C_Dir_jnt_FIM
-    400140: Kaokaoa_Indicador_Pe_C_Esq_jnt_FIM
-    400142: Kaokaoa_jnt_gp
-    400144: Kaokaoa_Lingua_A_jnt
-    400146: Kaokaoa_Lingua_B_jnt
-    400148: Kaokaoa_Lingua_C_jnt
-    400150: Kaokaoa_Lingua_D_jnt
-    400152: Kaokaoa_Lingua_F_jnt_FIM
-    400154: Kaokaoa_Mao_A_Dir_jnt
-    400156: Kaokaoa_Mao_A_Dir_jnt_FK
-    400158: Kaokaoa_Mao_A_Dir_jnt_IK
-    400160: Kaokaoa_Mao_A_Esq_jnt
-    400162: Kaokaoa_Mao_A_Esq_jnt_FK
-    400164: Kaokaoa_Mao_A_Esq_jnt_IK
-    400166: Kaokaoa_Mao_B_Dir_jnt
-    400168: Kaokaoa_Mao_B_Esq_jnt
-    400170: Kaokaoa_Medio_A_Dir_jnt
-    400172: Kaokaoa_Medio_A_Esq_jnt
-    400174: Kaokaoa_Medio_B_Dir_jnt
-    400176: Kaokaoa_Medio_B_Esq_jnt
-    400178: Kaokaoa_Medio_C_Dir_jnt
-    400180: Kaokaoa_Medio_C_Esq_jnt
-    400182: Kaokaoa_Medio_D_Dir_jnt_FIM
-    400184: Kaokaoa_Medio_D_Esq_jnt_FIM
-    400186: Kaokaoa_Medio_Pe_A_Dir_jnt
-    400188: Kaokaoa_Medio_Pe_A_Esq_jnt
-    400190: Kaokaoa_Medio_Pe_B_Dir_jnt
-    400192: Kaokaoa_Medio_Pe_B_Esq_jnt
-    400194: Kaokaoa_Medio_Pe_C_Dir_jnt_FIM
-    400196: Kaokaoa_Medio_Pe_C_Esq_jnt_FIM
-    400198: Kaokaoa_Minimo_A_Dir_jnt
-    400200: Kaokaoa_Minimo_A_Esq_jnt
-    400202: Kaokaoa_Minimo_B_Dir_jnt
-    400204: Kaokaoa_Minimo_B_Esq_jnt
-    400206: Kaokaoa_Minimo_C_Dir_jnt
-    400208: Kaokaoa_Minimo_C_Esq_jnt
-    400210: Kaokaoa_Minimo_D_Dir_jnt_FIM
-    400212: Kaokaoa_Minimo_D_Esq_jnt_FIM
-    400214: Kaokaoa_Olho_Dir_jnt
-    400216: Kaokaoa_Olho_Esq_jnt
-    400218: Kaokaoa_Ombro_Dir_jnt
-    400220: Kaokaoa_Ombro_Esq_jnt
-    400222: Kaokaoa_Orelha_Dir_A_jnt
-    400224: Kaokaoa_Orelha_Dir_B_jnt
-    400226: Kaokaoa_Orelha_Dir_C_jnt_FIM
-    400228: Kaokaoa_Orelha_Esq_A_jnt
-    400230: Kaokaoa_Orelha_Esq_B_jnt
-    400232: Kaokaoa_Orelha_Esq_C_jnt_FIM
-    400234: Kaokaoa_Pe_Dir_A_jnt
-    400236: Kaokaoa_Pe_Dir_A_jnt_FK
-    400238: Kaokaoa_Pe_Dir_A_jnt_IK
-    400240: Kaokaoa_Pe_Dir_B_jnt
-    400242: Kaokaoa_Pe_Dir_B_jnt_IK
-    400244: Kaokaoa_Pe_Dir_C_jnt
-    400246: Kaokaoa_Pe_Dir_C_jnt_IK
-    400248: Kaokaoa_Pe_Esq_A_jnt
-    400250: Kaokaoa_Pe_Esq_A_jnt_FK
-    400252: Kaokaoa_Pe_Esq_A_jnt_IK
-    400254: Kaokaoa_Pe_Esq_B_jnt
-    400256: Kaokaoa_Pe_Esq_B_jnt_IK
-    400258: Kaokaoa_Pe_Esq_C_jnt
-    400260: Kaokaoa_Pe_Esq_C_jnt_IK
-    400262: Kaokaoa_Perna_Dir_A_jnt
-    400264: Kaokaoa_Perna_Dir_A_jnt_FK
-    400266: Kaokaoa_Perna_Dir_A_jnt_IK
-    400268: Kaokaoa_Perna_Dir_B_jnt
-    400270: Kaokaoa_Perna_Dir_B_jnt_FK
-    400272: Kaokaoa_Perna_Dir_B_jnt_IK
-    400274: Kaokaoa_Perna_Esq_A_jnt
-    400276: Kaokaoa_Perna_Esq_A_jnt_FK
-    400278: Kaokaoa_Perna_Esq_A_jnt_IK
-    400280: Kaokaoa_Perna_Esq_B_jnt
-    400282: Kaokaoa_Perna_Esq_B_jnt_FK
-    400284: Kaokaoa_Perna_Esq_B_jnt_IK
-    400286: Kaokaoa_Polegar_A_Dir_jnt
-    400288: Kaokaoa_Polegar_A_Esq_jnt
-    400290: Kaokaoa_Polegar_B_Dir_jnt
-    400292: Kaokaoa_Polegar_B_Esq_jnt
-    400294: Kaokaoa_Polegar_C_Dir_jnt
-    400296: Kaokaoa_Polegar_C_Esq_jnt
-    400298: Kaokaoa_Polegar_D_Dir_jnt_FIM
-    400300: Kaokaoa_Polegar_D_Esq_jnt_FIM
-    400302: Kaokaoa_Root_jnt
-    400304: Katzen_Mand_A_jnt
-    400306: Katzen_Mand_B_jnt_FIM
-    2100000: phong4
-    2100002: IrisDirKaoaka
-    2100004: EscleraKaokaoa
-    2100006: LenteOlhosKaokaoa
-    2100008: IrisEsqKaokaoa
-    2100010: KaokaoaDente
-    2100012: KaokaoaPeleBoca
-    2100014: CabeloKaokaoa
-    2100016: lambert1
-    2100018: Gravata1
-    2100020: Gravata2
-    2100022: LuvasKoakaoa
-    2100024: CamisaKaoakaoa
-    2100026: PelosKaokaoa
-    2100028: NarizKaoaka
-    2100030: OrelhasKaokaoa
-    2100032: Labios
-    2100034: KoakaoaPeleBoca
+    400034: Kaokaoa_Braco_A_dir_crv_FK
+    400036: Kaokaoa_Braco_A_dir_crv_FK_gp
+    400038: Kaokaoa_Braco_A_Dir_jnt
+    400040: Kaokaoa_Braco_A_Dir_jnt_FK
+    400042: Kaokaoa_Braco_A_Dir_jnt_IK
+    400044: Kaokaoa_Braco_A_esq_crv_FK
+    400046: Kaokaoa_Braco_A_esq_crv_FK_gp
+    400048: Kaokaoa_Braco_A_Esq_jnt
+    400050: Kaokaoa_Braco_A_Esq_jnt_FK
+    400052: Kaokaoa_Braco_A_Esq_jnt_IK
+    400054: Kaokaoa_Braco_B_Dir_jnt
+    400056: Kaokaoa_Braco_B_Dir_jnt_FK
+    400058: Kaokaoa_Braco_B_Dir_jnt_IK
+    400060: Kaokaoa_Braco_B_Esq_jnt
+    400062: Kaokaoa_Braco_B_Esq_jnt_FK
+    400064: Kaokaoa_Braco_B_Esq_jnt_IK
+    400066: Kaokaoa_Cabeca_A_jnt
+    400068: Kaokaoa_Cabeca_B_jnt
+    400070: Kaokaoa_Cabeca_C_jnt_FIM
+    400072: Kaokaoa_Calda_A_jnt
+    400074: Kaokaoa_Calda_B_jnt
+    400076: Kaokaoa_Calda_C_jnt
+    400078: Kaokaoa_Calda_D_jnt
+    400080: Kaokaoa_Calda_E_jnt
+    400082: Kaokaoa_Calda_F_jnt
+    400084: Kaokaoa_Calda_G_jnt
+    400086: Kaokaoa_Calda_H_jnt
+    400088: Kaokaoa_Calda_I_jnt
+    400090: Kaokaoa_Calda_J_jnt
+    400092: Kaokaoa_Calda_K_jnt
+    400094: Kaokaoa_Calda_L_jnt_FIM
+    400096: Kaokaoa_Col_A_jnt
+    400098: Kaokaoa_Col_B_jnt
+    400100: Kaokaoa_Col_C_jnt
+    400102: Kaokaoa_Col_D_jnt
+    400104: Kaokaoa_Col_E_jnt
+    400106: Kaokaoa_ctrl_barriga_crv
+    400108: Kaokaoa_ctrl_barriga_crv_gp
+    400110: Kaokaoa_ctrl_boca_crv
+    400112: Kaokaoa_ctrl_boca_crv_gp
+    400114: Kaokaoa_ctrl_cabeca_crv
+    400116: Kaokaoa_ctrl_cabeca_crv_gp
+    400118: Kaokaoa_ctrl_cintura_crv
+    400120: Kaokaoa_ctrl_cintura_crv_gp
+    400122: Kaokaoa_ctrl_cotovelo_dir_crv_FK
+    400124: Kaokaoa_ctrl_cotovelo_dir_crv_FK_gp
+    400126: Kaokaoa_ctrl_cotovelo_esq_crv_FK
+    400128: Kaokaoa_ctrl_cotovelo_esq_crv_FK_gp
+    400130: Kaokaoa_ctrl_master_crv
+    400132: Kaokaoa_ctrl_master_crv_gp
+    400134: Kaokaoa_ctrl_nariz_crv
+    400136: Kaokaoa_ctrl_nariz_crv_gp
+    400138: Kaokaoa_ctrl_olho_dir_crv
+    400140: Kaokaoa_ctrl_olho_dir_crv_gp
+    400142: Kaokaoa_ctrl_olho_esq_crv
+    400144: Kaokaoa_ctrl_olho_esq_crv_gp
+    400146: Kaokaoa_ctrl_olhos_crv
+    400148: Kaokaoa_ctrl_olhos_crv_gp
+    400150: Kaokaoa_ctrl_ombro_dir_crv
+    400152: Kaokaoa_ctrl_ombro_dir_crv_gp
+    400154: Kaokaoa_ctrl_ombro_esq_crv
+    400156: Kaokaoa_ctrl_ombro_esq_crv_gp
+    400158: Kaokaoa_ctrl_peito_A_crv
+    400160: Kaokaoa_ctrl_peito_A_crv_gp
+    400162: Kaokaoa_ctrl_perna_A_dir_crv_FK
+    400164: Kaokaoa_ctrl_perna_A_dir_crv_FK_gp
+    400166: Kaokaoa_ctrl_perna_A_esq_crv_FK
+    400168: Kaokaoa_ctrl_perna_A_esq_crv_FK_gp
+    400170: Kaokaoa_ctrl_perna_B_dir_crv_FK
+    400172: Kaokaoa_ctrl_perna_B_dir_crv_FK_gp
+    400174: Kaokaoa_ctrl_perna_B_esq_crv_FK
+    400176: Kaokaoa_ctrl_perna_B_esq_crv_FK_gp
+    400178: Kaokaoa_ctrl_pescoco_crv
+    400180: Kaokaoa_ctrl_pescoco_crv_gp
+    400182: Kaokaoa_ctrl_pulso_dir_crv_FK
+    400184: Kaokaoa_ctrl_pulso_dir_crv_FK_gp
+    400186: Kaokaoa_ctrl_pulso_dir_crv_IK
+    400188: Kaokaoa_ctrl_pulso_dir_crv_IK_gp
+    400190: Kaokaoa_ctrl_pulso_esq_crv_FK
+    400192: Kaokaoa_ctrl_pulso_esq_crv_FK_gp
+    400194: Kaokaoa_ctrl_pulso_esq_crv_IK
+    400196: Kaokaoa_ctrl_pulso_esq_crv_IK_gp
+    400198: Kaokaoa_ctrl_root_crv
+    400200: Kaokaoa_ctrl_root_crv_gp
+    400202: Kaokaoa_ctrl_tornozelo_dir_crv_FK
+    400204: Kaokaoa_ctrl_tornozelo_dir_crv_FK_gp
+    400206: Kaokaoa_ctrl_tornozelo_esq_crv_FK
+    400208: Kaokaoa_ctrl_tornozelo_esq_crv_FK_gp
+    400210: Kaokaoa_ctrls
+    400212: Kaokaoa_Dedao_Pe_A_Dir_jnt
+    400214: Kaokaoa_Dedao_Pe_A_Esq_jnt
+    400216: Kaokaoa_Dedao_Pe_B_Dir_jnt
+    400218: Kaokaoa_Dedao_Pe_B_Esq_jnt
+    400220: Kaokaoa_Dedao_Pe_C_Dir_jnt_FIM
+    400222: Kaokaoa_Dedao_Pe_C_Esq_jnt_FIM
+    400224: Kaokaoa_geo
+    400226: Kaokaoa_geo_gp
+    400228: Kaokaoa_Indicador_A_Dir_jnt
+    400230: Kaokaoa_Indicador_A_Esq_jnt
+    400232: Kaokaoa_Indicador_B_Dir_jnt
+    400234: Kaokaoa_Indicador_B_Esq_jnt
+    400236: Kaokaoa_Indicador_C_Dir_jnt
+    400238: Kaokaoa_Indicador_C_Esq_jnt
+    400240: Kaokaoa_Indicador_D_Dir_jnt_FIM
+    400242: Kaokaoa_Indicador_D_Esq_jnt_FIM
+    400244: Kaokaoa_Indicador_Pe_A_Dir_jnt
+    400246: Kaokaoa_Indicador_Pe_A_Esq_jnt
+    400248: Kaokaoa_Indicador_Pe_B_Dir_jnt
+    400250: Kaokaoa_Indicador_Pe_B_Esq_jnt
+    400252: Kaokaoa_Indicador_Pe_C_Dir_jnt_FIM
+    400254: Kaokaoa_Indicador_Pe_C_Esq_jnt_FIM
+    400256: Kaokaoa_jnt_gp
+    400258: Kaokaoa_Lingua_A_jnt
+    400260: Kaokaoa_Lingua_B_jnt
+    400262: Kaokaoa_Lingua_C_jnt
+    400264: Kaokaoa_Lingua_D_jnt
+    400266: Kaokaoa_Lingua_F_jnt_FIM
+    400268: Kaokaoa_Mao_A_Dir_jnt
+    400270: Kaokaoa_Mao_A_Dir_jnt_FK
+    400272: Kaokaoa_Mao_A_Dir_jnt_IK
+    400274: Kaokaoa_Mao_A_Esq_jnt
+    400276: Kaokaoa_Mao_A_Esq_jnt_FK
+    400278: Kaokaoa_Mao_A_Esq_jnt_IK
+    400280: Kaokaoa_Mao_B_Dir_jnt
+    400282: Kaokaoa_Mao_B_Esq_jnt
+    400284: Kaokaoa_Medio_A_Dir_jnt
+    400286: Kaokaoa_Medio_A_Esq_jnt
+    400288: Kaokaoa_Medio_B_Dir_jnt
+    400290: Kaokaoa_Medio_B_Esq_jnt
+    400292: Kaokaoa_Medio_C_Dir_jnt
+    400294: Kaokaoa_Medio_C_Esq_jnt
+    400296: Kaokaoa_Medio_D_Dir_jnt_FIM
+    400298: Kaokaoa_Medio_D_Esq_jnt_FIM
+    400300: Kaokaoa_Medio_Pe_A_Dir_jnt
+    400302: Kaokaoa_Medio_Pe_A_Esq_jnt
+    400304: Kaokaoa_Medio_Pe_B_Dir_jnt
+    400306: Kaokaoa_Medio_Pe_B_Esq_jnt
+    400308: Kaokaoa_Medio_Pe_C_Dir_jnt_FIM
+    400310: Kaokaoa_Medio_Pe_C_Esq_jnt_FIM
+    400312: Kaokaoa_Minimo_A_Dir_jnt
+    400314: Kaokaoa_Minimo_A_Esq_jnt
+    400316: Kaokaoa_Minimo_B_Dir_jnt
+    400318: Kaokaoa_Minimo_B_Esq_jnt
+    400320: Kaokaoa_Minimo_C_Dir_jnt
+    400322: Kaokaoa_Minimo_C_Esq_jnt
+    400324: Kaokaoa_Minimo_D_Dir_jnt_FIM
+    400326: Kaokaoa_Minimo_D_Esq_jnt_FIM
+    400328: Kaokaoa_Olho_Dir_jnt
+    400330: Kaokaoa_Olho_Esq_jnt
+    400332: Kaokaoa_Ombro_Dir_jnt
+    400334: Kaokaoa_Ombro_Esq_jnt
+    400336: Kaokaoa_Orelha_Dir_A_jnt
+    400338: Kaokaoa_Orelha_Dir_B_jnt
+    400340: Kaokaoa_Orelha_Dir_C_jnt_FIM
+    400342: Kaokaoa_Orelha_Esq_A_jnt
+    400344: Kaokaoa_Orelha_Esq_B_jnt
+    400346: Kaokaoa_Orelha_Esq_C_jnt_FIM
+    400348: Kaokaoa_Pe_Dir_A_jnt
+    400350: Kaokaoa_Pe_Dir_A_jnt_FK
+    400352: Kaokaoa_Pe_Dir_A_jnt_IK
+    400354: Kaokaoa_Pe_Dir_B_jnt
+    400356: Kaokaoa_Pe_Dir_B_jnt_IK
+    400358: Kaokaoa_Pe_Dir_C_jnt
+    400360: Kaokaoa_Pe_Dir_C_jnt_IK
+    400362: Kaokaoa_Pe_Esq_A_jnt
+    400364: Kaokaoa_Pe_Esq_A_jnt_FK
+    400366: Kaokaoa_Pe_Esq_A_jnt_IK
+    400368: Kaokaoa_Pe_Esq_B_jnt
+    400370: Kaokaoa_Pe_Esq_B_jnt_IK
+    400372: Kaokaoa_Pe_Esq_C_jnt
+    400374: Kaokaoa_Pe_Esq_C_jnt_IK
+    400376: Kaokaoa_Perna_Dir_A_jnt
+    400378: Kaokaoa_Perna_Dir_A_jnt_FK
+    400380: Kaokaoa_Perna_Dir_A_jnt_IK
+    400382: Kaokaoa_Perna_Dir_B_jnt
+    400384: Kaokaoa_Perna_Dir_B_jnt_FK
+    400386: Kaokaoa_Perna_Dir_B_jnt_IK
+    400388: Kaokaoa_Perna_Esq_A_jnt
+    400390: Kaokaoa_Perna_Esq_A_jnt_FK
+    400392: Kaokaoa_Perna_Esq_A_jnt_IK
+    400394: Kaokaoa_Perna_Esq_B_jnt
+    400396: Kaokaoa_Perna_Esq_B_jnt_FK
+    400398: Kaokaoa_Perna_Esq_B_jnt_IK
+    400400: Kaokaoa_Polegar_A_Dir_jnt
+    400402: Kaokaoa_Polegar_A_Esq_jnt
+    400404: Kaokaoa_Polegar_B_Dir_jnt
+    400406: Kaokaoa_Polegar_B_Esq_jnt
+    400408: Kaokaoa_Polegar_C_Dir_jnt
+    400410: Kaokaoa_Polegar_C_Esq_jnt
+    400412: Kaokaoa_Polegar_D_Dir_jnt_FIM
+    400414: Kaokaoa_Polegar_D_Esq_jnt_FIM
+    400416: Kaokaoa_Root_jnt
+    400418: Katzen_Mand_A_jnt
+    400420: Katzen_Mand_B_jnt_FIM
+    2100000: Pupila_Kaokaoa
+    2100002: IrisDir_Kaoaka
+    2100004: Esclera_Kaokaoa
+    2100006: Esclerotica_Kaokaoa
+    2100008: IrisEsq_Kaokaoa
+    2100010: lambert1
+    2100012: Roupas_Kaokaoa
+    2100014: Cabelo_Kaokaoa
+    2100016: Pelos_Kaokaoa
+    2100018: Orelhas_Kaokaoa
     4300000: Kaokaoa_geo
     9500000: //RootNode
     13700000: Kaokaoa_geo
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabelo_Kaokaoa
+    second: {fileID: 2100000, guid: 04663961ee7e1384fa6c186152e1ac0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roupas_Kaokaoa
+    second: {fileID: 2100000, guid: cec61685e03183846affaad52118c6f8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -353,7 +468,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -393,1218 +508,8 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human:
-    - boneName: Kaokaoa_Root_jnt
-      humanName: Hips
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Perna_Dir_A_jnt
-      humanName: RightUpperLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Perna_Dir_B_jnt
-      humanName: RightLowerLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Pe_Dir_A_jnt
-      humanName: RightFoot
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Col_B_jnt
-      humanName: Spine
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Col_C_jnt
-      humanName: Chest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Col_E_jnt
-      humanName: Neck
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Cabeca_A_jnt
-      humanName: Head
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Ombro_Esq_jnt
-      humanName: LeftShoulder
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Ombro_Dir_jnt
-      humanName: RightShoulder
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Braco_A_Esq_jnt
-      humanName: LeftUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Braco_A_Dir_jnt
-      humanName: RightUpperArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Braco_B_Esq_jnt
-      humanName: LeftLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Braco_B_Dir_jnt
-      humanName: RightLowerArm
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Mao_A_Esq_jnt
-      humanName: LeftHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Mao_A_Dir_jnt
-      humanName: RightHand
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Olho_Esq_jnt
-      humanName: LeftEye
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Olho_Dir_jnt
-      humanName: RightEye
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Lingua_A_jnt
-      humanName: Jaw
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_A_Esq_jnt
-      humanName: Left Thumb Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_B_Esq_jnt
-      humanName: Left Thumb Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_C_Esq_jnt
-      humanName: Left Thumb Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_A_Esq_jnt
-      humanName: Left Index Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_B_Esq_jnt
-      humanName: Left Index Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_C_Esq_jnt
-      humanName: Left Index Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_A_Esq_jnt
-      humanName: Left Middle Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_B_Esq_jnt
-      humanName: Left Middle Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_C_Esq_jnt
-      humanName: Left Middle Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_A_Esq_jnt
-      humanName: Left Ring Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_B_Esq_jnt
-      humanName: Left Ring Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_C_Esq_jnt
-      humanName: Left Ring Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_A_Esq_jnt
-      humanName: Left Little Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_B_Esq_jnt
-      humanName: Left Little Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_C_Esq_jnt
-      humanName: Left Little Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_A_Dir_jnt
-      humanName: Right Thumb Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_B_Dir_jnt
-      humanName: Right Thumb Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Polegar_C_Dir_jnt
-      humanName: Right Thumb Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_A_Dir_jnt
-      humanName: Right Index Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_B_Dir_jnt
-      humanName: Right Index Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Indicador_C_Dir_jnt
-      humanName: Right Index Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_A_Dir_jnt
-      humanName: Right Middle Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_B_Dir_jnt
-      humanName: Right Middle Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Medio_C_Dir_jnt
-      humanName: Right Middle Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_A_Dir_jnt
-      humanName: Right Ring Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_B_Dir_jnt
-      humanName: Right Ring Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Anelar_C_Dir_jnt
-      humanName: Right Ring Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_A_Dir_jnt
-      humanName: Right Little Proximal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_B_Dir_jnt
-      humanName: Right Little Intermediate
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Minimo_C_Dir_jnt
-      humanName: Right Little Distal
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Col_D_jnt
-      humanName: UpperChest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Perna_Esq_A_jnt
-      humanName: LeftUpperLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Perna_Esq_B_jnt
-      humanName: LeftLowerLeg
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Pe_Esq_A_jnt
-      humanName: LeftFoot
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Pe_Dir_B_jnt
-      humanName: RightToes
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    - boneName: Kaokaoa_Pe_Esq_B_jnt
-      humanName: LeftToes
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
-    skeleton:
-    - name: Kaokaoa(Clone)
-      parentName: 
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_geo_gp
-      parentName: Kaokaoa(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_geo
-      parentName: Kaokaoa_geo_gp
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_jnt_gp
-      parentName: Kaokaoa(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Root_jnt
-      parentName: Kaokaoa_jnt_gp
-      position: {x: -0, y: 0.48999998, z: 0.01}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Col_A_jnt
-      parentName: Kaokaoa_Root_jnt
-      position: {x: -1.0658141e-16, y: 0, z: 0}
-      rotation: {x: -0.010290478, y: -0.010290478, z: -0.7070319, w: 0.7070319}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Col_B_jnt
-      parentName: Kaokaoa_Col_A_jnt
-      position: {x: -0.04484092, y: 9.9566845e-18, z: 0}
-      rotation: {x: 0, y: -0.1019255, z: -0, w: 0.99479204}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Col_C_jnt
-      parentName: Kaokaoa_Col_B_jnt
-      position: {x: -0.04484092, y: 9.9566845e-18, z: 1.7763568e-17}
-      rotation: {x: 1.4063665e-17, y: -0.0766996, z: -2.6159938e-18, w: 0.9970543}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Col_D_jnt
-      parentName: Kaokaoa_Col_C_jnt
-      position: {x: -0.04484092, y: 9.9566845e-18, z: 0}
-      rotation: {x: 0, y: 0.14504494, z: -0, w: 0.98942506}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Ombro_Dir_jnt
-      parentName: Kaokaoa_Col_D_jnt
-      position: {x: -0.021475757, y: 0.0389958, z: -0.010024966}
-      rotation: {x: 0.7980687, y: 0.6006632, z: -0.038235035, w: -0.028777443}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Dir_jnt_FK
-      parentName: Kaokaoa_Ombro_Dir_jnt
-      position: {x: 0.057524618, y: -0.0011707315, z: 0.00064579997}
-      rotation: {x: -0.0041834107, y: -0.053188704, z: -0.09736081, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Dir_jnt_FK
-      parentName: Kaokaoa_Braco_A_Dir_jnt_FK
-      position: {x: 0.10222204, y: 0.00048213443, z: 0.0008678943}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Dir_jnt_FK
-      parentName: Kaokaoa_Braco_B_Dir_jnt_FK
-      position: {x: 0.094323665, y: -0.00000054638076, z: 0.00023836237}
-      rotation: {x: 1.5881397e-18, y: -0.019797755, z: -3.639133e-17, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Dir_jnt_IK
-      parentName: Kaokaoa_Ombro_Dir_jnt
-      position: {x: 0.057524618, y: -0.0011707315, z: 0.00064579997}
-      rotation: {x: -0.0041836076, y: -0.053188674, z: -0.097360805, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Dir_jnt_IK
-      parentName: Kaokaoa_Braco_A_Dir_jnt_IK
-      position: {x: 0.10222204, y: 0.00048213443, z: 0.0008678943}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Dir_jnt_IK
-      parentName: Kaokaoa_Braco_B_Dir_jnt_IK
-      position: {x: 0.094323665, y: -0.00000054638076, z: 0.00023836237}
-      rotation: {x: 1.1529406e-18, y: -0.019797755, z: -1.7151588e-17, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Dir_jnt
-      parentName: Kaokaoa_Ombro_Dir_jnt
-      position: {x: 0.057524618, y: -0.0011707315, z: 0.00064579997}
-      rotation: {x: -0.004183609, y: -0.053188685, z: -0.097360805, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Dir_jnt
-      parentName: Kaokaoa_Braco_A_Dir_jnt
-      position: {x: 0.10222204, y: 0.00048213443, z: 0.0008678943}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Dir_jnt
-      parentName: Kaokaoa_Braco_B_Dir_jnt
-      position: {x: 0.094323665, y: -0.00000054638076, z: 0.00023836237}
-      rotation: {x: 0, y: -0.019797755, z: -0, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_B_Dir_jnt
-      parentName: Kaokaoa_Mao_A_Dir_jnt
-      position: {x: 0.047851767, y: 0.00000027777568, z: -0.000000028032948}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_A_Dir_jnt
-      parentName: Kaokaoa_Mao_B_Dir_jnt
-      position: {x: -0.01894279, y: 0.007517858, z: -0.018846584}
-      rotation: {x: 0.5886872, y: 0.56851715, z: -0.12955174, w: 0.55986786}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_B_Dir_jnt
-      parentName: Kaokaoa_Polegar_A_Dir_jnt
-      position: {x: 0.02186607, y: 0.004811799, z: 0.00041826474}
-      rotation: {x: 0, y: 0, z: 0.13351393, w: 0.99104697}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_C_Dir_jnt
-      parentName: Kaokaoa_Polegar_B_Dir_jnt
-      position: {x: 0.020496164, y: 0.00017522612, z: -0.00000020478335}
-      rotation: {x: -0.00070609135, y: 0.029355489, z: 0.024035806, w: 0.9992798}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_D_Dir_jnt_FIM
-      parentName: Kaokaoa_Polegar_C_Dir_jnt
-      position: {x: 0.029974004, y: -0.0000004210785, z: 0.00000039581548}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_A_Dir_jnt
-      parentName: Kaokaoa_Mao_B_Dir_jnt
-      position: {x: 0.024149036, y: 0.0036500464, z: -0.023345165}
-      rotation: {x: 0.0016271515, y: 0.13803734, z: 0.0110862935, w: 0.99036366}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_B_Dir_jnt
-      parentName: Kaokaoa_Indicador_A_Dir_jnt
-      position: {x: 0.025793225, y: 0, z: -0.00000016578876}
-      rotation: {x: 0, y: 0, z: 0.22273412, w: 0.97487926}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_C_Dir_jnt
-      parentName: Kaokaoa_Indicador_B_Dir_jnt
-      position: {x: 0.020345028, y: -0.00000043610467, z: 0.00000014470352}
-      rotation: {x: 0, y: 0, z: 0.17504601, w: 0.9845603}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_D_Dir_jnt_FIM
-      parentName: Kaokaoa_Indicador_C_Dir_jnt
-      position: {x: 0.019999491, y: 0.0000005026833, z: -0.00000023715285}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_A_Dir_jnt
-      parentName: Kaokaoa_Mao_B_Dir_jnt
-      position: {x: 0.028341109, y: -0.0040680985, z: -0.007529768}
-      rotation: {x: 0.0033679144, y: 0.0044111256, z: 0.071783334, w: 0.9974048}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_B_Dir_jnt
-      parentName: Kaokaoa_Medio_A_Dir_jnt
-      position: {x: 0.024671588, y: -0.0005603685, z: 0.000000016612098}
-      rotation: {x: 0, y: 0, z: 0.13194051, w: 0.99125767}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_C_Dir_jnt
-      parentName: Kaokaoa_Medio_B_Dir_jnt
-      position: {x: 0.025503313, y: -0.0006064466, z: -0.0000000036095678}
-      rotation: {x: 0, y: 0, z: 0.16290623, w: 0.9866416}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_D_Dir_jnt_FIM
-      parentName: Kaokaoa_Medio_C_Dir_jnt
-      position: {x: 0.024117038, y: -0.00005122494, z: -0.000000020584903}
-      rotation: {x: 0, y: 0, z: -0.012316659, w: 0.9999242}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_A_Dir_jnt
-      parentName: Kaokaoa_Mao_B_Dir_jnt
-      position: {x: 0.02623317, y: -0.004484667, z: 0.0127011}
-      rotation: {x: -0.05616232, y: -0.12240092, z: 0.09548385, w: 0.98627925}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_B_Dir_jnt
-      parentName: Kaokaoa_Anelar_A_Dir_jnt
-      position: {x: 0.024197394, y: 0.00087242655, z: 0.0000000027357028}
-      rotation: {x: 0, y: 0, z: 0.13194051, w: 0.99125767}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_C_Dir_jnt
-      parentName: Kaokaoa_Anelar_B_Dir_jnt
-      position: {x: 0.020486018, y: -0.0006061714, z: 0.0000000451092}
-      rotation: {x: 0, y: 0, z: 0.16290623, w: 0.9866416}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_D_Dir_jnt_FIM
-      parentName: Kaokaoa_Anelar_C_Dir_jnt
-      position: {x: 0.0241174, y: -0.000052403015, z: -0.00000016995494}
-      rotation: {x: 0, y: 0, z: -0.012316659, w: 0.9999242}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_A_Dir_jnt
-      parentName: Kaokaoa_Mao_B_Dir_jnt
-      position: {x: 0.017015452, y: 0.002800635, z: 0.030884534}
-      rotation: {x: -0.103668265, y: -0.22081664, z: 0.07556916, w: 0.9668414}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_B_Dir_jnt
-      parentName: Kaokaoa_Minimo_A_Dir_jnt
-      position: {x: 0.018340595, y: -0.00359344, z: 0.00000012109554}
-      rotation: {x: 0, y: 0, z: 0.17819682, w: 0.9839949}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_C_Dir_jnt
-      parentName: Kaokaoa_Minimo_B_Dir_jnt
-      position: {x: 0.017791836, y: 0.0008982598, z: -0.000000023828054}
-      rotation: {x: 0, y: 0, z: 0.17504601, w: 0.9845603}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_D_Dir_jnt_FIM
-      parentName: Kaokaoa_Minimo_C_Dir_jnt
-      position: {x: 0.022732355, y: -0.0017233024, z: -0.000000095276654}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Ombro_Esq_jnt
-      parentName: Kaokaoa_Col_D_jnt
-      position: {x: -0.021475766, y: -0.03899577, z: -0.010024962}
-      rotation: {x: 0.03823504, y: 0.028777448, z: 0.7980687, w: 0.6006632}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Esq_jnt_FK
-      parentName: Kaokaoa_Ombro_Esq_jnt
-      position: {x: -0.0575248, y: 0.0011703493, z: -0.00064577936}
-      rotation: {x: -0.004183418, y: -0.053188704, z: -0.09736081, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Esq_jnt_FK
-      parentName: Kaokaoa_Braco_A_Esq_jnt_FK
-      position: {x: -0.10222238, y: -0.00048162308, z: -0.00086791493}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Esq_jnt_FK
-      parentName: Kaokaoa_Braco_B_Esq_jnt_FK
-      position: {x: -0.0943232, y: 6.3948843e-16, z: -0.00023825011}
-      rotation: {x: -1.2092115e-17, y: -0.019797755, z: 1.3735951e-17, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Esq_jnt_IK
-      parentName: Kaokaoa_Ombro_Esq_jnt
-      position: {x: -0.0575248, y: 0.0011703493, z: -0.00064577936}
-      rotation: {x: -0.004183418, y: -0.053188704, z: -0.09736081, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Esq_jnt_IK
-      parentName: Kaokaoa_Braco_A_Esq_jnt_IK
-      position: {x: -0.10222238, y: -0.00048162308, z: -0.00086791493}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Esq_jnt_IK
-      parentName: Kaokaoa_Braco_B_Esq_jnt_IK
-      position: {x: -0.0943232, y: 6.3948843e-16, z: -0.00023825011}
-      rotation: {x: -1.3698242e-17, y: -0.019797755, z: 2.0915505e-17, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_A_Esq_jnt
-      parentName: Kaokaoa_Ombro_Esq_jnt
-      position: {x: -0.0575248, y: 0.0011703493, z: -0.00064577936}
-      rotation: {x: -0.004183418, y: -0.053188704, z: -0.09736081, w: 0.9938181}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Braco_B_Esq_jnt
-      parentName: Kaokaoa_Braco_A_Esq_jnt
-      position: {x: -0.10222238, y: -0.00048162308, z: -0.00086791493}
-      rotation: {x: -0.00518096, y: 0.09692356, z: -0.053125847, w: 0.99385947}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_A_Esq_jnt
-      parentName: Kaokaoa_Braco_B_Esq_jnt
-      position: {x: -0.0943232, y: 6.3948843e-16, z: -0.00023825011}
-      rotation: {x: 0, y: -0.019797755, z: -0, w: 0.999804}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Mao_B_Esq_jnt
-      parentName: Kaokaoa_Mao_A_Esq_jnt
-      position: {x: -0.04785141, y: -4.2632563e-16, z: 8.881784e-18}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_A_Esq_jnt
-      parentName: Kaokaoa_Mao_B_Esq_jnt
-      position: {x: 0.018942505, y: -0.0075175175, z: 0.018846536}
-      rotation: {x: 0.5886872, y: 0.56851715, z: -0.12955174, w: 0.55986786}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_B_Esq_jnt
-      parentName: Kaokaoa_Polegar_A_Esq_jnt
-      position: {x: -0.021866478, y: -0.0048122755, z: -0.00041808898}
-      rotation: {x: 0, y: 0, z: 0.13351393, w: 0.99104697}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_C_Esq_jnt
-      parentName: Kaokaoa_Polegar_B_Esq_jnt
-      position: {x: -0.020495372, y: -0.00017460025, z: 4.1848467e-16}
-      rotation: {x: -0.00070609135, y: 0.029355489, z: 0.024035806, w: 0.9992798}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Polegar_D_Esq_jnt_FIM
-      parentName: Kaokaoa_Polegar_C_Esq_jnt
-      position: {x: -0.029974785, y: -7.105427e-17, z: -7.105427e-17}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_A_Esq_jnt
-      parentName: Kaokaoa_Mao_B_Esq_jnt
-      position: {x: -0.024148962, y: -0.0036498085, z: 0.02334518}
-      rotation: {x: 0.0016271515, y: 0.13803734, z: 0.0110862935, w: 0.99036366}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_B_Esq_jnt
-      parentName: Kaokaoa_Indicador_A_Esq_jnt
-      position: {x: -0.025793705, y: 2.1316282e-16, z: 1.7763568e-17}
-      rotation: {x: 0, y: 0, z: 0.22273412, w: 0.97487926}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_C_Esq_jnt
-      parentName: Kaokaoa_Indicador_B_Esq_jnt
-      position: {x: -0.020344771, y: -1.4210854e-16, z: 3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0.17504601, w: 0.9845603}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_D_Esq_jnt_FIM
-      parentName: Kaokaoa_Indicador_C_Esq_jnt
-      position: {x: -0.02, y: -2.842171e-16, z: -5.3290704e-17}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_A_Esq_jnt
-      parentName: Kaokaoa_Mao_B_Esq_jnt
-      position: {x: -0.028341532, y: 0.004068504, z: 0.0075297407}
-      rotation: {x: 0.0033679144, y: 0.0044111256, z: 0.071783334, w: 0.9974048}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_B_Esq_jnt
-      parentName: Kaokaoa_Medio_A_Esq_jnt
-      position: {x: -0.024671184, y: 0.00056014303, z: 8.881784e-18}
-      rotation: {x: 0, y: 0, z: 0.13194051, w: 0.99125767}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_C_Esq_jnt
-      parentName: Kaokaoa_Medio_B_Esq_jnt
-      position: {x: -0.025503436, y: 0.00060630176, z: -8.881784e-18}
-      rotation: {x: 0, y: 0, z: 0.16290623, w: 0.9866416}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_D_Esq_jnt_FIM
-      parentName: Kaokaoa_Medio_C_Esq_jnt
-      position: {x: -0.024116963, y: 0.000051834322, z: -2.6645352e-17}
-      rotation: {x: 0, y: 0, z: -0.012316659, w: 0.9999242}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_A_Esq_jnt
-      parentName: Kaokaoa_Mao_B_Esq_jnt
-      position: {x: -0.026233457, y: 0.0044851243, z: -0.012701091}
-      rotation: {x: -0.05616232, y: -0.12240092, z: 0.09548385, w: 0.98627925}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_B_Esq_jnt
-      parentName: Kaokaoa_Anelar_A_Esq_jnt
-      position: {x: -0.024197731, y: -0.00087290024, z: -1.7763568e-17}
-      rotation: {x: 0, y: 0, z: 0.13194051, w: 0.99125767}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_C_Esq_jnt
-      parentName: Kaokaoa_Anelar_B_Esq_jnt
-      position: {x: -0.020486314, y: 0.00060630176, z: -1.7763568e-17}
-      rotation: {x: 0, y: 0, z: 0.16290623, w: 0.9866416}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_D_Esq_jnt_FIM
-      parentName: Kaokaoa_Anelar_C_Esq_jnt
-      position: {x: -0.024116963, y: 0.000051834322, z: -1.7763568e-17}
-      rotation: {x: 0, y: 0, z: -0.012316659, w: 0.9999242}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_A_Esq_jnt
-      parentName: Kaokaoa_Mao_B_Esq_jnt
-      position: {x: -0.017015941, y: -0.0028001566, z: -0.030884584}
-      rotation: {x: -0.103668265, y: -0.22081664, z: 0.07556916, w: 0.9668414}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_B_Esq_jnt
-      parentName: Kaokaoa_Minimo_A_Esq_jnt
-      position: {x: -0.01834103, y: 0.0035930343, z: -1.7763567e-16}
-      rotation: {x: 0, y: 0, z: 0.17819682, w: 0.9839949}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_C_Esq_jnt
-      parentName: Kaokaoa_Minimo_B_Esq_jnt
-      position: {x: -0.017791739, y: -0.00089818565, z: 3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0.17504601, w: 0.9845603}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Minimo_D_Esq_jnt_FIM
-      parentName: Kaokaoa_Minimo_C_Esq_jnt
-      position: {x: -0.022732135, y: 0.0017231395, z: 1.7763567e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Col_E_jnt
-      parentName: Kaokaoa_Col_D_jnt
-      position: {x: -0.04484092, y: 9.9566845e-18, z: -3.9968027e-17}
-      rotation: {x: -2.9439236e-17, y: -2.9439236e-17, z: 0.7071068, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Cabeca_A_jnt
-      parentName: Kaokaoa_Col_E_jnt
-      position: {x: 2.5757173e-16, y: 0.03855447, z: 0.0012945061}
-      rotation: {x: 0.008940836, y: 0.008940836, z: -0.70705026, w: 0.70705026}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Olho_Dir_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.075428195, y: 0.03810656, z: 0.059953537}
-      rotation: {x: 0.024904992, y: 0.024904992, z: 0.7066681, w: 0.7066681}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Olho_Esq_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.075428195, y: -0.03810656, z: 0.059953537}
-      rotation: {x: 0.024904992, y: 0.024904992, z: 0.7066681, w: 0.7066681}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Dir_A_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.09157851, y: 0.059462097, z: -0.020092424}
-      rotation: {x: 0.32089537, y: 0.82961404, z: 0.2543361, w: 0.37957853}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Dir_B_jnt
-      parentName: Kaokaoa_Orelha_Dir_A_jnt
-      position: {x: 0.046610024, y: 0.000000110928546, z: 0.00000020521867}
-      rotation: {x: 0.005368562, y: 0.037270978, z: 0.14246881, w: 0.98908275}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Dir_C_jnt_FIM
-      parentName: Kaokaoa_Orelha_Dir_B_jnt
-      position: {x: 0.04661031, y: 0.00000005454646, z: -0.00000005749914}
-      rotation: {x: 0, y: 0, z: 0.80069566, w: 0.5990713}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Esq_A_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.09157811, y: -0.05946213, z: -0.02009241}
-      rotation: {x: -0.2543361, y: -0.37957853, z: 0.32089537, w: 0.82961404}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Esq_B_jnt
-      parentName: Kaokaoa_Orelha_Esq_A_jnt
-      position: {x: -0.046610158, y: -7.105427e-17, z: 0}
-      rotation: {x: 0.005368562, y: 0.037270978, z: 0.14246881, w: 0.98908275}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Orelha_Esq_C_jnt_FIM
-      parentName: Kaokaoa_Orelha_Esq_B_jnt
-      position: {x: -0.046610158, y: -7.105427e-17, z: -1.4210854e-16}
-      rotation: {x: 0, y: 0, z: 0.80069566, w: 0.5990713}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Katzen_Mand_A_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.028841352, y: -1.7009843e-16, z: 0.019123716}
-      rotation: {x: -1.5840502e-17, y: 0.8245232, z: -1.5840502e-17, w: 0.56582814}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Katzen_Mand_B_jnt_FIM
-      parentName: Katzen_Mand_A_jnt
-      position: {x: -0.11585397, y: 2.499357e-19, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Lingua_A_jnt
-      parentName: Katzen_Mand_A_jnt
-      position: {x: -0.046983536, y: 2.5017584e-16, z: 0.021428946}
-      rotation: {x: -0.64614195, y: -0.2872292, z: -0.2872292, w: 0.64614195}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Lingua_B_jnt
-      parentName: Kaokaoa_Lingua_A_jnt
-      position: {x: -0.015, y: 2.1316282e-16, z: -1.7360167e-17}
-      rotation: {x: -3.239427e-18, y: 2.7565887e-17, z: 0.11671266, w: 0.99316573}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Lingua_C_jnt
-      parentName: Kaokaoa_Lingua_B_jnt
-      position: {x: -0.015, y: -2.842171e-16, z: 4.0548174e-18}
-      rotation: {x: 8.8316585e-18, y: -5.4804104e-17, z: 0.15909702, w: 0.98726296}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Lingua_D_jnt
-      parentName: Kaokaoa_Lingua_C_jnt
-      position: {x: -0.015, y: 0, z: 3.5654644e-18}
-      rotation: {x: 5.3369958e-18, y: -5.5254e-17, z: 0.09614277, w: 0.9953676}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Lingua_F_jnt_FIM
-      parentName: Kaokaoa_Lingua_D_jnt
-      position: {x: -0.015111111, y: 2.842171e-16, z: 3.302131e-18}
-      rotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Cabeca_B_jnt
-      parentName: Kaokaoa_Cabeca_A_jnt
-      position: {x: -0.13963147, y: 2.2084268e-17, z: 3.8857806e-18}
-      rotation: {x: 8.236247e-17, y: 0.890919, z: -8.236247e-17, w: 0.45416218}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Cabeca_C_jnt_FIM
-      parentName: Kaokaoa_Cabeca_B_jnt
-      position: {x: -0.17746955, y: 1.89887e-17, z: 1.0658141e-16}
-      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Bacia_A_jnt
-      parentName: Kaokaoa_Root_jnt
-      position: {x: 1.0658141e-16, y: 0, z: 0}
-      rotation: {x: -0.003297938, y: 0.003297938, z: 0.7070991, w: 0.7070991}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Bacia_B_jnt
-      parentName: Kaokaoa_Bacia_A_jnt
-      position: {x: -0.04, y: -8.881784e-18, z: 0}
-      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_A_jnt_FK
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: 0.048254497, y: -0.04185788, z: -0.0028603247}
-      rotation: {x: 0.7156664, y: -0.69718546, z: 0.029501628, w: 0.02972935}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_B_jnt_FK
-      parentName: Kaokaoa_Perna_Dir_A_jnt_FK
-      position: {x: 0.16747321, y: 0.000000011405771, z: 0.00038188184}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_A_jnt_FK
-      parentName: Kaokaoa_Perna_Dir_B_jnt_FK
-      position: {x: 0.1975566, y: -0.000000027028031, z: -0.000000064832165}
-      rotation: {x: -0.64297414, y: -0.29031777, z: -0.28405616, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_A_jnt_IK
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: 0.048254497, y: -0.04185788, z: -0.0028603247}
-      rotation: {x: 0.7156664, y: -0.69718546, z: 0.029501623, w: 0.029729353}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_B_jnt_IK
-      parentName: Kaokaoa_Perna_Dir_A_jnt_IK
-      position: {x: 0.16747321, y: 0.000000011405771, z: 0.00038188184}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_A_jnt_IK
-      parentName: Kaokaoa_Perna_Dir_B_jnt_IK
-      position: {x: 0.1975566, y: -0.000000027028031, z: -0.000000064832165}
-      rotation: {x: -0.6429742, y: -0.2903178, z: -0.2840562, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_B_jnt_IK
-      parentName: Kaokaoa_Pe_Dir_A_jnt_IK
-      position: {x: 0.045136683, y: -0.00005052741, z: -0.00089530274}
-      rotation: {x: 0.000000018784739, y: 0.000000011393476, z: -0.296918, w: 0.954903}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_C_jnt_IK
-      parentName: Kaokaoa_Pe_Dir_B_jnt_IK
-      position: {x: 0.03, y: 2.2204459e-17, z: -3.5527136e-17}
-      rotation: {x: 0.000000023441496, y: 0.70710677, z: -0.000000023441496, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_A_jnt_FK
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: -0.048254464, y: -0.041857827, z: -0.002860322}
-      rotation: {x: -0.02972935, y: 0.029501628, z: 0.69718546, w: 0.7156664}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_B_jnt_FK
-      parentName: Kaokaoa_Perna_Esq_A_jnt_FK
-      position: {x: -0.16747347, y: -8.881784e-18, z: -0.00038186423}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_A_jnt_FK
-      parentName: Kaokaoa_Perna_Esq_B_jnt_FK
-      position: {x: -0.19755645, y: -1.4161036e-10, z: -2.847722e-10}
-      rotation: {x: -0.64297414, y: -0.29031777, z: -0.28405616, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_A_jnt_IK
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: -0.048254464, y: -0.041857827, z: -0.002860322}
-      rotation: {x: -0.02972935, y: 0.029501628, z: 0.69718546, w: 0.7156664}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_B_jnt_IK
-      parentName: Kaokaoa_Perna_Esq_A_jnt_IK
-      position: {x: -0.16747347, y: -8.881784e-18, z: -0.00038186423}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_A_jnt_IK
-      parentName: Kaokaoa_Perna_Esq_B_jnt_IK
-      position: {x: -0.19755645, y: -1.4161036e-10, z: -2.847722e-10}
-      rotation: {x: -0.64297414, y: -0.29031777, z: -0.28405616, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_B_jnt_IK
-      parentName: Kaokaoa_Pe_Esq_A_jnt_IK
-      position: {x: -0.045136664, y: 0.000050550792, z: 0.00089532643}
-      rotation: {x: 4.2406212e-16, y: -1.3185808e-16, z: -0.296918, w: 0.954903}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_C_jnt_IK
-      parentName: Kaokaoa_Pe_Esq_B_jnt_IK
-      position: {x: -0.03, y: 4.440892e-18, z: -2.6645352e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_A_jnt
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: -0.048254464, y: -0.041857827, z: -0.002860322}
-      rotation: {x: -0.02972935, y: 0.029501628, z: 0.69718546, w: 0.7156664}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Esq_B_jnt
-      parentName: Kaokaoa_Perna_Esq_A_jnt
-      position: {x: -0.16747347, y: -8.881784e-18, z: -0.00038186423}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_A_jnt
-      parentName: Kaokaoa_Perna_Esq_B_jnt
-      position: {x: -0.19755645, y: -1.4161036e-10, z: -2.847722e-10}
-      rotation: {x: -0.64297414, y: -0.29031777, z: -0.28405616, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_B_jnt
-      parentName: Kaokaoa_Pe_Esq_A_jnt
-      position: {x: -0.045136664, y: 0.000050550792, z: 0.00089532643}
-      rotation: {x: 0, y: 0, z: -0.296918, w: 0.954903}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Esq_C_jnt
-      parentName: Kaokaoa_Pe_Esq_B_jnt
-      position: {x: -0.03, y: 4.440892e-18, z: -2.6645352e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_A_Esq_jnt
-      parentName: Kaokaoa_Pe_Esq_C_jnt
-      position: {x: -0.024315428, y: 0.00002043488, z: 0.023091545}
-      rotation: {x: -0.009476918, y: -0.48803848, z: 0.01493795, w: 0.8726428}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_B_Esq_jnt
-      parentName: Kaokaoa_Anelar_Pe_A_Esq_jnt
-      position: {x: -0.027949361, y: 0.0022663393, z: 3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0.23889439, w: 0.9710456}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_C_Esq_jnt_FIM
-      parentName: Kaokaoa_Anelar_Pe_B_Esq_jnt
-      position: {x: -0.025090868, y: 8.881784e-18, z: 3.5527136e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_A_Esq_jnt
-      parentName: Kaokaoa_Pe_Esq_C_jnt
-      position: {x: -0.012319716, y: -0.00003441563, z: 0.01484639}
-      rotation: {x: 0.046043225, y: -0.6142633, z: -0.051736433, w: 0.786056}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_B_Esq_jnt
-      parentName: Kaokaoa_Medio_Pe_A_Esq_jnt
-      position: {x: -0.033850558, y: -0.0008243201, z: -3.5527136e-17}
-      rotation: {x: 0, y: 0, z: 0.34062916, w: 0.9401977}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_C_Esq_jnt_FIM
-      parentName: Kaokaoa_Medio_Pe_B_Esq_jnt
-      position: {x: -0.026500285, y: 1.7763568e-17, z: 2.6645352e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_A_Esq_jnt
-      parentName: Kaokaoa_Pe_Esq_C_jnt
-      position: {x: 0.0075902897, y: -0.00032645123, z: 0.013346223}
-      rotation: {x: 0.038376078, y: -0.71790844, z: -0.0576534, w: 0.6926839}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_B_Esq_jnt
-      parentName: Kaokaoa_Indicador_Pe_A_Esq_jnt
-      position: {x: -0.033850558, y: -0.0008243201, z: 0}
-      rotation: {x: 0, y: 0, z: 0.34062916, w: 0.9401977}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_C_Esq_jnt_FIM
-      parentName: Kaokaoa_Indicador_Pe_B_Esq_jnt
-      position: {x: -0.026500285, y: 8.881784e-18, z: 3.5527136e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_A_Esq_jnt
-      parentName: Kaokaoa_Pe_Esq_C_jnt
-      position: {x: 0.023070488, y: 0.0010252447, z: 0.017678307}
-      rotation: {x: -0.0011362963, y: -0.84722865, z: 0.017653985, w: 0.5309338}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_B_Esq_jnt
-      parentName: Kaokaoa_Dedao_Pe_A_Esq_jnt
-      position: {x: -0.029423572, y: 0.0014942449, z: -1.4210854e-16}
-      rotation: {x: 0, y: 0, z: 0.23889439, w: 0.9710456}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_C_Esq_jnt_FIM
-      parentName: Kaokaoa_Dedao_Pe_B_Esq_jnt
-      position: {x: -0.025090868, y: -8.881784e-18, z: 1.7763568e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_A_jnt
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: 0.048254497, y: -0.04185788, z: -0.0028603247}
-      rotation: {x: 0.7156664, y: -0.69718546, z: 0.029501628, w: 0.02972935}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Perna_Dir_B_jnt
-      parentName: Kaokaoa_Perna_Dir_A_jnt
-      position: {x: 0.16747321, y: 0.000000011405771, z: 0.00038188184}
-      rotation: {x: -0.0005486879, y: -0.112034455, z: 0.0069363965, w: 0.99368}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_A_jnt
-      parentName: Kaokaoa_Perna_Dir_B_jnt
-      position: {x: 0.1975566, y: -0.000000027028031, z: -0.000000064832165}
-      rotation: {x: -0.64297414, y: -0.29031777, z: -0.28405616, w: 0.64931655}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_B_jnt
-      parentName: Kaokaoa_Pe_Dir_A_jnt
-      position: {x: 0.045136683, y: -0.00005052731, z: -0.00089529995}
-      rotation: {x: 0.000000014229163, y: -0.000000004424423, z: -0.296918, w: 0.954903}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Pe_Dir_C_jnt
-      parentName: Kaokaoa_Pe_Dir_B_jnt
-      position: {x: 0.03, y: 4.440892e-18, z: -1.7763568e-17}
-      rotation: {x: 0.000000023441498, y: 0.7071068, z: -0.000000023441498, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_A_Dir_jnt
-      parentName: Kaokaoa_Pe_Dir_C_jnt
-      position: {x: 0.0243154, y: -0.000020402254, z: -0.023091499}
-      rotation: {x: -0.009476954, y: -0.48803845, z: 0.014937953, w: 0.8726428}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_B_Dir_jnt
-      parentName: Kaokaoa_Anelar_Pe_A_Dir_jnt
-      position: {x: 0.027949335, y: -0.0022664224, z: -0.000000054843685}
-      rotation: {x: 0, y: 0, z: 0.23889439, w: 0.9710456}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Anelar_Pe_C_Dir_jnt_FIM
-      parentName: Kaokaoa_Anelar_Pe_B_Dir_jnt
-      position: {x: 0.02509086, y: 0.000000058935452, z: 0.000000014914551}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_A_Dir_jnt
-      parentName: Kaokaoa_Pe_Dir_C_jnt
-      position: {x: 0.012319699, y: 0.000034398647, z: -0.014846399}
-      rotation: {x: 0.046043187, y: -0.6142633, z: -0.051736426, w: 0.786056}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_B_Dir_jnt
-      parentName: Kaokaoa_Medio_Pe_A_Dir_jnt
-      position: {x: 0.03385059, y: 0.00082433183, z: 0.0000000307805}
-      rotation: {x: 0, y: 0, z: 0.34062916, w: 0.9401977}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Medio_Pe_C_Dir_jnt_FIM
-      parentName: Kaokaoa_Medio_Pe_B_Dir_jnt
-      position: {x: 0.026500575, y: -0.00000016979553, z: 0.000000063758826}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_A_Dir_jnt
-      parentName: Kaokaoa_Pe_Dir_C_jnt
-      position: {x: -0.0075903004, y: 0.00032649934, z: -0.0133462}
-      rotation: {x: 0.03837604, y: -0.71790844, z: -0.05765339, w: 0.6926839}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_B_Dir_jnt
-      parentName: Kaokaoa_Indicador_Pe_A_Dir_jnt
-      position: {x: 0.03385054, y: 0.0008242881, z: -0.0000000022048743}
-      rotation: {x: 0, y: 0, z: 0.34062916, w: 0.9401977}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Indicador_Pe_C_Dir_jnt_FIM
-      parentName: Kaokaoa_Indicador_Pe_B_Dir_jnt
-      position: {x: 0.026500005, y: 0.0000001480533, z: 0.000000071655776}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_A_Dir_jnt
-      parentName: Kaokaoa_Pe_Dir_C_jnt
-      position: {x: -0.0230705, y: -0.0010252005, z: -0.017678298}
-      rotation: {x: -0.0011363265, y: -0.84722865, z: 0.017654005, w: 0.53093386}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_B_Dir_jnt
-      parentName: Kaokaoa_Dedao_Pe_A_Dir_jnt
-      position: {x: 0.029423589, y: -0.0014942682, z: -0.0000000068262103}
-      rotation: {x: 0, y: 0, z: 0.23889439, w: 0.9710456}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Dedao_Pe_C_Dir_jnt_FIM
-      parentName: Kaokaoa_Dedao_Pe_B_Dir_jnt
-      position: {x: 0.02509086, y: -0.000000024436314, z: 0.000000030052345}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_A_jnt
-      parentName: Kaokaoa_Bacia_B_jnt
-      position: {x: -1.0642359e-16, y: -0.029437281, z: -0.060650337}
-      rotation: {x: -0.2191295, y: -0.6722963, z: 0.2191295, w: 0.6722963}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_B_jnt
-      parentName: Kaokaoa_Calda_A_jnt
-      position: {x: -0.0326881, y: 0, z: -1.4516432e-17}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_C_jnt
-      parentName: Kaokaoa_Calda_B_jnt
-      position: {x: -0.0326881, y: 1.4210854e-16, z: -1.4516432e-17}
-      rotation: {x: 0, y: 0, z: 0.0010357487, w: 0.99999946}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_D_jnt
-      parentName: Kaokaoa_Calda_C_jnt
-      position: {x: -0.0326881, y: -7.105427e-17, z: -1.4520175e-17}
-      rotation: {x: 0, y: 0, z: -0.017307123, w: 0.9998503}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_E_jnt
-      parentName: Kaokaoa_Calda_D_jnt
-      position: {x: -0.0326881, y: -2.1316282e-16, z: -1.4453545e-17}
-      rotation: {x: 0, y: 0, z: -0.036823586, w: 0.99932176}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_F_jnt
-      parentName: Kaokaoa_Calda_E_jnt
-      position: {x: -0.0326881, y: 4.2632563e-16, z: -1.4283174e-17}
-      rotation: {x: 0, y: 0, z: -0.049798068, w: 0.9987593}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_G_jnt
-      parentName: Kaokaoa_Calda_F_jnt
-      position: {x: -0.0326881, y: -4.2632563e-16, z: -1.3992314e-17}
-      rotation: {x: 0, y: 0, z: 0.0010573118, w: 0.99999946}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_H_jnt
-      parentName: Kaokaoa_Calda_G_jnt
-      position: {x: -0.0326881, y: 1.4210854e-16, z: -1.3999193e-17}
-      rotation: {x: 0, y: 0, z: -0.05669458, w: 0.99839157}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_I_jnt
-      parentName: Kaokaoa_Calda_H_jnt
-      position: {x: -0.0326881, y: 0, z: -1.358844e-17}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_J_jnt
-      parentName: Kaokaoa_Calda_I_jnt
-      position: {x: -0.0326881, y: -3.5527135e-16, z: -1.358844e-17}
-      rotation: {x: 0, y: 0, z: -0.007829136, w: 0.99996936}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_K_jnt
-      parentName: Kaokaoa_Calda_J_jnt
-      position: {x: -0.0326881, y: 2.1316282e-16, z: -1.35252236e-17}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Kaokaoa_Calda_L_jnt_FIM
-      parentName: Kaokaoa_Calda_K_jnt
-      position: {x: -0.0326881, y: 7.105427e-17, z: -1.35252236e-17}
-      rotation: {x: -0, y: 0.7071068, z: 0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
+    human: []
+    skeleton: []
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -1615,10 +520,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
