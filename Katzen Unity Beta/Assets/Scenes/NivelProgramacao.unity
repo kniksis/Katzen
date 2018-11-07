@@ -62018,8 +62018,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1007837826}
-  m_LocalRotation: {x: -0.002539222, y: 0.9970894, z: 0.039814442, w: 0.06497013}
-  m_LocalPosition: {x: 11.074036, y: -0.6824898, z: -6.9454722}
+  m_LocalRotation: {x: 0.0770116, y: 0.91993976, z: 0.30832595, w: -0.22959803}
+  m_LocalPosition: {x: 81.984474, y: -19.315992, z: 14.335716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98124,6 +98124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d629ad5f580987b4b8ecd77823d5b875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  go: {fileID: 1395872636}
   AddQuantTerra: 0.01
 --- !u!1 &2007743964
 GameObject:

@@ -6,7 +6,7 @@ public class ControleShader : MonoBehaviour {
     Renderer rend;
     Material mat;
     Shader shad;
-    GameObject go;
+    public GameObject go;
     float quantTerra = 1.0f;
     public float AddQuantTerra;
     bool EstaSujando = false;
