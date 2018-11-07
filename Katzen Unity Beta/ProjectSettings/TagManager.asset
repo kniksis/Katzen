@@ -7,13 +7,16 @@ TagManager:
   - FundoFala
   - TiroJogador
   - Save
-  - Agua
-  - Pedras
   - WallJump
   - Grab
   - SlideArea
   - EquilibrarArea
   - Waypoint
+  - Agua
+  - Pedra
+  - Grama
+  - Terra
+  - Areia
   layers:
   - Default
   - TransparentFX

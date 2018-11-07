@@ -65,12 +65,12 @@
 			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
 			fixed4 r = tex2D(_TerraTex, IN.uv_MainTex);
-			fixed4 t = tex2D(_TerraMaskTex, IN.uv_TerraMaskTex);
-			fixed4 a = tex2D(_AguaMaskTex, IN.uv_AguaMaskTex);
+			fixed4 mt = tex2D(_TerraMaskTex, IN.uv_TerraMaskTex);
+			fixed4 ma = tex2D(_AguaMaskTex, IN.uv_AguaMaskTex);
 			fixed3 n = UnpackNormal(tex2D(_NormalTerra, IN.uv_NormalTerra));
 
 
-			if (t.x < _TerraQuantidade)
+			if (mt.x < _TerraQuantidade)
 			{
 				if (c.x > 0.5 && c.y > 0.5 && c.z > 0.5)//Se for branco
 				{
@@ -98,6 +98,55 @@
 			{
 				o.Albedo = r.rgb;
 				o.Normal = n;
+			}
+
+			if(_AguaQuantidade < 0.25)
+			if (ma.x < _AguaQuantidade)
+			{
+				if (c.x > 0.5 && c.y > 0.5 && c.z > 0.5)//Se for branco
+				{
+					o.Albedo = _ColorPelo;
+				}
+
+				if (c.x > 0.5 && c.y < 0.5 && c.z > 0.5)//Se for Rosa
+				{
+					o.Albedo = _ColorPele;
+				}
+
+				if (c.x > 0.5 && c.y > 0.5 && c.z < 0.5)//Se for Amarelo
+				{
+					o.Albedo = _ColorShorts;
+				}
+
+				if (c.x < 0.5 && c.y < 0.5 && c.z < 0.5)//Se for Preto
+				{
+					o.Albedo = _ColorShortsDetalhes;
+				}
+				o.Smoothness = _Glossiness;
+			}
+
+			else
+			{
+				if (c.x > 0.5 && c.y > 0.5 && c.z > 0.5)//Se for branco
+				{
+					o.Albedo = _ColorPelo * _ColorAgua;
+				}
+
+				if (c.x > 0.5 && c.y < 0.5 && c.z > 0.5)//Se for Rosa
+				{
+					o.Albedo = _ColorPele * _ColorAgua;
+				}
+
+				if (c.x > 0.5 && c.y > 0.5 && c.z < 0.5)//Se for Amarelo
+				{
+					o.Albedo = _ColorShorts * _ColorAgua;
+				}
+
+				if (c.x < 0.5 && c.y < 0.5 && c.z < 0.5)//Se for Preto
+				{
+					o.Albedo = _ColorShortsDetalhes * _ColorAgua;
+				}
+				o.Smoothness = 0.8;
 			}
 
 
