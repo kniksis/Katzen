@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControleShader : MonoBehaviour {
+
+    [SerializeField]
     Renderer rend;
+    [SerializeField]
     Material mat;
     Shader shad;
     public GameObject go;
@@ -14,7 +17,10 @@ public class ControleShader : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rend = go.GetComponent<Renderer>();
-        mat = (Material)Resources.Load("Materiais/KatzenCorpoMat", typeof(Material));
+
+        //rend.material.shader = Shader.Find("Custom/KatzenShader");
+        mat = (Material)Resources.Load("Materiais/Katzen/KatzenCorpoMat", typeof(Material));
+        //mat = (Material)Resources.Load("Materiais/Kaokaoa/RoupasKaokaoa_Material", typeof(Material));
         shad = (Shader)Resources.Load("Shaders/KatzenShader", typeof(Shader));
         rend.material.shader = shad;
 	}
