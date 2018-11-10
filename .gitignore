@@ -1,4 +1,3 @@
-@@ -1,34 +0,0 @@
 Katzen Unity Beta/[Ll]ibrary/
 Katzen Unity Beta/[Tt]emp/
 Katzen Unity Beta/[Oo]bj/
@@ -36,8 +35,4 @@ Objetos Diversos/[Aa]utosave/
 
 # Builds
 /Katzen Unity Beta/*.apk
-Katzen Unity Beta/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
-Katzen Unity Beta/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
-Katzen Unity Beta/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
-Katzen Unity Beta/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
-Katzen Unity Beta/Library/ScriptAssemblies/Assembly-CSharp.dll
+/Katzen Unity Beta/*.apk
