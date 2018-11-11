@@ -2,47 +2,112 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JogAtirar : MonoBehaviour {
-
-	public float fireRate = 0.5f;
-	public float nextFire = 0.0f;
-	public Transform respawnTiro;
+public class JogAtirar : MonoBehaviour
+{
+    [Header("Componentes")]
+    public Transform respawnTiro;
 	public Rigidbody tiro;
+    public AudioSource TiroAudioOrigem;
+    public AudioClip CarregandoClip;
+    public AudioClip AtirouClip;
+    
+    public Animator animJog;
+    public Animator animHUDArmas;
+    public Animator animEstilingue;
 
-    public float forcaAtual;
-    bool fire;
+    [Header("Variaveis")]
+    public float ForcaMinima = 15f;
+    public float ForcaMaxima = 30f;
+    public float TempoMaximoForca = 0.75f;
 
-	GameObject gameManagerGO;
+    public float TiroFrequencia = 0.5f;
+    public float ProximoTiro = 0.0f;
+    private float ForcaAtual;
+    private float VelocidadeForca;
+    private bool atirou;
+    private bool AtirarInput;
+
+    float ForcaLancamentoAnim;
+
+    GameObject gameManagerGO;
 	GameManager gmScript;
 
-	// Use this for initialization
-	void Start () {
+    public string ATIRAR_BT_NAME;
+    public string ATIRAR_AN_NAME;
+
+
+    private void OnEnable()
+    {
+        ForcaAtual = ForcaMinima;
+    }
+    // Use this for initialization
+    void Start () {
 		gameManagerGO = GameObject.Find("Manager");
 		gmScript = gameManagerGO.GetComponent<GameManager>();
-	}
+
+        AtirarInput = Input.GetButton(ATIRAR_BT_NAME);
+
+        VelocidadeForca = (ForcaMaxima - ForcaMinima) / TempoMaximoForca;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		fire = Input.GetButton("Atirar");
 
-        if (fire)
+        //if(ForcaAtual >= ForcaMaxima && !atirou)
+        //{
+        //    ForcaAtual = ForcaMaxima;
+        //    Atirar ();
+        //}
+        //if (Time.time > ProximoTiro)
+        //{
+        //    ProximoTiro = Time.time + TiroFrequencia;
+
+        if (Input.GetButtonDown(ATIRAR_BT_NAME))
         {
-            if (Time.time > nextFire)
-            {
-                nextFire = Time.time + fireRate;
-                //atirar = true;
-                //GameObject temp = gop.ObterObjeto();
-                //if(temp != null)
-                //{
-                //temp.transform.position = respawnTiro.transform.position;
-                //temp.transform.rotation = respawnTiro.transform.rotation;
-                //temp.SetActive(true);
+            atirou = false;
+            ForcaAtual = ForcaMinima;
 
-                Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
-
-                tiroInstancia.velocity = forcaAtual * respawnTiro.forward;
-                //}
-            }
+            //Som atirar aqui
+            //TiroAudioOrigem.clip = CarregandoClip;
+            //TiroAudioOrigem.Play();
         }
+
+        else if (Input.GetButton(ATIRAR_BT_NAME) && !atirou)
+        {
+            ForcaAtual += VelocidadeForca * Time.deltaTime;
+
+            //Sloder e animacoes aqui
+            //m_AimSlider.value = ForcaAtual;
+            ForcaLancamentoAnim = (ForcaAtual) / ForcaMaxima;
+
+            animJog.SetFloat("ForcaTiro", ForcaLancamentoAnim);
+            animEstilingue.SetFloat("ForcaTiro", ForcaLancamentoAnim);
+            animHUDArmas.SetFloat("ForcaEstilingue", ForcaLancamentoAnim);
+        }
+
+        else if (Input.GetButtonUp(ATIRAR_BT_NAME) && !atirou)
+        {
+            Atirar();
+            animEstilingue.SetBool("Atirou", false);
+        }
+    }
+
+    private void Atirar()
+    {
+        atirou = true;
+
+        Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
+
+        tiroInstancia.velocity = ForcaAtual * respawnTiro.forward;
+        //Ajustar Som
+        //TiroAudioOrigem.clip = AtirouClip;
+        //TiroAudioOrigem.Play();
+
+        animEstilingue.CrossFade("Atirar", Time.deltaTime);
+        animEstilingue.SetFloat("ForcaTiro", 0);
+        animHUDArmas.SetFloat("ForcaEstilingue", 0);
+
+        ForcaAtual = ForcaMinima;
     }
 }

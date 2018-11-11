@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour {
     GameObject voltaOpcoesBotaoContextual;
     [SerializeField]
     EventSystem eventSystem;
-
+    public string CenaAtual;
     public static bool GameIsPaused = false;
 
     public enum EstadoMenu
@@ -119,7 +119,7 @@ public class PauseMenu : MonoBehaviour {
     public void Restart()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Nivel1");
+        SceneManager.LoadScene(CenaAtual);
     }
 
     public void RestartCheckpoint()
