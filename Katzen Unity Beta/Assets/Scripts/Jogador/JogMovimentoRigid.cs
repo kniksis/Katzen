@@ -26,6 +26,8 @@ public class JogMovimentoRigid : MonoBehaviour
     [Header("Componentes")]
     public Animator animJog;
     public Animator animHUDArmas;
+    public Animator animEstilingue;
+    public GameObject Estilingue;
     public Rigidbody rb;
     public Collider myColl;
     bool isGrounded;
@@ -74,7 +76,6 @@ public class JogMovimentoRigid : MonoBehaviour
     float verticalInput;
     float TrocaArmaInput;
     [Range(0f, 1f)][SerializeField]
-    float ForcaTiro;
     float AtirarInput;
     public string JUMP_BT_NAME;
     public string HORIZONTAL_BT_NAME;
@@ -101,8 +102,10 @@ public class JogMovimentoRigid : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        Estilingue = GameObject.Find("Estilingue_Animacoes_Root_Travado");
         rb = GetComponent<Rigidbody>();
         animJog = GetComponent<Animator>();
+        animEstilingue = Estilingue.GetComponent<Animator>();
         myColl = GetComponent<CapsuleCollider>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
@@ -119,8 +122,6 @@ public class JogMovimentoRigid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animJog.SetFloat("ForcaTiro", ForcaTiro);
-
         PlayerControl();
 
         PlayerInput();
@@ -236,21 +237,25 @@ public class JogMovimentoRigid : MonoBehaviour
 
     public void Mirar()
     {
-        if (MirarInput)
+        if (!MirarInput)
         {
             Debug.Log(MirarInput);
             animJog.SetLayerWeight(3, 1.0f);
             animJog.SetLayerWeight(4, 1.0f);
             animJog.SetLayerWeight(5, 1.0f);
+            animJog.SetLayerWeight(7, 1.0f);
+            animEstilingue.SetBool("Mirar", true);
             animJog.SetBool("Mirar", true);
             action = Mode.AndarMirando;
         }
 
-        if (!MirarInput)
+        if (MirarInput)
         {
             animJog.SetLayerWeight(3, 0.0f);
             animJog.SetLayerWeight(4, 0.0f);
             animJog.SetLayerWeight(5, 0.0f);
+            animJog.SetLayerWeight(7, 0.0f);
+            animEstilingue.SetBool("Mirar", false);
             animJog.SetBool("Mirar", false);
             action = Mode.AndarNormal;
         }

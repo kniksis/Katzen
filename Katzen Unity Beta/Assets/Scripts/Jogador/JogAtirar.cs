@@ -63,6 +63,9 @@ public class JogAtirar : MonoBehaviour
         //{
         //    ProximoTiro = Time.time + TiroFrequencia;
 
+        atirou = false;
+        animJog.SetBool("Atirou", atirou);
+
         if (Input.GetButtonDown(ATIRAR_BT_NAME))
         {
             atirou = false;
@@ -105,6 +108,9 @@ public class JogAtirar : MonoBehaviour
         //TiroAudioOrigem.Play();
 
         animEstilingue.CrossFade("Atirar", Time.deltaTime);
+        animJog.SetBool("Atirou", atirou);
+        animJog.CrossFade("AtirarEstilingue", Time.deltaTime);
+        animJog.SetFloat("ForcaTiro", 0);
         animEstilingue.SetFloat("ForcaTiro", 0);
         animHUDArmas.SetFloat("ForcaEstilingue", 0);
 

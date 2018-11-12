@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class CameraOrbital : MonoBehaviour {
 
-	public GameObject[] alvo;
+    [SerializeField]
+    public enum Mode
+    {
+        Orbital = 0,
+        Mirando = 1,
+        Equilibrio = 2,
+        Livre = 3
+    }
+
+    public Mode action = Mode.Orbital;
+
+
+    public GameObject[] alvo;
 	public GameObject[] posicoes;
 	private int indice = 0;
 
@@ -63,58 +75,96 @@ public class CameraOrbital : MonoBehaviour {
 
 	void LateUpdate()
 	{
+        switch (action)
+        {
+            case Mode.Orbital:
+                if (HasMouseMoved())
+                {
+                    RotacionarNoJogador = true;
+                }
+                else
+                {
+                    RotacionarNoJogador = false;
+                }
 
+                if (RotacionarNoJogador)
+                {
+                    x += Input.GetAxis(GiroX) * xSpeed * 0.02f;
+                    y -= Input.GetAxis(GiroY) * ySpeed * 0.02f;
+                }
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-		if (HasMouseMoved())
-		{
-			RotacionarNoJogador = true;
-		}
-		else
-		{
-			RotacionarNoJogador = false;
-		}
+                Quaternion rotacao = Quaternion.Euler(y, x, 0);
+                alvo[0].transform.rotation = Quaternion.Lerp(rotacao, Quaternion.Euler(0.0f, 0.0f, 0.0f), VelocidadeCamera * Time.smoothDeltaTime);
+                //distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
-		if (RotacionarNoJogador)
-		{
-			x += Input.GetAxis(GiroX) * xSpeed * 0.02f;
-			y -= Input.GetAxis(GiroY) * ySpeed * 0.02f;
-		}
-			y = ClampAngle(y, yMinLimit, yMaxLimit);
+                Vector3 camPosRotacao = posicoes[0].transform.position;
 
-		Quaternion rotacao = Quaternion.Euler(y, x, 0);
-		alvo[indice].transform.rotation = Quaternion.Lerp(rotacao, Quaternion.Euler(0.0f, 0.0f, 0.0f), VelocidadeCamera * Time.smoothDeltaTime);
-		//distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+                if (!Physics.Linecast(alvo[0].transform.position, camPosRotacao))
+                {
+                    transform.position = Vector3.Lerp(transform.position, camPosRotacao, VelocidadeCamera * Time.smoothDeltaTime);
+                }
+                else if (Physics.Linecast(alvo[0].transform.position, camPosRotacao, out hit))
+                {
+                    transform.position = Vector3.Lerp(transform.position, hit.point, (VelocidadeCamera * MultiCamVelo) * Time.smoothDeltaTime);
+                }
 
-		Vector3 camPosRotacao = posicoes[indice].transform.position;
+                if (RotacionarNoJogador)
+                {
+                    alvo[0].transform.rotation = rotacao;
+                }
 
-		if (!Physics.Linecast(alvo[indice].transform.position, camPosRotacao))
-		{
-			transform.position = Vector3.Lerp(transform.position, camPosRotacao, VelocidadeCamera * Time.smoothDeltaTime);
-		}
-		else if (Physics.Linecast(alvo[indice].transform.position, camPosRotacao, out hit))
-		{
-			transform.position = Vector3.Lerp(transform.position, hit.point, (VelocidadeCamera * MultiCamVelo) * Time.smoothDeltaTime);
-		}
+                Debug.DrawLine(transform.position, alvo[0].transform.position, Color.red);
 
-		if (RotacionarNoJogador)
-		{
-			alvo[indice].transform.rotation = rotacao;
-		}
+                //posicoes[indice].transform.rotation = rotacao;
+                //Vector3 negDistance = new Vector3(0.0f, 0.0f, Mathf.Lerp(5, -distance, VelocidadeCamera * Time.deltaTime));
+                //Vector3 position = rotacao * negDistance + alvo[indice].transform.position;
 
-        Debug.DrawLine(transform.position, alvo[indice].transform.position, Color.red);
+                //transform.rotation = rotacao;
+                //transform.position = position;
+                // transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
 
-        //posicoes[indice].transform.rotation = rotacao;
-        //Vector3 negDistance = new Vector3(0.0f, 0.0f, Mathf.Lerp(5, -distance, VelocidadeCamera * Time.deltaTime));
-        //Vector3 position = rotacao * negDistance + alvo[indice].transform.position;
+                if (LookAtPlayer || RotacionarNoJogador)
+                {
+                    transform.LookAt(alvo[0].transform);
+                }
+                break;
+            case Mode.Mirando:
+                if (HasMouseMoved())
+                {
+                    RotacionarNoJogador = true;
+                }
+                else
+                {
+                    RotacionarNoJogador = false;
+                }
 
-        //transform.rotation = rotacao;
-        //transform.position = position;
-        // transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
+                if (RotacionarNoJogador)
+                {
+                    x += Input.GetAxis(GiroX) * xSpeed * 0.02f;
+                    y -= Input.GetAxis(GiroY) * ySpeed * 0.02f;
+                }
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-        if (LookAtPlayer || RotacionarNoJogador)
-		{
-			transform.LookAt(alvo[indice].transform);
-		}
+                rotacao = Quaternion.Euler(y, x, 0);
+                alvo[1].transform.rotation = Quaternion.Lerp(rotacao, Quaternion.Euler(0.0f, 0.0f, 0.0f), VelocidadeCamera * Time.smoothDeltaTime);
+
+                camPosRotacao = posicoes[1].transform.position;
+                transform.position = Vector3.Lerp(transform.position, camPosRotacao, VelocidadeCamera * Time.smoothDeltaTime);
+
+                if (RotacionarNoJogador)
+                {
+                    alvo[1].transform.rotation = rotacao;
+                }
+
+                Debug.DrawLine(transform.position, alvo[1].transform.position, Color.red);
+                
+                if (LookAtPlayer || RotacionarNoJogador)
+                {
+                    transform.LookAt(alvo[1].transform);
+                }
+                break;
+        }
 	}
 	// Use this for initialization
 	
@@ -139,7 +189,7 @@ public class CameraOrbital : MonoBehaviour {
 		if (angle > 360F)
 			angle -= 360F;
 
-		return Mathf.Clamp(angle, min, max);
+		return Mathf.Clamp(angle, min, max);//Define os pontos minimos e maximos da camera
 	}
 
 	bool HasMouseMoved()
