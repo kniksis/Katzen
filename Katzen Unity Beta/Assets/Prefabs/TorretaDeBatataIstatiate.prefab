@@ -175,15 +175,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973826167301202}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 422.4891, y: 24.035, z: 339.2678}
+  m_LocalRotation: {x: -0, y: 0.7114848, z: -0, w: -0.70270157}
+  m_LocalPosition: {x: 15.32, y: 0.09, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4619193544396896}
   - {fileID: 4608160367689048}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 269.288, z: 0}
 --- !u!4 &4608160367689048
 Transform:
   m_ObjectHideFlags: 1
@@ -241,7 +241,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 780918ef0c4abc9499a733653efd113c, type: 3}
+  - {fileID: 2100000, guid: b7dc75396b3976e4189b360e3ceb6f35, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -276,7 +276,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 780918ef0c4abc9499a733653efd113c, type: 3}
+  - {fileID: 2100000, guid: 7afb606883bf05641b37da14d79cbf8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,7 +311,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 780918ef0c4abc9499a733653efd113c, type: 3}
+  - {fileID: 2100000, guid: 702b62adccc72754f902b7b6ef7cabec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -346,7 +346,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 780918ef0c4abc9499a733653efd113c, type: 3}
+  - {fileID: 2100000, guid: 702b62adccc72754f902b7b6ef7cabec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -449,11 +449,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogEntrouMiraGO: {fileID: 0}
   jemScript: {fileID: 0}
-  tiro: {fileID: 0}
+  tiro: {fileID: 54688424109597190, guid: 6ddb1b9051690184484fbf1293cd1f96, type: 2}
   respawnTiro: {fileID: 4325473265434934}
   fireRate: 0.5
   nextFire: 0
-  forcaAtual: 0
+  forcaAtual: 20
   atirar: 0
 --- !u!114 &114536094507822106
 MonoBehaviour:

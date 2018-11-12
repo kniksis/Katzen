@@ -11447,8 +11447,8 @@ ModelImporter:
     - serializedVersion: 16
       name: SacarEstilingue
       takeName: Take 001
-      firstFrame: 1611
-      lastFrame: 1634
+      firstFrame: 771
+      lastFrame: 806
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

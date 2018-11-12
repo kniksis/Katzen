@@ -26,6 +26,8 @@ public class JogMovimentoRigid : MonoBehaviour
     [Header("Componentes")]
     public Animator animJog;
     public Animator animHUDArmas;
+    public Animator animEstilingue;
+    public GameObject Estilingue;
     public Rigidbody rb;
     public Collider myColl;
     bool isGrounded;
@@ -73,6 +75,7 @@ public class JogMovimentoRigid : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     float TrocaArmaInput;
+    [Range(0f, 1f)][SerializeField]
     float AtirarInput;
     public string JUMP_BT_NAME;
     public string HORIZONTAL_BT_NAME;
@@ -99,8 +102,10 @@ public class JogMovimentoRigid : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        Estilingue = GameObject.Find("Estilingue_Animacoes_Root_Travado");
         rb = GetComponent<Rigidbody>();
         animJog = GetComponent<Animator>();
+        animEstilingue = Estilingue.GetComponent<Animator>();
         myColl = GetComponent<CapsuleCollider>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         m_OrigGroundCheckDistance = m_GroundCheckDistance;
@@ -193,40 +198,64 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void TrocarArmas()
     {
-        animHUDArmas.SetFloat("ForcaEstilingue", AtirarInput);
-        if (TrocaArmaInput > 0 && combate == Combat.Garras)
+        if (TrocaArmaInput > 0)
         {
-            animJog.SetLayerWeight(3, 1.0f);
+            animJog.SetLayerWeight(6, 1.0f);
             animHUDArmas.SetBool("Armado", true);
-            animJog.SetBool("Armado", true);
-            animJog.CrossFade("PickGun", Time.deltaTime);
             combate = Combat.Estilingue;
+            TrocadorArma();
         }
 
-        if (TrocaArmaInput < 0 && combate == Combat.Estilingue)
+        if (TrocaArmaInput < 0)
         {
-            animJog.SetLayerWeight(3, 1.0f);
+            animJog.SetLayerWeight(6, 1.0f);
             animHUDArmas.SetBool("Armado", false);
-            animJog.SetBool("Armado", false);
-            animJog.CrossFade("PutGun", Time.deltaTime);
             combate = Combat.Garras;
+            TrocadorArma();
         }
+    }
+
+    private void TrocadorArma()
+    {
+        if (combate == Combat.Garras)
+        {
+            animJog.SetBool("Armado", true);
+            animJog.CrossFade("SacarEstilingue", Time.deltaTime);
+        }
+
+        if (combate == Combat.Estilingue)
+        {
+            animJog.SetBool("Armado", false);
+            animJog.CrossFade("GuardarEstilingue", Time.deltaTime);
+        }
+    }
+
+    private void ZerarPesoCamadaTroca()
+    {
+        animJog.SetLayerWeight(6, 0.0f);
     }
 
     public void Mirar()
     {
-        if (MirarInput)
+        if (!MirarInput)
         {
+            Debug.Log(MirarInput);
             animJog.SetLayerWeight(3, 1.0f);
             animJog.SetLayerWeight(4, 1.0f);
+            animJog.SetLayerWeight(5, 1.0f);
+            animJog.SetLayerWeight(7, 1.0f);
+            animEstilingue.SetBool("Mirar", true);
             animJog.SetBool("Mirar", true);
             action = Mode.AndarMirando;
         }
 
-        if (!MirarInput)
+        if (MirarInput)
         {
-            //animJog.SetLayerWeight(3, 0.0f);
+            animJog.SetLayerWeight(3, 0.0f);
             animJog.SetLayerWeight(4, 0.0f);
+            animJog.SetLayerWeight(5, 0.0f);
+            animJog.SetLayerWeight(7, 0.0f);
+            animEstilingue.SetBool("Mirar", false);
             animJog.SetBool("Mirar", false);
             action = Mode.AndarNormal;
         }
@@ -536,7 +565,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Grab")
+        if (other.tag == "EquilibrarArea")
         {
             animJog.SetBool("Equilibrar", true);
             animJog.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
@@ -545,7 +574,7 @@ public class JogMovimentoRigid : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Grab")
+        if (other.tag == "EquilibrarArea")
         {
             animJog.SetBool("Equilibrar", false);
         }

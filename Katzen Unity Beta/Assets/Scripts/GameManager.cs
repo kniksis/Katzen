@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+    [SerializeField]
+    public Animator animJog;
+
 	[SerializeField]
 	public float life;
 
@@ -103,7 +106,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (life <= 0)
 		{
-			SceneManager.LoadScene("GameOver");
+            animJog.Play("Morte1");
 		}
 	}
 
