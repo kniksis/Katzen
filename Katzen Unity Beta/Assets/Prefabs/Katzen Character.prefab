@@ -2607,6 +2607,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1843281838770584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4380179579119142}
+  m_Layer: 2
+  m_Name: AlvoCabeca
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1846824934253208
 GameObject:
   m_ObjectHideFlags: 1
@@ -3076,7 +3091,7 @@ Transform:
   m_Children:
   - {fileID: 4190893297323918}
   m_Father: {fileID: 4030474887039170}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4027084004499900
 Transform:
@@ -3117,13 +3132,14 @@ Transform:
   m_LocalPosition: {x: 16.5, y: 0, z: 50.691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4575114677546538}
-  - {fileID: 4016314347047634}
-  - {fileID: 4518204485572116}
+  - {fileID: 4380179579119142}
   - {fileID: 4809434033924258}
+  - {fileID: 4518204485572116}
+  - {fileID: 4143355162172956}
   - {fileID: 4472031112473576}
   - {fileID: 4004173600116694}
-  - {fileID: 4143355162172956}
+  - {fileID: 4575114677546538}
+  - {fileID: 4016314347047634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -3487,7 +3503,7 @@ Transform:
   m_Children:
   - {fileID: 4194645451092740}
   m_Father: {fileID: 4030474887039170}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4152848133924456
 Transform:
@@ -4111,6 +4127,19 @@ Transform:
   m_Father: {fileID: 4192580223617562}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4380179579119142
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1843281838770584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.811, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4030474887039170}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4387848604246428
 Transform:
   m_ObjectHideFlags: 1
@@ -4607,7 +4636,7 @@ Transform:
   m_Children:
   - {fileID: 4789086371615380}
   m_Father: {fileID: 4030474887039170}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4582222236353746
 Transform:
@@ -5207,7 +5236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4030474887039170}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4811780883073244
 Transform:
@@ -6153,7 +6182,7 @@ MonoBehaviour:
   minStepOffset: 0.03
   WallOffset: 0.3
   fowardVelocity: 0
-  WalkVelocity: 0.6
+  WalkVelocity: 1
   RunVelocity: 2
   NormalVelocity: 0.5
   turnangle: 0
@@ -6172,6 +6201,7 @@ MonoBehaviour:
   footLanimator: {fileID: 1128884555277572}
   ikVeloMin: 0.1
   ikYOffset: 0.06
+  cameraSettings: {fileID: 0}
 --- !u!114 &114963111982169650
 MonoBehaviour:
   m_ObjectHideFlags: 1

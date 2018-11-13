@@ -245,8 +245,6 @@ GameObject:
   - component: {fileID: 114141376091094308}
   - component: {fileID: 114506966409251732}
   - component: {fileID: 114471731890489314}
-  - component: {fileID: 114902518976976866}
-  - component: {fileID: 114765181830807316}
   m_Layer: 8
   m_Name: CameraBrain
   m_TagString: CameraPrincipal
@@ -328,7 +326,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182681005685328}
-  m_LocalRotation: {x: -0.0131966295, y: 0.00000019496076, z: 0.000000001065285, w: 0.999913}
+  m_LocalRotation: {x: 0.070443474, y: 0.00000019926146, z: -0.000000012307265, w: 0.9975158}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -343,7 +341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1075082157808546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.840012, y: -6.9929976, z: 62.059998}
+  m_LocalPosition: {x: 15.390011, y: -8.570997, z: 48.461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4192935305055058}
@@ -359,7 +357,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1838024410292986}
-  m_LocalRotation: {x: -0.009998438, y: -0.15693738, z: 0.0015625365, w: -0.98755676}
+  m_LocalRotation: {x: -0.07044362, y: 0.0000003460764, z: -0.000026125264, w: -0.9975158}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -373,7 +371,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508687857140430}
-  m_LocalRotation: {x: 0.012667448, y: -0.00000040107375, z: 0.0000000042921626, w: 0.9999198}
+  m_LocalRotation: {x: 0.096217774, y: 0.00000017702716, z: -0.000000022500567, w: 0.9953603}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -387,7 +385,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475443691635162}
-  m_LocalRotation: {x: 0.038663033, y: -0.00000011234414, z: 0.000000009272104, w: 0.9992523}
+  m_LocalRotation: {x: 0.12201126, y: 0.00000016083594, z: -0.000000012618171, w: 0.99252874}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -401,8 +399,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1633273767501972}
-  m_LocalRotation: {x: 0.03552303, y: 0.15682255, z: -0.0056976983, w: 0.9869713}
-  m_LocalPosition: {x: 0, y: 1.8800001, z: -4}
+  m_LocalRotation: {x: 0.09621839, y: -0, z: -0, w: 0.99536026}
+  m_LocalPosition: {x: 15.390011, y: -8.570997, z: 48.461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4256909705080834}
@@ -456,7 +454,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927628494148420}
-  m_LocalRotation: {x: -0.03552303, y: -0.15682262, z: 0.0056977067, w: -0.9869713}
+  m_LocalRotation: {x: -0.096217506, y: -0.0000024436356, z: 0.000053139895, w: -0.9953604}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -510,7 +508,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1408508789849254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8800001, z: -4}
+  m_LocalPosition: {x: 15.390011, y: -8.570997, z: 48.461}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4815978278818358}
@@ -539,7 +537,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124908086715276}
-  m_LocalRotation: {x: -0.061152276, y: -0.15667492, z: 0.009720022, w: -0.98570734}
+  m_LocalRotation: {x: -0.12205486, y: -0.000000037915182, z: 0.000000073720315, w: -0.9925234}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -581,7 +579,7 @@ Camera:
   m_GameObject: {fileID: 1633273767501972}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 3
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1033,7 +1031,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: Analogico X
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1188,7 +1186,7 @@ MonoBehaviour:
   controllerCamera: {fileID: 114997549853583770}
   inputChoice: 0
   keyboardAndMouseInvertSettings:
-    invertX: 1
+    invertX: 0
     invertY: 0
   controllerInvertSettings:
     invertX: 0
@@ -1228,7 +1226,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: Analogico X
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1263,20 +1261,6 @@ MonoBehaviour:
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
---- !u!114 &114765181830807316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1633273767501972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7124386dc596efb45b4f13a274e0298f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 0}
-  minimumQualitySettings: 0
 --- !u!114 &114775411506575222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1311,7 +1295,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: Analogico X
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1495,127 +1479,6 @@ MonoBehaviour:
   m_MaximumEffort: 4
   m_Damping: 0.2
   m_OptimalTargetDistance: 0
---- !u!114 &114902518976976866
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1633273767501972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44581c3d37d3d464fa6c8302231b48ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 20752240193472234}
-  settings:
-  - minimumQualitySetting: 0
-    nearPlane: 0.3
-    farPlane: 5000
-    distances:
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 15
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 100
-    - 30
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 100
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-  - minimumQualitySetting: 1
-    nearPlane: 0.3
-    farPlane: 5000
-    distances:
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 30
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 150
-    - 100
-    - 1500
-    - 1500
-    - 1500
-    - 300
-    - 1500
-    - 300
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-  - minimumQualitySetting: 1
-    nearPlane: 0.3
-    farPlane: 5000
-    distances:
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 100
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 200
-    - 150
-    - 1500
-    - 1500
-    - 1500
-    - 300
-    - 1500
-    - 400
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
-    - 1500
 --- !u!114 &114940676793645354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1670,7 +1533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 8454144
+    m_Bits: 4294967295
   m_IgnoreTag: 
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
@@ -1722,7 +1585,7 @@ MonoBehaviour:
     m_MaxSpeed: 10
     m_AccelTime: 0.5
     m_DecelTime: 0.1
-    m_InputAxisName: CameraY
+    m_InputAxisName: Analogico Y
     m_InputAxisValue: 0
     m_InvertInput: 0
     m_MinValue: 0
@@ -1739,7 +1602,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: Analogico X
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
