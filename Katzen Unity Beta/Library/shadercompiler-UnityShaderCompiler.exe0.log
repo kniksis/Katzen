@@ -8,8 +8,6 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1483 outsize=523 ok=1
 Cmd: preprocess
-  insize=2451 outsize=661 ok=1
-Cmd: preprocess
   insize=435 outsize=435 ok=1
 Cmd: preprocess
   insize=1615 outsize=1854 ok=1
@@ -20,11 +18,11 @@ Cmd: preprocess
 Cmd: preprocess
   insize=9665 outsize=722 ok=1
 Cmd: preprocess
-  insize=3219 outsize=322 ok=1
+  insize=3181 outsize=323 ok=1
 Cmd: preprocess
   insize=1707 outsize=386 ok=1
 Cmd: preprocess
-  insize=6801 outsize=3266 ok=1
+  insize=6931 outsize=3266 ok=1
 Cmd: preprocess
   insize=927 outsize=382 ok=1
 Cmd: preprocessCompute
@@ -46,17 +44,17 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1579 outsize=233 ok=1
 Cmd: preprocessCompute
-  insize=1220 outsize=1226 ok=1
+  insize=808 outsize=812 ok=1
 Cmd: preprocessCompute
-  insize=2857 outsize=2863 ok=1
+  insize=3414 outsize=3420 ok=1
 Cmd: preprocessCompute
-  insize=11166 outsize=11176 ok=1
+  insize=7518 outsize=7524 ok=1
 Cmd: preprocess
-  insize=1231 outsize=322 ok=1
+  insize=780 outsize=232 ok=1
 Cmd: preprocess
   insize=224 outsize=221 ok=1
 Cmd: preprocess
-  insize=11336 outsize=228 ok=1
+  insize=10908 outsize=228 ok=1
 Cmd: preprocess
   insize=1454 outsize=1799 ok=1
 Cmd: preprocess
@@ -64,7 +62,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1867 outsize=322 ok=1
 Cmd: preprocessCompute
-  insize=5014 outsize=5022 ok=1
+  insize=5180 outsize=5188 ok=1
 Cmd: preprocess
   insize=1247 outsize=436 ok=1
 Cmd: preprocess
@@ -86,13 +84,13 @@ Cmd: preprocess
 Cmd: preprocess
   insize=2581 outsize=863 ok=1
 Cmd: preprocessCompute
-  insize=3526 outsize=3532 ok=1
+  insize=2440 outsize=2444 ok=1
 Cmd: preprocess
   insize=726 outsize=175 ok=1
 Cmd: preprocess
   insize=942 outsize=469 ok=1
 Cmd: preprocess
-  insize=6257 outsize=384 ok=1
+  insize=6398 outsize=383 ok=1
 Cmd: preprocess
   insize=2495 outsize=707 ok=1
 Cmd: preprocess
@@ -114,7 +112,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=5130 outsize=3777 ok=1
 Cmd: preprocessCompute
-  insize=18709 outsize=18731 ok=1
+  insize=9409 outsize=9421 ok=1
 Cmd: preprocess
   insize=1270 outsize=356 ok=1
 Cmd: preprocess
@@ -148,19 +146,19 @@ Cmd: preprocess
 Cmd: preprocess
   insize=4852 outsize=1511 ok=1
 Cmd: preprocess
-  insize=7372 outsize=421 ok=1
+  insize=7036 outsize=421 ok=1
 Cmd: preprocess
   insize=2507 outsize=1111 ok=1
 Cmd: preprocess
   insize=12870 outsize=1687 ok=1
 Cmd: preprocess
-  insize=16047 outsize=5245 ok=1
+  insize=16035 outsize=5244 ok=1
 Cmd: compileSnippet
   error: 1 plat 4 at (137): 'UNITY_PASS_FORWARDADD' : macro redefinition\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
   error: 2 plat 4 at (199): syntax error: unexpected token ';'\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING
-  api=4 type=0 insize=5114 outsize=0 kw=UNITY_PASS_FORWARDADD POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=0
+  api=4 type=0 insize=5102 outsize=0 kw=UNITY_PASS_FORWARDADD POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_RGBM_ENCODING ok=0
 Cmd: preprocess
   insize=1046 outsize=385 ok=1
 Cmd: preprocess
@@ -214,7 +212,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=925 outsize=365 ok=1
 Cmd: preprocess
-  insize=12338 outsize=1048 ok=1
+  insize=12097 outsize=1046 ok=1
 Cmd: preprocess
   insize=5646 outsize=778 ok=1
 Cmd: preprocess
@@ -232,7 +230,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=32666 outsize=307 ok=1
 Cmd: preprocess
-  insize=6462 outsize=1315 ok=1
+  insize=6111 outsize=1315 ok=1
 Cmd: preprocess
   insize=1107 outsize=393 ok=1
 Cmd: preprocess
@@ -240,7 +238,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=6820 outsize=288 ok=1
 Cmd: preprocess
-  insize=1188 outsize=411 ok=1
+  insize=1176 outsize=411 ok=1
 Cmd: preprocess
   insize=4393 outsize=438 ok=1
 Cmd: preprocess
@@ -248,7 +246,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1442 outsize=1162 ok=1
 Cmd: preprocess
-  insize=3197 outsize=1434 ok=1
+  insize=3212 outsize=1435 ok=1
 Cmd: preprocess
   insize=1393 outsize=436 ok=1
 Cmd: preprocess
@@ -272,7 +270,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=584 outsize=581 ok=1
 Cmd: preprocessCompute
-  insize=2114 outsize=2120 ok=1
+  insize=1693 outsize=1697 ok=1
 Cmd: preprocess
   insize=1495 outsize=207 ok=1
 Cmd: preprocess
@@ -298,7 +296,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=595 outsize=293 ok=1
 Cmd: preprocess
-  insize=4106 outsize=397 ok=1
+  insize=4103 outsize=398 ok=1
 Cmd: preprocess
   insize=733 outsize=342 ok=1
 Cmd: preprocess
@@ -311,9 +309,6 @@ Cmd: preprocess
   insize=5085 outsize=789 ok=1
 Cmd: preprocess
   insize=1409 outsize=310 ok=1
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
