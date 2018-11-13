@@ -1,4 +1,4 @@
-Katzen Unity Beta/[Ll]ibrary/
+Katzen Unity Beta/Library
 Katzen Unity Beta/[Tt]emp/
 Katzen Unity Beta/[Oo]bj/
 Katzen Unity Beta/[Bb]uild/
@@ -27,11 +27,14 @@ Katzen Unity Beta/*.pdb
 Katzen Unity Beta/*.pidb.meta
 
 # Unity3D Generated File On Crash Reports
-/Katzen Unity Beta/sysinfo.txt
+Katzen Unity Beta/sysinfo.txt
 
 #Maya Autosaves
 Katzen/[Aa]utosave/
 Objetos Diversos/[Aa]utosave/
 
 # Builds
-/Katzen Unity Beta/*.apk
+Katzen Unity Beta/*.apk
+
+Katzen Unity Beta/Library/UnityAssemblies/UnityScript.xml
+Katzen Unity Beta/Library/UnityAssemblies/version.txt
