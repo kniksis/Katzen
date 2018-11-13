@@ -37,7 +37,7 @@ public class JogMovimentoRigid : MonoBehaviour
     [SerializeField]
     GameObject cameraGO;
     [SerializeField]
-    CameraOrbital camScript;
+    CameraControle camScript;
 
     [Header("Movimentos")]
     float angle;
@@ -99,6 +99,22 @@ public class JogMovimentoRigid : MonoBehaviour
     public float ikVeloMin;
     public float ikYOffset;
 
+    public CameraSettings cameraSettings;
+
+    private void Reset()
+    {
+        cameraSettings = FindObjectOfType<CameraSettings>();
+
+        if (cameraSettings != null)
+        {
+            if (cameraSettings.follow == null)
+                cameraSettings.follow = transform;
+
+            if (cameraSettings.lookAt == null)
+                cameraSettings.follow = transform.Find("AlvoCabeca");
+        }
+    }
+
     // Use this for initialization
     void Awake()
     {
@@ -115,8 +131,8 @@ public class JogMovimentoRigid : MonoBehaviour
         }
         Jump = false;
 
-        cameraGO = GameObject.Find("Main Camera");
-        camScript = cameraGO.GetComponent<CameraOrbital>();
+        cameraGO = GameObject.Find("CameraBrain");
+        camScript = cameraGO.GetComponent<CameraControle>();
     }
 
     // Update is called once per frame
@@ -237,9 +253,8 @@ public class JogMovimentoRigid : MonoBehaviour
 
     public void Mirar()
     {
-        if (!MirarInput)
+        if (MirarInput)
         {
-            Debug.Log(MirarInput);
             animJog.SetLayerWeight(3, 1.0f);
             animJog.SetLayerWeight(4, 1.0f);
             animJog.SetLayerWeight(5, 1.0f);
@@ -249,7 +264,7 @@ public class JogMovimentoRigid : MonoBehaviour
             action = Mode.AndarMirando;
         }
 
-        if (MirarInput)
+        if (!MirarInput)
         {
             animJog.SetLayerWeight(3, 0.0f);
             animJog.SetLayerWeight(4, 0.0f);
@@ -449,7 +464,7 @@ public class JogMovimentoRigid : MonoBehaviour
     {
             localvelocity = transform.InverseTransformDirection(rb.velocity);
             animJog.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
-        animJog.SetFloat("MiraX", camScript.y);
+        //animJog.SetFloat("MiraX", camScript.y);
     }
 
     public void OnAnimatorMove()

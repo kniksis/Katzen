@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Gamekit3D.Cameras
-{
     [ExecuteInEditMode]
     [RequireComponent(typeof(Camera))]
     public class LayerCullDistances : MonoBehaviour
@@ -111,4 +108,3 @@ namespace Gamekit3D.Cameras
                 ComputeLayerCullDistances();
         }
     }
-}

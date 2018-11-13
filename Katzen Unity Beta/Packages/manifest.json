@@ -1,8 +1,6 @@
 {
   "dependencies": {
     "com.unity.probuilder": "3.0.9",
-    "com.unity.progrids": "3.0.3-preview.0",
-    "com.unity.cinemachine": "2.2.7",
-    "com.unity.postprocessing": "2.0.17-preview"
+    "com.unity.progrids": "3.0.3-preview.0"
   }
 }
