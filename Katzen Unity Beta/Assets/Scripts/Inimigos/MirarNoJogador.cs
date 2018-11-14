@@ -15,10 +15,10 @@ public class MirarNoJogador : MonoBehaviour
 
 	void Awake()
 	{
-		jogEntrouMiraGO = GameObject.Find("MiraInimigo");
-		jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
-        PlayerTransform = GameObject.FindGameObjectWithTag("Player");
-        targetTR = PlayerTransform.transform;
+		//jogEntrouMiraGO = GameObject.Find("MiraInimigo");
+		//jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
+       // PlayerTransform = GameObject.FindGameObjectWithTag("Player");
+        //targetTR = PlayerTransform.transform;
 	}
 	// Use this for initialization
 
@@ -36,7 +36,8 @@ public class MirarNoJogador : MonoBehaviour
 											this.transform.position.y,
 											targetObj.position.z);
 			transform.LookAt(targetPostition);*/
-			Vector3 dirFromToTarget = targetTR.position - transform.position;
+
+			Vector3 dirFromToTarget = jemScript.player.transform.position - transform.position;
 			dirFromToTarget.y = 0.0f;
 			Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
 			transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * (delayGiro / 360.0f));

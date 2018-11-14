@@ -18,6 +18,8 @@ TagManager:
   - Terra
   - Areia
   - Ground
+  - CameraPrincipal
+  - Inimigo
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - 
   - 
   - Cameras
-  - 
+  - Inimigos
   - 
   - 
   - 

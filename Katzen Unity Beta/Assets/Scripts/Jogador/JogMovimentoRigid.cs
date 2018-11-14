@@ -37,7 +37,7 @@ public class JogMovimentoRigid : MonoBehaviour
     [SerializeField]
     GameObject cameraGO;
     [SerializeField]
-    CameraControle camScript;
+    CameraControle camCinemachineScript;
 
     [Header("Movimentos")]
     float angle;
@@ -132,7 +132,7 @@ public class JogMovimentoRigid : MonoBehaviour
         Jump = false;
 
         cameraGO = GameObject.Find("CameraBrain");
-        camScript = cameraGO.GetComponent<CameraControle>();
+        camCinemachineScript = cameraGO.GetComponent<CameraControle>();
     }
 
     // Update is called once per frame
@@ -464,7 +464,7 @@ public class JogMovimentoRigid : MonoBehaviour
     {
             localvelocity = transform.InverseTransformDirection(rb.velocity);
             animJog.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
-        //animJog.SetFloat("MiraX", camScript.y);
+            animJog.SetFloat("MiraX", cameraGO.transform.rotation.x);
     }
 
     public void OnAnimatorMove()

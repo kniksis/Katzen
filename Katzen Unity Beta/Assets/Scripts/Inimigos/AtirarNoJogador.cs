@@ -24,8 +24,8 @@ public class AtirarNoJogador : MonoBehaviour {
 	// Use this for initialization
 	void Awake()
 	{
-		jogEntrouMiraGO = GameObject.Find("MiraInimigo");
-		jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
+		//jogEntrouMiraGO = GameObject.Find("MiraInimigo");
+		//jemScript = jogEntrouMiraGO.GetComponent<JogEntrouMira>();
 
 		atirar = false;
 	}

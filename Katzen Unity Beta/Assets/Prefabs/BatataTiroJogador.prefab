@@ -23,8 +23,7 @@ GameObject:
   - component: {fileID: 23775622123912480}
   - component: {fileID: 136227191475381192}
   - component: {fileID: 54688424109597190}
-  - component: {fileID: 114325757307434074}
-  - component: {fileID: 114874102026210620}
+  - component: {fileID: 114704905437162052}
   m_Layer: 0
   m_Name: BatataTiroJogador
   m_TagString: TiroJogador
@@ -168,7 +167,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114325757307434074
+--- !u!114 &114704905437162052
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -176,22 +175,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042629063591114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9314252656ad1a541840fc63fbb873e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114874102026210620
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042629063591114}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ca4e46aef7e2a46b60f4ef5d01c9b8, type: 3}
+  m_Script: {fileID: 11500000, guid: f435e7d2b60a0ee479a10191c55ca43b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 5
-  lifeTime: 10
+  gameManagerGO: {fileID: 0}
+  gmScript: {fileID: 0}
+  TempoDeVida: 2
 --- !u!136 &136227191475381192
 CapsuleCollider:
   m_ObjectHideFlags: 1

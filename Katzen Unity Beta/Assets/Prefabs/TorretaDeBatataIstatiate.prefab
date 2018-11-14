@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4608160367689048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GrupoMiradorCanhao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114327748643874724}
   - component: {fileID: 114501413888230058}
   - component: {fileID: 114536094507822106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canhao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 23229707235615244}
   - component: {fileID: 64903975729428942}
   - component: {fileID: 114331323652124272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiraInimigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4325473265434934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TiroSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4260750964764338}
   - component: {fileID: 33584872703220830}
   - component: {fileID: 23418077304947708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mirador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,9 +105,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4573641934239418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TorretaDeBatataIstatiate
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 4294005039107882}
   - component: {fileID: 33828197489756006}
   - component: {fileID: 23914514341562130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SuporteCanhao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,28 +162,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370342582793250}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.382, z: 0.734}
+  m_LocalRotation: {x: -0.13052624, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: -0.00000020861626, y: 0.38199973, z: 0.73399955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4933518279807476}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
 --- !u!4 &4573641934239418
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973826167301202}
-  m_LocalRotation: {x: -0, y: 0.7114848, z: -0, w: -0.70270157}
-  m_LocalPosition: {x: 15.32, y: 0.09, z: 0.04}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.68, y: 0, z: 37.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4619193544396896}
   - {fileID: 4608160367689048}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 269.288, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4608160367689048
 Transform:
   m_ObjectHideFlags: 1
@@ -419,8 +419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dd2d9fffeec8e40959b55e5ea0e4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogEntrouMiraGO: {fileID: 0}
-  jemScript: {fileID: 0}
+  jogEntrouMiraGO: {fileID: 1337629060618964}
+  jemScript: {fileID: 114331323652124272}
   PlayerTransform: {fileID: 0}
   targetTR: {fileID: 0}
   delayGiro: 500
@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jogEntrou: 0
+  player: {fileID: 0}
 --- !u!114 &114501413888230058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -447,13 +448,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4e6eaa50b67ca49837b3614f74cf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogEntrouMiraGO: {fileID: 0}
-  jemScript: {fileID: 0}
+  jogEntrouMiraGO: {fileID: 1337629060618964}
+  jemScript: {fileID: 114331323652124272}
   tiro: {fileID: 54688424109597190, guid: 6ddb1b9051690184484fbf1293cd1f96, type: 2}
   respawnTiro: {fileID: 4325473265434934}
   fireRate: 0.5
   nextFire: 0
-  forcaAtual: 20
+  forcaAtual: 10
   atirar: 0
 --- !u!114 &114536094507822106
 MonoBehaviour:

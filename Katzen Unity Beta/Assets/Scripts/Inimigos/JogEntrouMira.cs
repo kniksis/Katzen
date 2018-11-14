@@ -6,6 +6,8 @@ public class JogEntrouMira : MonoBehaviour {
 
 	public bool jogEntrou;
 
+    public GameObject player;
+
 	// Use this for initialization
 	void Start () {
 		jogEntrou = false;
@@ -21,7 +23,9 @@ public class JogEntrouMira : MonoBehaviour {
 		if (col.CompareTag("Player"))
 		{
 			jogEntrou = true;
-		}
+            player = col.gameObject;
+
+        }
 	}
 
 	private void OnTriggerExit(Collider col)
@@ -29,6 +33,7 @@ public class JogEntrouMira : MonoBehaviour {
 		if (col.CompareTag("Player"))
 		{
 			jogEntrou = false;
+            player = null;
 		}
 	}
 }
