@@ -28,8 +28,8 @@ public class GarrasMelee : MonoBehaviour
 
     public TimeEffect[] effects;
 
-    [Header("Audio")] public RandomAudioPlayer hitAudio;
-    public RandomAudioPlayer attackAudio;
+    [Header("Audio")] public PlayerDeAudioRandomico hitAudio;
+    public PlayerDeAudioRandomico attackAudio;
 
     public bool throwingHit
     {

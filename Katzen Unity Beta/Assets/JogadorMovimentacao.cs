@@ -21,14 +21,14 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     public bool canAttack;                    // Whether or not Ellen can swing her staff.
 
     public CameraSettings cameraSettings;            // Reference used to determine the camera's direction.
-    public MeleeWeapon meleeWeapon;                  // Reference used to (de)activate the staff when attacking. 
-    public RandomAudioPlayer footstepPlayer;         // Random Audio Players used for various situations.
-    public RandomAudioPlayer hurtAudioPlayer;
-    public RandomAudioPlayer landingPlayer;
-    public RandomAudioPlayer emoteLandingPlayer;
-    public RandomAudioPlayer emoteDeathPlayer;
-    public RandomAudioPlayer emoteAttackPlayer;
-    public RandomAudioPlayer emoteJumpPlayer;
+    public GarrasMelee meleeWeapon;                  // Reference used to (de)activate the staff when attacking. 
+    public PlayerDeAudioRandomico footstepPlayer;         // Random Audio Players used for various situations.
+    public PlayerDeAudioRandomico hurtAudioPlayer;
+    public PlayerDeAudioRandomico landingPlayer;
+    public PlayerDeAudioRandomico emoteLandingPlayer;
+    public PlayerDeAudioRandomico emoteDeathPlayer;
+    public PlayerDeAudioRandomico emoteAttackPlayer;
+    public PlayerDeAudioRandomico emoteJumpPlayer;
 
     protected AnimatorStateInfo m_CurrentStateInfo;    // Information about the base layer of the animator cached.
     protected AnimatorStateInfo m_NextStateInfo;
@@ -42,7 +42,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     protected float m_DesiredForwardSpeed;         // How fast Ellen aims be going along the ground based on input.
     protected float m_ForwardSpeed;                // How fast Ellen is currently going along the ground.
     protected float m_VerticalSpeed;               // How fast Ellen is currently moving up or down.
-    protected PlayerInput m_Input;                 // Reference used to determine how Ellen should move.
+    protected JogadorInputs m_Input;                 // Reference used to determine how Ellen should move.
     protected CharacterController m_CharCtrl;      // Reference used to actually move Ellen.
     protected Animator m_Animator;                 // Reference used to make decisions based on Ellen's current animation and to set parameters.
     protected Material m_CurrentWalkingSurface;    // Reference used to make decisions about audio.
@@ -51,7 +51,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     protected Collider[] m_OverlapResult = new Collider[8];    // Used to cache colliders that are near Ellen.
     protected bool m_InAttack;                     // Whether Ellen is currently in the middle of a melee attack.
     protected bool m_InCombo;                      // Whether Ellen is currently in the middle of her melee combo.
-    protected Damageable m_Damageable;             // Reference used to set invulnerablity and health based on respawning.
+    protected AreaDeDano m_Damageable;             // Reference used to set invulnerablity and health based on respawning.
     protected Renderer[] m_Renderers;              // References used to make sure Renderers are reset properly. 
     protected Checkpoint m_CurrentCheckpoint;      // Reference used to reset Ellen to the correct position on respawn.
     protected bool m_Respawning;                   // Whether Ellen is currently respawning.
@@ -111,19 +111,19 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called automatically by Unity when the script is first added to a gameobject or is reset from the context menu.
     void Reset()
     {
-        meleeWeapon = GetComponentInChildren<MeleeWeapon>();
+        meleeWeapon = GetComponentInChildren<GarrasMelee>();
 
         Transform footStepSource = transform.Find("FootstepSource");
         if (footStepSource != null)
-            footstepPlayer = footStepSource.GetComponent<RandomAudioPlayer>();
+            footstepPlayer = footStepSource.GetComponent<PlayerDeAudioRandomico>();
 
         Transform hurtSource = transform.Find("HurtSource");
         if (hurtSource != null)
-            hurtAudioPlayer = hurtSource.GetComponent<RandomAudioPlayer>();
+            hurtAudioPlayer = hurtSource.GetComponent<PlayerDeAudioRandomico>();
 
         Transform landingSource = transform.Find("LandingSource");
         if (landingSource != null)
-            landingPlayer = landingSource.GetComponent<RandomAudioPlayer>();
+            landingPlayer = landingSource.GetComponent<PlayerDeAudioRandomico>();
 
         cameraSettings = FindObjectOfType<CameraSettings>();
 
@@ -140,7 +140,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called automatically by Unity when the script first exists in the scene.
     void Awake()
     {
-        m_Input = GetComponent<PlayerInput>();
+        m_Input = GetComponent<JogadorInputs>();
         m_Animator = GetComponent<Animator>();
         m_CharCtrl = GetComponent<CharacterController>();
 
@@ -152,9 +152,9 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called automatically by Unity after Awake whenever the script is enabled. 
     void OnEnable()
     {
-        SceneLinkedSMB<PlayerController>.Initialise(m_Animator, this);
+        SceneLinkedSMB<JogadorMovimentacao>.Initialise(m_Animator, this);
 
-        m_Damageable = GetComponent<Damageable>();
+        m_Damageable = GetComponent<AreaDeDano>();
         m_Damageable.onDamageMessageReceivers.Add(this);
 
         m_Damageable.isInvulnerable = true;
@@ -585,7 +585,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         }
 
         // Enable spawning.
-        EllenSpawn spawn = GetComponentInChildren<EllenSpawn>();
+        KatzenSpawn spawn = GetComponentInChildren<KatzenSpawn>();
         spawn.enabled = true;
 
         // If there is a checkpoint, move Ellen to it.
@@ -627,13 +627,13 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         {
             case MessageType.DAMAGED:
                 {
-                    Damageable.DamageMessage damageData = (Damageable.DamageMessage)data;
+                    AreaDeDano.DamageMessage damageData = (AreaDeDano.DamageMessage)data;
                     Damaged(damageData);
                 }
                 break;
             case MessageType.DEAD:
                 {
-                    Damageable.DamageMessage damageData = (Damageable.DamageMessage)data;
+                    AreaDeDano.DamageMessage damageData = (AreaDeDano.DamageMessage)data;
                     Die(damageData);
                 }
                 break;
@@ -641,7 +641,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     }
 
     // Called by OnReceiveMessage.
-    void Damaged(Damageable.DamageMessage damageMessage)
+    void Damaged(AreaDeDano.DamageMessage damageMessage)
     {
         // Set the Hurt parameter of the animator.
         m_Animator.SetTrigger(m_HashHurt);
@@ -667,7 +667,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     }
 
     // Called by OnReceiveMessage and by DeathVolumes in the scene.
-    public void Die(Damageable.DamageMessage damageMessage)
+    public void Die(AreaDeDano.DamageMessage damageMessage)
     {
         m_Animator.SetTrigger(m_HashDeath);
         m_ForwardSpeed = 0f;
