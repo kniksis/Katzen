@@ -54,6 +54,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     protected AreaDeDano m_Damageable;             // Reference used to set invulnerablity and health based on respawning.
     protected Renderer[] m_Renderers;              // References used to make sure Renderers are reset properly. 
     protected Checkpoint m_CurrentCheckpoint;      // Reference used to reset Ellen to the correct position on respawn.
+    [SerializeField]
     protected bool m_Respawning;                   // Whether Ellen is currently respawning.
     protected float m_IdleTimer;                   // Used to count up to Ellen considering a random idle.
 
@@ -70,33 +71,32 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
 
     // Parameters
 
-    readonly int m_HashAirborneVerticalSpeed = Animator.StringToHash("AirborneVerticalSpeed");
-    readonly int m_HashForwardSpeed = Animator.StringToHash("ForwardSpeed");
-    readonly int m_HashAngleDeltaRad = Animator.StringToHash("AngleDeltaRad");
-    readonly int m_HashTimeoutToIdle = Animator.StringToHash("TimeoutToIdle");
-    readonly int m_HashGrounded = Animator.StringToHash("Grounded");
+    readonly int m_HashAirborneVerticalSpeed = Animator.StringToHash("VelocidadeVerticalNoAr");
+    readonly int m_HashForwardSpeed = Animator.StringToHash("FowardVelocity");
+    readonly int m_HashAngleDeltaRad = Animator.StringToHash("DeltaAnguloRadiano");
+    readonly int m_HashTimeoutToIdle = Animator.StringToHash("IrParaIdle");
+    readonly int m_HashGrounded = Animator.StringToHash("NoChao");
     readonly int m_HashInputDetected = Animator.StringToHash("InputDetected");
-    readonly int m_HashMeleeAttack = Animator.StringToHash("MeleeAttack");
-    readonly int m_HashHurt = Animator.StringToHash("Hurt");
-    readonly int m_HashDeath = Animator.StringToHash("Death");
-    readonly int m_HashRespawn = Animator.StringToHash("Respawn");
-    readonly int m_HashHurtFromX = Animator.StringToHash("HurtFromX");
-    readonly int m_HashHurtFromY = Animator.StringToHash("HurtFromY");
-    readonly int m_HashStateTime = Animator.StringToHash("StateTime");
+    readonly int m_HashMeleeAttack = Animator.StringToHash("AtaqueMelee");
+    readonly int m_HashHurt = Animator.StringToHash("LevouDano");
+    readonly int m_HashDeath = Animator.StringToHash("Morrer");
+    readonly int m_HashRespawn = Animator.StringToHash("Respawnar");
+    readonly int m_HashHurtFromX = Animator.StringToHash("LevarDanoX");
+    readonly int m_HashHurtFromY = Animator.StringToHash("LevarDanoY");
+    readonly int m_HashStateTime = Animator.StringToHash("TempoDeEstado");
     readonly int m_HashFootFall = Animator.StringToHash("FootFall");
 
     // States
-    readonly int m_HashLocomotion = Animator.StringToHash("Locomotion");
-    readonly int m_HashAirborne = Animator.StringToHash("Airborne");
-    readonly int m_HashLanding = Animator.StringToHash("Landing");    // Also a parameter.
-    readonly int m_HashEllenCombo1 = Animator.StringToHash("EllenCombo1");
-    readonly int m_HashEllenCombo2 = Animator.StringToHash("EllenCombo2");
-    readonly int m_HashEllenCombo3 = Animator.StringToHash("EllenCombo3");
-    readonly int m_HashEllenCombo4 = Animator.StringToHash("EllenCombo4");
-    readonly int m_HashEllenDeath = Animator.StringToHash("EllenDeath");
+    readonly int m_HashLocomotion = Animator.StringToHash("Movimentacao");
+    readonly int m_HashAirborne = Animator.StringToHash("NoAr");
+    readonly int m_HashLanding = Animator.StringToHash("Aterrissando");    // Also a parameter.
+    readonly int m_HashEllenCombo1 = Animator.StringToHash("Soco1");
+    readonly int m_HashEllenCombo2 = Animator.StringToHash("Soco2");
+    readonly int m_HashEllenCombo3 = Animator.StringToHash("Soco2");
+    readonly int m_HashEllenDeath = Animator.StringToHash("Morte1");
 
     // Tags
-    readonly int m_HashBlockInput = Animator.StringToHash("BlockInput");
+    readonly int m_HashBlockInput = Animator.StringToHash("BloquearControles");
 
     protected bool IsMoveInput
     {
@@ -133,7 +133,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
                 cameraSettings.follow = transform;
 
             if (cameraSettings.lookAt == null)
-                cameraSettings.follow = transform.Find("HeadTarget");
+                cameraSettings.follow = transform.Find("AlvoCabeca");
         }
     }
 
@@ -231,7 +231,6 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         bool equipped = m_NextStateInfo.shortNameHash == m_HashEllenCombo1 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo1;
         equipped |= m_NextStateInfo.shortNameHash == m_HashEllenCombo2 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo2;
         equipped |= m_NextStateInfo.shortNameHash == m_HashEllenCombo3 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo3;
-        equipped |= m_NextStateInfo.shortNameHash == m_HashEllenCombo4 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo4;
 
         return equipped;
     }
@@ -457,8 +456,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
 
         if (m_CurrentStateInfo.shortNameHash == m_HashEllenCombo1 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo1 ||
             m_CurrentStateInfo.shortNameHash == m_HashEllenCombo2 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo2 ||
-            m_CurrentStateInfo.shortNameHash == m_HashEllenCombo3 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo3 ||
-            m_CurrentStateInfo.shortNameHash == m_HashEllenCombo4 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo4)
+            m_CurrentStateInfo.shortNameHash == m_HashEllenCombo3 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo3)    
         {
             emoteAttackPlayer.PlayRandomClip();
         }

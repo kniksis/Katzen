@@ -11,7 +11,7 @@ public class JogadorInputs : MonoBehaviour
 
     protected static JogadorInputs s_Instance;
 
-    [HideInInspector]
+    
     public bool playerControllerInputBlocked;
 
     protected Vector2 m_Movement;
