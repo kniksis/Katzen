@@ -5,23 +5,30 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(Animator))]
-public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
+
+public class JogadorMovimentacao : MonoBehaviour
 {
     protected static JogadorMovimentacao s_Instance;
     public static JogadorMovimentacao instance { get { return s_Instance; } }
+    
+    [Header("Velocidades de Movimentacao")]
+    [Range(0f, 20f)] [SerializeField]
+    public float velocidadeMaximaFoward = 8f;
+    [Range(0f, 40f)] [SerializeField]
+    public float gravidade = 20f;
+    [Range(0f, 20f)] [SerializeField]
+    public float velocidadePulo = 10f;
+    [Range(100f, 600f)] [SerializeField]
+    public float velocidadeMinimaVirada = 400f;
+    [Range(500f, 1500f)] [SerializeField]
+    public float velocidadeMaximaVirada = 1200f;
+    [Range(0f, 20f)] [SerializeField]
+    public float idleTempoDeOciosidade = 5f;
+    public bool podeAtacar;
+    public bool podeUsarEstilingue;
 
-    public bool respawning { get { return m_Respawning; } }
-
-    public float maxForwardSpeed = 8f;        // How fast Ellen can run.
-    public float gravity = 20f;               // How fast Ellen accelerates downwards when airborne.
-    public float jumpSpeed = 10f;             // How fast Ellen takes off when jumping.
-    public float minTurnSpeed = 400f;         // How fast Ellen turns when moving at maximum speed.
-    public float maxTurnSpeed = 1200f;        // How fast Ellen turns when stationary.
-    public float idleTimeout = 5f;            // How long before Ellen starts considering random idles.
-    public bool canAttack;                    // Whether or not Ellen can swing her staff.
-
-    public CameraSettings cameraSettings;            // Reference used to determine the camera's direction.
-    public GarrasMelee meleeWeapon;                  // Reference used to (de)activate the staff when attacking. 
+    public CameraSettings cameraSettings;
+    public GarrasMelee garrasMelee;
     public PlayerDeAudioRandomico footstepPlayer;         // Random Audio Players used for various situations.
     public PlayerDeAudioRandomico hurtAudioPlayer;
     public PlayerDeAudioRandomico landingPlayer;
@@ -36,17 +43,17 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     protected AnimatorStateInfo m_PreviousCurrentStateInfo;    // Information about the base layer of the animator from last frame.
     protected AnimatorStateInfo m_PreviousNextStateInfo;
     protected bool m_PreviousIsAnimatorTransitioning;
-    protected bool m_IsGrounded = true;            // Whether or not Ellen is currently standing on the ground.
-    protected bool m_PreviouslyGrounded = true;    // Whether or not Ellen was standing on the ground last frame.
-    protected bool m_ReadyToJump;                  // Whether or not the input state and Ellen are correct to allow jumping.
-    protected float m_DesiredForwardSpeed;         // How fast Ellen aims be going along the ground based on input.
-    protected float m_ForwardSpeed;                // How fast Ellen is currently going along the ground.
-    protected float m_VerticalSpeed;               // How fast Ellen is currently moving up or down.
-    protected JogadorInputs m_Input;                 // Reference used to determine how Ellen should move.
-    protected CharacterController m_CharCtrl;      // Reference used to actually move Ellen.
-    protected Animator m_Animator;                 // Reference used to make decisions based on Ellen's current animation and to set parameters.
-    protected Material m_CurrentWalkingSurface;    // Reference used to make decisions about audio.
-    protected Quaternion m_TargetRotation;         // What rotation Ellen is aiming to have based on input.
+    protected bool noChao = true;
+    protected bool estavaNoChao = true;
+    protected bool podePular;
+    protected float velocidadeFowardDesejada;         //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
+    protected float velocidadeFoward;                //Quao rapido o jogador esta indo.
+    protected float velocidadeVertical;               // How fast Ellen is currently moving up or down.
+    protected JogadorInputs input;                 // Reference used to determine how Ellen should move.
+    protected CharacterController charCtrl;      // Reference used to actually move Ellen.
+    protected Animator animator;                 // Reference used to make decisions based on Ellen's current animation and to set parameters.
+    protected Material superficeAtual;    // Reference used to make decisions about audio.
+    protected Quaternion rotacaoAlvo;         // What rotation Ellen is aiming to have based on input.
     protected float m_AngleDiff;                   // Angle in degrees between Ellen's current rotation and her target rotation.
     protected Collider[] m_OverlapResult = new Collider[8];    // Used to cache colliders that are near Ellen.
     protected bool m_InAttack;                     // Whether Ellen is currently in the middle of a melee attack.
@@ -100,18 +107,18 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
 
     protected bool IsMoveInput
     {
-        get { return !Mathf.Approximately(m_Input.MoveInput.sqrMagnitude, 0f); }
+        get { return !Mathf.Approximately(input.MoveInput.sqrMagnitude, 0f); }
     }
 
     public void SetCanAttack(bool canAttack)
     {
-        this.canAttack = canAttack;
+        this.podeAtacar = canAttack;
     }
 
     // Called automatically by Unity when the script is first added to a gameobject or is reset from the context menu.
     void Reset()
     {
-        meleeWeapon = GetComponentInChildren<GarrasMelee>();
+        garrasMelee = GetComponentInChildren<GarrasMelee>();
 
         Transform footStepSource = transform.Find("FootstepSource");
         if (footStepSource != null)
@@ -140,11 +147,11 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called automatically by Unity when the script first exists in the scene.
     void Awake()
     {
-        m_Input = GetComponent<JogadorInputs>();
-        m_Animator = GetComponent<Animator>();
-        m_CharCtrl = GetComponent<CharacterController>();
+        input = GetComponent<JogadorInputs>();
+        animator = GetComponent<Animator>();
+        charCtrl = GetComponent<CharacterController>();
 
-        meleeWeapon.SetOwner(gameObject);
+        garrasMelee.SetOwner(gameObject);
 
         s_Instance = this;
     }
@@ -152,7 +159,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called automatically by Unity after Awake whenever the script is enabled. 
     void OnEnable()
     {
-        SceneLinkedSMB<JogadorMovimentacao>.Initialise(m_Animator, this);
+        SceneLinkedSMB<JogadorMovimentacao>.Initialise(animator, this);
 
         m_Damageable = GetComponent<AreaDeDano>();
         m_Damageable.onDamageMessageReceivers.Add(this);
@@ -184,11 +191,11 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
 
         EquipMeleeWeapon(IsWeaponEquiped());
 
-        m_Animator.SetFloat(m_HashStateTime, Mathf.Repeat(m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
-        m_Animator.ResetTrigger(m_HashMeleeAttack);
+        animator.SetFloat(m_HashStateTime, Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        animator.ResetTrigger(m_HashMeleeAttack);
 
-        if (m_Input.Attack && canAttack)
-            m_Animator.SetTrigger(m_HashMeleeAttack);
+        if (input.AtaqueInput && podeAtacar)
+            animator.SetTrigger(m_HashMeleeAttack);
 
         CalculateForwardMovement();
         CalculateVerticalMovement();
@@ -202,7 +209,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
 
         TimeoutToIdle();
 
-        m_PreviouslyGrounded = m_IsGrounded;
+        estavaNoChao = noChao;
     }
 
     // Called at the start of FixedUpdate to record the current state of the base layer of the animator.
@@ -212,9 +219,9 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         m_PreviousNextStateInfo = m_NextStateInfo;
         m_PreviousIsAnimatorTransitioning = m_IsAnimatorTransitioning;
 
-        m_CurrentStateInfo = m_Animator.GetCurrentAnimatorStateInfo(0);
-        m_NextStateInfo = m_Animator.GetNextAnimatorStateInfo(0);
-        m_IsAnimatorTransitioning = m_Animator.IsInTransition(0);
+        m_CurrentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        m_NextStateInfo = animator.GetNextAnimatorStateInfo(0);
+        m_IsAnimatorTransitioning = animator.IsInTransition(0);
     }
 
     // Called after the animator state has been cached to determine whether this script should block user input.
@@ -222,7 +229,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     {
         bool inputBlocked = m_CurrentStateInfo.tagHash == m_HashBlockInput && !m_IsAnimatorTransitioning;
         inputBlocked |= m_NextStateInfo.tagHash == m_HashBlockInput;
-        m_Input.playerControllerInputBlocked = inputBlocked;
+        input.JogadorInputsBloqueados = inputBlocked;
     }
 
     // Called after the animator state has been cached to determine whether or not the staff should be active or not.
@@ -238,74 +245,74 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called each physics step with a parameter based on the return value of IsWeaponEquiped.
     void EquipMeleeWeapon(bool equip)
     {
-        meleeWeapon.gameObject.SetActive(equip);
+        garrasMelee.gameObject.SetActive(equip);
         m_InAttack = false;
         m_InCombo = equip;
 
         if (!equip)
-            m_Animator.ResetTrigger(m_HashMeleeAttack);
+            animator.ResetTrigger(m_HashMeleeAttack);
     }
 
     // Called each physics step.
     void CalculateForwardMovement()
     {
         // Cache the move input and cap it's magnitude at 1.
-        Vector2 moveInput = m_Input.MoveInput;
+        Vector2 moveInput = input.MoveInput;
         if (moveInput.sqrMagnitude > 1f)
             moveInput.Normalize();
 
         // Calculate the speed intended by input.
-        m_DesiredForwardSpeed = moveInput.magnitude * maxForwardSpeed;
+        velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
 
         // Determine change to speed based on whether there is currently any move input.
         float acceleration = IsMoveInput ? k_GroundAcceleration : k_GroundDeceleration;
 
         // Adjust the forward speed towards the desired speed.
-        m_ForwardSpeed = Mathf.MoveTowards(m_ForwardSpeed, m_DesiredForwardSpeed, acceleration * Time.deltaTime);
+        velocidadeFoward = Mathf.MoveTowards(velocidadeFoward, velocidadeFowardDesejada, acceleration * Time.deltaTime);
 
         // Set the animator parameter to control what animation is being played.
-        m_Animator.SetFloat(m_HashForwardSpeed, m_ForwardSpeed);
+        animator.SetFloat(m_HashForwardSpeed, velocidadeFoward);
     }
 
     // Called each physics step.
     void CalculateVerticalMovement()
     {
         // If jump is not currently held and Ellen is on the ground then she is ready to jump.
-        if (!m_Input.JumpInput && m_IsGrounded)
-            m_ReadyToJump = true;
+        if (!input.PuloInput && noChao)
+            podePular = true;
 
-        if (m_IsGrounded)
+        if (noChao)
         {
             // When grounded we apply a slight negative vertical speed to make Ellen "stick" to the ground.
-            m_VerticalSpeed = -gravity * k_StickingGravityProportion;
+            velocidadeVertical = -gravidade * k_StickingGravityProportion;
 
             // If jump is held, Ellen is ready to jump and not currently in the middle of a melee combo...
-            if (m_Input.JumpInput && m_ReadyToJump && !m_InCombo)
+            if (input.PuloInput && podePular && !m_InCombo)
             {
                 // ... then override the previously set vertical speed and make sure she cannot jump again.
-                m_VerticalSpeed = jumpSpeed;
-                m_IsGrounded = false;
-                m_ReadyToJump = false;
+                velocidadeVertical = velocidadePulo;
+                noChao = false;
+                podePular = false;
             }
         }
         else
         {
             // If Ellen is airborne, the jump button is not held and Ellen is currently moving upwards...
-            if (!m_Input.JumpInput && m_VerticalSpeed > 0.0f)
+            if (!input.PuloInput && velocidadeVertical > 0.0f)
             {
                 // ... decrease Ellen's vertical speed.
                 // This is what causes holding jump to jump higher that tapping jump.
-                m_VerticalSpeed -= k_JumpAbortSpeed * Time.deltaTime;
+                velocidadeVertical -= k_JumpAbortSpeed * Time.deltaTime;
             }
 
             // If a jump is approximately peaking, make it absolute.
-            if (Mathf.Approximately(m_VerticalSpeed, 0f))
+            if (Mathf.Approximately(velocidadeVertical, 0f))
             {
-                m_VerticalSpeed = 0f;
+                velocidadeVertical = 0f;
             }
 
             // If Ellen is airborne, apply gravity.
-            m_VerticalSpeed -= gravity * Time.deltaTime;
+            velocidadeVertical -= gravidade * Time.deltaTime;
         }
     }
 
@@ -313,7 +320,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     void SetTargetRotation()
     {
         // Create three variables, move input local to the player, flattened forward direction of the camera and a local target rotation.
-        Vector2 moveInput = m_Input.MoveInput;
+        Vector2 moveInput = input.MoveInput;
         Vector3 localMovementDirection = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
 
         Vector3 forward = Quaternion.Euler(0f, cameraSettings.Current.m_XAxis.Value, 0f) * Vector3.forward;
@@ -387,7 +394,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         float targetAngle = Mathf.Atan2(resultingForward.x, resultingForward.z) * Mathf.Rad2Deg;
 
         m_AngleDiff = Mathf.DeltaAngle(angleCurrent, targetAngle);
-        m_TargetRotation = targetRotation;
+        rotacaoAlvo = targetRotation;
     }
 
     // Called each physics step to help determine whether Ellen can turn under player input.
@@ -403,26 +410,26 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called each physics step after SetTargetRotation if there is move input and Ellen is in the correct animator state according to IsOrientationUpdated.
     void UpdateOrientation()
     {
-        m_Animator.SetFloat(m_HashAngleDeltaRad, m_AngleDiff * Mathf.Deg2Rad);
+        animator.SetFloat(m_HashAngleDeltaRad, m_AngleDiff * Mathf.Deg2Rad);
 
-        Vector3 localInput = new Vector3(m_Input.MoveInput.x, 0f, m_Input.MoveInput.y);
-        float groundedTurnSpeed = Mathf.Lerp(maxTurnSpeed, minTurnSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
-        float actualTurnSpeed = m_IsGrounded ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * k_InverseOneEighty * k_AirborneTurnSpeedProportion * groundedTurnSpeed;
-        m_TargetRotation = Quaternion.RotateTowards(transform.rotation, m_TargetRotation, actualTurnSpeed * Time.deltaTime);
+        Vector3 localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
+        float groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
+        float actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * k_InverseOneEighty * k_AirborneTurnSpeedProportion * groundedTurnSpeed;
+        rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
 
-        transform.rotation = m_TargetRotation;
+        transform.rotation = rotacaoAlvo;
     }
 
     // Called each physics step to check if audio should be played and if so instruct the relevant random audio player to do so.
     void PlayAudio()
     {
-        float footfallCurve = m_Animator.GetFloat(m_HashFootFall);
+        float footfallCurve = animator.GetFloat(m_HashFootFall);
 
         if (footfallCurve > 0.01f && !footstepPlayer.playing && footstepPlayer.canPlay)
         {
             footstepPlayer.playing = true;
             footstepPlayer.canPlay = false;
-            footstepPlayer.PlayRandomClip(m_CurrentWalkingSurface, m_ForwardSpeed < 4 ? 0 : 1);
+            footstepPlayer.PlayRandomClip(superficeAtual, velocidadeFoward < 4 ? 0 : 1);
         }
         else if (footstepPlayer.playing)
         {
@@ -433,13 +440,13 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
             footstepPlayer.canPlay = true;
         }
 
-        if (m_IsGrounded && !m_PreviouslyGrounded)
+        if (noChao && !estavaNoChao)
         {
-            landingPlayer.PlayRandomClip(m_CurrentWalkingSurface, bankId: m_ForwardSpeed < 4 ? 0 : 1);
+            landingPlayer.PlayRandomClip(superficeAtual, bankId: velocidadeFoward < 4 ? 0 : 1);
             emoteLandingPlayer.PlayRandomClip();
         }
 
-        if (!m_IsGrounded && m_PreviouslyGrounded && m_VerticalSpeed > 0f)
+        if (!noChao && estavaNoChao && velocidadeVertical > 0f)
         {
             emoteJumpPlayer.PlayRandomClip();
         }
@@ -465,24 +472,24 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called each physics step to count up to the point where Ellen considers a random idle.
     void TimeoutToIdle()
     {
-        bool inputDetected = IsMoveInput || m_Input.Attack || m_Input.JumpInput;
-        if (m_IsGrounded && !inputDetected)
+        bool inputDetected = IsMoveInput || input.AtaqueInput || input.PuloInput;
+        if (noChao && !inputDetected)
         {
             m_IdleTimer += Time.deltaTime;
 
-            if (m_IdleTimer >= idleTimeout)
+            if (m_IdleTimer >= idleTempoDeOciosidade)
             {
                 m_IdleTimer = 0f;
-                m_Animator.SetTrigger(m_HashTimeoutToIdle);
+                animator.SetTrigger(m_HashTimeoutToIdle);
             }
         }
         else
         {
             m_IdleTimer = 0f;
-            m_Animator.ResetTrigger(m_HashTimeoutToIdle);
+            animator.ResetTrigger(m_HashTimeoutToIdle);
         }
 
-        m_Animator.SetBool(m_HashInputDetected, inputDetected);
+        animator.SetBool(m_HashInputDetected, inputDetected);
     }
 
     // Called each physics step (so long as the Animator component is set to Animate Physics) after FixedUpdate to override root motion.
@@ -491,7 +498,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         Vector3 movement;
 
         // If Ellen is on the ground...
-        if (m_IsGrounded)
+        if (noChao)
         {
             // ... raycast into the ground...
             RaycastHit hit;
@@ -499,58 +506,58 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
             if (Physics.Raycast(ray, out hit, k_GroundedRayDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 // ... and get the movement of the root motion rotated to lie along the plane of the ground.
-                movement = Vector3.ProjectOnPlane(m_Animator.deltaPosition, hit.normal);
+                movement = Vector3.ProjectOnPlane(animator.deltaPosition, hit.normal);
 
                 // Also store the current walking surface so the correct audio is played.
                 Renderer groundRenderer = hit.collider.GetComponentInChildren<Renderer>();
-                m_CurrentWalkingSurface = groundRenderer ? groundRenderer.sharedMaterial : null;
+                superficeAtual = groundRenderer ? groundRenderer.sharedMaterial : null;
             }
             else
             {
                 // If no ground is hit just get the movement as the root motion.
                 // Theoretically this should rarely happen as when grounded the ray should always hit.
-                movement = m_Animator.deltaPosition;
-                m_CurrentWalkingSurface = null;
+                movement = animator.deltaPosition;
+                superficeAtual = null;
             }
         }
         else
         {
             // If not grounded the movement is just in the forward direction.
-            movement = m_ForwardSpeed * transform.forward * Time.deltaTime;
+            movement = velocidadeFoward * transform.forward * Time.deltaTime;
         }
 
         // Rotate the transform of the character controller by the animation's root rotation.
-        m_CharCtrl.transform.rotation *= m_Animator.deltaRotation;
+        charCtrl.transform.rotation *= animator.deltaRotation;
 
         // Add to the movement with the calculated vertical speed.
-        movement += m_VerticalSpeed * Vector3.up * Time.deltaTime;
+        movement += velocidadeVertical * Vector3.up * Time.deltaTime;
 
         // Move the character controller.
-        m_CharCtrl.Move(movement);
+        charCtrl.Move(movement);
 
         // After the movement store whether or not the character controller is grounded.
-        m_IsGrounded = m_CharCtrl.isGrounded;
+        noChao = charCtrl.isGrounded;
 
         // If Ellen is not on the ground then send the vertical speed to the animator.
         // This is so the vertical speed is kept when landing so the correct landing animation is played.
-        if (!m_IsGrounded)
-            m_Animator.SetFloat(m_HashAirborneVerticalSpeed, m_VerticalSpeed);
+        if (!noChao)
+            animator.SetFloat(m_HashAirborneVerticalSpeed, velocidadeVertical);
 
         // Send whether or not Ellen is on the ground to the animator.
-        m_Animator.SetBool(m_HashGrounded, m_IsGrounded);
+        animator.SetBool(m_HashGrounded, noChao);
     }
 
     // This is called by an animation event when Ellen swings her staff.
     public void MeleeAttackStart(int throwing = 0)
     {
-        meleeWeapon.BeginAttack(throwing != 0);
+        garrasMelee.BeginAttack(throwing != 0);
         m_InAttack = true;
     }
 
     // This is called by an animation event when Ellen finishes swinging her staff.
     public void MeleeAttackEnd()
     {
-        meleeWeapon.EndAttack();
+        garrasMelee.EndAttack();
         m_InAttack = false;
     }
 
@@ -601,7 +608,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         m_Damageable.ResetDamage();
 
         // Set the Respawn parameter of the animator.
-        m_Animator.SetTrigger(m_HashRespawn);
+        animator.SetTrigger(m_HashRespawn);
 
         // Start the respawn graphic effects.
         spawn.StartEffect();
@@ -642,7 +649,7 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     void Damaged(AreaDeDano.DamageMessage damageMessage)
     {
         // Set the Hurt parameter of the animator.
-        m_Animator.SetTrigger(m_HashHurt);
+        animator.SetTrigger(m_HashHurt);
 
         // Find the direction of the damage.
         Vector3 forward = damageMessage.damageSource - transform.position;
@@ -651,8 +658,8 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
         Vector3 localHurt = transform.InverseTransformDirection(forward);
 
         // Set the HurtFromX and HurtFromY parameters of the animator based on the direction of the damage.
-        m_Animator.SetFloat(m_HashHurtFromX, localHurt.x);
-        m_Animator.SetFloat(m_HashHurtFromY, localHurt.z);
+        animator.SetFloat(m_HashHurtFromX, localHurt.x);
+        animator.SetFloat(m_HashHurtFromY, localHurt.z);
 
         // Shake the camera.
         CameraShake.Shake(CameraShake.k_PlayerHitShakeAmount, CameraShake.k_PlayerHitShakeTime);
@@ -667,9 +674,9 @@ public class JogadorMovimentacao : MonoBehaviour, IMessageReceiver
     // Called by OnReceiveMessage and by DeathVolumes in the scene.
     public void Die(AreaDeDano.DamageMessage damageMessage)
     {
-        m_Animator.SetTrigger(m_HashDeath);
-        m_ForwardSpeed = 0f;
-        m_VerticalSpeed = 0f;
+        animator.SetTrigger(m_HashDeath);
+        velocidadeFoward = 0f;
+        velocidadeVertical = 0f;
         m_Respawning = true;
         m_Damageable.isInvulnerable = true;
     }
