@@ -3166,9 +3166,8 @@ GameObject:
   - component: {fileID: 114422016858103282}
   - component: {fileID: 114313667975131672}
   - component: {fileID: 114963111982169650}
-  - component: {fileID: 114369958278400792}
   - component: {fileID: 114525352855221994}
-  - component: {fileID: 114468397947246634}
+  - component: {fileID: 114767982662150064}
   - component: {fileID: 114779485206759404}
   m_Layer: 2
   m_Name: Katzen Character
@@ -7305,7 +7304,7 @@ Animator:
   m_GameObject: {fileID: 1978897870966298}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 20b7cf748a0b3ed48b697c0bb302d032, type: 3}
-  m_Controller: {fileID: 9100000, guid: a38f751d02397e743a3982930ec0f5ba, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7df9973b56d7b2d4886ddde88341316b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -7401,47 +7400,6 @@ MonoBehaviour:
   ProximoTiro: 0
   ATIRAR_BT_NAME: Atirar
   ATIRAR_AN_NAME: Atirar
---- !u!114 &114369958278400792
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978897870966298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: becbea09dc6aed74592c463083cfee91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitPoints: 5
-  invulnerabiltyTime: 5
-  hitAngle: 360
-  hitForwardRotation: 360
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnReceiveDamage:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHitWhileInvulnerable:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnBecomeVulnerable:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnResetDamage:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onDamageMessageReceivers: []
 --- !u!114 &114422016858103282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7482,33 +7440,6 @@ MonoBehaviour:
   overrides: []
   playing: 0
   canPlay: 0
---- !u!114 &114468397947246634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1978897870966298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45328edf46ff1c04890ef33b7e94d38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxForwardSpeed: 8
-  gravity: 20
-  jumpSpeed: 10
-  minTurnSpeed: 400
-  maxTurnSpeed: 1200
-  idleTimeout: 5
-  canAttack: 0
-  cameraSettings: {fileID: 0}
-  meleeWeapon: {fileID: 114074881330997060}
-  footstepPlayer: {fileID: 114572181056400972}
-  hurtAudioPlayer: {fileID: 114056730162596184}
-  landingPlayer: {fileID: 114425572374205006}
-  emoteLandingPlayer: {fileID: 114144916910182288}
-  emoteDeathPlayer: {fileID: 114618783866079062}
-  emoteAttackPlayer: {fileID: 114888421251634800}
-  emoteJumpPlayer: {fileID: 114559086519289318}
 --- !u!114 &114525352855221994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7520,7 +7451,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11312a8c718ae5f48b9c8bd600fc85ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControllerInputBlocked: 0
+  JogadorInputsBloqueados: 0
+  JUMP_BT_NAME: Jump
+  MOV_HORIZONTAL_AN_NAME: Horizontal
+  MOV_VERTICAL_AN_NAME: Vertical
+  CAM_HORIZONTAL_AN_NAME: Analogico X
+  CAM_VERTICAL_AN_NAME: Analogico Y
+  TROCA_ARMA_BT_NAME: TrocaArma
+  MIRAR_BT_NAME: Mirar
+  ATIRAR_BT_NAME: Atirar
+  ATACAR_BT_NAME: Atirar
+  PAUSE_BT_NAME: Pause
 --- !u!114 &114559086519289318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7601,6 +7542,37 @@ MonoBehaviour:
   overrides: []
   playing: 0
   canPlay: 0
+--- !u!114 &114767982662150064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978897870966298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861304fd52e409d449e5bea9cc440c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeMaximaFoward: 8
+  gravidade: 20
+  velocidadePulo: 10
+  velocidadeMinimaVirada: 400
+  velocidadeMaximaVirada: 1200
+  idleTempoDeOciosidade: 5
+  podeAtacar: 0
+  podeUsarEstilingue: 0
+  cameraSettings: {fileID: 0}
+  footstepPlayer: {fileID: 114572181056400972}
+  hurtAudioPlayer: {fileID: 114056730162596184}
+  landingPlayer: {fileID: 114425572374205006}
+  emoteLandingPlayer: {fileID: 114144916910182288}
+  emoteDeathPlayer: {fileID: 114618783866079062}
+  emoteAttackPlayer: {fileID: 114888421251634800}
+  emoteJumpPlayer: {fileID: 114559086519289318}
+  input: {fileID: 0}
+  charCtrl: {fileID: 0}
+  animatorChar: {fileID: 0}
+  IdleTimer: 5
 --- !u!114 &114774522436431888
 MonoBehaviour:
   m_ObjectHideFlags: 1

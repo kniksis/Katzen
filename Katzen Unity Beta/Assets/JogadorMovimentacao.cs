@@ -37,74 +37,69 @@ public class JogadorMovimentacao : MonoBehaviour
     public PlayerDeAudioRandomico emoteAttackPlayer;
     public PlayerDeAudioRandomico emoteJumpPlayer;
 
-    protected AnimatorStateInfo m_CurrentStateInfo;    // Information about the base layer of the animator cached.
+    protected AnimatorStateInfo m_CurrentStateInfo;            //Information about the base layer of the animator cached.
     protected AnimatorStateInfo m_NextStateInfo;
     protected bool m_IsAnimatorTransitioning;
-    protected AnimatorStateInfo m_PreviousCurrentStateInfo;    // Information about the base layer of the animator from last frame.
+    protected AnimatorStateInfo m_PreviousCurrentStateInfo;    //Information about the base layer of the animator from last frame.
     protected AnimatorStateInfo m_PreviousNextStateInfo;
     protected bool m_PreviousIsAnimatorTransitioning;
     protected bool noChao = true;
     protected bool estavaNoChao = true;
     protected bool podePular;
-    protected float velocidadeFowardDesejada;         //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
-    protected float velocidadeFoward;                //Quao rapido o jogador esta indo.
-    protected float velocidadeVertical;               // How fast Ellen is currently moving up or down.
-    protected JogadorInputs input;                 // Reference used to determine how Ellen should move.
-    protected CharacterController charCtrl;      // Reference used to actually move Ellen.
-    protected Animator animator;                 // Reference used to make decisions based on Ellen's current animation and to set parameters.
-    protected Material superficeAtual;    // Reference used to make decisions about audio.
-    protected Quaternion rotacaoAlvo;         // What rotation Ellen is aiming to have based on input.
-    protected float m_AngleDiff;                   // Angle in degrees between Ellen's current rotation and her target rotation.
-    protected Collider[] m_OverlapResult = new Collider[8];    // Used to cache colliders that are near Ellen.
-    protected bool m_InAttack;                     // Whether Ellen is currently in the middle of a melee attack.
-    protected bool m_InCombo;                      // Whether Ellen is currently in the middle of her melee combo.
-    protected AreaDeDano m_Damageable;             // Reference used to set invulnerablity and health based on respawning.
-    protected Renderer[] m_Renderers;              // References used to make sure Renderers are reset properly. 
-    protected Checkpoint m_CurrentCheckpoint;      // Reference used to reset Ellen to the correct position on respawn.
+    protected float velocidadeFowardDesejada;                   //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
+    protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
+    protected float velocidadeVertical;
+    protected JogadorInputs input;
+    protected CharacterController charCtrl;
+    protected Animator animatorChar;
+    protected Material superficeAtual;                          //Usado para fazer as decisoes de troca de audio de acordo com  terreno
+    protected Quaternion rotacaoAlvo;                           //Qual é a rotação que o jogador pretende ter com base no Input.
+    protected float GrausAngulo;                                //Ângulo em graus entre a rotação atual do jogador e a rotação do alvo.
+    protected Collider[] CollidersAVolta = new Collider[8];     //Usado para armazenar em cache colliders que estão próximos ao jogador.
+    protected bool Atacando;                                    //Se o jogador está atualmente no meio de um ataque corpo a corpo
+    protected bool Combando;                                    //Se o jogador está atualmente no meio de seu combo melee.
+    protected AreaDeDano ConsegueAtacar;                        //Referência utilizada para definir a invulnerabilidade e a saúde com base no respawning.
+    protected Renderer[] Renderers;                             //Referências usadas para garantir que os Renderers sejam redefinidos corretamente.
     [SerializeField]
-    protected bool m_Respawning;                   // Whether Ellen is currently respawning.
-    protected float m_IdleTimer;                   // Used to count up to Ellen considering a random idle.
+    protected float IdleTimer;                                  //Usado para contar até o jogador considerando uma ociosidade aleatória.
 
-    // These constants are used to ensure Ellen moves and behaves properly.
-    // It is advised you don't change them without fully understanding what they do in code.
-    const float k_AirborneTurnSpeedProportion = 5.4f;
-    const float k_GroundedRayDistance = 1f;
-    const float k_JumpAbortSpeed = 10f;
-    const float k_MinEnemyDotCoeff = 0.2f;
-    const float k_InverseOneEighty = 1f / 180f;
-    const float k_StickingGravityProportion = 0.3f;
-    const float k_GroundAcceleration = 20f;
-    const float k_GroundDeceleration = 25f;
+    //Essas constantes são usadas para garantir que Ellen se mova e se comporte adequadamente.
+    //É aconselhável que você não os altere sem entender completamente o que eles fazem no código.
+    const float ProporcaoVelocidadeGiroNoAr = 5.4f;             //ProporcaoVelocidadeGiroNoAr
+    const float DistanciaRaioDoChao = 1f;                       //DistanciaRaioDoChao
+    const float ParaPuloVelocidade = 10f;
+    const float MinEnemyDotCoeff = 0.2f;
+    const float InverterUmACentoEoitenta = 1f / 180f;
+    const float StickingGravidadeProporcional = 0.3f;
+    const float AceleracaoChao = 20f;
+    const float DesaceleracaoChao = 25f;
 
-    // Parameters
-
-    readonly int m_HashAirborneVerticalSpeed = Animator.StringToHash("VelocidadeVerticalNoAr");
-    readonly int m_HashForwardSpeed = Animator.StringToHash("FowardVelocity");
-    readonly int m_HashAngleDeltaRad = Animator.StringToHash("DeltaAnguloRadiano");
-    readonly int m_HashTimeoutToIdle = Animator.StringToHash("IrParaIdle");
-    readonly int m_HashGrounded = Animator.StringToHash("NoChao");
-    readonly int m_HashInputDetected = Animator.StringToHash("InputDetected");
-    readonly int m_HashMeleeAttack = Animator.StringToHash("AtaqueMelee");
-    readonly int m_HashHurt = Animator.StringToHash("LevouDano");
-    readonly int m_HashDeath = Animator.StringToHash("Morrer");
-    readonly int m_HashRespawn = Animator.StringToHash("Respawnar");
-    readonly int m_HashHurtFromX = Animator.StringToHash("LevarDanoX");
-    readonly int m_HashHurtFromY = Animator.StringToHash("LevarDanoY");
-    readonly int m_HashStateTime = Animator.StringToHash("TempoDeEstado");
-    readonly int m_HashFootFall = Animator.StringToHash("FootFall");
+    // Parametros
+    readonly int AnimVelocidadeVerticalNoAr = Animator.StringToHash("VelocidadeVerticalNoAr");
+    readonly int AnimVelocidadeFoward = Animator.StringToHash("FowardVelocity");
+    readonly int AnimAnguloDeltaRad = Animator.StringToHash("DeltaAnguloRadiano");
+    readonly int AnimTempoIrParaIdle = Animator.StringToHash("IrParaIdle");
+    readonly int AnimNoChao = Animator.StringToHash("NoChao");
+    readonly int AnimDetectouInput = Animator.StringToHash("DetectarInput");
+    readonly int AnimAtaqueMelee = Animator.StringToHash("AtaqueMelee");
+    readonly int AnimLevouDano = Animator.StringToHash("LevouDano");
+    readonly int AnimMorreuNormal = Animator.StringToHash("Morrer");
+    readonly int AnimRespawnar = Animator.StringToHash("Respawnar");
+    readonly int AnimLevarDanoX = Animator.StringToHash("LevarDanoX");
+    readonly int AnimLevarDanoY = Animator.StringToHash("LevarDanoY");
+    readonly int AnimTempoDeEstado = Animator.StringToHash("TempoDeEstado");
+    readonly int AnimPeNoChao = Animator.StringToHash("FootFall");
 
     // States
-    readonly int m_HashLocomotion = Animator.StringToHash("Movimentacao");
-    readonly int m_HashAirborne = Animator.StringToHash("NoAr");
-    readonly int m_HashLanding = Animator.StringToHash("Aterrissando");    // Also a parameter.
-    readonly int m_HashEllenCombo1 = Animator.StringToHash("Soco1");
-    readonly int m_HashEllenCombo2 = Animator.StringToHash("Soco2");
-    readonly int m_HashEllenCombo3 = Animator.StringToHash("Soco2");
-    readonly int m_HashEllenDeath = Animator.StringToHash("Morte1");
+    readonly int AnimMovimentacao = Animator.StringToHash("Movimentacao");
+    readonly int AnimNoAr = Animator.StringToHash("NoAr");
+    readonly int AnimAterissando = Animator.StringToHash("Aterrissando");    // Also a parameter.
+    readonly int AnimCombo1 = Animator.StringToHash("Soco1");
+    readonly int AnimCombo2 = Animator.StringToHash("Soco2");
+    readonly int AnimCombo3 = Animator.StringToHash("Soco2");
+    readonly int AnimMorte1 = Animator.StringToHash("Morte1");
 
     // Tags
-    readonly int m_HashBlockInput = Animator.StringToHash("BloquearControles");
-
     protected bool IsMoveInput
     {
         get { return !Mathf.Approximately(input.MoveInput.sqrMagnitude, 0f); }
@@ -148,10 +143,10 @@ public class JogadorMovimentacao : MonoBehaviour
     void Awake()
     {
         input = GetComponent<JogadorInputs>();
-        animator = GetComponent<Animator>();
+        animatorChar = GetComponent<Animator>();
         charCtrl = GetComponent<CharacterController>();
 
-        garrasMelee.SetOwner(gameObject);
+        //garrasMelee.SetOwner(gameObject);
 
         s_Instance = this;
     }
@@ -159,26 +154,26 @@ public class JogadorMovimentacao : MonoBehaviour
     // Called automatically by Unity after Awake whenever the script is enabled. 
     void OnEnable()
     {
-        SceneLinkedSMB<JogadorMovimentacao>.Initialise(animator, this);
+        SceneLinkedSMB<JogadorMovimentacao>.Initialise(animatorChar, this);
 
-        m_Damageable = GetComponent<AreaDeDano>();
-        m_Damageable.onDamageMessageReceivers.Add(this);
+        //ConsegueAtacar = GetComponent<AreaDeDano>();
+        //ConsegueAtacar.onDamageMessageReceivers.Add(this);
 
-        m_Damageable.isInvulnerable = true;
+        //ConsegueAtacar.isInvulnerable = true;
 
-        EquipMeleeWeapon(false);
+        //EquipMeleeWeapon(false);
 
-        m_Renderers = GetComponentsInChildren<Renderer>();
+        Renderers = GetComponentsInChildren<Renderer>();
     }
 
     // Called automatically by Unity whenever the script is disabled.
     void OnDisable()
     {
-        m_Damageable.onDamageMessageReceivers.Remove(this);
+        //ConsegueAtacar.onDamageMessageReceivers.Remove(this);
 
-        for (int i = 0; i < m_Renderers.Length; ++i)
+        for (int i = 0; i < Renderers.Length; ++i)
         {
-            m_Renderers[i].enabled = true;
+            Renderers[i].enabled = true;
         }
     }
 
@@ -186,16 +181,13 @@ public class JogadorMovimentacao : MonoBehaviour
     void FixedUpdate()
     {
         CacheAnimatorState();
-
-        UpdateInputBlocking();
-
         EquipMeleeWeapon(IsWeaponEquiped());
 
-        animator.SetFloat(m_HashStateTime, Mathf.Repeat(animator.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
-        animator.ResetTrigger(m_HashMeleeAttack);
+        animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        animatorChar.ResetTrigger(AnimAtaqueMelee);
 
         if (input.AtaqueInput && podeAtacar)
-            animator.SetTrigger(m_HashMeleeAttack);
+            animatorChar.SetTrigger(AnimAtaqueMelee);
 
         CalculateForwardMovement();
         CalculateVerticalMovement();
@@ -219,25 +211,18 @@ public class JogadorMovimentacao : MonoBehaviour
         m_PreviousNextStateInfo = m_NextStateInfo;
         m_PreviousIsAnimatorTransitioning = m_IsAnimatorTransitioning;
 
-        m_CurrentStateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        m_NextStateInfo = animator.GetNextAnimatorStateInfo(0);
-        m_IsAnimatorTransitioning = animator.IsInTransition(0);
+        m_CurrentStateInfo = animatorChar.GetCurrentAnimatorStateInfo(0);
+        m_NextStateInfo = animatorChar.GetNextAnimatorStateInfo(0);
+        m_IsAnimatorTransitioning = animatorChar.IsInTransition(0);
     }
 
     // Called after the animator state has been cached to determine whether this script should block user input.
-    void UpdateInputBlocking()
-    {
-        bool inputBlocked = m_CurrentStateInfo.tagHash == m_HashBlockInput && !m_IsAnimatorTransitioning;
-        inputBlocked |= m_NextStateInfo.tagHash == m_HashBlockInput;
-        input.JogadorInputsBloqueados = inputBlocked;
-    }
-
     // Called after the animator state has been cached to determine whether or not the staff should be active or not.
     bool IsWeaponEquiped()
     {
-        bool equipped = m_NextStateInfo.shortNameHash == m_HashEllenCombo1 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo1;
-        equipped |= m_NextStateInfo.shortNameHash == m_HashEllenCombo2 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo2;
-        equipped |= m_NextStateInfo.shortNameHash == m_HashEllenCombo3 || m_CurrentStateInfo.shortNameHash == m_HashEllenCombo3;
+        bool equipped = m_NextStateInfo.shortNameHash == AnimCombo1 || m_CurrentStateInfo.shortNameHash == AnimCombo1;
+        equipped |= m_NextStateInfo.shortNameHash == AnimCombo2 || m_CurrentStateInfo.shortNameHash == AnimCombo2;
+        equipped |= m_NextStateInfo.shortNameHash == AnimCombo3 || m_CurrentStateInfo.shortNameHash == AnimCombo3;
 
         return equipped;
     }
@@ -246,11 +231,11 @@ public class JogadorMovimentacao : MonoBehaviour
     void EquipMeleeWeapon(bool equip)
     {
         garrasMelee.gameObject.SetActive(equip);
-        m_InAttack = false;
-        m_InCombo = equip;
+        Atacando = false;
+        Combando = equip;
 
         if (!equip)
-            animator.ResetTrigger(m_HashMeleeAttack);
+            animatorChar.ResetTrigger(AnimAtaqueMelee);
     }
 
     // Called each physics step.
@@ -265,13 +250,13 @@ public class JogadorMovimentacao : MonoBehaviour
         velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
 
         // Determine change to speed based on whether there is currently any move input.
-        float acceleration = IsMoveInput ? k_GroundAcceleration : k_GroundDeceleration;
+        float acceleration = IsMoveInput ? AceleracaoChao : DesaceleracaoChao;
 
         // Adjust the forward speed towards the desired speed.
         velocidadeFoward = Mathf.MoveTowards(velocidadeFoward, velocidadeFowardDesejada, acceleration * Time.deltaTime);
 
         // Set the animator parameter to control what animation is being played.
-        animator.SetFloat(m_HashForwardSpeed, velocidadeFoward);
+        animatorChar.SetFloat(AnimVelocidadeFoward, velocidadeFoward);
     }
 
     // Called each physics step.
@@ -284,10 +269,10 @@ public class JogadorMovimentacao : MonoBehaviour
         if (noChao)
         {
             // When grounded we apply a slight negative vertical speed to make Ellen "stick" to the ground.
-            velocidadeVertical = -gravidade * k_StickingGravityProportion;
+            velocidadeVertical = -gravidade * StickingGravidadeProporcional;
 
             // If jump is held, Ellen is ready to jump and not currently in the middle of a melee combo...
-            if (input.PuloInput && podePular && !m_InCombo)
+            if (input.PuloInput && podePular && !Combando)
             {
                 // ... then override the previously set vertical speed and make sure she cannot jump again.
                 velocidadeVertical = velocidadePulo;
@@ -302,7 +287,7 @@ public class JogadorMovimentacao : MonoBehaviour
             {
                 // ... decrease Ellen's vertical speed.
                 // This is what causes holding jump to jump higher that tapping jump.
-                velocidadeVertical -= k_JumpAbortSpeed * Time.deltaTime;
+                velocidadeVertical -= ParaPuloVelocidade * Time.deltaTime;
             }
 
             // If a jump is approximately peaking, make it absolute.
@@ -345,13 +330,13 @@ public class JogadorMovimentacao : MonoBehaviour
         Vector3 resultingForward = targetRotation * Vector3.forward;
 
         // If attacking try to orient to close enemies.
-        if (m_InAttack)
+        if (Atacando)
         {
             // Find all the enemies in the local area.
             Vector3 centre = transform.position + transform.forward * 2.0f + transform.up;
             Vector3 halfExtents = new Vector3(3.0f, 1.0f, 2.0f);
             int layerMask = 1 << LayerMask.NameToLayer("Enemy");
-            int count = Physics.OverlapBoxNonAlloc(centre, halfExtents, m_OverlapResult, targetRotation, layerMask);
+            int count = Physics.OverlapBoxNonAlloc(centre, halfExtents, CollidersAVolta, targetRotation, layerMask);
 
             // Go through all the enemies in the local area...
             float closestDot = 0.0f;
@@ -361,7 +346,7 @@ public class JogadorMovimentacao : MonoBehaviour
             for (int i = 0; i < count; ++i)
             {
                 // ... and for each get a vector from the player to the enemy.
-                Vector3 playerToEnemy = m_OverlapResult[i].transform.position - transform.position;
+                Vector3 playerToEnemy = CollidersAVolta[i].transform.position - transform.position;
                 playerToEnemy.y = 0;
                 playerToEnemy.Normalize();
 
@@ -370,7 +355,7 @@ public class JogadorMovimentacao : MonoBehaviour
                 float d = Vector3.Dot(resultingForward, playerToEnemy);
 
                 // Store the closest enemy.
-                if (d > k_MinEnemyDotCoeff && d > closestDot)
+                if (d > MinEnemyDotCoeff && d > closestDot)
                 {
                     closestForward = playerToEnemy;
                     closestDot = d;
@@ -393,28 +378,28 @@ public class JogadorMovimentacao : MonoBehaviour
         float angleCurrent = Mathf.Atan2(transform.forward.x, transform.forward.z) * Mathf.Rad2Deg;
         float targetAngle = Mathf.Atan2(resultingForward.x, resultingForward.z) * Mathf.Rad2Deg;
 
-        m_AngleDiff = Mathf.DeltaAngle(angleCurrent, targetAngle);
+        GrausAngulo = Mathf.DeltaAngle(angleCurrent, targetAngle);
         rotacaoAlvo = targetRotation;
     }
 
     // Called each physics step to help determine whether Ellen can turn under player input.
     bool IsOrientationUpdated()
     {
-        bool updateOrientationForLocomotion = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == m_HashLocomotion || m_NextStateInfo.shortNameHash == m_HashLocomotion;
-        bool updateOrientationForAirborne = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == m_HashAirborne || m_NextStateInfo.shortNameHash == m_HashAirborne;
-        bool updateOrientationForLanding = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == m_HashLanding || m_NextStateInfo.shortNameHash == m_HashLanding;
+        bool updateOrientationForLocomotion = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimMovimentacao || m_NextStateInfo.shortNameHash == AnimMovimentacao;
+        bool updateOrientationForAirborne = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimNoAr || m_NextStateInfo.shortNameHash == AnimNoAr;
+        bool updateOrientationForLanding = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimAterissando || m_NextStateInfo.shortNameHash == AnimAterissando;
 
-        return updateOrientationForLocomotion || updateOrientationForAirborne || updateOrientationForLanding || m_InCombo && !m_InAttack;
+        return updateOrientationForLocomotion || updateOrientationForAirborne || updateOrientationForLanding || Combando && !Atacando;
     }
 
     // Called each physics step after SetTargetRotation if there is move input and Ellen is in the correct animator state according to IsOrientationUpdated.
     void UpdateOrientation()
     {
-        animator.SetFloat(m_HashAngleDeltaRad, m_AngleDiff * Mathf.Deg2Rad);
+        animatorChar.SetFloat(AnimAnguloDeltaRad, GrausAngulo * Mathf.Deg2Rad);
 
         Vector3 localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
         float groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
-        float actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * k_InverseOneEighty * k_AirborneTurnSpeedProportion * groundedTurnSpeed;
+        float actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
         rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
 
         transform.rotation = rotacaoAlvo;
@@ -423,7 +408,7 @@ public class JogadorMovimentacao : MonoBehaviour
     // Called each physics step to check if audio should be played and if so instruct the relevant random audio player to do so.
     void PlayAudio()
     {
-        float footfallCurve = animator.GetFloat(m_HashFootFall);
+        float footfallCurve = animatorChar.GetFloat(AnimPeNoChao);
 
         if (footfallCurve > 0.01f && !footstepPlayer.playing && footstepPlayer.canPlay)
         {
@@ -451,19 +436,19 @@ public class JogadorMovimentacao : MonoBehaviour
             emoteJumpPlayer.PlayRandomClip();
         }
 
-        if (m_CurrentStateInfo.shortNameHash == m_HashHurt && m_PreviousCurrentStateInfo.shortNameHash != m_HashHurt)
+        if (m_CurrentStateInfo.shortNameHash == AnimLevouDano && m_PreviousCurrentStateInfo.shortNameHash != AnimLevouDano)
         {
             hurtAudioPlayer.PlayRandomClip();
         }
 
-        if (m_CurrentStateInfo.shortNameHash == m_HashEllenDeath && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenDeath)
+        if (m_CurrentStateInfo.shortNameHash == AnimMorte1 && m_PreviousCurrentStateInfo.shortNameHash != AnimMorte1)
         {
             emoteDeathPlayer.PlayRandomClip();
         }
 
-        if (m_CurrentStateInfo.shortNameHash == m_HashEllenCombo1 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo1 ||
-            m_CurrentStateInfo.shortNameHash == m_HashEllenCombo2 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo2 ||
-            m_CurrentStateInfo.shortNameHash == m_HashEllenCombo3 && m_PreviousCurrentStateInfo.shortNameHash != m_HashEllenCombo3)    
+        if (m_CurrentStateInfo.shortNameHash == AnimCombo1 && m_PreviousCurrentStateInfo.shortNameHash != AnimCombo1 ||
+            m_CurrentStateInfo.shortNameHash == AnimCombo2 && m_PreviousCurrentStateInfo.shortNameHash != AnimCombo2 ||
+            m_CurrentStateInfo.shortNameHash == AnimCombo3 && m_PreviousCurrentStateInfo.shortNameHash != AnimCombo3)    
         {
             emoteAttackPlayer.PlayRandomClip();
         }
@@ -475,21 +460,21 @@ public class JogadorMovimentacao : MonoBehaviour
         bool inputDetected = IsMoveInput || input.AtaqueInput || input.PuloInput;
         if (noChao && !inputDetected)
         {
-            m_IdleTimer += Time.deltaTime;
+            IdleTimer += Time.deltaTime;
 
-            if (m_IdleTimer >= idleTempoDeOciosidade)
+            if (IdleTimer >= idleTempoDeOciosidade)
             {
-                m_IdleTimer = 0f;
-                animator.SetTrigger(m_HashTimeoutToIdle);
+                IdleTimer = 0f;
+                animatorChar.SetTrigger(AnimTempoIrParaIdle);
             }
         }
         else
         {
-            m_IdleTimer = 0f;
-            animator.ResetTrigger(m_HashTimeoutToIdle);
+            IdleTimer = 0f;
+            animatorChar.ResetTrigger(AnimTempoIrParaIdle);
         }
 
-        animator.SetBool(m_HashInputDetected, inputDetected);
+        animatorChar.SetBool(AnimDetectouInput, inputDetected);
     }
 
     // Called each physics step (so long as the Animator component is set to Animate Physics) after FixedUpdate to override root motion.
@@ -502,11 +487,11 @@ public class JogadorMovimentacao : MonoBehaviour
         {
             // ... raycast into the ground...
             RaycastHit hit;
-            Ray ray = new Ray(transform.position + Vector3.up * k_GroundedRayDistance * 0.5f, -Vector3.up);
-            if (Physics.Raycast(ray, out hit, k_GroundedRayDistance, Physics.AllLayers, QueryTriggerInteraction.Ignore))
+            Ray ray = new Ray(transform.position + Vector3.up * DistanciaRaioDoChao * 0.5f, -Vector3.up);
+            if (Physics.Raycast(ray, out hit, DistanciaRaioDoChao, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 // ... and get the movement of the root motion rotated to lie along the plane of the ground.
-                movement = Vector3.ProjectOnPlane(animator.deltaPosition, hit.normal);
+                movement = Vector3.ProjectOnPlane(animatorChar.deltaPosition, hit.normal);
 
                 // Also store the current walking surface so the correct audio is played.
                 Renderer groundRenderer = hit.collider.GetComponentInChildren<Renderer>();
@@ -516,7 +501,7 @@ public class JogadorMovimentacao : MonoBehaviour
             {
                 // If no ground is hit just get the movement as the root motion.
                 // Theoretically this should rarely happen as when grounded the ray should always hit.
-                movement = animator.deltaPosition;
+                movement = animatorChar.deltaPosition;
                 superficeAtual = null;
             }
         }
@@ -527,7 +512,7 @@ public class JogadorMovimentacao : MonoBehaviour
         }
 
         // Rotate the transform of the character controller by the animation's root rotation.
-        charCtrl.transform.rotation *= animator.deltaRotation;
+        charCtrl.transform.rotation *= animatorChar.deltaRotation;
 
         // Add to the movement with the calculated vertical speed.
         movement += velocidadeVertical * Vector3.up * Time.deltaTime;
@@ -541,90 +526,27 @@ public class JogadorMovimentacao : MonoBehaviour
         // If Ellen is not on the ground then send the vertical speed to the animator.
         // This is so the vertical speed is kept when landing so the correct landing animation is played.
         if (!noChao)
-            animator.SetFloat(m_HashAirborneVerticalSpeed, velocidadeVertical);
+            animatorChar.SetFloat(AnimVelocidadeVerticalNoAr, velocidadeVertical);
 
         // Send whether or not Ellen is on the ground to the animator.
-        animator.SetBool(m_HashGrounded, noChao);
+        animatorChar.SetBool(AnimNoChao, noChao);
     }
 
     // This is called by an animation event when Ellen swings her staff.
     public void MeleeAttackStart(int throwing = 0)
     {
         garrasMelee.BeginAttack(throwing != 0);
-        m_InAttack = true;
+        Atacando = true;
     }
 
     // This is called by an animation event when Ellen finishes swinging her staff.
     public void MeleeAttackEnd()
     {
         garrasMelee.EndAttack();
-        m_InAttack = false;
+        Atacando = false;
     }
-
-    // This is called by Checkpoints to make sure Ellen respawns correctly.
-    public void SetCheckpoint(Checkpoint checkpoint)
-    {
-        if (checkpoint != null)
-            m_CurrentCheckpoint = checkpoint;
-    }
-
-    // This is usually called by a state machine behaviour on the animator controller but can be called from anywhere.
-    public void Respawn()
-    {
-        StartCoroutine(RespawnRoutine());
-    }
-
-    protected IEnumerator RespawnRoutine()
-    {
-        // Wait for the animator to be transitioning from the EllenDeath state.
-        while (m_CurrentStateInfo.shortNameHash != m_HashEllenDeath || !m_IsAnimatorTransitioning)
-        {
-            yield return null;
-        }
-
-        // Wait for the screen to fade out.
-        yield return StartCoroutine(ScreenFader.FadeSceneOut());
-        while (ScreenFader.IsFading)
-        {
-            yield return null;
-        }
-
-        // Enable spawning.
-        KatzenSpawn spawn = GetComponentInChildren<KatzenSpawn>();
-        spawn.enabled = true;
-
-        // If there is a checkpoint, move Ellen to it.
-        if (m_CurrentCheckpoint != null)
-        {
-            transform.position = m_CurrentCheckpoint.transform.position;
-            transform.rotation = m_CurrentCheckpoint.transform.rotation;
-        }
-        else
-        {
-            Debug.LogError("There is no Checkpoint set, there should always be a checkpoint set. Did you add a checkpoint at the spawn?");
-        }
-
-        // Get Ellen's health back.
-        m_Damageable.ResetDamage();
-
-        // Set the Respawn parameter of the animator.
-        animator.SetTrigger(m_HashRespawn);
-
-        // Start the respawn graphic effects.
-        spawn.StartEffect();
-
-        // Wait for the screen to fade in.
-        // Currently it is not important to yield here but should some changes occur that require waiting until a respawn has finished this will be required.
-        yield return StartCoroutine(ScreenFader.FadeSceneIn());
-    }
-
     // Called by a state machine behaviour on Ellen's animator controller.
-    public void RespawnFinished()
-    {
-        m_Respawning = false;
-        m_Damageable.isInvulnerable = false;
-    }
-
+    
     // Called by Ellen's Damageable when she is hurt.
     public void OnReceiveMessage(MessageType type, object sender, object data)
     {
@@ -649,7 +571,7 @@ public class JogadorMovimentacao : MonoBehaviour
     void Damaged(AreaDeDano.DamageMessage damageMessage)
     {
         // Set the Hurt parameter of the animator.
-        animator.SetTrigger(m_HashHurt);
+        animatorChar.SetTrigger(AnimLevouDano);
 
         // Find the direction of the damage.
         Vector3 forward = damageMessage.damageSource - transform.position;
@@ -658,8 +580,8 @@ public class JogadorMovimentacao : MonoBehaviour
         Vector3 localHurt = transform.InverseTransformDirection(forward);
 
         // Set the HurtFromX and HurtFromY parameters of the animator based on the direction of the damage.
-        animator.SetFloat(m_HashHurtFromX, localHurt.x);
-        animator.SetFloat(m_HashHurtFromY, localHurt.z);
+        animatorChar.SetFloat(AnimLevarDanoX, localHurt.x);
+        animatorChar.SetFloat(AnimLevarDanoY, localHurt.z);
 
         // Shake the camera.
         CameraShake.Shake(CameraShake.k_PlayerHitShakeAmount, CameraShake.k_PlayerHitShakeTime);
@@ -674,10 +596,9 @@ public class JogadorMovimentacao : MonoBehaviour
     // Called by OnReceiveMessage and by DeathVolumes in the scene.
     public void Die(AreaDeDano.DamageMessage damageMessage)
     {
-        animator.SetTrigger(m_HashDeath);
+        animatorChar.SetTrigger(AnimMorreuNormal);
         velocidadeFoward = 0f;
         velocidadeVertical = 0f;
-        m_Respawning = true;
-        m_Damageable.isInvulnerable = true;
+        ConsegueAtacar.isInvulnerable = true;
     }
 }

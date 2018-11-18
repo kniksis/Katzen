@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace Gamekit3D
-{
     public class RandomStateSMB : StateMachineBehaviour
     {
         public int numberOfStates = 3;
@@ -9,9 +7,10 @@ namespace Gamekit3D
         public float maxNormTime = 5f;
 
         protected float m_RandomNormTime;
-
+        
+    [SerializeField]
         readonly int m_HashRandomIdle = Animator.StringToHash("IdleRandomico");
-
+        
         public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             // Randomly decide a time at which to transition.
@@ -32,5 +31,4 @@ namespace Gamekit3D
                 animator.SetInteger(m_HashRandomIdle, Random.Range(0, numberOfStates));
             }
         }
-    } 
-}
+    }
