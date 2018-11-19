@@ -16,13 +16,19 @@ public class JogadorInputs : MonoBehaviour
 
     protected Vector2 MovimentoCtrl;
     protected Vector2 CameraCtrl;
+    protected bool CaminharBt;
+    protected bool CorrerBt;
     protected bool PuloBt;
+    protected float TrocarArmaBt;
+    protected bool MirarBt;
+    protected bool AtirarBt;
     protected bool AtaqueBt;
     protected bool PauseBt;
-    protected bool MirarBt;
     protected bool InputExternoBloqueados;
 
     [Header("Inputs Nomes")]
+    public string CAMINHAR_BT_NAME;
+    public string CORRER_BT_NAME;
     public string JUMP_BT_NAME;
     public string MOV_HORIZONTAL_AN_NAME;
     public string MOV_VERTICAL_AN_NAME;
@@ -54,9 +60,34 @@ public class JogadorInputs : MonoBehaviour
         }
     }
 
+    public bool CaminharInput
+    {
+        get { return CaminharBt /*&& !JogadorInputsBloqueados && !InputExternoBloqueados*/; }
+    }
+
+    public bool CorrerInput
+    {
+        get { return CorrerBt /*&& !JogadorInputsBloqueados && !InputExternoBloqueados*/; }
+    }
+
     public bool PuloInput
     {
         get { return PuloBt /*&& !JogadorInputsBloqueados && !InputExternoBloqueados*/; }
+    }
+
+    public float TrocarArmaInput
+    {
+        get { return TrocarArmaBt; }
+    }
+
+    public bool MirarInput
+    {
+        get { return MirarBt /*&& !JogadorInputsBloqueados && !InputExternoBloqueados*/; }
+    }
+
+    public bool AtirarInput
+    {
+        get { return AtirarBt /*&& !JogadorInputsBloqueados && !InputExternoBloqueados*/; }
     }
 
     public bool AtaqueInput
@@ -66,7 +97,7 @@ public class JogadorInputs : MonoBehaviour
 
     public bool PauseInput
     {
-        get { return PauseInput; }
+        get { return PauseBt; }
     }
 
     WaitForSeconds AtaqueInputDelay;
@@ -89,8 +120,14 @@ public class JogadorInputs : MonoBehaviour
     {
         MovimentoCtrl.Set(Input.GetAxis(MOV_HORIZONTAL_AN_NAME), Input.GetAxis(MOV_VERTICAL_AN_NAME));
         CameraCtrl.Set(Input.GetAxis(CAM_HORIZONTAL_AN_NAME), Input.GetAxis(CAM_VERTICAL_AN_NAME));
+        CaminharBt = Input.GetButton(CAMINHAR_BT_NAME);
+        CorrerBt = Input.GetButton(CORRER_BT_NAME);
+        TrocarArmaBt = Input.GetAxis(TROCA_ARMA_BT_NAME);
+        MirarBt = Input.GetButton(MIRAR_BT_NAME);
+        AtirarBt = Input.GetButton(ATIRAR_BT_NAME);
         PuloBt = Input.GetButton(JUMP_BT_NAME);
 
+        //Talvez fazer o mesmo para o btAtirar
         if (Input.GetButtonDown(ATACAR_BT_NAME))
         {
             if (AtaqueEsperaCorotina != null)

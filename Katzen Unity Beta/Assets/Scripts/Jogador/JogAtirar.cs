@@ -65,6 +65,7 @@ public class JogAtirar : MonoBehaviour
 
         atirou = false;
         animJog.SetBool("Atirou", atirou);
+        animEstilingue.SetBool("Atirou", atirou);
 
         if (Input.GetButtonDown(ATIRAR_BT_NAME))
         {
@@ -92,7 +93,6 @@ public class JogAtirar : MonoBehaviour
         else if (Input.GetButtonUp(ATIRAR_BT_NAME) && !atirou)
         {
             Atirar();
-            animEstilingue.SetBool("Atirou", false);
         }
     }
 
@@ -107,9 +107,11 @@ public class JogAtirar : MonoBehaviour
         //TiroAudioOrigem.clip = AtirouClip;
         //TiroAudioOrigem.Play();
 
+        animEstilingue.SetBool("Atirou", atirou);
         animEstilingue.CrossFade("Atirar", Time.deltaTime);
         animJog.SetBool("Atirou", atirou);
         animJog.CrossFade("AtirarEstilingue", Time.deltaTime);
+
         animJog.SetFloat("ForcaTiro", 0);
         animEstilingue.SetFloat("ForcaTiro", 0);
         animHUDArmas.SetFloat("ForcaEstilingue", 0);

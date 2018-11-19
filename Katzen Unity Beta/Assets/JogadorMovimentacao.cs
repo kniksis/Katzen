@@ -12,8 +12,14 @@ public class JogadorMovimentacao : MonoBehaviour
     public static JogadorMovimentacao instance { get { return s_Instance; } }
     
     [Header("Velocidades de Movimentacao")]
+    [Range(0f, 20f)]
+    [SerializeField]
+    public float velocidadeCaminhadaFoward = 2f;
     [Range(0f, 20f)] [SerializeField]
-    public float velocidadeMaximaFoward = 8f;
+    public float velocidadeNormalFoward = 8f;
+    [Range(0f, 20f)]
+    [SerializeField]
+    public float velocidadeMaximaFoward = 15f;
     [Range(0f, 40f)] [SerializeField]
     public float gravidade = 20f;
     [Range(0f, 20f)] [SerializeField]
@@ -247,7 +253,7 @@ public class JogadorMovimentacao : MonoBehaviour
             moveInput.Normalize();
 
         // Calculate the speed intended by input.
-        velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
+        velocidadeFowardDesejada = moveInput.magnitude * velocidadeNormalFoward;
 
         // Determine change to speed based on whether there is currently any move input.
         float acceleration = IsMoveInput ? AceleracaoChao : DesaceleracaoChao;

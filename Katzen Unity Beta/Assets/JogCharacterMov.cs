@@ -10,10 +10,33 @@ public class JogCharacterMov : MonoBehaviour {
     protected static JogCharacterMov s_Instance;
     public static JogCharacterMov instance { get { return s_Instance; } }
 
+    public enum Mode
+    {
+        AndarNormal = 0,
+        AndarMirando = 1,
+        Escorregar = 2
+    }
+    public Mode action = Mode.AndarNormal;
+
+    public enum Combat
+    {
+        Garras = 0,
+        Estilingue = 1
+    }
+    public Combat combate = Combat.Garras;
+
     [Header("Velocidades de Movimentacao")]
     [Range(0f, 20f)]
     [SerializeField]
-    public float velocidadeMaximaFoward = 8f;
+    public float velocidadeCaminhadaFoward = 2f;
+    [Range(0f, 20f)]
+    [SerializeField]
+    public float velocidadeNormalFoward = 8f;
+    [Range(0f, 20f)]
+    [SerializeField]
+    public float velocidadeMaximaFoward = 15f;
+
+    [Header("Velocidades de Saltos")]
     [Range(0f, 40f)]
     [SerializeField]
     public float gravidade = 20f;
@@ -22,17 +45,24 @@ public class JogCharacterMov : MonoBehaviour {
     public float velocidadePulo = 10f;
     [Range(100f, 600f)]
     [SerializeField]
+
+    [Header("Velocidades de Viradas")]
     public float velocidadeMinimaVirada = 400f;
     [Range(500f, 1500f)]
     [SerializeField]
     public float velocidadeMaximaVirada = 1200f;
+
+    [Header("Idles e Combate")]
     [Range(0f, 20f)]
     [SerializeField]
     public float idleTempoDeOciosidade = 5f;
     public bool podeAtacar;
     public bool podeUsarEstilingue;
+    private int numPulos = 0;
+    private int maxPulos = 1;
 
     public CameraSettings cameraSettings;
+    public Transform cameraOrb;
     //public GarrasMelee garrasMelee;
     public PlayerDeAudioRandomico footstepPlayer;         // Random Audio Players used for various situations.
     public PlayerDeAudioRandomico hurtAudioPlayer;
@@ -42,24 +72,38 @@ public class JogCharacterMov : MonoBehaviour {
     public PlayerDeAudioRandomico emoteAttackPlayer;
     public PlayerDeAudioRandomico emoteJumpPlayer;
 
-    protected AnimatorStateInfo m_CurrentStateInfo;            //Information about the base layer of the animator cached.
-    protected AnimatorStateInfo m_NextStateInfo;
-    protected bool m_IsAnimatorTransitioning;
-    protected AnimatorStateInfo m_PreviousCurrentStateInfo;    //Information about the base layer of the animator from last frame.
-    protected AnimatorStateInfo m_PreviousNextStateInfo;
-    protected bool m_PreviousIsAnimatorTransitioning;
+    [SerializeField]
+    protected AnimatorStateInfo EstadoAtualInfo;            //Information about the base layer of the animator cached.
+    [SerializeField]
+    protected AnimatorStateInfo ProximoEstadoInfo;
+    [SerializeField]
+    protected bool AnimEstaEmTransicao;
+    [SerializeField]
+    protected AnimatorStateInfo EstadoAtualAnteriorInfo;    //Information about the base layer of the animator from last frame.
+    [SerializeField]
+    protected AnimatorStateInfo ProximoEstadoDoAnteriorInfo;
+    [SerializeField]
+    protected bool AnimAnteriorEstaEmAnimacao;
     protected bool noChao = true;
     protected bool estavaNoChao = true;
     protected bool podePular;
+    protected bool pulou;
     protected float velocidadeFowardDesejada;                   //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
     protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
     protected float velocidadeVertical;
+    float angle;
+    Vector2 ultimoMovimento;
+    Vector3 movement;
     [SerializeField]
     protected JogadorInputs input;
     [SerializeField]
     protected CharacterController charCtrl;
     [SerializeField]
     protected Animator animatorChar;
+    protected Animator animHUDArmas;
+    protected Animator animEstilingue;
+    public GameObject Estilingue;
+    public GameObject HUDArmas;
     protected Material superficeAtual;                          //Usado para fazer as decisoes de troca de audio de acordo com  terreno
     protected Quaternion rotacaoAlvo;                           //Qual é a rotação que o jogador pretende ter com base no Input.
     protected float GrausAngulo;                                //Ângulo em graus entre a rotação atual do jogador e a rotação do alvo.
@@ -102,7 +146,7 @@ public class JogCharacterMov : MonoBehaviour {
     // States
     readonly int AnimMovimentacao = Animator.StringToHash("Movimentacao");
     readonly int AnimNoAr = Animator.StringToHash("NoAr");
-    readonly int AnimAterissando = Animator.StringToHash("Aterrissando");    // Also a parameter.
+    readonly int AnimAterissando = Animator.StringToHash("Aterrissando");    // Também é o parametro.
     readonly int AnimCombo1 = Animator.StringToHash("Soco1");
     readonly int AnimCombo2 = Animator.StringToHash("Soco2");
     readonly int AnimCombo3 = Animator.StringToHash("Soco2");
@@ -141,29 +185,60 @@ public class JogCharacterMov : MonoBehaviour {
             if (cameraSettings.lookAt == null)
                 cameraSettings.follow = transform.Find("AlvoCabeca");
         }
+
+        if (Camera.main != null)
+        {
+            cameraOrb = Camera.main.transform;
+        }
     }
 
     // Chamado automaticamente pelo Unity quando o script existe pela primeira vez na cena.
     void Awake()
     {
+        if (Estilingue == null)
+        {
+            Estilingue = GameObject.Find("Estilingue_Animacoes_Root_Travado");
+        }
+
+        if (HUDArmas == null)
+        {
+            HUDArmas = GameObject.Find("ArmasHUD");
+        }
+        
+        if (Camera.main != null)
+        {
+            cameraOrb = Camera.main.transform;
+        }
+
         input = GetComponent<JogadorInputs>();
         animatorChar = GetComponent<Animator>();
+        animEstilingue = Estilingue.GetComponent<Animator>();
+        animHUDArmas = HUDArmas.GetComponent<Animator>();
         charCtrl = GetComponent<CharacterController>();
 
         //garrasMelee.SetOwner(gameObject);
 
         s_Instance = this;
     }
-
     
-
     void Start () {
 		
 	}
 
     // Update é chamado uma vez por frame
     void Update () {
-        
+
+        TrocarArmas();
+
+        switch (combate)
+        {
+            case Combat.Estilingue:
+                Mirar();
+                break;
+            case Combat.Garras:
+
+                break;
+        }
     }
 
     private void FixedUpdate()
@@ -171,29 +246,43 @@ public class JogCharacterMov : MonoBehaviour {
         CacheAnimatorState();
         animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
 
-        CalculaMovimentoParaFrente();
-        CalculaMovimentoVertical();
+        switch (action)
+        {
+            case Mode.AndarNormal:
+                CalculaMovimentoParaFrente();
+                CalculaMovimentoVertical();
 
-        SetTargetRotation();
+                SetTargetRotation();
 
-        if (IsOrientationUpdated() && IsMoveInput)
-            UpdateOrientation();
+                //if (IsOrientationUpdated() && IsMoveInput)
+                if (IsMoveInput)
+                {
+                    CalculateDirection();
+                    Rotate();
+                }
 
-        TimeoutToIdle();
-
+                TimeoutToIdle();
+                break;
+            case Mode.AndarMirando:
+                AnimatorControlWalk8Way();
+                MoverMirando();
+                CalculateDirectionMira();
+                Rotate();
+                break;
+        }
         estavaNoChao = noChao;
     }
 
     // Chamado no início do FixedUpdate para registrar o estado atual da camada base do animador.
     void CacheAnimatorState()
     {
-        m_PreviousCurrentStateInfo = m_CurrentStateInfo;
-        m_PreviousNextStateInfo = m_NextStateInfo;
-        m_PreviousIsAnimatorTransitioning = m_IsAnimatorTransitioning;
+        EstadoAtualAnteriorInfo = EstadoAtualInfo;
+        ProximoEstadoDoAnteriorInfo = ProximoEstadoInfo;
+        AnimAnteriorEstaEmAnimacao = AnimEstaEmTransicao;
 
-        m_CurrentStateInfo = animatorChar.GetCurrentAnimatorStateInfo(0);
-        m_NextStateInfo = animatorChar.GetNextAnimatorStateInfo(0);
-        m_IsAnimatorTransitioning = animatorChar.IsInTransition(0);
+        EstadoAtualInfo = animatorChar.GetCurrentAnimatorStateInfo(0);
+        ProximoEstadoInfo = animatorChar.GetNextAnimatorStateInfo(0);
+        AnimEstaEmTransicao = animatorChar.IsInTransition(0);
     }
 
 
@@ -205,7 +294,20 @@ public class JogCharacterMov : MonoBehaviour {
             moveInput.Normalize();
 
         // Calcule a velocidade pretendida pela entrada.
-        velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
+        if(input.CaminharInput && noChao)
+        {
+            velocidadeFowardDesejada = moveInput.magnitude * velocidadeCaminhadaFoward;
+        }
+
+        else if (input.CorrerInput && noChao)
+        {
+            velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
+        }
+
+        else
+        {
+            velocidadeFowardDesejada = moveInput.magnitude * velocidadeNormalFoward;
+        }
 
         // Determine a mudança para acelerar com base em se há alguma entrada de movimento no momento.
         float acceleration = IsMoveInput ? AceleracaoChao : DesaceleracaoChao;
@@ -219,12 +321,14 @@ public class JogCharacterMov : MonoBehaviour {
     // Chamado cada passo da física.
     void CalculaMovimentoVertical()
     {
+        Vector2 moveInput = input.MoveInput;
         // Se o salto não estiver no momento e Ellen estiver no chão, ela estará pronta para pular.
         if (!input.PuloInput && noChao)
             podePular = true;
 
         if (noChao)
         {
+            numPulos = 0;
             // Quando aterrados aplicamos uma velocidade vertical ligeiramente negativa para fazer o jogador "grudar" no chão.
             // Isso corrige o charCtrl.isGrounded, fazendo com que ele retorce o valor true.
             velocidadeVertical = -gravidade * StickingGravidadeProporcional;
@@ -233,10 +337,11 @@ public class JogCharacterMov : MonoBehaviour {
             if (input.PuloInput && podePular && !Combando)
             {
                 // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente.
-                //Fazer modificacao para que o jogador possa pular duas vezes
+                
                 velocidadeVertical = velocidadePulo;
                 noChao = false;
                 podePular = false;
+                pulou = true;
             }
         }
         else
@@ -245,8 +350,10 @@ public class JogCharacterMov : MonoBehaviour {
             if (!input.PuloInput && velocidadeVertical > 0.0f)
             {
                 // ... diminui a velocidade vertical do jogador.
-                // Isto é o que faz com que o salto de sustentação salte mais alto que o salto de pancada.
+                // Isto é o que faz com que o salto de sustentação salte mais alto que o salto de clique rapido. 
+                //Faz com que o pulo varie de acordo com a pressão aplicada no botao de pulo.
                 velocidadeVertical -= ParaPuloVelocidade * Time.deltaTime;
+                pulou = false;
             }
 
             // Se um salto estiver chegando ao máximo, torne-o absoluto.
@@ -254,9 +361,130 @@ public class JogCharacterMov : MonoBehaviour {
             {
                 velocidadeVertical = 0f;
             }
-
             // Se o jogador estiver no ar, aplique a gravidade.
             velocidadeVertical -= gravidade * Time.deltaTime;
+            ultimoMovimento = moveInput;
+
+            if (input.PuloInput && velocidadeVertical < 0.0f && !pulou && numPulos < maxPulos)
+            {
+                // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente.
+                animatorChar.SetTrigger("PuloDuplo");
+                velocidadeVertical = velocidadePulo;
+                noChao = false;
+                numPulos += 1;
+                //podePular = false;
+            }
+        }
+    }
+
+    private void TrocarArmas()
+    {
+        if (input.TrocarArmaInput > 0)
+        {
+            animatorChar.SetLayerWeight(4, 1.0f);
+            animHUDArmas.SetBool("Armado", true);
+            combate = Combat.Estilingue;
+            TrocadorArma();
+        }
+
+        if (input.TrocarArmaInput < 0)
+        {
+            animatorChar.SetLayerWeight(4, 1.0f);
+            animHUDArmas.SetBool("Armado", false);
+            combate = Combat.Garras;
+            TrocadorArma();
+        }
+    }
+
+    private void TrocadorArma()
+    {
+        if (combate == Combat.Garras)
+        {
+            animatorChar.SetBool("Armado", true);
+            animatorChar.CrossFade("SacarEstilingue", Time.deltaTime);
+        }
+
+        if (combate == Combat.Estilingue)
+        {
+            animatorChar.SetBool("Armado", false);
+            animatorChar.CrossFade("GuardarEstilingue", Time.deltaTime);
+        }
+    }
+
+    public void Mirar()
+    {
+        if (input.MirarInput)
+        {
+            animatorChar.SetLayerWeight(1, 1.0f);
+            animatorChar.SetLayerWeight(2, 1.0f);
+            animatorChar.SetLayerWeight(3, 1.0f);
+            animatorChar.SetLayerWeight(5, 1.0f);
+            animEstilingue.SetBool("Mirar", true);
+            animatorChar.SetBool("Mirar", true);
+            action = Mode.AndarMirando;
+        }
+
+        if (!input.MirarInput)
+        {
+            animatorChar.SetLayerWeight(1, 0.0f);
+            animatorChar.SetLayerWeight(2, 0.0f);
+            animatorChar.SetLayerWeight(3, 0.0f);
+            animatorChar.SetLayerWeight(5, 0.0f);
+            animEstilingue.SetBool("Mirar", false);
+            animatorChar.SetBool("Mirar", false);
+            action = Mode.AndarNormal;
+        }
+    }
+
+    public void zeraPesoLayerAim()
+    {
+        animatorChar.SetLayerWeight(1, 0.0f);
+    }
+
+    void CalculateDirection()
+    {
+        Vector2 moveInput = input.MoveInput;
+        angle = Mathf.Atan2(moveInput.x, moveInput.y);
+        angle = Mathf.Rad2Deg * angle;//converte para graus
+        angle += cameraOrb.eulerAngles.y;
+    }
+
+    void CalculateDirectionMira()//Trava a mira do jogador para a direção da camera
+    {
+        //Relativa a rotação da camera
+        angle = Mathf.Atan2(0, 0);
+        angle = Mathf.Rad2Deg * angle;//converte para graus
+        angle += cameraOrb.eulerAngles.y;
+    }
+
+    void Rotate()
+    {
+        Vector3 localInput;
+        float groundedTurnSpeed;
+        float actualTurnSpeed;
+        switch (action)
+        {
+            case Mode.AndarNormal:
+                animatorChar.SetFloat(AnimAnguloDeltaRad, GrausAngulo * Mathf.Deg2Rad);
+
+                localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
+                groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
+                actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
+
+                rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
+
+                transform.rotation = rotacaoAlvo;
+                break;
+            case Mode.AndarMirando:
+
+                localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
+                groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
+                actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
+
+                rotacaoAlvo = Quaternion.Euler(0, angle, 0);//converte para quaternion
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
+
+                break;
         }
     }
 
@@ -286,8 +514,6 @@ public class JogCharacterMov : MonoBehaviour {
 
         // A direção direta desejada do jogador.
         Vector3 resultingForward = targetRotation * Vector3.forward;
-
-        Debug.Log(targetRotation);
 
         // Se atacar, tente orientar para a direcao dos inimigos.
         if (Atacando)
@@ -346,24 +572,11 @@ public class JogCharacterMov : MonoBehaviour {
     // Chamado de cada passo da física para ajudar a determinar se o jogador pode se virar sob a entrada do jogador.
     bool IsOrientationUpdated()
     {
-        bool updateOrientationForLocomotion = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimMovimentacao || m_NextStateInfo.shortNameHash == AnimMovimentacao;
-        bool updateOrientationForAirborne = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimNoAr || m_NextStateInfo.shortNameHash == AnimNoAr;
-        bool updateOrientationForLanding = !m_IsAnimatorTransitioning && m_CurrentStateInfo.shortNameHash == AnimAterissando || m_NextStateInfo.shortNameHash == AnimAterissando;
+        bool updateOrientationForLocomotion = !AnimEstaEmTransicao && EstadoAtualInfo.shortNameHash == AnimMovimentacao || ProximoEstadoInfo.shortNameHash == AnimMovimentacao;
+        bool updateOrientationForAirborne = !AnimEstaEmTransicao && EstadoAtualInfo.shortNameHash == AnimNoAr || ProximoEstadoInfo.shortNameHash == AnimNoAr;
+        bool updateOrientationForLanding = !AnimEstaEmTransicao && EstadoAtualInfo.shortNameHash == AnimAterissando || ProximoEstadoInfo.shortNameHash == AnimAterissando;
 
         return updateOrientationForLocomotion || updateOrientationForAirborne || updateOrientationForLanding || Combando && !Atacando;
-    }
-
-    // Chamado cada passo da física após SetTargetRotation, se houver movimento de entrada o jogador estiver no estado correto do animador, de acordo com IsOrientationUpdated.
-    void UpdateOrientation()
-    {
-        animatorChar.SetFloat(AnimAnguloDeltaRad, GrausAngulo * Mathf.Deg2Rad);
-
-        Vector3 localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
-        float groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
-        float actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
-        rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
-
-        transform.rotation = rotacaoAlvo;
     }
 
     // Chamei cada passo da física para contar até o ponto em que Ellen considera uma ociosidade aleatória.
@@ -389,9 +602,23 @@ public class JogCharacterMov : MonoBehaviour {
         animatorChar.SetBool(AnimDetectouInput, inputDetected);
     }
 
+    void AnimatorControlWalk8Way()
+    {
+        Vector3 localvelocity;
+        localvelocity = transform.InverseTransformDirection(Vector3.forward);
+        //animatorChar.SetFloat("velocity", localvelocity.z, 0.1f, Time.deltaTime);
+        //animatorChar.SetFloat("MiraX", cameraGO.transform.rotation.x);
+    }
+
+    private void MoverMirando()
+    {
+        animatorChar.SetFloat("MoveX", input.MoveInput.x);
+        animatorChar.SetFloat("MoveZ", input.MoveInput.y);
+    }
+
     void OnAnimatorMove()
     {
-        Vector3 movement;
+        //Vector3 movement;
 
         // If se o jogador esta no chao...
         if (noChao)
@@ -447,5 +674,23 @@ public class JogCharacterMov : MonoBehaviour {
     {
         Respawnando = false;
         //ConsegueAtacar.isInvulnerable = false;
+    }
+
+    //Ainda da para melhorar o wall jump
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        //if (hit.gameObject.tag == "WallJump" && !noChao)
+        //{
+        //    Debug.Log("WallJump");
+        //}
+        if (charCtrl.collisionFlags == CollisionFlags.Sides)
+        {
+            if (input.PuloInput)
+            {
+                Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
+                movement = hit.normal * velocidadeFoward;
+                movement.y = velocidadePulo;
+            }
+        }
     }
 }

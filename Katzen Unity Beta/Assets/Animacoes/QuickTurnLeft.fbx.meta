@@ -269,8 +269,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Virada Rapida Esquerda
       takeName: Take 001
-      firstFrame: 40
-      lastFrame: 80
+      firstFrame: 45
+      lastFrame: 70
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
