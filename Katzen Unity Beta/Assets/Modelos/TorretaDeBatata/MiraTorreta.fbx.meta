@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: aea43406f662fbb4c8283a0bbbf4f773
+guid: 87f64b2bb6160e14fa63abf5ea36c1a0
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: MiraInimigo__Script__Default_Prototype1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube1
+    4300000: MiraTorreta
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 13
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -65,7 +65,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

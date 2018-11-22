@@ -37,7 +37,7 @@ public class MirarNoJogador : MonoBehaviour
 											targetObj.position.z);
 			transform.LookAt(targetPostition);*/
 
-			Vector3 dirFromToTarget = jemScript.player.transform.position - transform.position;
+			Vector3 dirFromToTarget = jemScript.jogadorGO.transform.position - transform.position;
 			dirFromToTarget.y = 0.0f;
 			Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
 			transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * (delayGiro / 360.0f));

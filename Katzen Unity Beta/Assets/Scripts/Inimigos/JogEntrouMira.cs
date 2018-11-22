@@ -6,7 +6,7 @@ public class JogEntrouMira : MonoBehaviour {
 
 	public bool jogEntrou;
 
-    public GameObject player;
+    public GameObject jogadorGO;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +23,7 @@ public class JogEntrouMira : MonoBehaviour {
 		if (col.CompareTag("Player"))
 		{
 			jogEntrou = true;
-            player = col.gameObject;
+            jogadorGO = col.gameObject;
 
         }
 	}
@@ -33,7 +33,7 @@ public class JogEntrouMira : MonoBehaviour {
 		if (col.CompareTag("Player"))
 		{
 			jogEntrou = false;
-            player = null;
+            jogadorGO = null;
 		}
 	}
 }
