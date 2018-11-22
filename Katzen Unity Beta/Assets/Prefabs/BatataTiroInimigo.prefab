@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114325757307434074}
   - component: {fileID: 114874102026210620}
   m_Layer: 0
-  m_Name: BatataTiro
+  m_Name: BatataTiroInimigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

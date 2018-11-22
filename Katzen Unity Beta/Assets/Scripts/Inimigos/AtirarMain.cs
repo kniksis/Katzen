@@ -25,7 +25,7 @@ public class AtirarMain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (anjScript.atirar == true)
+		/*if (anjScript.atirar == true)
 		{
 			Debug.Log("To atirando, seu Animal!");
 
@@ -35,6 +35,6 @@ public class AtirarMain : MonoBehaviour {
    //             temp.transform.position = anjScript.respawnTiro.position;
    //             temp.SetActive(true);
    //         }
-        }
+        }*/
 	}
 }
