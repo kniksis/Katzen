@@ -4,37 +4,87 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Atiradeira_de_Batata
-    100002: //RootNode
-    100004: HeliceFrontDir
-    100006: HeliceFrontEsq
-    100008: HeliceTrasDir
-    100010: HeliceTrasEsq
+    100002: CameraParteBaixo
+    100004: CameraParteCima
+    100006: Cerebro
+    100008: //RootNode
+    100010: GarrafaDireita
+    100012: GarrafaEsquerda
+    100014: HeliceFrontDir
+    100016: HeliceFrontEsq
+    100018: HeliceTrasDir
+    100020: HeliceTrasEsq
+    100022: MotorHeliceFrontDir
+    100024: MotorHeliceFrontEsq
+    100026: MotorHeliceTrasDir
+    100028: MotorHeliceTrasEsq
     400000: Atiradeira_de_Batata
-    400002: //RootNode
-    400004: HeliceFrontDir
-    400006: HeliceFrontEsq
-    400008: HeliceTrasDir
-    400010: HeliceTrasEsq
-    2100000: lambert1
+    400002: CameraParteBaixo
+    400004: CameraParteCima
+    400006: Cerebro
+    400008: //RootNode
+    400010: GarrafaDireita
+    400012: GarrafaEsquerda
+    400014: HeliceFrontDir
+    400016: HeliceFrontEsq
+    400018: HeliceTrasDir
+    400020: HeliceTrasEsq
+    400022: MotorHeliceFrontDir
+    400024: MotorHeliceFrontEsq
+    400026: MotorHeliceTrasDir
+    400028: MotorHeliceTrasEsq
+    2100000: DroneTexura
     2300000: Atiradeira_de_Batata
-    2300002: //RootNode
-    2300004: HeliceFrontDir
-    2300006: HeliceFrontEsq
-    2300008: HeliceTrasDir
-    2300010: HeliceTrasEsq
+    2300002: CameraParteBaixo
+    2300004: CameraParteCima
+    2300006: Cerebro
+    2300008: //RootNode
+    2300010: GarrafaDireita
+    2300012: GarrafaEsquerda
+    2300014: HeliceFrontDir
+    2300016: HeliceFrontEsq
+    2300018: HeliceTrasDir
+    2300020: HeliceTrasEsq
+    2300022: MotorHeliceFrontDir
+    2300024: MotorHeliceFrontEsq
+    2300026: MotorHeliceTrasDir
+    2300028: MotorHeliceTrasEsq
     3300000: Atiradeira_de_Batata
-    3300002: //RootNode
-    3300004: HeliceFrontDir
-    3300006: HeliceFrontEsq
-    3300008: HeliceTrasDir
-    3300010: HeliceTrasEsq
-    4300000: CorpoDrone
+    3300002: CameraParteBaixo
+    3300004: CameraParteCima
+    3300006: Cerebro
+    3300008: //RootNode
+    3300010: GarrafaDireita
+    3300012: GarrafaEsquerda
+    3300014: HeliceFrontDir
+    3300016: HeliceFrontEsq
+    3300018: HeliceTrasDir
+    3300020: HeliceTrasEsq
+    3300022: MotorHeliceFrontDir
+    3300024: MotorHeliceFrontEsq
+    3300026: MotorHeliceTrasDir
+    3300028: MotorHeliceTrasEsq
+    4300000: Base
     4300002: Atiradeira_de_Batata
-    4300004: HeliceFrontDir
-    4300006: HeliceTrasDir
-    4300008: HeliceTrasEsq
-    4300010: HeliceFrontEsq
-  externalObjects: {}
+    4300004: Cerebro
+    4300006: MotorHeliceTrasDir
+    4300008: HeliceTrasDir
+    4300010: MotorHeliceTrasEsq
+    4300012: HeliceTrasEsq
+    4300014: MotorHeliceFrontDir
+    4300016: HeliceFrontDir
+    4300018: MotorHeliceFrontEsq
+    4300020: HeliceFrontEsq
+    4300022: CameraParteBaixo
+    4300024: CameraParteCima
+    4300026: GarrafaDireita
+    4300028: GarrafaEsquerda
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DroneTexura
+    second: {fileID: 2100000, guid: 3e33c1d6601823e4a89eeb3ab2fd24e7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,7 +115,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

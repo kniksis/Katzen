@@ -64,7 +64,7 @@ public class Torreta : MonoBehaviour {
                 Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
 
                 tiroInstancia.velocity = (forcaAtual + JogadorDistancia / 2.5f) * respawnTiro.forward;
-                Time.timeScale = 0.4f;
+                //Time.timeScale = 0.4f;
                 animator.SetTrigger("Atirar");
             }
         }
