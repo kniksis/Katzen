@@ -14,11 +14,12 @@ public class Torreta : MonoBehaviour {
     
     public JogEntrouMira MiraDaTorretaScript;
     public float CorrecaoDeMira;
+
     [SerializeField]
     private GameObject apontar;
 
     [SerializeField]
-    private float InimigoAtualDistancia;
+    private float JogadorDistancia;
     
     public float delayGiro = 5;
 
@@ -46,6 +47,11 @@ public class Torreta : MonoBehaviour {
 	void Update () {
         MirarNoJog();
         AtirarNoJog();
+        if(MiraDaTorretaScript.jogEntrou)
+        {
+            JogadorDistancia = Vector3.Distance(MiraDaTorretaScript.jogadorGO.transform.position, transform.position);
+            print("Distance to other: " + JogadorDistancia);
+        }
     }
 
     private void AtirarNoJog()
@@ -57,7 +63,8 @@ public class Torreta : MonoBehaviour {
                 nextFire = Time.time + fireRate;
                 Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
 
-                tiroInstancia.velocity = forcaAtual * respawnTiro.forward;
+                tiroInstancia.velocity = (forcaAtual + JogadorDistancia / 2.5f) * respawnTiro.forward;
+                Time.timeScale = 0.4f;
                 animator.SetTrigger("Atirar");
             }
         }
@@ -71,7 +78,7 @@ public class Torreta : MonoBehaviour {
             Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
             apontar.transform.rotation = Quaternion.Lerp(apontar.transform.rotation, lookRotation, Time.deltaTime * (delayGiro / 360.0f));//Faço uso de um gameobjec vazio para mirar no jogador, apos isso eu uso o seu valor de y de rotacao para a mira com animacao
 
-            float deg = apontar.transform.rotation.y * Mathf.Rad2Deg;//Converte   graus radianos.
+            float deg = apontar.transform.localRotation.y * Mathf.Rad2Deg;//Converte   graus radianos.
             animator.SetFloat("DirecaoMiraY", deg * CorrecaoDeMira);//1.6f é para um ajuste mais perfeito de mira, para que ela não fique olhando atrasada.
         }
 
@@ -79,7 +86,7 @@ public class Torreta : MonoBehaviour {
         else
         {
             apontar.transform.rotation = Quaternion.Lerp(apontar.transform.rotation, this.transform.rotation, Time.deltaTime * (delayGiro / 360.0f));
-            float deg = apontar.transform.rotation.y * Mathf.Rad2Deg;//Converte radianos para graus.
+            float deg = apontar.transform.localRotation.y * Mathf.Rad2Deg;//Converte radianos para graus.
             animator.SetFloat("DirecaoMiraY", deg * CorrecaoDeMira);
         }
     }
