@@ -57,7 +57,7 @@ public class JogCharacterMov : MonoBehaviour {
     [SerializeField]
     public float idleTempoDeOciosidade = 5f;
     public bool podeAtacar;
-    public bool podeUsarEstilingue;
+    public bool podeAtirar;
     private int numPulos = 0;
     private int maxPulos = 1;
 
@@ -158,6 +158,11 @@ public class JogCharacterMov : MonoBehaviour {
         get { return !Mathf.Approximately(input.MoveInput.sqrMagnitude, 0f); }
     }
 
+    public void SetPodeAtacar(bool podeAtacar)
+    {
+        this.podeAtacar = podeAtacar;
+    }
+
     //Chamado automaticamente pelo Unity quando o script é adicionado pela primeira vez a um objeto de jogo ou é redefinido no menu de contexto.
     void Reset()
     {
@@ -222,7 +227,7 @@ public class JogCharacterMov : MonoBehaviour {
     }
     
     void Start () {
-		
+        SetPodeAtacar(true);
 	}
 
     // Update é chamado uma vez por frame
@@ -234,9 +239,12 @@ public class JogCharacterMov : MonoBehaviour {
         {
             case Combat.Estilingue:
                 Mirar();
+                podeAtirar = true;
+                SetPodeAtacar(false);
                 break;
             case Combat.Garras:
-
+                SetPodeAtacar(true);
+                podeAtirar = false;
                 break;
         }
     }
@@ -249,6 +257,14 @@ public class JogCharacterMov : MonoBehaviour {
         switch (action)
         {
             case Mode.AndarNormal:
+
+                animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+                animatorChar.ResetTrigger(AnimAtaqueMelee);
+
+                //if (input.AtaqueInput && podeAtacar)
+                if (input.AtaqueInput && podeAtacar)
+                    animatorChar.SetTrigger(AnimAtaqueMelee);
+
                 CalculaMovimentoParaFrente();
                 CalculaMovimentoVertical();
 
@@ -402,12 +418,14 @@ public class JogCharacterMov : MonoBehaviour {
         {
             animatorChar.SetBool("Armado", true);
             animatorChar.CrossFade("SacarEstilingue", Time.deltaTime);
+            SetPodeAtacar(true);
         }
 
         if (combate == Combat.Estilingue)
         {
             animatorChar.SetBool("Armado", false);
             animatorChar.CrossFade("GuardarEstilingue", Time.deltaTime);
+            SetPodeAtacar(false);
         }
     }
 

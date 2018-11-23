@@ -10,7 +10,7 @@ public class JogAtirar : MonoBehaviour
     public AudioSource TiroAudioOrigem;
     public AudioClip CarregandoClip;
     public AudioClip AtirouClip;
-    
+
     public Animator animJog;
     public Animator animHUDArmas;
     public Animator animEstilingue;
@@ -31,7 +31,10 @@ public class JogAtirar : MonoBehaviour
 
     GameObject gameManagerGO;
 	GameManager gmScript;
-
+    
+    JogCharacterMov jogMoveScript;
+    
+    protected JogadorInputs input;
     public string ATIRAR_BT_NAME;
     public string ATIRAR_AN_NAME;
 
@@ -50,9 +53,14 @@ public class JogAtirar : MonoBehaviour
         VelocidadeForca = (ForcaMaxima - ForcaMinima) / TempoMaximoForca;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        input = GetComponent<JogadorInputs>();
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         //if(ForcaAtual >= ForcaMaxima && !atirou)
         //{
@@ -62,37 +70,39 @@ public class JogAtirar : MonoBehaviour
         //if (Time.time > ProximoTiro)
         //{
         //    ProximoTiro = Time.time + TiroFrequencia;
-
-        atirou = false;
-        animJog.SetBool("Atirou", atirou);
-
-        if (Input.GetButtonDown(ATIRAR_BT_NAME))
+        if (jogMoveScript.podeAtirar)
         {
             atirou = false;
-            ForcaAtual = ForcaMinima;
+            animJog.SetBool("Atirou", atirou);
 
-            //Som atirar aqui
-            //TiroAudioOrigem.clip = CarregandoClip;
-            //TiroAudioOrigem.Play();
-        }
+            if (input.AtirarInput)
+            {
+                atirou = false;
+                ForcaAtual = ForcaMinima;
 
-        else if (Input.GetButton(ATIRAR_BT_NAME) && !atirou)
-        {
-            ForcaAtual += VelocidadeForca * Time.deltaTime;
+                //Som atirar aqui
+                //TiroAudioOrigem.clip = CarregandoClip;
+                //TiroAudioOrigem.Play();
+            }
 
-            //Sloder e animacoes aqui
-            //m_AimSlider.value = ForcaAtual;
-            ForcaLancamentoAnim = (ForcaAtual) / ForcaMaxima;
+            else if (Input.GetButton(ATIRAR_BT_NAME) && !atirou)
+            {
+                ForcaAtual += VelocidadeForca * Time.deltaTime;
 
-            animJog.SetFloat("ForcaTiro", ForcaLancamentoAnim);
-            animEstilingue.SetFloat("ForcaTiro", ForcaLancamentoAnim);
-            animHUDArmas.SetFloat("ForcaEstilingue", ForcaLancamentoAnim);
-        }
+                //Sloder e animacoes aqui
+                //m_AimSlider.value = ForcaAtual;
+                ForcaLancamentoAnim = (ForcaAtual) / ForcaMaxima;
 
-        else if (Input.GetButtonUp(ATIRAR_BT_NAME) && !atirou)
-        {
-            Atirar();
-            animEstilingue.SetBool("Atirou", false);
+                animJog.SetFloat("ForcaTiro", ForcaLancamentoAnim);
+                animEstilingue.SetFloat("ForcaTiro", ForcaLancamentoAnim);
+                animHUDArmas.SetFloat("ForcaEstilingue", ForcaLancamentoAnim);
+            }
+
+            else if (Input.GetButtonUp(ATIRAR_BT_NAME) && !atirou)
+            {
+                Atirar();
+                animEstilingue.SetBool("Atirou", false);
+            }
         }
     }
 

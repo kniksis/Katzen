@@ -1,7 +1,6 @@
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Boo.Lang.dll
-C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Facebook.Unity.Settings.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\KdTreeLib.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\mscorlib.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\pb_Stl.dll
@@ -175,3 +174,7 @@ C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\ProBuilderMeshO
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Unity.ProBuilder.AddOns.Editor.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Unity.ProGrids.dll
 C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Unity.ProGrids.Editor.dll
+C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Cinemachine.pdb
+C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\com.unity.postprocessing.Editor.pdb
+C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\com.unity.postprocessing.Runtime.pdb
+C:\Users\kniks\Downloads\Katzen\Katzen Unity Beta\Temp\bin\Debug\Cinemachine.Editor.pdb
