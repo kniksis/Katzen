@@ -31,7 +31,10 @@ public class Torreta : MonoBehaviour {
     public Transform respawnTiro;
 
     public float fireRate = 0.5f;
-    public float nextFire = 0.0f;
+    private float nextFire = 0.0f;
+
+    public float RateCombo = 0.3f;
+    private float proximoSoco = 0.0f;
     public float forcaAtual;
 
     public bool atirar;
@@ -100,13 +103,29 @@ public class Torreta : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Garras" && JogMCScript.Atacando)
+        if (other.gameObject.tag == "Garras" && JogMCScript.Atacando)
         {
-            tmpDirection = (other.transform.position - transform.position);
-            tmpContactPoint = transform.position + tmpDirection;
-
-            Instantiate<GameObject>(particulaDano, tmpContactPoint, transform.rotation);
-            animator.SetTrigger("LevarDano");
+            LevarDano(other);
+            Debug.Log("Dar Dano Por ENTER");
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Garras" && JogMCScript.Atacando && Time.time > proximoSoco)
+        {
+            proximoSoco = Time.time + RateCombo;
+            Debug.Log("Dar Dano Por STAY");
+            LevarDano(other);
+        }
+    }
+
+    void LevarDano(Collider other)
+    {
+        tmpDirection = (other.transform.position - transform.position);
+        tmpContactPoint = transform.position + tmpDirection;
+
+        Instantiate<GameObject>(particulaDano, tmpContactPoint, transform.rotation);
+        animator.SetTrigger("LevarDano");
     }
 }

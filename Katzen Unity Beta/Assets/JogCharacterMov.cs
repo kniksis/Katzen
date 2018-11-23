@@ -14,7 +14,7 @@ public class JogCharacterMov : MonoBehaviour {
     {
         AndarNormal = 0,
         AndarMirando = 1,
-        Escorregar = 2
+        NoWallJump = 2
     }
     public Mode action = Mode.AndarNormal;
 
@@ -71,9 +71,8 @@ public class JogCharacterMov : MonoBehaviour {
     public PlayerDeAudioRandomico emoteDeathPlayer;
     public PlayerDeAudioRandomico emoteAttackPlayer;
     public PlayerDeAudioRandomico emoteJumpPlayer;
-
-    [SerializeField]
-    protected AnimatorStateInfo EstadoAtualInfo;            //Information about the base layer of the animator cached.
+    
+    AnimatorStateInfo EstadoAtualInfo;            //Information about the base layer of the animator cached.
     [SerializeField]
     protected AnimatorStateInfo ProximoEstadoInfo;
     [SerializeField]
@@ -88,6 +87,7 @@ public class JogCharacterMov : MonoBehaviour {
     protected bool estavaNoChao = true;
     protected bool podePular;
     protected bool pulou;
+    protected bool noWallJump;
     protected float velocidadeFowardDesejada;                   //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
     protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
     protected float velocidadeVertical;
@@ -232,7 +232,7 @@ public class JogCharacterMov : MonoBehaviour {
 
     // Update é chamado uma vez por frame
     void Update () {
-
+        
         TrocarArmas();
 
         switch (combate)
@@ -383,13 +383,21 @@ public class JogCharacterMov : MonoBehaviour {
             {
                 velocidadeVertical = 0f;
             }
-            // Se o jogador estiver no ar, aplique a gravidade.
-            velocidadeVertical -= gravidade * Time.deltaTime;
-            ultimoMovimento = moveInput;
+            if (!noWallJump)
+            {
+                // Se o jogador estiver no ar, e não estiver em um wallJump, aplique a gravidade.
+                velocidadeVertical -= gravidade * Time.deltaTime;
+                ultimoMovimento = moveInput;
+            }
+            else
+            {
+                velocidadeVertical -= (gravidade / 100) * Time.deltaTime;
+                ultimoMovimento = moveInput;
+            }
 
             if (input.PuloInput && velocidadeVertical < 0.0f && !pulou && numPulos < maxPulos)
             {
-                // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente.
+                // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente apos atingir o numero maximo de pulos.
                 animatorChar.SetTrigger("PuloDuplo");
                 velocidadeVertical = velocidadePulo;
                 noChao = false;
@@ -647,7 +655,7 @@ public class JogCharacterMov : MonoBehaviour {
     void OnAnimatorMove()
     {
         //Vector3 movement;
-
+        
         // If se o jogador esta no chao...
         if (noChao)
         {
@@ -711,14 +719,21 @@ public class JogCharacterMov : MonoBehaviour {
         //{
         //    Debug.Log("WallJump");
         //}
-        if (charCtrl.collisionFlags == CollisionFlags.Sides)
+        
+        Debug.Log(hit.gameObject.tag);
+        if (hit.gameObject.tag == "WallJump")
         {
-            if (input.PuloInput)
+            if (charCtrl.collisionFlags == CollisionFlags.Sides)
             {
-                Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
-                movement = hit.normal * velocidadeFoward;
-                movement.y = velocidadePulo;
+                if (input.PuloInput && velocidadeVertical < 0.0f)
+                {
+                    Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
+                    //noWallJump = true;
+                    //movement = hit.normal * velocidadeFoward;
+                    //movement.y = velocidadePulo;
+                }
             }
         }
+
     }
 }

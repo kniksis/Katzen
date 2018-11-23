@@ -687,7 +687,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4440953249360268}
-  - component: {fileID: 135498724986001050}
+  - component: {fileID: 136800888657395378}
   - component: {fileID: 54613687776377944}
   m_Layer: 10
   m_Name: Katzen_Mao_B_Esq_jnt
@@ -929,7 +929,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4366564376279002}
-  - component: {fileID: 135108882021351830}
+  - component: {fileID: 136261342294858890}
   - component: {fileID: 54395133498272710}
   m_Layer: 10
   m_Name: Katzen_Mao_B_Dir_jnt
@@ -6992,7 +6992,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 20b7cf748a0b3ed48b697c0bb302d032, type: 3}
   m_Controller: {fileID: 9100000, guid: 7df9973b56d7b2d4886ddde88341316b, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -7339,8 +7339,8 @@ MonoBehaviour:
   mat: {fileID: 0}
   go: {fileID: 1877264053181176}
   AddQuantTerra: 0.01
---- !u!135 &135108882021351830
-SphereCollider:
+--- !u!136 &136261342294858890
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -7348,11 +7348,12 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135498724986001050
-SphereCollider:
+  m_Radius: 0.04
+  m_Height: 0.14
+  m_Direction: 0
+  m_Center: {x: 0.03, y: 0.014, z: 0}
+--- !u!136 &136800888657395378
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -7360,9 +7361,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.07
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.04
+  m_Height: 0.14
+  m_Direction: 0
+  m_Center: {x: -0.03, y: -0.014, z: 0}
 --- !u!137 &137510510739789588
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
