@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4261082809632124}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Elastico_dir_baixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780797866702138}
   - component: {fileID: 137600488643782372}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Estilingue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557723953072112}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Couro_esq 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4544970263924152}
   - component: {fileID: 95273992320417930}
   - component: {fileID: 114082695502439358}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue_Animacoes_Root_Travado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4156113722736896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Suporte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4066387673289590}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4578167801956878}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Couro_dir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4591009812207422}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Elastico_dir_cima
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4423891940900250}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Couro_dir 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4051060028586778}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Couro_esq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4963399501539760}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Elastico_esq_baixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4650755611009282}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Suporte_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4733082887718458}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Estilingue1_0_4:Elastico_esq_cima
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4963399501539760}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.41200924, y: 91.46514, z: 0.7542722}
 --- !u!4 &4066387673289590
 Transform:
   m_ObjectHideFlags: 1
@@ -286,7 +286,7 @@ Transform:
   - {fileID: 4650755611009282}
   m_Father: {fileID: 4066387673289590}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.3229053, y: -89.75038, z: -21.589949}
 --- !u!4 &4261082809632124
 Transform:
   m_ObjectHideFlags: 1
@@ -313,7 +313,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4591009812207422}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.68490195, y: 88.586395, z: -0.63521934}
 --- !u!4 &4544970263924152
 Transform:
   m_ObjectHideFlags: 1
@@ -341,7 +341,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4733082887718458}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.41109347, y: 91.41343, z: 0.85028505}
 --- !u!4 &4578167801956878
 Transform:
   m_ObjectHideFlags: 1
@@ -354,7 +354,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4261082809632124}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.685704, y: 88.54856, z: -0.5387729}
 --- !u!4 &4591009812207422
 Transform:
   m_ObjectHideFlags: 1

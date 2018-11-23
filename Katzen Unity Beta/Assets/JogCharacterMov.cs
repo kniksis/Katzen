@@ -108,7 +108,7 @@ public class JogCharacterMov : MonoBehaviour {
     protected Quaternion rotacaoAlvo;                           //Qual é a rotação que o jogador pretende ter com base no Input.
     protected float GrausAngulo;                                //Ângulo em graus entre a rotação atual do jogador e a rotação do alvo.
     protected Collider[] CollidersAVolta = new Collider[8];     //Usado para armazenar em cache colliders que estão próximos ao jogador.
-    protected bool Atacando;                                    //Se o jogador está atualmente no meio de um ataque corpo a corpo
+    public bool Atacando;                                    //Se o jogador está atualmente no meio de um ataque corpo a corpo
     protected bool Combando;                                    //Se o jogador está atualmente no meio de seu combo melee.
     protected AreaDeDano ConsegueAtacar;                        //Referência utilizada para definir a invulnerabilidade e a saúde com base no respawning.
     protected Renderer[] Renderers;                             //Referências usadas para garantir que os Renderers sejam redefinidos corretamente.
@@ -260,10 +260,16 @@ public class JogCharacterMov : MonoBehaviour {
 
                 animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
                 animatorChar.ResetTrigger(AnimAtaqueMelee);
-
+                Atacando = false;
+                
                 //if (input.AtaqueInput && podeAtacar)
                 if (input.AtaqueInput && podeAtacar)
+                {
                     animatorChar.SetTrigger(AnimAtaqueMelee);
+                    Atacando = true;
+                    //Debug.Log(Atacando);
+                }
+                
 
                 CalculaMovimentoParaFrente();
                 CalculaMovimentoVertical();
@@ -433,17 +439,21 @@ public class JogCharacterMov : MonoBehaviour {
     {
         if (input.MirarInput)
         {
+            animatorChar.SetLayerWeight(0, 0.0f);
             animatorChar.SetLayerWeight(1, 1.0f);
             animatorChar.SetLayerWeight(2, 1.0f);
             animatorChar.SetLayerWeight(3, 1.0f);
             animatorChar.SetLayerWeight(5, 1.0f);
             animEstilingue.SetBool("Mirar", true);
+            float deg = cameraOrb.transform.rotation.x * Mathf.Rad2Deg;
+            animatorChar.SetFloat("MiraX", deg * 2.5f);
             animatorChar.SetBool("Mirar", true);
             action = Mode.AndarMirando;
         }
 
         if (!input.MirarInput)
         {
+            animatorChar.SetLayerWeight(0, 1.0f);
             animatorChar.SetLayerWeight(1, 0.0f);
             animatorChar.SetLayerWeight(2, 0.0f);
             animatorChar.SetLayerWeight(3, 0.0f);
@@ -456,7 +466,7 @@ public class JogCharacterMov : MonoBehaviour {
 
     public void zeraPesoLayerAim()
     {
-        animatorChar.SetLayerWeight(1, 0.0f);
+        animatorChar.SetLayerWeight(4, 0.0f);
     }
 
     void CalculateDirection()

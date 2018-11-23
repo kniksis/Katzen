@@ -20,6 +20,7 @@ TagManager:
   - Ground
   - CameraPrincipal
   - Inimigo
+  - Garras
   layers:
   - Default
   - TransparentFX

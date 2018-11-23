@@ -32,7 +32,7 @@ public class JogAtirar : MonoBehaviour
     GameObject gameManagerGO;
 	GameManager gmScript;
     
-    JogCharacterMov jogMoveScript;
+    public JogCharacterMov jogMoveScript;
     
     protected JogadorInputs input;
     public string ATIRAR_BT_NAME;
@@ -75,7 +75,7 @@ public class JogAtirar : MonoBehaviour
             atirou = false;
             animJog.SetBool("Atirou", atirou);
 
-            if (input.AtirarInput)
+            if (Input.GetButtonDown(ATIRAR_BT_NAME))
             {
                 atirou = false;
                 ForcaAtual = ForcaMinima;

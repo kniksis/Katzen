@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4601422014306192}
   - component: {fileID: 33913384249549728}
   - component: {fileID: 23473016828952770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SuporteMiraGirador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4829868007906918}
   - component: {fileID: 33552437793082548}
   - component: {fileID: 23310393808733178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bateria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4180575067310964}
   - component: {fileID: 33927762794138424}
   - component: {fileID: 23080801096591666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoteDeMunicoesDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4930164394095422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TiroRespawnTorreta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4184954373117162}
   - component: {fileID: 33268377784129856}
   - component: {fileID: 23378068416733410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cerebro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4745989019481750}
   - component: {fileID: 114717238633334516}
   - component: {fileID: 64822862866667280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiraInimigo (Script)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4837179485777130}
   - component: {fileID: 33773888785402514}
   - component: {fileID: 23014872292365082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SuporteCanhaoMira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4952662280537158}
   - component: {fileID: 33980412989199416}
   - component: {fileID: 23293950194211190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SuporteCanhaoBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,9 +157,10 @@ GameObject:
   - component: {fileID: 23608092404328864}
   - component: {fileID: 95328960334259130}
   - component: {fileID: 114487625488382516}
-  m_Layer: 0
+  - component: {fileID: 65077101046478792}
+  m_Layer: 9
   m_Name: TorretaDeBatata 1
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,7 +175,7 @@ GameObject:
   - component: {fileID: 4358752143228900}
   - component: {fileID: 33418461435410030}
   - component: {fileID: 23274568318834224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canhao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +190,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4428095054674098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OrigemRaioMira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +207,7 @@ GameObject:
   - component: {fileID: 4150081095957174}
   - component: {fileID: 33735807447068014}
   - component: {fileID: 23739938154733218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoteDeMunicoesEsq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4816088385189432}
   - component: {fileID: 23640183105255932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiraTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378694755613184}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14, y: 0, z: 70}
+  m_LocalPosition: {x: 15.25, y: 0, z: 59.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745989019481750}
@@ -837,6 +838,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 87f64b2bb6160e14fa63abf5ea36c1a0, type: 3}
+--- !u!65 &65077101046478792
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378694755613184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6288098, y: 0.61, z: 1.1799364}
+  m_Center: {x: 0, y: 0.26, z: -0.000028759241}
 --- !u!95 &95328960334259130
 Animator:
   serializedVersion: 3
@@ -867,6 +880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95328960334259130}
+  JogMCGO: {fileID: 0}
+  JogMCScript: {fileID: 0}
   MiraDaTorretaScript: {fileID: 114717238633334516}
   CorrecaoDeMira: 2
   apontar: {fileID: 1974424163071774}
@@ -874,10 +889,12 @@ MonoBehaviour:
   delayGiro: 800
   tiro: {fileID: 54688424109597190, guid: 6ddb1b9051690184484fbf1293cd1f96, type: 2}
   respawnTiro: {fileID: 4930164394095422}
-  fireRate: 0.0001
+  fireRate: 0.1
   nextFire: 0
   forcaAtual: 10
   atirar: 0
+  particulaDano: {fileID: 1750511825329642, guid: 8bc50abdf7ba41246be0350d13335048,
+    type: 2}
 --- !u!114 &114717238633334516
 MonoBehaviour:
   m_ObjectHideFlags: 1

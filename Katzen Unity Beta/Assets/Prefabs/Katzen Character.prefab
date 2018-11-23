@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4582222236353746}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Cabeca_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,23 +34,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964781670749436}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1020021318531152
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4230538890924346}
-  m_Layer: 0
-  m_Name: Katzen_Mao_A_Esq_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4952769299715244}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: posicaoDaCameraSeguir
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -79,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4954100808753450}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964110642243654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Cabeca_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600401221672320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4257544101577734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_D_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4784454355116454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Lingua_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4477326453013172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Esq_C_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4096171900554954}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299587381714426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Braco_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4093323442148408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_2_C_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4444410576722542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +216,7 @@ GameObject:
   - component: {fileID: 4636768927522858}
   - component: {fileID: 82416311348449790}
   - component: {fileID: 114144916910182288}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: VozQueda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +231,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4158810639873992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Mand_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +248,7 @@ GameObject:
   - component: {fileID: 4721798795357212}
   - component: {fileID: 114056730162596184}
   - component: {fileID: 82902131755024598}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: SomDeDano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4222460700906920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Mand_B_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +278,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4277801152301300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Col_D_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +293,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067191737264522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4808957104851946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Lingua_D_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4679660815828954}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Mao_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +340,7 @@ GameObject:
   - component: {fileID: 4926071356341682}
   - component: {fileID: 82810841952071248}
   - component: {fileID: 114888421251634800}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: VozAtaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +355,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4198015768337368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_F_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +370,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4543446880744696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +385,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4027084004499900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_2_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +400,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4882776219871874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +415,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4768218660233020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_D_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,23 +430,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4504490476766786}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1131037018382460
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4586081697542436}
-  m_Layer: 0
-  m_Name: Katzen_Braco_B_Dir_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +445,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4132458986031252}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Col_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,23 +460,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4940088825364674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Lingua_B_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1143377785424576
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4752615776684034}
-  m_Layer: 0
-  m_Name: Katzen_Mao_A_Esq_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +475,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4768615507927424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Col_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +490,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4027713226866516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Dir_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +505,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4270153579799054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_D_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +522,7 @@ GameObject:
   - component: {fileID: 4898614432601086}
   - component: {fileID: 82957296256903076}
   - component: {fileID: 114774522436431888}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: SomColisao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +537,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4160019584150868}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: AlvoCabeca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +552,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4496729602374572}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Lingua_F_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +567,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4004173600116694}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: AlvoJogador
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -627,7 +582,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4682226158727918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Braco_B_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +597,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472031112473576}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: PeitoInicio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +612,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4343807106570864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +627,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4706449822732064}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_D_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +642,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4296728968656106}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -702,7 +657,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4927464006131864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +672,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4908068436437196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,9 +687,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4440953249360268}
-  m_Layer: 0
+  - component: {fileID: 135498724986001050}
+  - component: {fileID: 54613687776377944}
+  m_Layer: 10
   m_Name: Katzen_Mao_B_Esq_jnt
-  m_TagString: Untagged
+  m_TagString: Garras
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +704,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4530608096037642}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_D_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +719,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4345238384728032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -777,7 +734,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4387848604246428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +749,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4016314347047634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_rig_gp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +764,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4531796252065364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_D_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +779,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4848689310880202}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +794,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4973753972234550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_F_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +809,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4832624179878036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Esq_B_jnt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +824,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4205026567489430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_F_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +839,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864984414688146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Dir_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +854,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4528732644774986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +869,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056729693250162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Dir_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +884,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4307034894075714}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +899,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4918952859263716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +914,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519346692474150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Olho_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,9 +929,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4366564376279002}
-  m_Layer: 0
+  - component: {fileID: 135108882021351830}
+  - component: {fileID: 54395133498272710}
+  m_Layer: 10
   m_Name: Katzen_Mao_B_Dir_jnt
-  m_TagString: Untagged
+  m_TagString: Garras
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,7 +946,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4779308919355376}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +963,7 @@ GameObject:
   - component: {fileID: 4037171303199894}
   - component: {fileID: 82167839993016796}
   - component: {fileID: 114425572374205006}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: SomDeQueda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1019,7 +978,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4126091914765494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_C_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +993,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4068054364428178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_G_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,23 +1008,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4971156225291444}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Dir_C_jnt_FIM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1337772397144768
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4901857789399324}
-  m_Layer: 0
-  m_Name: Katzen_Braco_B_Esq_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,7 +1023,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4487151847206586}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_I_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1038,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4517066984667432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,7 +1053,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4497446327803480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_1_B_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1068,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4065444425224430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1139,7 +1083,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4568658074639734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_E_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1098,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4318008667849234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,7 +1113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4528791802951284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_C_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4575114677546538}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Katzen_Geo_grp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1199,7 +1143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4820428133272228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1214,7 +1158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4766264789213932}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1173,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966989291128608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Col_F_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,7 +1188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4063285724795630}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4889270489878324}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: AudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1218,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4660367693132726}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: FontesDeSom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1289,23 +1233,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4473842509659618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_A_Dir_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1413252114512388
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4497053011390826}
-  m_Layer: 0
-  m_Name: Katzen_Braco_A_Dir_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1319,7 +1248,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4625762930472424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Mao_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,7 +1263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039356243887230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Braco_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1278,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4116775519830696}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1293,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4185805408433404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Ombro_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,7 +1308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4266159648344956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_D_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,7 +1323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4505586728794988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1338,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4234822793527162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1353,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4552616560991190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_C_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1368,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4822392342954768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1383,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4453770516699462}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1398,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4391285359166616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1413,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4616749966671160}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1428,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4343333210991164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Dir_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,7 +1443,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4683458075608926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Braco_B_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4653142842250916}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1544,7 +1473,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4902432394713772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_1_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1488,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4928521959293722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,7 +1503,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4627084956255628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1518,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4094324089035898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_C_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1604,7 +1533,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4925449382640980}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EstilinguePos
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1619,7 +1548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4341534551180482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Esq_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1563,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4806954283854790}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_1_B_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1650,7 +1579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309086593698604}
   - component: {fileID: 114074881330997060}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: GarraDireita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1667,7 +1596,7 @@ GameObject:
   - component: {fileID: 4993989829726238}
   - component: {fileID: 82803749359129650}
   - component: {fileID: 114561279354119756}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: SomMovimento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,23 +1611,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4914501719119726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Esq_C_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1525836321299130
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4317295013347804}
-  m_Layer: 0
-  m_Name: Katzen_Mao_A_Dir_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1626,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4135769977044266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_2_jnt2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1641,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4378788309850518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_C_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1656,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4289820234472612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_D_2_jnt_FIM 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1671,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4373186412157140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_J_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1772,7 +1686,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4674096559604568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_2_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1787,7 +1701,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4976465009048452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1802,7 +1716,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600392079557188}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_D_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,7 +1731,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4595422334561498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_D_Dir_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1832,7 +1746,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4826805951181470}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,7 +1761,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4811780883073244}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_2_jnt3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1862,7 +1776,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964294795312568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1877,7 +1791,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4352323931743490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Esq_C_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1806,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4192580223617562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +1821,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4977871964343944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_2_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1922,7 +1836,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4361263696362458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Braco_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +1851,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4967282477744368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1952,7 +1866,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4064138588040246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Perna_Esq_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1967,7 +1881,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4989363863137054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_1_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,38 +1896,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4872129299512248}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Olho_Esq_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1620674138133840
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4523417145856322}
-  m_Layer: 0
-  m_Name: Katzen_Mao_A_Dir_jnt_IK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1622406943554614
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4365775622392924}
-  m_Layer: 0
-  m_Name: Katzen_Braco_B_Esq_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2027,7 +1911,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4566916791734520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +1926,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4233586469254218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Perna_Dir_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2057,7 +1941,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4809434033924258}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +1956,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4858656010049302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2087,7 +1971,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4244294948132194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2102,7 +1986,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4069524693279896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_1_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2001,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4542960785324488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_1_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2132,7 +2016,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4598348281611802}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_C_2_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2147,7 +2031,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067897122316712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Dir_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2162,7 +2046,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906100621404466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_D_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2177,7 +2061,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4241549344207172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Dir_B_jnt 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2076,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4012981786914104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Braco_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2091,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790871507479006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_H_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2106,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4815630373451282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2237,7 +2121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4972773883270682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2252,7 +2136,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4608629534387968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2267,7 +2151,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4270208358953694}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,7 +2166,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4815224530221506}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_D_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2297,7 +2181,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4518204485572116}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EstilingueRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2196,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4849025312982892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_2_jnt4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2327,7 +2211,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4804508038138060}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Esq_C_jnt_FIM 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,7 +2227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136266339199932}
   - component: {fileID: 82340786978066242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FootPrinterEsq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2242,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4236467328555462}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Perna_Dir_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2373,7 +2257,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4598046260874564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2388,7 +2272,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4605989661227690}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Braco_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2403,7 +2287,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4671619579883770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2302,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4143355162172956}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: AlvoEstilingue
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -2433,7 +2317,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4438786442395246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Braco_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2332,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4406166861261320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_A_D_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2347,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4703544337180776}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2478,7 +2362,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4704625552992364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2493,7 +2377,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4263684174755002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_1_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2508,7 +2392,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4101961776660220}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2525,7 +2409,7 @@ GameObject:
   - component: {fileID: 4328965363253392}
   - component: {fileID: 82470687569586416}
   - component: {fileID: 114618783866079062}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: VozMorte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4047248457060730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_1_A_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2555,7 +2439,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4624068128730488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2570,7 +2454,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4541168869077502}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_Pe_C_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,7 +2469,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4245350331008518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_D_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2600,7 +2484,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4921102931674198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2615,7 +2499,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4620014787340396}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2630,7 +2514,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4069303734748558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Shorts_B_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2645,38 +2529,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4733389658155488}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_D_Dir_jnt_FIM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1812121095267460
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4593726456373704}
-  m_Layer: 0
-  m_Name: Katzen_Braco_B_Dir_jnt_IK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1821169867600330
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4940395878154316}
-  m_Layer: 0
-  m_Name: Katzen_Braco_A_Esq_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2690,7 +2544,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4808404941168054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2705,7 +2559,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4152848133924456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2720,7 +2574,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4879529361017170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2735,7 +2589,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4437676512868748}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Indicador_B_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2750,7 +2604,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4077132883963630}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_3_Esq_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2765,7 +2619,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4344943180664992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Dir_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2780,7 +2634,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4921920905745072}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Dir_C_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2795,7 +2649,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4245168212932680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Calda_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2812,7 +2666,7 @@ GameObject:
   - component: {fileID: 4549929809694884}
   - component: {fileID: 82182460409075518}
   - component: {fileID: 114572181056400972}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: FootstepSom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2681,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4190893297323918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Root_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2842,7 +2696,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4194645451092740}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: posicaoDaCameraSeguirETG
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -2857,7 +2711,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4729975878037382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_1_Dir_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2728,7 @@ GameObject:
   - component: {fileID: 4723241530441994}
   - component: {fileID: 82773127842423618}
   - component: {fileID: 114559086519289318}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: VozPulo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2889,7 +2743,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4610983809124976}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Perna_Esq_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2904,7 +2758,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4847475486138558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Cabeca_C_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2919,7 +2773,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964141675747964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Topete_B_2_jnt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2934,7 +2788,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4354864704848928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Esq_B_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2950,7 +2804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4789086371615380}
   - component: {fileID: 137510510739789588}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Katzen_geo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2965,7 +2819,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4544732126175106}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_Pe_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2980,23 +2834,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4472346636771366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_A_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1905402391163586
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4719065823007284}
-  m_Layer: 0
-  m_Name: Katzen_Braco_A_Dir_jnt_FK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3010,7 +2849,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305352883427574}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Col_A_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3025,7 +2864,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4544682793044534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Esq_E_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3040,7 +2879,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4205793955680784}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pelos_Perna_2_C_Esq_jnt_FIM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3055,23 +2894,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4939313774642448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_A_Dir_jnt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1944637485720084
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4162640004854434}
-  m_Layer: 0
-  m_Name: Katzen_Braco_A_Esq_jnt_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3085,7 +2909,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4073475807700768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Medio_C_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3100,7 +2924,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4040684339185912}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Costeletas_2_Dir_C_jnt_FIM 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3115,7 +2939,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4127627181722480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Ombro_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3130,7 +2954,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4046661902776506}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Dedao_Pe_B_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3146,7 +2970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4711029359552676}
   - component: {fileID: 82324582971077566}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FootPrinterDir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3169,7 +2993,7 @@ GameObject:
   - component: {fileID: 114525352855221994}
   - component: {fileID: 114767982662150064}
   - component: {fileID: 114779485206759404}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Katzen Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3184,7 +3008,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4461741810999860}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Pe_Dir_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3023,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897845850505448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Anelar_A_Esq_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3214,7 +3038,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4960931569448520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Polegar_C_Dir_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3229,7 +3053,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864183633545550}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Orelha_Dir_D_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3244,7 +3068,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4583792315885956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Katzen_Lingua_C_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3329,7 +3153,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978897870966298}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16.5, y: 0, z: 50.691}
+  m_LocalPosition: {x: 14, y: 0, z: 56.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4160019584150868}
@@ -3364,7 +3188,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414367803723748}
-  m_LocalRotation: {x: 0.16527143, y: -0.06601449, z: 0.5960308, w: 0.78299093}
+  m_LocalRotation: {x: 0.16193412, y: -0.049230825, z: 0.6013659, w: 0.78084105}
   m_LocalPosition: {x: -0.06818952, y: -0.0003537883, z: -0.0012349276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3419,7 +3243,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1281160795641386}
-  m_LocalRotation: {x: -0.49846387, y: 0.4652376, z: 0.48759353, w: 0.5452893}
+  m_LocalRotation: {x: -0.49846384, y: 0.46523756, z: 0.4875936, w: 0.54528934}
   m_LocalPosition: {x: 0.004627903, y: -0.0534833, z: 0.053246398}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3447,7 +3271,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598734716599716}
-  m_LocalRotation: {x: -0.06317191, y: -0.3953114, z: 0.04544556, w: 0.91524476}
+  m_LocalRotation: {x: -0.076940015, y: -0.3965772, z: 0.034443174, w: 0.91412276}
   m_LocalPosition: {x: -0.22339411, y: 0.0024104267, z: -0.014805726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3477,7 +3301,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115278951521530}
-  m_LocalRotation: {x: 0.032016482, y: 0.02411246, z: -0.36248505, w: -0.93112737}
+  m_LocalRotation: {x: 0.03201638, y: 0.024111573, z: -0.36247513, w: -0.93113124}
   m_LocalPosition: {x: 0.02096473, y: 0.00034363475, z: -0.00011625374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3505,7 +3329,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1336525207230990}
-  m_LocalRotation: {x: 0.0046500023, y: 0.077627376, z: -0.0335486, w: 0.996407}
+  m_LocalRotation: {x: 0.009588204, y: 0.16006406, z: 0.02194206, w: 0.98681617}
   m_LocalPosition: {x: -0.048311464, y: 0.0004718371, z: -1.0304459e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3547,7 +3371,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949031477662986}
-  m_LocalRotation: {x: -0.030026278, y: -0.009401585, z: 0.19600734, w: 0.98009753}
+  m_LocalRotation: {x: -0.03002628, y: -0.009401656, z: 0.19600813, w: 0.98009735}
   m_LocalPosition: {x: -0.020965267, y: -0.0003427007, z: 0.00011631987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3655,13 +3479,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961475034791522}
-  m_LocalRotation: {x: 0.11275636, y: 0.017698005, z: 0.75802505, w: 0.64216113}
+  m_LocalRotation: {x: 0.11275641, y: 0.017698018, z: 0.75802517, w: 0.64216095}
   m_LocalPosition: {x: -0.017013006, y: 0.030330462, z: -0.0063487873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4299587381714426}
-  - {fileID: 4719065823007284}
-  - {fileID: 4497053011390826}
   m_Father: {fileID: 4277801152301300}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3671,7 +3493,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1139046122051646}
-  m_LocalRotation: {x: -0.016236885, y: -0.015130049, z: -0.7311832, w: 0.6818201}
+  m_LocalRotation: {x: -0.010643332, y: -0.009925184, z: -0.73127633, w: 0.68192613}
   m_LocalPosition: {x: 3.3991155e-19, y: 0.050888836, z: 0.0015708436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3726,7 +3548,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826285264124262}
-  m_LocalRotation: {x: -0.027808977, y: -0.010757613, z: 0.03596015, w: 0.9989084}
+  m_LocalRotation: {x: -0.02780898, y: -0.010757683, z: 0.035960987, w: 0.99890834}
   m_LocalPosition: {x: -0.021190697, y: -0.00049450004, z: 0.00056334294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3762,33 +3584,17 @@ Transform:
   m_Father: {fileID: 4030474887039170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4162640004854434
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944637485720084}
-  m_LocalRotation: {x: 0.24529043, y: -0.03300483, z: -0.06503402, w: 0.9667026}
-  m_LocalPosition: {x: -0.06818952, y: -0.00035381722, z: -0.0012349258}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4365775622392924}
-  m_Father: {fileID: 4185805408433404}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4185805408433404
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420393762817474}
-  m_LocalRotation: {x: 0.112756446, y: 0.017698057, z: 0.75802505, w: 0.64216113}
+  m_LocalRotation: {x: 0.11275644, y: 0.017698022, z: 0.7580251, w: 0.64216095}
   m_LocalPosition: {x: -0.017013013, y: -0.030330462, z: -0.0063487873}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4039356243887230}
-  - {fileID: 4940395878154316}
-  - {fileID: 4162640004854434}
   m_Father: {fileID: 4277801152301300}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3798,8 +3604,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852300616827094}
-  m_LocalRotation: {x: 0.00008820214, y: -0.19198339, z: 0.000021050373, w: -0.9813982}
-  m_LocalPosition: {x: -0.000011444324, y: 0.5396584, z: 0.002458572}
+  m_LocalRotation: {x: 2.0193644e-10, y: 0.21643965, z: -2.0193644e-10, w: 0.97629595}
+  m_LocalPosition: {x: -2.3283059e-10, y: 0.5395244, z: 0.0025100703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4964294795312568}
@@ -3855,7 +3661,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277868807686456}
-  m_LocalRotation: {x: 0.0030471592, y: 0.05545658, z: -0.011275067, w: 0.9983928}
+  m_LocalRotation: {x: 0.007114273, y: 0.12947401, z: 0.03373683, w: 0.9909832}
   m_LocalPosition: {x: -0.047060117, y: 0.0006106004, z: -1.0431631e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3889,26 +3695,13 @@ Transform:
   m_Father: {fileID: 4158810639873992}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4230538890924346
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1020021318531152}
-  m_LocalRotation: {x: -0.24728069, y: -0.05015794, z: -0.041586958, w: 0.96675074}
-  m_LocalPosition: {x: -0.10168893, y: 0.00040315898, z: 0.00038143166}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4365775622392924}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4233586469254218
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1631716278661650}
-  m_LocalRotation: {x: 0.03482632, y: 0.10174681, z: 0.7434024, w: 0.6601421}
+  m_LocalRotation: {x: -0.031651206, y: 0.04228388, z: 0.71918184, w: 0.6928116}
   m_LocalPosition: {x: 0.0430561, y: -0.07114938, z: -0.004975199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3926,7 +3719,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437530136562900}
-  m_LocalRotation: {x: -0.0005349064, y: 0.0092002135, z: 0.0384091, w: 0.9992196}
+  m_LocalRotation: {x: -0.0045895954, y: 0.07894433, z: 0.07866589, w: 0.99375975}
   m_LocalPosition: {x: -0.03314081, y: 2.842171e-16, z: -8.305317e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3940,7 +3733,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718722669222786}
-  m_LocalRotation: {x: 0.0087386705, y: -0.31908083, z: -0.055735715, w: 0.9460469}
+  m_LocalRotation: {x: 0.0082960725, y: -0.32546383, z: -0.012780286, w: 0.9454317}
   m_LocalPosition: {x: -0.22292902, y: -0.014737979, z: -0.014676223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3984,7 +3777,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846824934253208}
-  m_LocalRotation: {x: -0.00027080887, y: 0.019633563, z: 0.02313034, w: 0.9995396}
+  m_LocalRotation: {x: -0.0010685981, y: 0.07747917, z: 0.054851837, w: 0.9954834}
   m_LocalPosition: {x: -0.036193617, y: 0, z: -5.4566078e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4039,7 +3832,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1423153453097388}
-  m_LocalRotation: {x: 0.002222048, y: 0.034490444, z: 0.015113915, w: 0.9992883}
+  m_LocalRotation: {x: 0.00612907, y: 0.09513385, z: 0.049957417, w: 0.9941913}
   m_LocalPosition: {x: -0.040827923, y: 2.842171e-16, z: -9.718099e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4067,7 +3860,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687838987361902}
-  m_LocalRotation: {x: 0.0778934, y: 0.016737763, z: -0.14321035, w: -0.98648024}
+  m_LocalRotation: {x: 0.0778914, y: 0.016746059, z: -0.14319868, w: -0.98648196}
   m_LocalPosition: {x: 0.024105126, y: 0.0014864565, z: 0.00039108007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4081,7 +3874,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1112744656502230}
-  m_LocalRotation: {x: -0.000000030902786, y: 0.027850978, z: 0.000000021420417, w: 0.9996121}
+  m_LocalRotation: {x: 0.00000011810881, y: 0.027850978, z: 0.000000016763805, w: 0.9996121}
   m_LocalPosition: {x: -0.039342504, y: 0, z: 0.003900582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4110,7 +3903,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1218450395630812}
-  m_LocalRotation: {x: 3.351226e-16, y: 0.102692634, z: 4.1936457e-15, w: 0.9947131}
+  m_LocalRotation: {x: 8.2775903e-16, y: 0.10269264, z: 8.673635e-15, w: 0.9947131}
   m_LocalPosition: {x: -0.036760274, y: -7.105427e-16, z: 3.5527136e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4124,7 +3917,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1097468317048856}
-  m_LocalRotation: {x: 0.7134953, y: -0.67872787, z: -0.14749509, w: -0.092185296}
+  m_LocalRotation: {x: 0.71435016, y: -0.6814029, z: -0.13461971, w: -0.08527347}
   m_LocalPosition: {x: 0.06172634, y: -0.023562567, z: -0.016915126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4152,7 +3945,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283188890837534}
-  m_LocalRotation: {x: -0.5905549, y: -0.36009634, z: -0.1694728, w: -0.702036}
+  m_LocalRotation: {x: -0.5905554, y: -0.36010948, z: -0.16947049, w: -0.7020294}
   m_LocalPosition: {x: -0.023355918, y: 0.012898097, z: -0.014117329}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4173,19 +3966,6 @@ Transform:
   - {fileID: 4889270489878324}
   m_Father: {fileID: 4030474887039170}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4317295013347804
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1525836321299130}
-  m_LocalRotation: {x: -0.0006029534, y: -0.029071597, z: -0.022292815, w: 0.99932855}
-  m_LocalPosition: {x: 0.10168898, y: -0.00040295138, z: -0.00038140526}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4586081697542436}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4318008667849234
 Transform:
@@ -4234,7 +4014,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465628384427792}
-  m_LocalRotation: {x: -0.222131, y: 0.15241909, z: -0.672744, w: 0.6890877}
+  m_LocalRotation: {x: -0.17957833, y: 0.20922999, z: -0.6894826, w: 0.66976726}
   m_LocalPosition: {x: -0.20886815, y: -0.01169008, z: 0.009889513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4275,7 +4055,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256843116530968}
-  m_LocalRotation: {x: 0.024627294, y: -0.09609956, z: -0.26898834, w: -0.95802075}
+  m_LocalRotation: {x: 0.024627404, y: -0.096099034, z: -0.26898494, w: -0.9580217}
   m_LocalPosition: {x: 0.020236418, y: -0.0043251314, z: -0.0012647323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4316,27 +4096,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595030607934296}
-  m_LocalRotation: {x: -0.056091607, y: 0.28189093, z: -0.06990478, w: 0.9552511}
+  m_LocalRotation: {x: -0.05688119, y: 0.28195593, z: -0.07014766, w: 0.9551674}
   m_LocalPosition: {x: 0.10886516, y: -0.0008584205, z: -0.00063882675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4679660815828954}
   - {fileID: 4012981786914104}
   m_Father: {fileID: 4299587381714426}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4365775622392924
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622406943554614}
-  m_LocalRotation: {x: 0.005564465, y: 0.110694386, z: -0.06953141, w: 0.99140364}
-  m_LocalPosition: {x: -0.1088648, y: 0.0008585823, z: 0.0006388315}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4230538890924346}
-  m_Father: {fileID: 4162640004854434}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4366564376279002
@@ -4429,7 +4195,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1830928235002456}
-  m_LocalRotation: {x: 0.029783694, y: -0.024109721, z: -0.29310867, w: -0.95531094}
+  m_LocalRotation: {x: 0.029784545, y: -0.024107764, z: -0.29309773, w: -0.95531434}
   m_LocalPosition: {x: 0.021345394, y: -0.0035405676, z: -0.00067210663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4443,7 +4209,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1756515496270308}
-  m_LocalRotation: {x: -0.05480612, y: 0.32396668, z: -0.072873965, w: 0.94166416}
+  m_LocalRotation: {x: -0.055503793, y: 0.3630916, z: -0.07700472, w: 0.9269057}
   m_LocalPosition: {x: -0.1088648, y: 0.0008585844, z: 0.0006388309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4546,7 +4312,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1412418448775686}
-  m_LocalRotation: {x: 0.06686832, y: 0.048998654, z: -0.12396301, w: -0.988818}
+  m_LocalRotation: {x: 0.06686517, y: 0.049006555, z: -0.12395133, w: -0.98881924}
   m_LocalPosition: {x: 0.01717808, y: 0.0024140463, z: 0.026678829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4573,7 +4339,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1345136447335120}
-  m_LocalRotation: {x: 0.0061011226, y: 0.11108513, z: -0.06717738, w: 0.9915191}
+  m_LocalRotation: {x: 0.0077090273, y: 0.1403602, z: 0.0043111844, w: 0.99006116}
   m_LocalPosition: {x: -0.04083998, y: 0.00045236832, z: -4.9015865e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4593,20 +4359,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4808957104851946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4497053011390826
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1413252114512388}
-  m_LocalRotation: {x: 0.95245284, y: -0.1341848, z: -0.103483796, w: -0.2532176}
-  m_LocalPosition: {x: 0.06172634, y: -0.023562554, z: -0.016915126}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4593726456373704}
-  m_Father: {fileID: 4127627181722480}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4497446327803480
 Transform:
@@ -4641,7 +4393,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433446563735582}
-  m_LocalRotation: {x: 0.027241485, y: 0.025748365, z: -0.20812158, w: -0.97738445}
+  m_LocalRotation: {x: 0.027241549, y: 0.0257474, z: -0.20811038, w: -0.9773869}
   m_LocalPosition: {x: 0.021190656, y: 0.0004940117, z: -0.0005633761}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4682,25 +4434,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1292190159424276}
-  m_LocalRotation: {x: 0.47271904, y: -0.5494514, z: 0.44894883, w: 0.5225752}
+  m_LocalRotation: {x: 0.4722079, y: -0.5487391, z: 0.4496244, w: 0.5232046}
   m_LocalPosition: {x: -0.09942851, y: -0.061639473, z: 0.035306662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4964110642243654}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4523417145856322
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1620674138133840}
-  m_LocalRotation: {x: -0.24728127, y: -0.05015896, z: -0.041587, w: 0.9667505}
-  m_LocalPosition: {x: 0.10168898, y: -0.00040295138, z: -0.00038140526}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4593726456373704}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4528732644774986
 Transform:
@@ -4708,7 +4447,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1280410194849028}
-  m_LocalRotation: {x: 0.6042202, y: 0.40241238, z: 0.18909161, w: 0.6612311}
+  m_LocalRotation: {x: 0.6042202, y: 0.40241283, z: 0.18909158, w: 0.6612309}
   m_LocalPosition: {x: 0.023355665, y: -0.012898168, z: 0.014117272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4789,7 +4528,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1120759172053912}
-  m_LocalRotation: {x: -8.173628e-16, y: 0.07381202, z: -1.5026276e-14, w: 0.9972722}
+  m_LocalRotation: {x: -7.6830716e-16, y: 0.073812015, z: -1.4021057e-14, w: 0.9972722}
   m_LocalPosition: {x: -0.036760274, y: 4.2632563e-16, z: -1.7763568e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4857,7 +4596,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1629197128457620}
-  m_LocalRotation: {x: 0.035670314, y: 0.03360272, z: -0.33835354, w: -0.9397422}
+  m_LocalRotation: {x: 0.035670612, y: 0.033601835, z: -0.33834365, w: -0.9397458}
   m_LocalPosition: {x: 0.020602576, y: 0.0019842882, z: -0.0006462359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4871,7 +4610,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356650716747852}
-  m_LocalRotation: {x: 2.2613292e-15, y: 0.103313014, z: -1.8954607e-15, w: 0.99464893}
+  m_LocalRotation: {x: 1.2713842e-15, y: 0.10331302, z: -3.4178515e-16, w: 0.99464893}
   m_LocalPosition: {x: -0.036760274, y: -2.1316282e-16, z: 7.105427e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4927,34 +4666,6 @@ Transform:
   m_Father: {fileID: 4940088825364674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4586081697542436
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1131037018382460}
-  m_LocalRotation: {x: 0.0055644647, y: 0.11069521, z: -0.069531925, w: 0.9914035}
-  m_LocalPosition: {x: 0.108865164, y: -0.00085842225, z: -0.00063882896}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4317295013347804}
-  m_Father: {fileID: 4719065823007284}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4593726456373704
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1812121095267460}
-  m_LocalRotation: {x: 0.0055644647, y: 0.11069521, z: -0.069531925, w: 0.9914035}
-  m_LocalPosition: {x: 0.108865164, y: -0.00085842225, z: -0.00063882896}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4523417145856322}
-  m_Father: {fileID: 4497053011390826}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4595422334561498
 Transform:
   m_ObjectHideFlags: 1
@@ -4974,7 +4685,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1731323441993550}
-  m_LocalRotation: {x: 0.06171325, y: 0.082114495, z: 0.44081417, w: 0.8917016}
+  m_LocalRotation: {x: 0.0617132, y: 0.08211423, z: 0.44081354, w: 0.89170194}
   m_LocalPosition: {x: -0.017464854, y: -0.0035114633, z: 0.021603024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5056,7 +4767,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1862815663180666}
-  m_LocalRotation: {x: -0.19893488, y: 0.06883969, z: 0.62103355, w: 0.75498563}
+  m_LocalRotation: {x: -0.18934087, y: 0.07286471, z: 0.6261854, w: 0.7528165}
   m_LocalPosition: {x: -0.0430561, y: -0.07114938, z: -0.004975199}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5116,7 +4827,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413347560755726}
-  m_LocalRotation: {x: 0.03537492, y: -0.11535469, z: -0.024078157, w: 0.9924022}
+  m_LocalRotation: {x: 0.031943627, y: -0.11541408, z: -0.023611514, w: 0.99252295}
   m_LocalPosition: {x: -0.10168893, y: 0.0004031657, z: 0.00038143134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5131,7 +4842,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486969564008770}
-  m_LocalRotation: {x: -0.052138172, y: -0.0052037286, z: 0.0062474133, w: 0.9986068}
+  m_LocalRotation: {x: -0.0521561, y: -0.0052405596, z: 0.0060265325, w: 0.99860704}
   m_LocalPosition: {x: -0.021345332, y: 0.0035398751, z: 0.0006723306}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5158,7 +4869,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1478248290851884}
-  m_LocalRotation: {x: -0.001511706, y: 0.021321898, z: 0.13053909, w: 0.9912128}
+  m_LocalRotation: {x: -0.0015117058, y: 0.021321941, z: 0.13053891, w: 0.9912128}
   m_LocalPosition: {x: -0.027173996, y: -0.0024169767, z: 0.0015973039}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5220,7 +4931,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118153483994218}
-  m_LocalRotation: {x: 0.03424623, y: -0.02845572, z: -0.023758415, w: 0.9987258}
+  m_LocalRotation: {x: 0.03423852, y: -0.02845627, z: -0.02374618, w: 0.9987263}
   m_LocalPosition: {x: 0.10168897, y: -0.00040292647, z: -0.0003814092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5260,7 +4971,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767671475077466}
-  m_LocalRotation: {x: 0.03278178, y: 0.055388883, z: -0.26820672, w: -0.96120894}
+  m_LocalRotation: {x: 0.03278201, y: 0.05538797, z: -0.2681948, w: -0.9612123}
   m_LocalPosition: {x: 0.019569177, y: 0.0006542059, z: 0.0003488469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5309,20 +5020,6 @@ Transform:
   m_Father: {fileID: 4056729693250162}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!4 &4719065823007284
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1905402391163586}
-  m_LocalRotation: {x: 0.98306435, y: -0.13558541, z: -0.123173684, w: -0.00542385}
-  m_LocalPosition: {x: 0.06172634, y: -0.023562554, z: -0.016915126}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4586081697542436}
-  m_Father: {fileID: 4127627181722480}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4721798795357212
 Transform:
   m_ObjectHideFlags: 1
@@ -5377,26 +5074,13 @@ Transform:
   m_Father: {fileID: 4566916791734520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4752615776684034
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1143377785424576}
-  m_LocalRotation: {x: -0.00060008594, y: -0.029071197, z: -0.022292646, w: 0.99932855}
-  m_LocalPosition: {x: -0.10168893, y: 0.00040315898, z: 0.00038143166}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4901857789399324}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4766264789213932
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400862050977168}
-  m_LocalRotation: {x: -0.039878927, y: -0.018531034, z: 0.17074935, w: 0.98433274}
+  m_LocalRotation: {x: -0.039878912, y: -0.018531097, z: 0.17075008, w: 0.9843327}
   m_LocalPosition: {x: -0.020602724, y: -0.0019848652, z: 0.0006461942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5423,7 +5107,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153402715410984}
-  m_LocalRotation: {x: -0.0023773513, y: -0.10869062, z: -0.01730556, w: 0.9939221}
+  m_LocalRotation: {x: -0.0022835305, y: -0.10190995, z: -0.017302355, w: 0.9946406}
   m_LocalPosition: {x: -0.046991564, y: 0, z: -0.00044163386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5477,7 +5161,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1680390738554844}
-  m_LocalRotation: {x: 0.0056589157, y: 0.09733858, z: -0.047585852, w: 0.994097}
+  m_LocalRotation: {x: 0.009441237, y: 0.16239652, z: 0.01617906, w: 0.98654777}
   m_LocalPosition: {x: -0.04339491, y: 0.00017787823, z: -1.1053313e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5627,7 +5311,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554215831240102}
-  m_LocalRotation: {x: -0.01656119, y: -0.08717407, z: -0.19729629, w: -0.9763199}
+  m_LocalRotation: {x: -0.016558636, y: -0.08717651, z: -0.19728549, w: -0.976322}
   m_LocalPosition: {x: 0.01746457, y: 0.0035117273, z: -0.021603098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5695,7 +5379,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1642613720337834}
-  m_LocalRotation: {x: -0.0379805, y: -0.046443954, z: 0.39485782, w: 0.91678125}
+  m_LocalRotation: {x: -0.037980665, y: -0.046443913, z: 0.3948567, w: 0.9167817}
   m_LocalPosition: {x: -0.024105113, y: -0.0014864549, z: -0.0003911003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5709,7 +5393,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988301136787446}
-  m_LocalRotation: {x: 1.5775274e-15, y: 0.119268194, z: 1.2706935e-14, w: 0.9928621}
+  m_LocalRotation: {x: 1.8194186e-16, y: 0.1192682, z: 3.8623436e-15, w: 0.9928621}
   m_LocalPosition: {x: -0.036760274, y: 6.3948843e-16, z: -2.1316282e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5737,7 +5421,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618165288220958}
-  m_LocalRotation: {x: 0.5288562, y: 0.4531329, z: 0.54473054, w: -0.46717268}
+  m_LocalRotation: {x: 0.5294737, y: 0.45377308, z: 0.54404014, w: -0.4666561}
   m_LocalPosition: {x: -0.09942834, y: -0.061639518, z: -0.0353067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5750,7 +5434,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1827022666199690}
-  m_LocalRotation: {x: -0.00000002613341, y: 0.0776994, z: -0.0000019661027, w: 0.99697685}
+  m_LocalRotation: {x: -0.000000026133456, y: 0.0776994, z: -0.0000019661027, w: 0.99697685}
   m_LocalPosition: {x: 0.036760118, y: -0.0000000981646, z: 0.000000062802336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5764,7 +5448,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128884555277572}
-  m_LocalRotation: {x: -0.15032463, y: 0.1322894, z: -0.66920656, w: 0.715587}
+  m_LocalRotation: {x: -0.16626185, y: 0.119817704, z: -0.65866363, w: 0.723991}
   m_LocalPosition: {x: -0.209193, y: -0.00005491078, z: 0.009931214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5793,7 +5477,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985338937737476}
-  m_LocalRotation: {x: -0.054152917, y: -0.08026041, z: 0.3779885, w: 0.92073363}
+  m_LocalRotation: {x: -0.054152947, y: -0.08026034, z: 0.37798867, w: 0.9207336}
   m_LocalPosition: {x: -0.017178936, y: -0.0024136887, z: -0.026678918}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5812,20 +5496,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4889270489878324}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4901857789399324
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1337772397144768}
-  m_LocalRotation: {x: 0.0055644647, y: 0.11069494, z: -0.06953175, w: 0.9914036}
-  m_LocalPosition: {x: -0.1088648, y: 0.0008585823, z: 0.0006388315}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4752615776684034}
-  m_Father: {fileID: 4940395878154316}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4902432394713772
@@ -5889,7 +5559,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289424484466986}
-  m_LocalRotation: {x: 0.012511212, y: -0.13823813, z: 0.026691906, w: 0.98996025}
+  m_LocalRotation: {x: 0.012511175, y: -0.13823824, z: 0.026692448, w: 0.9899602}
   m_LocalPosition: {x: -0.020447385, y: 0.008908316, z: -0.0016354518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5903,7 +5573,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800508600129056}
-  m_LocalRotation: {x: -0.040960807, y: 0.068534054, z: 0.10056174, w: 0.99172205}
+  m_LocalRotation: {x: -0.040960792, y: 0.06853415, z: 0.10056227, w: 0.991722}
   m_LocalPosition: {x: -0.020236649, y: 0.004325207, z: 0.0012646371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5956,7 +5626,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1220821324565988}
-  m_LocalRotation: {x: -0.015758038, y: 0.12553371, z: 0.0312949, w: -0.9914704}
+  m_LocalRotation: {x: -0.015757926, y: 0.12553424, z: 0.03129262, w: -0.99147046}
   m_LocalPosition: {x: 0.02044721, y: -0.008908422, z: 0.0016355701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6006,20 +5676,6 @@ Transform:
   m_Father: {fileID: 4784454355116454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4940395878154316
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821169867600330}
-  m_LocalRotation: {x: -0.00021366312, y: -0.0053675584, z: -0.039774317, w: 0.99919426}
-  m_LocalPosition: {x: -0.06818952, y: -0.00035381722, z: -0.0012349258}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4901857789399324}
-  m_Father: {fileID: 4185805408433404}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4952769299715244
 Transform:
   m_ObjectHideFlags: 1
@@ -6053,7 +5709,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1985381157239110}
-  m_LocalRotation: {x: 0.0015113202, y: -0.021324245, z: -0.13054912, w: -0.99121135}
+  m_LocalRotation: {x: 0.0015115733, y: -0.021326255, z: -0.13053988, w: -0.9912125}
   m_LocalPosition: {x: 0.027174331, y: 0.00241719, z: -0.0015977658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6067,7 +5723,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1037780200005478}
-  m_LocalRotation: {x: -0.30387458, y: 0.45620298, z: -0.4828821, w: 0.6829085}
+  m_LocalRotation: {x: -0.26968005, y: 0.4667874, z: -0.46790206, w: 0.70032126}
   m_LocalPosition: {x: 0, y: 0.0299798, z: 0.0068680593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6106,7 +5762,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585300284544406}
-  m_LocalRotation: {x: -0.2700899, y: -0.63318217, z: 0.24826717, w: 0.6815389}
+  m_LocalRotation: {x: -0.23392045, y: -0.64128, z: 0.2070425, w: 0.7008385}
   m_LocalPosition: {x: 1.9721521e-32, y: -0.062041495, z: -0.058476012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6134,7 +5790,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401255328498198}
-  m_LocalRotation: {x: 0.03701257, y: 0.032312267, z: 0.7243771, w: 0.687651}
+  m_LocalRotation: {x: 0.0032702568, y: -0.0032702084, z: 0.7250835, w: 0.68864554}
   m_LocalPosition: {x: -0.03384409, y: 0, z: 0.0000000027939677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6201,7 +5857,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534246250866022}
-  m_LocalRotation: {x: -0.035562918, y: -0.041860037, z: 0.097378105, w: 0.9937306}
+  m_LocalRotation: {x: -0.035562903, y: -0.041860107, z: 0.097378954, w: 0.9937306}
   m_LocalPosition: {x: -0.019568786, y: -0.0006545002, z: -0.0003488349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6250,6 +5906,36 @@ Transform:
   m_Father: {fileID: 4889270489878324}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54395133498272710
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300209030711338}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54613687776377944
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237207577549310}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &82167839993016796
 AudioSource:
   m_ObjectHideFlags: 1
@@ -7398,6 +7084,7 @@ MonoBehaviour:
   TempoMaximoForca: 0.99
   TiroFrequencia: 0.5
   ProximoTiro: 0
+  jogMoveScript: {fileID: 114767982662150064}
   ATIRAR_BT_NAME: Atirar
   ATIRAR_AN_NAME: Atirar
 --- !u!114 &114422016858103282
@@ -7452,6 +7139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JogadorInputsBloqueados: 0
+  CAMINHAR_BT_NAME: Walk
+  CORRER_BT_NAME: Run
   JUMP_BT_NAME: Jump
   MOV_HORIZONTAL_AN_NAME: Horizontal
   MOV_VERTICAL_AN_NAME: Vertical
@@ -7460,7 +7149,7 @@ MonoBehaviour:
   TROCA_ARMA_BT_NAME: TrocaArma
   MIRAR_BT_NAME: Mirar
   ATIRAR_BT_NAME: Atirar
-  ATACAR_BT_NAME: Atirar
+  ATACAR_BT_NAME: Atacar
   PAUSE_BT_NAME: Pause
 --- !u!114 &114559086519289318
 MonoBehaviour:
@@ -7553,15 +7242,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861304fd52e409d449e5bea9cc440c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeMaximaFoward: 8
+  action: 0
+  combate: 0
+  velocidadeCaminhadaFoward: 2
+  velocidadeNormalFoward: 8
+  velocidadeMaximaFoward: 15
   gravidade: 20
-  velocidadePulo: 10
+  velocidadePulo: 8
   velocidadeMinimaVirada: 400
   velocidadeMaximaVirada: 1200
   idleTempoDeOciosidade: 5
   podeAtacar: 0
-  podeUsarEstilingue: 0
+  podeAtirar: 0
   cameraSettings: {fileID: 0}
+  cameraOrb: {fileID: 0}
   footstepPlayer: {fileID: 114572181056400972}
   hurtAudioPlayer: {fileID: 114056730162596184}
   landingPlayer: {fileID: 114425572374205006}
@@ -7569,9 +7263,14 @@ MonoBehaviour:
   emoteDeathPlayer: {fileID: 114618783866079062}
   emoteAttackPlayer: {fileID: 114888421251634800}
   emoteJumpPlayer: {fileID: 114559086519289318}
+  AnimEstaEmTransicao: 0
+  AnimAnteriorEstaEmAnimacao: 0
   input: {fileID: 0}
   charCtrl: {fileID: 0}
   animatorChar: {fileID: 0}
+  Estilingue: {fileID: 0}
+  HUDArmas: {fileID: 0}
+  Atacando: 0
   IdleTimer: 5
 --- !u!114 &114774522436431888
 MonoBehaviour:
@@ -7640,6 +7339,30 @@ MonoBehaviour:
   mat: {fileID: 0}
   go: {fileID: 1877264053181176}
   AddQuantTerra: 0.01
+--- !u!135 &135108882021351830
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300209030711338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135498724986001050
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1237207577549310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137510510739789588
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

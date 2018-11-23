@@ -8,7 +8,10 @@ public class Torreta : MonoBehaviour {
 
     //---- Identifica um por um ----
     public Animator animator;
-
+    [SerializeField]
+    GameObject JogMCGO;
+    [SerializeField]
+    JogCharacterMov JogMCScript;
 
     [Header("Variaveis da mira")]
     
@@ -37,6 +40,8 @@ public class Torreta : MonoBehaviour {
     void Awake()
     {
         atirar = false;
+        JogMCGO = GameObject.Find("Katzen Character");
+        JogMCScript = JogMCGO.GetComponent<JogCharacterMov>();
     }
     // Use this for initialization
     void Start () {
@@ -50,7 +55,6 @@ public class Torreta : MonoBehaviour {
         if(MiraDaTorretaScript.jogEntrou)
         {
             JogadorDistancia = Vector3.Distance(MiraDaTorretaScript.jogadorGO.transform.position, transform.position);
-            print("Distance to other: " + JogadorDistancia);
         }
     }
 
@@ -88,6 +92,21 @@ public class Torreta : MonoBehaviour {
             apontar.transform.rotation = Quaternion.Lerp(apontar.transform.rotation, this.transform.rotation, Time.deltaTime * (delayGiro / 360.0f));
             float deg = apontar.transform.localRotation.y * Mathf.Rad2Deg;//Converte radianos para graus.
             animator.SetFloat("DirecaoMiraY", deg * CorrecaoDeMira);
+        }
+    }
+    public GameObject particulaDano;
+    private Vector3 tmpContactPoint;
+    private Vector3 tmpDirection;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Garras" && JogMCScript.Atacando)
+        {
+            tmpDirection = (other.transform.position - transform.position);
+            tmpContactPoint = transform.position + tmpDirection;
+
+            Instantiate<GameObject>(particulaDano, tmpContactPoint, transform.rotation);
+            animator.SetTrigger("LevarDano");
         }
     }
 }
