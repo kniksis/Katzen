@@ -25,6 +25,13 @@ public class JogCharacterMov : MonoBehaviour {
     }
     public Combat combate = Combat.Garras;
 
+    GameObject gmGO;
+    GameManager gmScript;
+
+
+    [System.Serializable]
+    public class Movimentacao
+    {
     [Header("Velocidades de Movimentacao")]
     [Range(0f, 20f)]
     [SerializeField]
@@ -37,16 +44,22 @@ public class JogCharacterMov : MonoBehaviour {
     public float velocidadeMaximaFoward = 15f;
 
     [Header("Velocidades de Saltos")]
+    [Range(0f, 10f)]
+    [SerializeField]
+    public float VelocidadeFowardNoAr = 2f;
     [Range(0f, 40f)]
     [SerializeField]
     public float gravidade = 20f;
     [Range(0f, 20f)]
     [SerializeField]
     public float velocidadePulo = 10f;
+    [Range(0f, 20f)]
+    [SerializeField]
+    public float velocidadeEscorregar = 10f;
+        
+    [Header("Velocidades de Viradas")]
     [Range(100f, 600f)]
     [SerializeField]
-
-    [Header("Velocidades de Viradas")]
     public float velocidadeMinimaVirada = 400f;
     [Range(500f, 1500f)]
     [SerializeField]
@@ -56,10 +69,26 @@ public class JogCharacterMov : MonoBehaviour {
     [Range(0f, 20f)]
     [SerializeField]
     public float idleTempoDeOciosidade = 5f;
+    }
+
     public bool podeAtacar;
     public bool podeAtirar;
-    private int numPulos = 0;
+    public int numPulos = 0;
     private int maxPulos = 1;
+
+    [System.Serializable]
+    public class GastosEstamina
+    {
+        [Range(0.0f, 2.0f)]
+        [SerializeField]
+        public float gastoEstaminaCorrida = 0.3f;
+        [Range(0f, 30f)]
+        [SerializeField]
+        public float gastoEstaminaPulo = 3f;
+        [Range(0f, 10f)]
+        [SerializeField]
+        public float gastoEstaminaCombate = 1f;
+    }
 
     public CameraSettings cameraSettings;
     public Transform cameraOrb;
@@ -83,11 +112,14 @@ public class JogCharacterMov : MonoBehaviour {
     protected AnimatorStateInfo ProximoEstadoDoAnteriorInfo;
     [SerializeField]
     protected bool AnimAnteriorEstaEmAnimacao;
-    protected bool noChao = true;
+    public bool noChao = true;
     protected bool estavaNoChao = true;
     protected bool podePular;
     protected bool pulou;
-    protected bool noWallJump;
+    public bool NaParede;
+    public float ParedeOffset;
+    public float centroPersonagemOffset;
+    public LayerMask layerMask;
     protected float velocidadeFowardDesejada;                   //Quao rapido o jogador pretende ir pela superficie baseado na entrada.
     protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
     protected float velocidadeVertical;
@@ -95,20 +127,22 @@ public class JogCharacterMov : MonoBehaviour {
     Vector2 ultimoMovimento;
     Vector3 movement;
     [SerializeField]
-    protected JogadorInputs input;
+    public JogadorInputs input;
     [SerializeField]
     protected CharacterController charCtrl;
     [SerializeField]
-    protected Animator animatorChar;
+    protected Animator animChar;
     protected Animator animHUDArmas;
     protected Animator animEstilingue;
+    private RaycastHit hit = new RaycastHit();                  //informação sobre o ponto de hit de um raycast
     public GameObject Estilingue;
     public GameObject HUDArmas;
     protected Material superficeAtual;                          //Usado para fazer as decisoes de troca de audio de acordo com  terreno
     protected Quaternion rotacaoAlvo;                           //Qual é a rotação que o jogador pretende ter com base no Input.
+    protected Vector3 anguloAlvo;
     protected float GrausAngulo;                                //Ângulo em graus entre a rotação atual do jogador e a rotação do alvo.
     protected Collider[] CollidersAVolta = new Collider[8];     //Usado para armazenar em cache colliders que estão próximos ao jogador.
-    public bool Atacando;                                    //Se o jogador está atualmente no meio de um ataque corpo a corpo
+    public bool Atacando;                                       //Se o jogador está atualmente no meio de um ataque corpo a corpo
     protected bool Combando;                                    //Se o jogador está atualmente no meio de seu combo melee.
     protected AreaDeDano ConsegueAtacar;                        //Referência utilizada para definir a invulnerabilidade e a saúde com base no respawning.
     protected Renderer[] Renderers;                             //Referências usadas para garantir que os Renderers sejam redefinidos corretamente.
@@ -127,6 +161,10 @@ public class JogCharacterMov : MonoBehaviour {
     const float AceleracaoChao = 20f;
     const float DesaceleracaoChao = 25f;
 
+    //Classes de variaveis
+    public Movimentacao movimentacao = new Movimentacao();
+    public GastosEstamina gastosEstamina = new GastosEstamina();
+
     // Parametros
     readonly int AnimVelocidadeVerticalNoAr = Animator.StringToHash("VelocidadeVerticalNoAr");
     readonly int AnimVelocidadeFoward = Animator.StringToHash("FowardVelocity");
@@ -142,6 +180,7 @@ public class JogCharacterMov : MonoBehaviour {
     readonly int AnimLevarDanoY = Animator.StringToHash("LevarDanoY");
     readonly int AnimTempoDeEstado = Animator.StringToHash("TempoDeEstado");
     readonly int AnimPeNoChao = Animator.StringToHash("FootFall");
+    
 
     // States
     readonly int AnimMovimentacao = Animator.StringToHash("Movimentacao");
@@ -152,6 +191,7 @@ public class JogCharacterMov : MonoBehaviour {
     readonly int AnimCombo3 = Animator.StringToHash("Soco2");
     readonly int AnimMorte1 = Animator.StringToHash("Morte1");
     
+
     //Tags
     protected bool IsMoveInput
     {
@@ -200,6 +240,8 @@ public class JogCharacterMov : MonoBehaviour {
     // Chamado automaticamente pelo Unity quando o script existe pela primeira vez na cena.
     void Awake()
     {
+        gmGO = GameObject.Find("Manager");
+        gmScript = gmGO.GetComponent<GameManager>();
         if (Estilingue == null)
         {
             Estilingue = GameObject.Find("Estilingue_Animacoes_Root_Travado");
@@ -216,7 +258,7 @@ public class JogCharacterMov : MonoBehaviour {
         }
 
         input = GetComponent<JogadorInputs>();
-        animatorChar = GetComponent<Animator>();
+        animChar = GetComponent<Animator>();
         animEstilingue = Estilingue.GetComponent<Animator>();
         animHUDArmas = HUDArmas.GetComponent<Animator>();
         charCtrl = GetComponent<CharacterController>();
@@ -233,6 +275,13 @@ public class JogCharacterMov : MonoBehaviour {
     // Update é chamado uma vez por frame
     void Update () {
         
+
+        if(gmScript.life <= 0)
+        {
+            charCtrl.enabled = false;
+            input.enabled = false;
+        }
+
         TrocarArmas();
 
         switch (combate)
@@ -252,21 +301,53 @@ public class JogCharacterMov : MonoBehaviour {
     private void FixedUpdate()
     {
         CacheAnimatorState();
-        animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        animChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+        
+        Vector3 centroPersonagem = new Vector3 (transform.position.x, transform.position.y + centroPersonagemOffset, transform.position.z);
+        float smooth = 1f;
+        Vector3 paredeNormal;
+
+        if (Physics.Raycast(centroPersonagem, transform.forward * ParedeOffset, out hit, ParedeOffset, layerMask, QueryTriggerInteraction.UseGlobal))
+        {
+            Debug.DrawRay(centroPersonagem, transform.forward * ParedeOffset, Color.blue);
+            
+            if (!noChao)
+            {
+                paredeNormal = hit.normal;
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(paredeNormal), (smooth * 2) * Time.deltaTime);
+                NaParede = true;
+            }
+        }
+
+        else
+        {
+            Debug.DrawRay(centroPersonagem, transform.forward * ParedeOffset, Color.white);
+            NaParede = false;
+        }
+
+        if (NaParede == true)
+        {
+            if (input.PuloInput && velocidadeVertical < 0.0f)
+            {
+                NaParede = false;
+                numPulos = 0;
+            }
+        }
 
         switch (action)
         {
             case Mode.AndarNormal:
 
-                animatorChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animatorChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
-                animatorChar.ResetTrigger(AnimAtaqueMelee);
+                animChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
+                animChar.ResetTrigger(AnimAtaqueMelee);
                 Atacando = false;
                 
                 //if (input.AtaqueInput && podeAtacar)
                 if (input.AtaqueInput && podeAtacar)
                 {
-                    animatorChar.SetTrigger(AnimAtaqueMelee);
+                    animChar.SetTrigger(AnimAtaqueMelee);
                     Atacando = true;
+                    //gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaCombate);
                     //Debug.Log(Atacando);
                 }
                 
@@ -302,9 +383,9 @@ public class JogCharacterMov : MonoBehaviour {
         ProximoEstadoDoAnteriorInfo = ProximoEstadoInfo;
         AnimAnteriorEstaEmAnimacao = AnimEstaEmTransicao;
 
-        EstadoAtualInfo = animatorChar.GetCurrentAnimatorStateInfo(0);
-        ProximoEstadoInfo = animatorChar.GetNextAnimatorStateInfo(0);
-        AnimEstaEmTransicao = animatorChar.IsInTransition(0);
+        EstadoAtualInfo = animChar.GetCurrentAnimatorStateInfo(0);
+        ProximoEstadoInfo = animChar.GetNextAnimatorStateInfo(0);
+        AnimEstaEmTransicao = animChar.IsInTransition(0);
     }
 
 
@@ -316,35 +397,45 @@ public class JogCharacterMov : MonoBehaviour {
             moveInput.Normalize();
 
         // Calcule a velocidade pretendida pela entrada.
-        if(input.CaminharInput && noChao)
+        //Seta a velocidade foward desejada para a velocidade de caminhada com o "C"
+        if (input.CaminharInput && noChao)
         {
-            velocidadeFowardDesejada = moveInput.magnitude * velocidadeCaminhadaFoward;
+            velocidadeFowardDesejada = moveInput.magnitude * movimentacao.velocidadeCaminhadaFoward;
         }
 
+        //Seta a velocidade foward desejada para a velocidade de corrida maxima com o "Shift"
         else if (input.CorrerInput && noChao)
         {
-            velocidadeFowardDesejada = moveInput.magnitude * velocidadeMaximaFoward;
+            velocidadeFowardDesejada = moveInput.magnitude * movimentacao.velocidadeMaximaFoward;
+            gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaCorrida);
         }
 
         else
         {
-            velocidadeFowardDesejada = moveInput.magnitude * velocidadeNormalFoward;
+            velocidadeFowardDesejada = moveInput.magnitude * movimentacao.velocidadeNormalFoward;
         }
 
         // Determine a mudança para acelerar com base em se há alguma entrada de movimento no momento.
-        float acceleration = IsMoveInput ? AceleracaoChao : DesaceleracaoChao;
+        float aceleracao = IsMoveInput ? AceleracaoChao : DesaceleracaoChao;
 
         // Ajuste a velocidade de avanço para a velocidade desejada.
-        velocidadeFoward = Mathf.MoveTowards(velocidadeFoward, velocidadeFowardDesejada, acceleration * Time.deltaTime);
+        if (noChao)
+        {
+            velocidadeFoward = Mathf.MoveTowards(velocidadeFoward, velocidadeFowardDesejada, aceleracao * Time.deltaTime);
+        }
+        else
+        {
+            velocidadeFoward = Mathf.MoveTowards(velocidadeFoward, velocidadeFowardDesejada / movimentacao.VelocidadeFowardNoAr, aceleracao * Time.deltaTime);
+        }
         // Defina o parâmetro do animador para controlar qual animação está sendo reproduzida.
-        animatorChar.SetFloat(AnimVelocidadeFoward, velocidadeFoward);
+        animChar.SetFloat(AnimVelocidadeFoward, velocidadeFoward);
     }
 
     // Chamado cada passo da física.
     void CalculaMovimentoVertical()
     {
         Vector2 moveInput = input.MoveInput;
-        // Se o salto não estiver no momento e Ellen estiver no chão, ela estará pronta para pular.
+        // Se o salto não estiver no momento e o jogador estiver no chão, ela estará pronta para pular.
         if (!input.PuloInput && noChao)
             podePular = true;
 
@@ -353,17 +444,18 @@ public class JogCharacterMov : MonoBehaviour {
             numPulos = 0;
             // Quando aterrados aplicamos uma velocidade vertical ligeiramente negativa para fazer o jogador "grudar" no chão.
             // Isso corrige o charCtrl.isGrounded, fazendo com que ele retorce o valor true.
-            velocidadeVertical = -gravidade * StickingGravidadeProporcional;
+            velocidadeVertical = -movimentacao.gravidade * StickingGravidadeProporcional;
+            NaParede = false;
 
             // Se o pulo acontecer, O jogador está pronto para pular e não está no meio de uma combinação corpo-a-corpo ...
             if (input.PuloInput && podePular && !Combando)
             {
                 // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente.
-                
-                velocidadeVertical = velocidadePulo;
+                velocidadeVertical = movimentacao.velocidadePulo;
                 noChao = false;
                 podePular = false;
                 pulou = true;
+                gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaPulo);
             }
         }
         else
@@ -383,23 +475,24 @@ public class JogCharacterMov : MonoBehaviour {
             {
                 velocidadeVertical = 0f;
             }
-            if (!noWallJump)
-            {
+            //if (!NaParede)
+            //{
                 // Se o jogador estiver no ar, e não estiver em um wallJump, aplique a gravidade.
-                velocidadeVertical -= gravidade * Time.deltaTime;
+                velocidadeVertical -= movimentacao.gravidade * Time.deltaTime;
                 ultimoMovimento = moveInput;
-            }
-            else
-            {
-                velocidadeVertical -= (gravidade / 100) * Time.deltaTime;
-                ultimoMovimento = moveInput;
-            }
+            //}
+            //else if(NaParede && velocidadeVertical < 0.0f)
+            //{
+            //    velocidadeVertical -= (movimentacao.gravidade / 100) * Time.deltaTime;
+            //    ultimoMovimento = moveInput;
+            //}
 
             if (input.PuloInput && velocidadeVertical < 0.0f && !pulou && numPulos < maxPulos)
             {
                 // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente apos atingir o numero maximo de pulos.
-                animatorChar.SetTrigger("PuloDuplo");
-                velocidadeVertical = velocidadePulo;
+                animChar.SetTrigger("PuloDuplo");
+                velocidadeVertical = movimentacao.velocidadePulo;
+                gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaPulo);
                 noChao = false;
                 numPulos += 1;
                 //podePular = false;
@@ -411,7 +504,7 @@ public class JogCharacterMov : MonoBehaviour {
     {
         if (input.TrocarArmaInput > 0)
         {
-            animatorChar.SetLayerWeight(4, 1.0f);
+            animChar.SetLayerWeight(4, 1.0f);
             animHUDArmas.SetBool("Armado", true);
             combate = Combat.Estilingue;
             TrocadorArma();
@@ -419,7 +512,7 @@ public class JogCharacterMov : MonoBehaviour {
 
         if (input.TrocarArmaInput < 0)
         {
-            animatorChar.SetLayerWeight(4, 1.0f);
+            animChar.SetLayerWeight(4, 1.0f);
             animHUDArmas.SetBool("Armado", false);
             combate = Combat.Garras;
             TrocadorArma();
@@ -430,15 +523,15 @@ public class JogCharacterMov : MonoBehaviour {
     {
         if (combate == Combat.Garras)
         {
-            animatorChar.SetBool("Armado", true);
-            animatorChar.CrossFade("SacarEstilingue", Time.deltaTime);
+            animChar.SetBool("Armado", true);
+            animChar.CrossFade("SacarEstilingue", Time.deltaTime);
             SetPodeAtacar(true);
         }
 
         if (combate == Combat.Estilingue)
         {
-            animatorChar.SetBool("Armado", false);
-            animatorChar.CrossFade("GuardarEstilingue", Time.deltaTime);
+            animChar.SetBool("Armado", false);
+            animChar.CrossFade("GuardarEstilingue", Time.deltaTime);
             SetPodeAtacar(false);
         }
     }
@@ -447,34 +540,34 @@ public class JogCharacterMov : MonoBehaviour {
     {
         if (input.MirarInput)
         {
-            animatorChar.SetLayerWeight(0, 0.0f);
-            animatorChar.SetLayerWeight(1, 1.0f);
-            animatorChar.SetLayerWeight(2, 1.0f);
-            animatorChar.SetLayerWeight(3, 1.0f);
-            animatorChar.SetLayerWeight(5, 1.0f);
+            animChar.SetLayerWeight(0, 0.0f);
+            animChar.SetLayerWeight(1, 1.0f);
+            animChar.SetLayerWeight(2, 1.0f);
+            animChar.SetLayerWeight(3, 1.0f);
+            animChar.SetLayerWeight(5, 1.0f);
             animEstilingue.SetBool("Mirar", true);
             float deg = cameraOrb.transform.rotation.x * Mathf.Rad2Deg;
-            animatorChar.SetFloat("MiraX", deg * 2.5f);
-            animatorChar.SetBool("Mirar", true);
+            animChar.SetFloat("MiraX", deg * 2.5f);
+            animChar.SetBool("Mirar", true);
             action = Mode.AndarMirando;
         }
 
         if (!input.MirarInput)
         {
-            animatorChar.SetLayerWeight(0, 1.0f);
-            animatorChar.SetLayerWeight(1, 0.0f);
-            animatorChar.SetLayerWeight(2, 0.0f);
-            animatorChar.SetLayerWeight(3, 0.0f);
-            animatorChar.SetLayerWeight(5, 0.0f);
+            animChar.SetLayerWeight(0, 1.0f);
+            animChar.SetLayerWeight(1, 0.0f);
+            animChar.SetLayerWeight(2, 0.0f);
+            animChar.SetLayerWeight(3, 0.0f);
+            animChar.SetLayerWeight(5, 0.0f);
             animEstilingue.SetBool("Mirar", false);
-            animatorChar.SetBool("Mirar", false);
+            animChar.SetBool("Mirar", false);
             action = Mode.AndarNormal;
         }
     }
 
     public void zeraPesoLayerAim()
     {
-        animatorChar.SetLayerWeight(4, 0.0f);
+        animChar.SetLayerWeight(4, 0.0f);
     }
 
     void CalculateDirection()
@@ -496,29 +589,29 @@ public class JogCharacterMov : MonoBehaviour {
     void Rotate()
     {
         Vector3 localInput;
-        float groundedTurnSpeed;
-        float actualTurnSpeed;
+        float noChaoVelocidadeRotacao;
+        float velocidadeRotacaoAtual;
         switch (action)
         {
             case Mode.AndarNormal:
-                animatorChar.SetFloat(AnimAnguloDeltaRad, GrausAngulo * Mathf.Deg2Rad);
+                animChar.SetFloat(AnimAnguloDeltaRad, GrausAngulo * Mathf.Deg2Rad);
 
                 localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
-                groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
-                actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
+                noChaoVelocidadeRotacao = Mathf.Lerp(movimentacao.velocidadeMaximaVirada, movimentacao.velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
+                velocidadeRotacaoAtual = noChao ? noChaoVelocidadeRotacao : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * noChaoVelocidadeRotacao;
 
-                rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
+                rotacaoAlvo = Quaternion.RotateTowards(transform.rotation, rotacaoAlvo, velocidadeRotacaoAtual * Time.deltaTime);
 
                 transform.rotation = rotacaoAlvo;
                 break;
             case Mode.AndarMirando:
 
                 localInput = new Vector3(input.MoveInput.x, 0f, input.MoveInput.y);
-                groundedTurnSpeed = Mathf.Lerp(velocidadeMaximaVirada, velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
-                actualTurnSpeed = noChao ? groundedTurnSpeed : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * groundedTurnSpeed;
+                noChaoVelocidadeRotacao = Mathf.Lerp(movimentacao.velocidadeMaximaVirada, movimentacao.velocidadeMinimaVirada, velocidadeFoward / velocidadeFowardDesejada);
+                velocidadeRotacaoAtual = noChao ? noChaoVelocidadeRotacao : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * noChaoVelocidadeRotacao;
 
                 rotacaoAlvo = Quaternion.Euler(0, angle, 0);//converte para quaternion
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, actualTurnSpeed * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, velocidadeRotacaoAtual * Time.deltaTime);
 
                 break;
         }
@@ -623,19 +716,19 @@ public class JogCharacterMov : MonoBehaviour {
         {
             IdleTimer += Time.deltaTime;
 
-            if (IdleTimer >= idleTempoDeOciosidade)
+            if (IdleTimer >= movimentacao.idleTempoDeOciosidade)
             {
                 IdleTimer = 0f;
-                animatorChar.SetTrigger(AnimTempoIrParaIdle);
+                animChar.SetTrigger(AnimTempoIrParaIdle);
             }
         }
         else
         {
             IdleTimer = 0f;
-            animatorChar.ResetTrigger(AnimTempoIrParaIdle);
+            animChar.ResetTrigger(AnimTempoIrParaIdle);
         }
 
-        animatorChar.SetBool(AnimDetectouInput, inputDetected);
+        animChar.SetBool(AnimDetectouInput, inputDetected);
     }
 
     void AnimatorControlWalk8Way()
@@ -648,8 +741,27 @@ public class JogCharacterMov : MonoBehaviour {
 
     private void MoverMirando()
     {
-        animatorChar.SetFloat("MoveX", input.MoveInput.x);
-        animatorChar.SetFloat("MoveZ", input.MoveInput.y);
+        animChar.SetFloat("MoveX", input.MoveInput.x);
+        animChar.SetFloat("MoveZ", input.MoveInput.y);
+    }
+
+    public void ReceberDano(Vector3 mataJogCol)
+    {
+        animChar.SetTrigger(AnimLevouDano);
+
+        Vector3 forward = mataJogCol - transform.position;
+        forward.y = 0f;
+
+        Vector3 localDano = transform.InverseTransformDirection(forward).normalized;
+
+        animChar.SetFloat(AnimLevarDanoX, localDano.x);
+        animChar.SetFloat(AnimLevarDanoY, localDano.z);
+
+        //Tocar audio de dano
+        //if (hurtAudioPlayer != null)
+        //{
+        //    hurtAudioPlayer.PlayRandomClip();
+        //}
     }
 
     void OnAnimatorMove()
@@ -665,7 +777,7 @@ public class JogCharacterMov : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, DistanciaRaioDoChao, Physics.AllLayers, QueryTriggerInteraction.Ignore))
             {
                 // Armazene também a superfície de caminhada atual para que o áudio correto seja reproduzido.
-                movement = Vector3.ProjectOnPlane(animatorChar.deltaPosition, hit.normal);
+                movement = Vector3.ProjectOnPlane(animChar.deltaPosition, hit.normal);
 
                 // Also store the current walking surface so the correct audio is played.
                 Renderer groundRenderer = hit.collider.GetComponentInChildren<Renderer>();
@@ -675,7 +787,7 @@ public class JogCharacterMov : MonoBehaviour {
             {
                 // Se nenhum solo for atingido, apenas pegue o movimento como o movimento da raiz.
                 // Teoricamente, isso raramente acontece, pois quando aterrado, o raio deve sempre acertar.
-                movement = animatorChar.deltaPosition;
+                movement = animChar.deltaPosition;
                 superficeAtual = null;
             }
         }
@@ -687,7 +799,7 @@ public class JogCharacterMov : MonoBehaviour {
         }
 
         // Gira a transformação do character controller pela rotação da raiz da animação.
-        charCtrl.transform.rotation *= animatorChar.deltaRotation;
+        charCtrl.transform.rotation *= animChar.deltaRotation;
 
         // Adicione ao movimento com a velocidade vertical calculada.
         movement += velocidadeVertical * Vector3.up * Time.deltaTime;
@@ -700,10 +812,10 @@ public class JogCharacterMov : MonoBehaviour {
         // Se o jogador não estiver no chão, envie a velocidade vertical para o animador.
         // É assim que a velocidade vertical é mantida durante o pouso para que a animação de pouso correta seja reproduzida.
         if (!noChao)
-            animatorChar.SetFloat(AnimVelocidadeVerticalNoAr, velocidadeVertical);
+            animChar.SetFloat(AnimVelocidadeVerticalNoAr, velocidadeVertical);
 
         // Envie se o jogador está ou não no chão para o animador.
-        animatorChar.SetBool(AnimNoChao, noChao);
+        animChar.SetBool(AnimNoChao, noChao);
     }
 
     public void RespawnAcabou()
@@ -713,27 +825,9 @@ public class JogCharacterMov : MonoBehaviour {
     }
 
     //Ainda da para melhorar o wall jump
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //if (hit.gameObject.tag == "WallJump" && !noChao)
-        //{
-        //    Debug.Log("WallJump");
-        //}
-        
-        Debug.Log(hit.gameObject.tag);
-        if (hit.gameObject.tag == "WallJump")
-        {
-            if (charCtrl.collisionFlags == CollisionFlags.Sides)
-            {
-                if (input.PuloInput && velocidadeVertical < 0.0f)
-                {
-                    Debug.DrawRay(hit.point, hit.normal, Color.red, 2.0f);
-                    //noWallJump = true;
-                    //movement = hit.normal * velocidadeFoward;
-                    //movement.y = velocidadePulo;
-                }
-            }
-        }
 
     }
 }

@@ -1,7 +1,5 @@
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
     [System.Serializable]
     public class SmartParts
     {
@@ -70,4 +68,3 @@ namespace Gamekit3D.WorldBuilding
         }
 
     }
-}

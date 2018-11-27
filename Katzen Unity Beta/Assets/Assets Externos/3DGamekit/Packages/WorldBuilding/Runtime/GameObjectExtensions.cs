@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
     public static class GameObjectExtensions
     {
         public static GameObject Dummy(this GameObject gameObject)
@@ -72,4 +70,3 @@ namespace Gamekit3D.WorldBuilding
             return bounds;
         }
     }
-}

@@ -7,8 +7,6 @@ using UnityEditor;
 using System.Linq;
 #endif
 
-namespace Gamekit3D
-{
     [ExecuteInEditMode]
     public class QualitySettingPostprocessProfileSwitch : MonoBehaviour
     {
@@ -232,4 +230,3 @@ namespace Gamekit3D
         }
     }
 #endif
-}

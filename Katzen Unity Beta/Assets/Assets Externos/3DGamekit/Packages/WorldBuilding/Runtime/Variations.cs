@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
     [System.Serializable]
     public class Variations : MonoBehaviour
     {
@@ -17,4 +15,3 @@ namespace Gamekit3D.WorldBuilding
 
 
     }
-}

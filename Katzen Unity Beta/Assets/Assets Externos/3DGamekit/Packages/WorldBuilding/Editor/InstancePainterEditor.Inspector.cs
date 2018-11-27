@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Rendering;
 
-
-namespace Gamekit3D.WorldBuilding
-{
-
     public partial class InstancePainterEditor : Editor
     {
         [MenuItem("GameObject/Create Other/Instance Painter")]
@@ -98,4 +94,3 @@ namespace Gamekit3D.WorldBuilding
         }
 
     }
-}

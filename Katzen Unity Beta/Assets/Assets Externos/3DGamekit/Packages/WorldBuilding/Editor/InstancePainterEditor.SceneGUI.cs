@@ -6,9 +6,6 @@ using UnityEngine.Rendering;
 using System;
 using System.Linq;
 
-namespace Gamekit3D.WorldBuilding
-{
-
     public partial class InstancePainterEditor : Editor
     {
 
@@ -253,5 +250,3 @@ namespace Gamekit3D.WorldBuilding
 
         public override bool RequiresConstantRepaint() { return true; }
     }
-
-}

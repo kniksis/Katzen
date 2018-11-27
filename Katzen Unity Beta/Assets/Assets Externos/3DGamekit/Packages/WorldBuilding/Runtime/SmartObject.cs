@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
     [ExecuteInEditMode]
     public class SmartObject : MonoBehaviour
     {
@@ -91,4 +89,3 @@ namespace Gamekit3D.WorldBuilding
 
 
     }
-}

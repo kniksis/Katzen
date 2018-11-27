@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
-
     [ExecuteInEditMode]
     public class InstancePainter : MonoBehaviour
     {
@@ -51,4 +48,3 @@ namespace Gamekit3D.WorldBuilding
 
 
     }
-}

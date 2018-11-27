@@ -2,8 +2,6 @@ using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 
-namespace Gamekit3D.WorldBuilding
-{
     [SelectionBase]
     [CustomEditor(typeof(MegaSmartObject))]
     public partial class MegaSmartObjectEditor : Editor
@@ -144,4 +142,3 @@ namespace Gamekit3D.WorldBuilding
             }
         }
     }
-}

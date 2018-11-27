@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Rendering;
 
-
-namespace Gamekit3D.WorldBuilding
-{
-
     [CustomEditor(typeof(InstancePainter))]
     public partial class InstancePainterEditor : Editor
     {
@@ -169,4 +165,3 @@ namespace Gamekit3D.WorldBuilding
         }
 
     }
-}

@@ -74,14 +74,6 @@ public class GameManager : MonoBehaviour
 		InstanciarJogador();
 	}
 
-    private void SetEstamina()
-    {
-        if(estamina <= 0)
-        {
-            DecreaseLife(0.1f);
-        }
-    }
-
     // Update is called once per frame
     void Update ()
     {
@@ -106,7 +98,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (life <= 0)
 		{
-            animJog.Play("Morte1");
+            animJog.SetTrigger("Morrer");
 		}
 	}
 
@@ -118,11 +110,58 @@ public class GameManager : MonoBehaviour
 
 	public void DecreaseLife(float LifeDesejada)
 	{
-		life -= LifeDesejada;
-		SetLife();
+        if (life >= 0)
+        {
+            life -= LifeDesejada;
+            SetLife();
+        }
+
+        if(life <= 0)
+        {
+            life = 0;
+            SetLife();
+        }
 	}
-	
-	public void SetMunicao()
+    
+    public void SetEstamina()
+    {
+        if (estamina <= 0)
+        {
+            estamina = 0;
+        }
+    }
+
+    public void AddEstamina(float EstaminaDesejada)
+    {
+        if (estamina <= 100)
+        {
+            estamina += EstaminaDesejada;
+            SetEstamina();
+        }
+
+        if(estamina >= 100)
+        {
+            estamina = 100;
+            SetEstamina();
+        }
+    }
+
+    public void DecreaseEstamina(float EstaminaDesejada)
+    {
+        if (estamina >= 0)
+        {
+            estamina -= EstaminaDesejada;
+            SetEstamina();
+        }
+
+        if (estamina <= 0)
+        {
+            estamina = 0;
+            SetEstamina();
+        }
+    }
+
+    public void SetMunicao()
 	{
 		municaonumber.text = municao.ToString();
 	}

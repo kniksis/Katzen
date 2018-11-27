@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Torreta : MonoBehaviour {
-
-    //public List<GameObject> InimigoAtualLocalizado = new List<GameObject>();
-
+    
     //---- Identifica um por um ----
     public Animator animator;
     [SerializeField]
@@ -106,7 +104,7 @@ public class Torreta : MonoBehaviour {
         if (other.gameObject.tag == "Garras" && JogMCScript.Atacando)
         {
             LevarDano(other);
-            Debug.Log("Dar Dano Por ENTER");
+            Debug.Log("Levar Dano Por ENTER");
         }
     }
 
@@ -115,7 +113,7 @@ public class Torreta : MonoBehaviour {
         if (other.gameObject.tag == "Garras" && JogMCScript.Atacando && Time.time > proximoSoco)
         {
             proximoSoco = Time.time + RateCombo;
-            Debug.Log("Dar Dano Por STAY");
+            Debug.Log("Levar Dano Por STAY");
             LevarDano(other);
         }
     }
