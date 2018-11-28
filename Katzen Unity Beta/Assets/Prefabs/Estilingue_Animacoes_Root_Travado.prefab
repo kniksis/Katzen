@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4918516855906562}
   m_Layer: 2
-  m_Name: TiroRespwn
+  m_Name: TiroRespwnEstilingue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +321,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230231158914900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.210588, y: 0.333, z: 51.501186}
+  m_LocalPosition: {x: 6.069313, y: 0.35, z: 0.35402298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4066387673289590}

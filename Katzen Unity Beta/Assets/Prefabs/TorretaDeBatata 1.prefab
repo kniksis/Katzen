@@ -395,8 +395,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378694755613184}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.25, y: 0, z: 59.94}
+  m_LocalRotation: {x: 0.0015883946, y: 0.9065066, z: -0.003410648, w: 0.42217493}
+  m_LocalPosition: {x: 25.63, y: 9.2, z: 20.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745989019481750}
@@ -410,7 +410,7 @@ Transform:
   - {fileID: 4816088385189432}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 402.998, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.43100002, y: 490.056, z: 0}
 --- !u!23 &23014872292365082
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -889,8 +889,8 @@ MonoBehaviour:
   delayGiro: 800
   tiro: {fileID: 54688424109597190, guid: 6ddb1b9051690184484fbf1293cd1f96, type: 2}
   respawnTiro: {fileID: 4930164394095422}
-  fireRate: 0.1
-  nextFire: 0
+  fireRate: 0.5
+  RateCombo: 0.3
   forcaAtual: 10
   atirar: 0
   particulaDano: {fileID: 1750511825329642, guid: 8bc50abdf7ba41246be0350d13335048,

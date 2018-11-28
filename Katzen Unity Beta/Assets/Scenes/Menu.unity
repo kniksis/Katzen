@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.103773594, g: 0.039081722, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e79deb2e6d4a5b142a0efa22234d22f5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -688,6 +688,8 @@ GameObject:
   - component: {fileID: 107817881}
   - component: {fileID: 107817880}
   - component: {fileID: 107817879}
+  - component: {fileID: 107817884}
+  - component: {fileID: 107817882}
   m_Layer: 5
   m_Name: BTNovoJogo
   m_TagString: Untagged
@@ -811,6 +813,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107817877}
+--- !u!114 &107817882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107817877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107817884}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 107817884}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &107817884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 107817877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &125956052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1150,7 @@ GameObject:
   - component: {fileID: 150149806}
   - component: {fileID: 150149808}
   - component: {fileID: 150149807}
+  - component: {fileID: 150149809}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1165,7 +1229,7 @@ RectTransform:
   - {fileID: 197859263}
   - {fileID: 1581732084}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1219,6 +1283,102 @@ MonoBehaviour:
   eventSystem: {fileID: 0}
   CenaAtual: 
   estadoMenu: 0
+--- !u!82 &150149809
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 150149801}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243047839134225194, guid: d876416c60c14da46a0a56b952fc33ac,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 109
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &163881817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1451,48 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 163881817}
+--- !u!1001 &175367443
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000030056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000075158
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048488336467262, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d1ea8e04a581954793ca4cd3d8cf2d1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &176045613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1652,8 @@ GameObject:
   - component: {fileID: 193417930}
   - component: {fileID: 193417929}
   - component: {fileID: 193417928}
+  - component: {fileID: 193417933}
+  - component: {fileID: 193417931}
   m_Layer: 5
   m_Name: BTVoltar
   m_TagString: Untagged
@@ -1588,6 +1792,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 193417926}
+--- !u!114 &193417931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193417926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 193417933}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 193417933}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &193417933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193417926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &196711365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,11 +2243,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.000019073486}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
---- !u!4 &268241302 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c,
-    type: 2}
-  m_PrefabInternal: {fileID: 996189300}
 --- !u!1 &282426205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,80 +2321,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282426205}
---- !u!1001 &300119344
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 268241302}
-    m_Modifications:
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -421.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -24.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -334.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.65005785
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.6608452
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.35355622
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.1253247
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1423305928260414, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_Name
-      value: Directional Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -95.733
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 17.719002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -221.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1423305928260414, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7adafd812960a3149be8610abb9dc14e, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &302611734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +2830,8 @@ GameObject:
   - component: {fileID: 340482467}
   - component: {fileID: 340482469}
   - component: {fileID: 340482468}
+  - component: {fileID: 340482472}
+  - component: {fileID: 340482470}
   m_Layer: 5
   m_Name: PanelBTVoltar
   m_TagString: Untagged
@@ -2703,6 +2891,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340482466}
+--- !u!114 &340482470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340482466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 340482472}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 340482472}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &340482472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340482466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &342943730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,7 +3035,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1093735295149016, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 343111052}
@@ -2804,14 +3053,14 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 222625985363550836, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343111050}
 --- !u!224 &343111052
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224032119029967160, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343111050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -3029,7 +3278,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 1284952aa3a4c8b4784e210fc5a2b477, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -3050,7 +3299,7 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 1
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!154 &379523833
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -3072,7 +3321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380656749
 GameObject:
@@ -3131,6 +3380,8 @@ GameObject:
   - component: {fileID: 387548623}
   - component: {fileID: 387548622}
   - component: {fileID: 387548621}
+  - component: {fileID: 387548626}
+  - component: {fileID: 387548624}
   m_Layer: 5
   m_Name: BTVoltar
   m_TagString: Untagged
@@ -3280,6 +3531,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387548619}
+--- !u!114 &387548624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 387548619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 387548626}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 387548626}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &387548626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 387548619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &388638723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,6 +3661,87 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388638723}
+--- !u!1 &392863610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 392863614}
+  - component: {fileID: 392863613}
+  - component: {fileID: 392863612}
+  - component: {fileID: 392863611}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &392863611
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392863610}
+  m_Enabled: 1
+--- !u!124 &392863612
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392863610}
+  m_Enabled: 1
+--- !u!20 &392863613
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392863610}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &392863614
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392863610}
+  m_LocalRotation: {x: -0.09926667, y: 0.6434156, z: -0.09603225, w: 0.7529545}
+  m_LocalPosition: {x: 24.683, y: 40.607, z: 142.993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -1.485, y: 81.235, z: -15.81}
 --- !u!1 &399907134
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,7 +4608,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114897370813157894, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343111050}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -4547,6 +4940,8 @@ GameObject:
   - component: {fileID: 559246629}
   - component: {fileID: 559246631}
   - component: {fileID: 559246630}
+  - component: {fileID: 559246634}
+  - component: {fileID: 559246632}
   m_Layer: 5
   m_Name: PanelBTVoltar
   m_TagString: Untagged
@@ -4606,6 +5001,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 559246628}
+--- !u!114 &559246632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559246628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 559246634}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 559246634}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &559246634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559246628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &570439881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4618,6 +5074,8 @@ GameObject:
   - component: {fileID: 570439885}
   - component: {fileID: 570439884}
   - component: {fileID: 570439883}
+  - component: {fileID: 570439888}
+  - component: {fileID: 570439886}
   m_Layer: 5
   m_Name: BTVoltar
   m_TagString: Untagged
@@ -4756,6 +5214,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 570439881}
+--- !u!114 &570439886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570439881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 570439888}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 570439888}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &570439888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570439881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &575530832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +5443,8 @@ GameObject:
   - component: {fileID: 592957624}
   - component: {fileID: 592957623}
   - component: {fileID: 592957622}
+  - component: {fileID: 592957628}
+  - component: {fileID: 592957626}
   m_Layer: 5
   m_Name: BTVoltar
   m_TagString: Untagged
@@ -5062,6 +5583,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &592957626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 592957621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 592957628}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 592957628}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &592957628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 592957621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &594394059
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +5721,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1873981479858676, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 604878593}
@@ -5157,7 +5739,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224939259934181130, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604878592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -5176,7 +5758,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114426337487496396, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604878592}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5204,7 +5786,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 222717480454040038, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604878592}
 --- !u!1 &606735937
 GameObject:
@@ -5469,6 +6051,8 @@ GameObject:
   - component: {fileID: 628554290}
   - component: {fileID: 628554289}
   - component: {fileID: 628554288}
+  - component: {fileID: 628554293}
+  - component: {fileID: 628554291}
   m_Layer: 5
   m_Name: "BTOp\xE7\xF5es"
   m_TagString: Untagged
@@ -5603,6 +6187,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 628554286}
+--- !u!114 &628554291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 628554286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 628554293}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 628554293}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &628554293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 628554286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &634641969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,6 +6260,8 @@ GameObject:
   - component: {fileID: 634641972}
   - component: {fileID: 634641971}
   - component: {fileID: 634641970}
+  - component: {fileID: 634641976}
+  - component: {fileID: 634641974}
   m_Layer: 5
   m_Name: BTControles
   m_TagString: Untagged
@@ -5753,6 +6400,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &634641974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634641969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 634641976}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 634641976}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &634641976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634641969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &636318685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6079,7 +6787,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1423305928260414, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 681646676}
@@ -6096,33 +6804,33 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4259603065465262, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681646675}
-  m_LocalRotation: {x: 0.65005785, y: -0.6608452, z: 0.35355622, w: -0.1253247}
-  m_LocalPosition: {x: -421.5, y: -24.8, z: -334.76}
+  m_LocalRotation: {x: 0.5665542, y: -0.6774307, z: -0.049819887, w: 0.46649978}
+  m_LocalPosition: {x: 25.882, y: 40.597, z: 143.161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 957565500}
-  m_Father: {fileID: 268241302}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.719002, y: -221.03, z: -95.733}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 27.458002, y: -129.113, z: -66.554}
 --- !u!108 &681646677
 Light:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 108161268002846348, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 681646675}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95823747, b: 0.8443396, a: 1}
+  m_Color: {r: 0.7264151, g: 0.49719733, b: 0.051397286, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7266,7 +7974,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1169562085234846, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 880081903}
@@ -7284,7 +7992,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224211569567149806, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880081902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7303,7 +8011,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114054413551058648, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880081902}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -7331,7 +8039,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 222723501869719880, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 880081902}
 --- !u!1 &920847225
 GameObject:
@@ -7632,7 +8340,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1283326549797076, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 957565500}
@@ -7649,7 +8357,7 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4038933579718128, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 957565499}
   m_LocalRotation: {x: 0, y: 1, z: -0, w: -0.0000001872535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -7663,12 +8371,12 @@ Light:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 108314658452080798, guid: 7adafd812960a3149be8610abb9dc14e,
     type: 2}
-  m_PrefabInternal: {fileID: 300119344}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 957565499}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.5849056, g: 0.3961923, b: 0.31176573, a: 1}
+  m_Color: {r: 0.26415092, g: 0.1890875, b: 0.113385536, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -7778,6 +8486,8 @@ GameObject:
   - component: {fileID: 971757791}
   - component: {fileID: 971757790}
   - component: {fileID: 971757789}
+  - component: {fileID: 971757794}
+  - component: {fileID: 971757792}
   m_Layer: 5
   m_Name: BTCreditos
   m_TagString: Untagged
@@ -7912,63 +8622,73 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 971757787}
---- !u!1001 &996189300
-Prefab:
+--- !u!114 &971757792
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 95.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 29.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 113.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.84143203
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.5403631
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1710961672018404, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4287973193154384, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -474.583
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114791259101244652, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 95e5259bfd5b8334aae314f0333ddc1c, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971757787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971757794}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 971757794}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &971757794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971757787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1000605647
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1707474948863922, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1000605648}
@@ -7985,7 +8705,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224868896131221128, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1000605647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -8391,110 +9111,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1048344182
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 150149805}
-    m_Modifications:
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 4.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964024718212518, guid: bc3b682ad5fbf81499467a4f98d1e3fa, type: 2}
-      propertyPath: m_Name
-      value: LoadScreen
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: bc3b682ad5fbf81499467a4f98d1e3fa, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1050641337
 GameObject:
   m_ObjectHideFlags: 0
@@ -8755,7 +9371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9561,7 +10177,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1024496427734514, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1300171489}
@@ -9577,7 +10193,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224372486805572028, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1300171488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -9750,6 +10366,8 @@ GameObject:
   - component: {fileID: 1362442424}
   - component: {fileID: 1362442423}
   - component: {fileID: 1362442422}
+  - component: {fileID: 1362442427}
+  - component: {fileID: 1362442425}
   m_Layer: 5
   m_Name: BTContinue
   m_TagString: Untagged
@@ -9811,7 +10429,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1362442423}
   m_OnClick:
     m_PersistentCalls:
@@ -9862,6 +10480,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1362442420}
+--- !u!114 &1362442425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362442420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1362442427}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1362442427}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1362442427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1362442420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: a86f184fc39ede342913dafbabc1541a, type: 3}
 --- !u!1 &1364489481
 GameObject:
   m_ObjectHideFlags: 0
@@ -10013,6 +10692,8 @@ GameObject:
   - component: {fileID: 1387702798}
   - component: {fileID: 1387702800}
   - component: {fileID: 1387702799}
+  - component: {fileID: 1387702803}
+  - component: {fileID: 1387702801}
   m_Layer: 5
   m_Name: PanelBTVoltar
   m_TagString: Untagged
@@ -10072,6 +10753,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1387702797}
+--- !u!114 &1387702801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387702797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1387702803}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1387702803}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1387702803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1387702797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1394056049
 GameObject:
   m_ObjectHideFlags: 0
@@ -10084,6 +10826,8 @@ GameObject:
   - component: {fileID: 1394056053}
   - component: {fileID: 1394056052}
   - component: {fileID: 1394056051}
+  - component: {fileID: 1394056056}
+  - component: {fileID: 1394056054}
   m_Layer: 5
   m_Name: BTVoltar
   m_TagString: Untagged
@@ -10222,6 +10966,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394056049}
+--- !u!114 &1394056054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394056049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1394056056}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1394056056}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1394056056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1394056049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1412490893
 GameObject:
   m_ObjectHideFlags: 0
@@ -10471,12 +11276,54 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1444832980
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25.647284
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 40.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 142.67453
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5847919
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.81118333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030474887039170, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f4d90b14345ae1241a39282797b4f747, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &1448795442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114021552099585404, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1000605647}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11124,7 +11971,7 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1964024718212518, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1581732084}
@@ -11142,7 +11989,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 224273267430547928, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581732083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -11162,7 +12009,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114689627913291168, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581732083}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -11190,7 +12037,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 222836381155841576, guid: bc3b682ad5fbf81499467a4f98d1e3fa,
     type: 2}
-  m_PrefabInternal: {fileID: 1048344182}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581732083}
 --- !u!1 &1584755395
 GameObject:
@@ -11516,7 +12363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1631129198
 GameObject:
@@ -11807,6 +12654,8 @@ GameObject:
   - component: {fileID: 1668181001}
   - component: {fileID: 1668181003}
   - component: {fileID: 1668181002}
+  - component: {fileID: 1668181006}
+  - component: {fileID: 1668181004}
   m_Layer: 5
   m_Name: PanelBTVoltar
   m_TagString: Untagged
@@ -11866,6 +12715,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1668181000}
+--- !u!114 &1668181004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668181000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1668181006}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1668181006}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1668181006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1668181000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1679467900
 GameObject:
   m_ObjectHideFlags: 0
@@ -12267,6 +13177,8 @@ GameObject:
   - component: {fileID: 1738360696}
   - component: {fileID: 1738360695}
   - component: {fileID: 1738360694}
+  - component: {fileID: 1738360699}
+  - component: {fileID: 1738360697}
   m_Layer: 5
   m_Name: BTSair
   m_TagString: Untagged
@@ -12379,6 +13291,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1738360692}
+--- !u!114 &1738360697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738360692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1738360699}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1738360699}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1738360699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738360692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: 76451334ec7885540a543ae477ea7f7f, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1743125220
 GameObject:
   m_ObjectHideFlags: 0
@@ -12391,6 +13364,8 @@ GameObject:
   - component: {fileID: 1743125223}
   - component: {fileID: 1743125222}
   - component: {fileID: 1743125221}
+  - component: {fileID: 1743125227}
+  - component: {fileID: 1743125225}
   m_Layer: 5
   m_Name: BTVideo
   m_TagString: Untagged
@@ -12529,6 +13504,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1743125225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743125220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1743125227}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1743125227}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1743125227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743125220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &1743608297
 GameObject:
   m_ObjectHideFlags: 0
@@ -15952,6 +16988,150 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28ba473643d71894f968a6dc2114f764, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2119015160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2119015163}
+  - component: {fileID: 2119015162}
+  - component: {fileID: 2119015161}
+  m_Layer: 0
+  m_Name: Calm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &2119015161
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119015160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a42fc8f7662ed044fac3ff4dd25c8c39, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &2119015162
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119015160}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243320144960619234, guid: d876416c60c14da46a0a56b952fc33ac,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 31c0c91baa1120341be28811a5881d6f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2119015163
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119015160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130363642
 GameObject:
   m_ObjectHideFlags: 0
@@ -16000,6 +17180,8 @@ GameObject:
   - component: {fileID: 2132067719}
   - component: {fileID: 2132067718}
   - component: {fileID: 2132067717}
+  - component: {fileID: 2132067722}
+  - component: {fileID: 2132067720}
   m_Layer: 5
   m_Name: BTAudio
   m_TagString: Untagged
@@ -16138,6 +17320,67 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2132067715}
+--- !u!114 &2132067720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132067715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2132067722}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2132067722}
+          m_MethodName: ClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &2132067722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132067715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f83615aaeca6846903c851774239b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BTAudioSource: {fileID: 150149809}
+  hoverBRSom: {fileID: 8300000, guid: f709b9a72f14dad4195c2f41f2d22661, type: 3}
+  clickBRSom: {fileID: 8300000, guid: 607901e4ef2a8da44bd0bdaef42b35c2, type: 3}
 --- !u!1 &2133475280
 GameObject:
   m_ObjectHideFlags: 0

@@ -242,21 +242,6 @@ public class JogCharacterMov : MonoBehaviour {
     {
         gmGO = GameObject.Find("Manager");
         gmScript = gmGO.GetComponent<GameManager>();
-        if (Estilingue == null)
-        {
-            Estilingue = GameObject.Find("Estilingue_Animacoes_Root_Travado");
-        }
-
-        if (HUDArmas == null)
-        {
-            HUDArmas = GameObject.Find("ArmasHUD");
-        }
-        
-        if (Camera.main != null)
-        {
-            cameraOrb = Camera.main.transform;
-        }
-
         input = GetComponent<JogadorInputs>();
         animChar = GetComponent<Animator>();
         animEstilingue = Estilingue.GetComponent<Animator>();

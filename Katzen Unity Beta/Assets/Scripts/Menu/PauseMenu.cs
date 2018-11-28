@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour {
     // Use this for initialization
     void Start () {
         PausePainel.SetActive(false);
+        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 	
@@ -92,6 +93,7 @@ public class PauseMenu : MonoBehaviour {
         {
             PausePainel.SetActive(true);
             Time.timeScale = 0.0f;
+            AudioListener.pause = true;
             GameIsPaused = true;
             VoltarMenuPause();
         }
@@ -112,6 +114,7 @@ public class PauseMenu : MonoBehaviour {
         PausePainel.SetActive(false);
         Time.timeScale = 1.0f;
         GameIsPaused = false;
+        AudioListener.pause = false;
         Cursor.lockState = CursorLockMode.Locked;
         eventSystem.SetSelectedGameObject(PrimeiroBotaoContextual);
     }
