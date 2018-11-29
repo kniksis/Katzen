@@ -16582,12 +16582,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.4
-  m_Text: "Raul Peres Cardoso - Algumas coisas\nRicardo Martins - Outras coisas\nAlizzzzzzon
-    - Mais coisas\n\nReinaldo Ramos - Desorientou\nAlexandre Braga - Confundiu\nFabio
-    Fernandes - Nao foi isso que eu pedi\nFabio Musarra - Se decepcionou\nDeborah
-    Magnani - Nao Concordou\nEliseu Lopes - Lei N\xBA 16.567/2017\nRogerio Cardoso
-    - ANIMAL!\nLawrence Shum - \xC9?... Legal!\nDolemes - Shalom!\nEduardo Savino
-    - Abram o XNA! heHeHE!\n\n"
+  m_Text: "Alison\nRaul Peres Cardoso\nRicardo Martins\n\nReinaldo Ramos\nAlexandre
+    Braga\nFabio Fernandes\nFabio Musarra\nRogerio Cardoso\nLawrence Shum\nDolemes\n\nAgradecimentos
+    especiais\n\nVictor Ka\xE7a\n"
 --- !u!222 &2074248317
 CanvasRenderer:
   m_ObjectHideFlags: 0

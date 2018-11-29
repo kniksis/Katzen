@@ -91,6 +91,7 @@ public class JogCharacterMov : MonoBehaviour {
     }
 
     public CameraSettings cameraSettings;
+    [SerializeField]
     public Transform cameraOrb;
     //public GarrasMelee garrasMelee;
     public PlayerDeAudioRandomico footstepPlayer;         // Random Audio Players used for various situations.
@@ -255,7 +256,11 @@ public class JogCharacterMov : MonoBehaviour {
     
     void Start () {
         SetPodeAtacar(true);
-	}
+        charCtrl.enabled = true;
+        input.enabled = true;
+        gmScript.life = 100;
+        gmScript.estamina = 100;
+    }
 
     // Update é chamado uma vez por frame
     void Update () {
