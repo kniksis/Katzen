@@ -21,6 +21,7 @@ TagManager:
   - CameraPrincipal
   - Inimigo
   - Garras
+  - Matar afogado
   layers:
   - Default
   - TransparentFX
