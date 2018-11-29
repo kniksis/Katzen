@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193478619909426270}
   - component: {fileID: 33160435823420780}
   - component: {fileID: 23217309334702332}
+  - component: {fileID: 136380272880181134}
   m_Layer: 2
   m_Name: Tree
   m_TagString: Untagged
@@ -3141,6 +3142,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21708759116837246}
   optimizedCutoutMaterial: {fileID: 21749291928666284}
   isInPreviewMode: 0
+--- !u!136 &136380272880181134
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714535890009584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.31
+  m_Height: 3.0296984
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5148492, z: 0}
 --- !u!193 &193478619909426270
 Tree:
   m_ObjectHideFlags: 1

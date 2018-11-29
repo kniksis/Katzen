@@ -22,12 +22,15 @@ GameObject:
   - component: {fileID: 193231079086264948}
   - component: {fileID: 33295237173558306}
   - component: {fileID: 23008777526735910}
+  - component: {fileID: 136555671216606318}
+  - component: {fileID: 136192664187755378}
+  - component: {fileID: 136645859872790406}
   m_Layer: 0
   m_Name: PalmeiraSemMundial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4454870124431750
 Transform:
@@ -35,8 +38,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669490329077246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 41.02, y: 0.00049996376, z: -1.65}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5743,6 +5746,45 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21439691118361630}
   optimizedCutoutMaterial: {fileID: 21050781209652624}
   isInPreviewMode: 0
+--- !u!136 &136192664187755378
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669490329077246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.58
+  m_Height: 12.48
+  m_Direction: 2
+  m_Center: {x: 0, y: 6.4, z: 6.21}
+--- !u!136 &136555671216606318
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669490329077246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.46
+  m_Height: 4.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 11.05, z: 14.26}
+--- !u!136 &136645859872790406
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1669490329077246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8
+  m_Height: 2.82
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.29, z: 0}
 --- !u!193 &193231079086264948
 Tree:
   m_ObjectHideFlags: 1

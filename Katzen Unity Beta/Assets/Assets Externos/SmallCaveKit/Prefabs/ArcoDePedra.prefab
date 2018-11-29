@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4329193739092950}
   - component: {fileID: 33862431151214096}
   - component: {fileID: 23303975573906184}
+  - component: {fileID: 136518449740352626}
+  - component: {fileID: 136111942748201978}
   m_Layer: 0
   m_Name: ArcoDePedra
   m_TagString: Untagged
@@ -83,3 +85,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1057874347749840}
   m_Mesh: {fileID: 4300000, guid: 15625566d4ee1e24ab1978249c51b74a, type: 3}
+--- !u!136 &136111942748201978
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057874347749840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.01
+  m_Height: 7.28
+  m_Direction: 1
+  m_Center: {x: 2.11, y: 1.49, z: -0.016417384}
+--- !u!136 &136518449740352626
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1057874347749840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.01
+  m_Height: 7.28
+  m_Direction: 1
+  m_Center: {x: -2.07, y: 1.49, z: -0.016417384}

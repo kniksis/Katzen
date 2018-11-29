@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193114688503157156}
   - component: {fileID: 33394453316082596}
   - component: {fileID: 23346075114952878}
+  - component: {fileID: 136778460169244372}
   m_Layer: 0
   m_Name: BigSabal
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417810335805884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.86502, y: 0.00049996376, z: 6.305581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2372,6 +2373,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21755767022589760}
   optimizedCutoutMaterial: {fileID: 21075141262244812}
   isInPreviewMode: 0
+--- !u!136 &136778460169244372
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1417810335805884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.27
+  m_Height: 6.4000163
+  m_Direction: 1
+  m_Center: {x: -0.18810284, y: 3.2000082, z: 0.22344697}
 --- !u!193 &193114688503157156
 Tree:
   m_ObjectHideFlags: 1

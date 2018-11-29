@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4127957888978536}
   - component: {fileID: 33943939975659692}
   - component: {fileID: 23145141043386540}
+  - component: {fileID: 135591969658568958}
   m_Layer: 0
   m_Name: Stone13
   m_TagString: Untagged
@@ -34,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1249264539806100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 96.784805, y: -0.02385816, z: 30.71024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1249264539806100}
   m_Mesh: {fileID: 4300000, guid: 6728445a1e8e2664eb23d309047418df, type: 3}
+--- !u!135 &135591969658568958
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249264539806100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.37863111
+  m_Center: {x: 0.000000834465, y: 0.116227955, z: 0.00000047683716}

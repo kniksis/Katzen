@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193974780192286252}
   - component: {fileID: 33032134644124344}
   - component: {fileID: 23525288879045156}
+  - component: {fileID: 136849655318957052}
   m_Layer: 0
   m_Name: TalvezTalvez
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1964459176440958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 55.81, y: 0.00049996376, z: 6.6993523}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7770,6 +7771,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21262409774360416}
   optimizedCutoutMaterial: {fileID: 21674429338353000}
   isInPreviewMode: 0
+--- !u!136 &136849655318957052
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964459176440958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.52
+  m_Height: 8.328032
+  m_Direction: 1
+  m_Center: {x: 0.24135506, y: 4.164016, z: -0.23201358}
 --- !u!193 &193974780192286252
 Tree:
   m_ObjectHideFlags: 1

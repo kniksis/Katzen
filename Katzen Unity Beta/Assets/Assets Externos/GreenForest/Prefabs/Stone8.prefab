@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4087859984565484}
   - component: {fileID: 33931556356790010}
   - component: {fileID: 23850220721932552}
+  - component: {fileID: 135041777654114852}
   m_Layer: 0
   m_Name: Stone8
   m_TagString: Untagged
@@ -34,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492374473633936}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 103.548294, y: -0.025601655, z: 27.803173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492374473633936}
   m_Mesh: {fileID: 4300000, guid: 21cb18e856c2b9d46b1206f465bc6d41, type: 3}
+--- !u!135 &135041777654114852
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1492374473633936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5592104
+  m_Center: {x: -0.00000011920929, y: 0.01, z: 0.00000011920929}

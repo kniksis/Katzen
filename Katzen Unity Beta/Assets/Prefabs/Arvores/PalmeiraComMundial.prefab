@@ -11,24 +11,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1669490329077246}
   m_IsPrefabParent: 1
---- !u!1 &1599259831853254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4598984151574202}
-  - component: {fileID: 33598465699714760}
-  - component: {fileID: 23105810099385196}
-  - component: {fileID: 136568460246379602}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
-  m_IsActive: 1
 --- !u!1 &1669490329077246
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +22,7 @@ GameObject:
   - component: {fileID: 193231079086264948}
   - component: {fileID: 33295237173558306}
   - component: {fileID: 23008777526735910}
+  - component: {fileID: 136952946256160100}
   m_Layer: 0
   m_Name: PalmeiraComMundial
   m_TagString: Untagged
@@ -54,26 +37,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669490329077246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.7157, y: 0.00049996376, z: -0.6080475}
+  m_LocalPosition: {x: 43.44, y: 0.00049996376, z: -1.85}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
-  m_Children:
-  - {fileID: 4598984151574202}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4598984151574202
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599259831853254}
-  m_LocalRotation: {x: 0.112942085, y: -1.0759156e-17, z: 0.000000013463746, w: 0.9936016}
-  m_LocalPosition: {x: 0, y: 8.84, z: 2.13}
-  m_LocalScale: {x: 1, y: 10, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4454870124431750}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.97, y: 0, z: 0}
 --- !u!21 &21050781209652624
 Material:
   serializedVersion: 6
@@ -193,41 +162,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23105810099385196
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599259831853254}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!33 &33295237173558306
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -235,13 +169,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1669490329077246}
   m_Mesh: {fileID: 43042517124381868}
---- !u!33 &33598465699714760
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599259831853254}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!43 &43042517124381868
 Mesh:
   m_ObjectHideFlags: 0
@@ -5596,19 +5523,19 @@ MonoBehaviour:
   optimizedSolidMaterial: {fileID: 21439691118361630}
   optimizedCutoutMaterial: {fileID: 21050781209652624}
   isInPreviewMode: 0
---- !u!136 &136568460246379602
+--- !u!136 &136952946256160100
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1599259831853254}
+  m_GameObject: {fileID: 1669490329077246}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 1.41
+  m_Height: 20.607885
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 9.44, z: 0.19}
 --- !u!193 &193231079086264948
 Tree:
   m_ObjectHideFlags: 1
