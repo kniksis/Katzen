@@ -25,6 +25,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 463750}
+  - component: {fileID: 65929679652176962}
   m_Layer: 0
   m_Name: RoadDivider
   m_TagString: Untagged
@@ -51,14 +52,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124036}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.41999802, y: -0.5398892, z: -0.4630226, w: 0.56367666}
+  m_LocalPosition: {x: -130.93161, y: 0.05268106, z: 0.6363193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440698}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.5170001, y: -86.315, z: -77.379005}
 --- !u!23 &2306192
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -112,3 +113,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124036}
   m_IsPrefabParent: 1
+--- !u!65 &65929679652176962
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5117489, y: 0.81151223, z: 2.0453103}
+  m_Center: {x: -0.34593812, y: 0.3363206, z: 0.10042465}

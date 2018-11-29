@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 472320}
   - component: {fileID: 3312382}
   - component: {fileID: 2311960}
+  - component: {fileID: 136834576077339438}
   m_Layer: 0
   m_Name: Cylinder.050
   m_TagString: Untagged
@@ -175,8 +176,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.12775269, y: -0, z: -0, w: 0.9918061}
+  m_LocalPosition: {x: -122.002, y: 0.022448301, z: 0.944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 472320}
@@ -187,7 +188,7 @@ Transform:
   - {fileID: 450514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -14.68, y: 0, z: 0}
 --- !u!4 &472320
 Transform:
   m_ObjectHideFlags: 1
@@ -477,3 +478,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 156290}
   m_IsPrefabParent: 1
+--- !u!136 &136834576077339438
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.1536819
+  m_Height: 7.534043
+  m_Direction: 2
+  m_Center: {x: -6.6299316e-23, y: 0.04, z: 2.410674}
