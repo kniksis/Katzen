@@ -2853,6 +2853,7 @@ GameObject:
   - component: {fileID: 114525352855221994}
   - component: {fileID: 114767982662150064}
   - component: {fileID: 114779485206759404}
+  - component: {fileID: 114977918571399428}
   m_Layer: 10
   m_Name: Katzen Character
   m_TagString: Player
@@ -2999,7 +3000,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978897870966298}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 36.78763, y: 3.664009, z: 113.69047}
+  m_LocalPosition: {x: 14.856613, y: 0.0024414062, z: 55.997448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4160019584150868}
@@ -6773,6 +6774,7 @@ MonoBehaviour:
   animChar: {fileID: 95891629122279992}
   Estilingue: {fileID: 0}
   HUDArmas: {fileID: 0}
+  sensibilidadeMiraY: 0.2
   Atacando: 0
   IdleTimer: 0
   movimentacao:
@@ -6837,6 +6839,26 @@ MonoBehaviour:
   mat: {fileID: 2100000, guid: 2294f2c70d2b7d64aa97ca1fd27a5fa9, type: 2}
   go: {fileID: 1877264053181176}
   AddQuantTerra: 0.01
+--- !u!114 &114977918571399428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1978897870966298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9935a3bc6cd4d42489deff0eab1aaf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InimigoAtualLocalizado: []
+  RaioAim: 5
+  DistanciaMaxima: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  HaInimigos: 0
+  InimigoParaMirar: {fileID: 0}
+  InimigoAtualDistancia: 0
 --- !u!136 &136261342294858890
 CapsuleCollider:
   m_ObjectHideFlags: 1

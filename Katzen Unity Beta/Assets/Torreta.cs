@@ -101,7 +101,7 @@ public class Torreta : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Garras" && JogMCScript.Atacando)
+        if ((other.gameObject.tag == "Garras" && JogMCScript.Atacando) || (other.gameObject.tag == "TiroJogador"))
         {
             LevarDano(other);
             Debug.Log("Levar Dano Por ENTER");

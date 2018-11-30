@@ -132,6 +132,7 @@ public class CameraOrbitalAvancada : MonoBehaviour
 			xOrbit[indiceCameras] += movX * (sensibilidade * distanciaCameraOrbit[indiceCameras]) / (distanciaCameraOrbit[indiceCameras] * 0.5f);
 			yOrbit[indiceCameras] -= movY * sensibilidade * velocidadeY;
 			yOrbit[indiceCameras] = ClampAngle(yOrbit[indiceCameras], 0.0f, 85.0f);
+
 			Quaternion _rotation = Quaternion.Euler(yOrbit[indiceCameras], xOrbit[indiceCameras], 0);
 			distanciaCameraOrbit[indiceCameras] = Mathf.Clamp(distanciaCameraOrbit[indiceCameras] - movZ * velocidadeScrool, distanciaMinima, distanciaMaxima);
 			Vector3 _negDistance = new Vector3(0.0f, 0.0f, -distanciaCameraOrbit[indiceCameras]);

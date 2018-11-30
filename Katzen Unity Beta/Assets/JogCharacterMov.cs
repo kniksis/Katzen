@@ -101,7 +101,13 @@ public class JogCharacterMov : MonoBehaviour {
     public PlayerDeAudioRandomico emoteDeathPlayer;
     public PlayerDeAudioRandomico emoteAttackPlayer;
     public PlayerDeAudioRandomico emoteJumpPlayer;
-    
+
+    [SerializeField]
+    GameObject AuxiliarMiraInimigo;
+    [SerializeField]
+    IdentificadorInimigos MiraAutocript;
+    public float CorrecaoDeMira;
+    public float delayGiro = 5;
     AnimatorStateInfo EstadoAtualInfo;            //Information about the base layer of the animator cached.
     [SerializeField]
     protected AnimatorStateInfo ProximoEstadoInfo;
@@ -125,6 +131,7 @@ public class JogCharacterMov : MonoBehaviour {
     protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
     protected float velocidadeVertical;
     float angle;
+    float y = 0;
     Vector2 ultimoMovimento;
     Vector3 movement;
     [SerializeField]
@@ -138,6 +145,9 @@ public class JogCharacterMov : MonoBehaviour {
     private RaycastHit hit = new RaycastHit();                  //informação sobre o ponto de hit de um raycast
     public GameObject Estilingue;
     public GameObject HUDArmas;
+    [Range(0.0f, 1.0f)]
+    [SerializeField]
+    public float sensibilidadeMiraY;
     protected Material superficeAtual;                          //Usado para fazer as decisoes de troca de audio de acordo com  terreno
     protected Quaternion rotacaoAlvo;                           //Qual é a rotação que o jogador pretende ter com base no Input.
     protected Vector3 anguloAlvo;
@@ -241,25 +251,25 @@ public class JogCharacterMov : MonoBehaviour {
     // Chamado automaticamente pelo Unity quando o script existe pela primeira vez na cena.
     void Awake()
     {
-        gmGO = GameObject.Find("Manager");
-        gmScript = gmGO.GetComponent<GameManager>();
-        input = GetComponent<JogadorInputs>();
-        animChar = GetComponent<Animator>();
-        animEstilingue = Estilingue.GetComponent<Animator>();
-        animHUDArmas = HUDArmas.GetComponent<Animator>();
-        charCtrl = GetComponent<CharacterController>();
 
         //garrasMelee.SetOwner(gameObject);
 
         s_Instance = this;
-    }
-    
-    void Start () {
         SetPodeAtacar(true);
-        charCtrl.enabled = true;
-        input.enabled = true;
+    }
+
+    void Start () {
+        gmGO = GameObject.Find("Manager");
+        gmScript = gmGO.GetComponent<GameManager>();
         gmScript.life = 100;
         gmScript.estamina = 100;
+        input = GetComponent<JogadorInputs>();
+        input.enabled = true;
+        animChar = GetComponent<Animator>();
+        animEstilingue = Estilingue.GetComponent<Animator>();
+        animHUDArmas = HUDArmas.GetComponent<Animator>();
+        charCtrl = GetComponent<CharacterController>();
+        charCtrl.enabled = true;
     }
 
     // Update é chamado uma vez por frame
@@ -536,10 +546,23 @@ public class JogCharacterMov : MonoBehaviour {
             animChar.SetLayerWeight(3, 1.0f);
             animChar.SetLayerWeight(5, 1.0f);
             animEstilingue.SetBool("Mirar", true);
-            float deg = cameraOrb.transform.rotation.x * Mathf.Rad2Deg;
-            animChar.SetFloat("MiraX", deg * 2.5f);
             animChar.SetBool("Mirar", true);
             action = Mode.AndarMirando;
+            if (MiraAutocript.HaInimigos && MiraAutocript.InimigoParaMirar != null)
+            {
+                //Vector3 dirFromToTarget = MiraAutocript.InimigoParaMirar.transform.position - transform.position;
+                //Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
+                //AuxiliarMiraInimigo.transform.rotation = Quaternion.Lerp(AuxiliarMiraInimigo.transform.rotation, lookRotation, Time.deltaTime * delayGiro);
+                AuxiliarMiraInimigo.transform.LookAt(MiraAutocript.InimigoParaMirar.transform);
+                float deg = AuxiliarMiraInimigo.transform.localRotation.x * Mathf.Rad2Deg;
+                animChar.SetFloat("MiraX", deg * CorrecaoDeMira);
+            }
+            else
+            {
+                
+                y += input.CameraInput.y * sensibilidadeMiraY;
+                animChar.SetFloat("MiraX", y);
+            }
         }
 
         if (!input.MirarInput)
@@ -553,6 +576,16 @@ public class JogCharacterMov : MonoBehaviour {
             animChar.SetBool("Mirar", false);
             action = Mode.AndarNormal;
         }
+    }
+
+    public static float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360F)
+            angle += 360F;
+        if (angle > 360F)
+            angle -= 360F;
+
+        return Mathf.Clamp(angle, min, max);//Define os pontos minimos e maximos da camera
     }
 
     public void zeraPesoLayerAim()
@@ -573,7 +606,7 @@ public class JogCharacterMov : MonoBehaviour {
         //Relativa a rotação da camera
         angle = Mathf.Atan2(0, 0);
         angle = Mathf.Rad2Deg * angle;//converte para graus
-        angle += cameraOrb.eulerAngles.y;
+        angle += cameraOrb.localEulerAngles.y;
     }
 
     void Rotate()
@@ -601,7 +634,7 @@ public class JogCharacterMov : MonoBehaviour {
                 velocidadeRotacaoAtual = noChao ? noChaoVelocidadeRotacao : Vector3.Angle(transform.forward, localInput) * InverterUmACentoEoitenta * ProporcaoVelocidadeGiroNoAr * noChaoVelocidadeRotacao;
 
                 rotacaoAlvo = Quaternion.Euler(0, angle, 0);//converte para quaternion
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotacaoAlvo, velocidadeRotacaoAtual * Time.deltaTime);
+                transform.rotation = rotacaoAlvo;//Quaternion.Slerp(transform.rotation, rotacaoAlvo, velocidadeRotacaoAtual * Time.deltaTime);
 
                 break;
         }
@@ -611,6 +644,7 @@ public class JogCharacterMov : MonoBehaviour {
     {
         // Cria três variáveis, move a entrada local para o player, achata a direção para frente da câmera e uma rotação de destino local.
         Vector2 moveInput = input.MoveInput;
+
         Vector3 localMovementDirection = new Vector3(moveInput.x, 0f, moveInput.y).normalized;
 
         Vector3 forward = Quaternion.Euler(0f, cameraSettings.Current.m_XAxis.Value, 0f) * Vector3.forward;
