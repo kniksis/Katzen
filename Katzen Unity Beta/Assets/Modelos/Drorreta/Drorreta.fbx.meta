@@ -48,6 +48,7 @@ ModelImporter:
     100084: SuporteHeliceDireita
     100086: SuporteHeliceDireita1
     100088: TorretaDeBatata1_0_3:Bateria
+    100090: SuporteArma_Eixo
     400000: ArmaDireita
     400002: ArmaEsqierda
     400004: CameraParteBaixo
@@ -93,6 +94,7 @@ ModelImporter:
     400084: SuporteHeliceDireita
     400086: SuporteHeliceDireita1
     400088: TorretaDeBatata1_0_3:Bateria
+    400090: SuporteArma_Eixo
     2100000: Drone1_2_DroneTexura
     2100002: TorretaDeBatata1_0_3_Torreta
     2300000: ArmaDireita

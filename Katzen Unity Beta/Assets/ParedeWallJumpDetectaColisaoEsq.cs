@@ -10,8 +10,6 @@ public class ParedeWallJumpDetectaColisaoEsq : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         jogadorColidiuEsq = false;
-        paredeRender = gameObject.GetComponent<Renderer>();
-        CorOriginal = paredeRender.material.color;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +22,6 @@ public class ParedeWallJumpDetectaColisaoEsq : MonoBehaviour {
         if (other.gameObject.tag == "Player" && gameObject.layer == 11)
         {
             jogadorColidiuEsq = true;
-            paredeRender.material.color = Color.Lerp(CorOriginal, Color.yellow, 3.0f);
         }
     }
 
@@ -33,7 +30,6 @@ public class ParedeWallJumpDetectaColisaoEsq : MonoBehaviour {
         if (other.gameObject.tag == "Player" && gameObject.layer == 0)
         {
             jogadorColidiuEsq = false;
-            paredeRender.material.color = Color.Lerp(CorOriginal, Color.white, 3.0f);
         }
     }
 
@@ -42,7 +38,6 @@ public class ParedeWallJumpDetectaColisaoEsq : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             jogadorColidiuEsq = false;
-            paredeRender.material.color = Color.Lerp(Color.yellow, CorOriginal, 1.0f);
         }
     }
 }

@@ -170,7 +170,7 @@ public class JogCharacterMov : MonoBehaviour {
     const float InverterUmACentoEoitenta = 1f / 180f;
     const float StickingGravidadeProporcional = 0.3f;
     const float AceleracaoChao = 20f;
-    const float DesaceleracaoChao = 25f;
+    const float DesaceleracaoChao = 50f;
 
     //Classes de variaveis
     public Movimentacao movimentacao = new Movimentacao();
@@ -853,5 +853,21 @@ public class JogCharacterMov : MonoBehaviour {
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "EquilibrarArea")
+        {
+            animChar.SetBool("Equilibrar", true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "EquilibrarArea")
+        {
+            animChar.SetBool("Equilibrar", false);
+        }
     }
 }
