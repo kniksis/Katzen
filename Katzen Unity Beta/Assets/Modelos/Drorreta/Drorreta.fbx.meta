@@ -232,7 +232,17 @@ ModelImporter:
     4300084: CameraParteBaixo
     4300086: Drone1_2:CameraParteCima
     4300088: Drone1_2:CameraParteBaixo
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drone1_2_DroneTexura
+    second: {fileID: 2100000, guid: 3e33c1d6601823e4a89eeb3ab2fd24e7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TorretaDeBatata1_0_3_Torreta
+    second: {fileID: 2100000, guid: a8c77f274f218b449b685adbc5f32fc8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

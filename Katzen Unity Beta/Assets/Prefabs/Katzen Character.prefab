@@ -1763,6 +1763,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1603532896065764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4962594415602390}
+  m_Layer: 10
+  m_Name: AuxiliarMiraAltomatica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1612306065923634
 GameObject:
   m_ObjectHideFlags: 1
@@ -2999,8 +3014,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1978897870966298}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 14.856613, y: 0.0024414062, z: 55.997448}
+  m_LocalRotation: {x: -0, y: -0.004649724, z: -0, w: 0.9999893}
+  m_LocalPosition: {x: 100.455, y: 28.667, z: 15.045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4160019584150868}
@@ -3008,9 +3023,10 @@ Transform:
   - {fileID: 4575114677546538}
   - {fileID: 4016314347047634}
   - {fileID: 4660367693132726}
+  - {fileID: 4962594415602390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.53300005, z: 0}
 --- !u!4 &4037171303199894
 Transform:
   m_ObjectHideFlags: 1
@@ -3446,8 +3462,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852300616827094}
-  m_LocalRotation: {x: 2.0193644e-10, y: 0.21643965, z: -2.0193644e-10, w: 0.97629595}
-  m_LocalPosition: {x: -2.3283059e-10, y: 0.5395244, z: 0.0025100703}
+  m_LocalRotation: {x: -4.5997037e-10, y: 0.2164396, z: 0.0000000012249672, w: 0.976296}
+  m_LocalPosition: {x: 0.0000004548274, y: 0.5395241, z: 0.002510175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4964294795312568}
@@ -5465,6 +5481,19 @@ Transform:
   m_Father: {fileID: 4927464006131864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4962594415602390
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603532896065764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalScale: {x: 0.11435811, y: 0.09061764, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4030474887039170}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4964110642243654
 Transform:
   m_ObjectHideFlags: 1
@@ -6760,6 +6789,10 @@ MonoBehaviour:
   emoteDeathPlayer: {fileID: 114618783866079062}
   emoteAttackPlayer: {fileID: 114888421251634800}
   emoteJumpPlayer: {fileID: 114559086519289318}
+  AuxiliarMiraInimigo: {fileID: 1603532896065764}
+  MiraAutocript: {fileID: 114977918571399428}
+  CorrecaoDeMira: -2.1
+  delayGiro: 800
   AnimEstaEmTransicao: 0
   AnimAnteriorEstaEmAnimacao: 0
   noChao: 1
@@ -6774,7 +6807,7 @@ MonoBehaviour:
   animChar: {fileID: 95891629122279992}
   Estilingue: {fileID: 0}
   HUDArmas: {fileID: 0}
-  sensibilidadeMiraY: 0.2
+  sensibilidadeMiraY: 5.11
   Atacando: 0
   IdleTimer: 0
   movimentacao:

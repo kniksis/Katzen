@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
 	}
 
     [SerializeField]
+    float tempoRestartCenaAtual = 10.0f;
+
+    [SerializeField]
+    string cenaAtual;
+
+    [SerializeField]
     public Animator animJog;
 
 	[SerializeField]
@@ -53,13 +59,15 @@ public class GameManager : MonoBehaviour
 	public GameObject playerInstance;
 	
 	public bool playerVivo;
+    bool ReiniciarCena;
 
-	// Use this for initialization
-	void Awake ()
+    // Use this for initialization
+    void Awake ()
 	{
 		SetLife();
         SetEstamina();
 		SetMunicao();
+        ReiniciarCena = false;
 
 		if (instance != null)
 		{
@@ -82,6 +90,10 @@ public class GameManager : MonoBehaviour
 
         lifeslider.value = life;
         estaminaslider.value = estamina;
+        if(ReiniciarCena)
+        {
+            RecarregarCena();
+        }
     }
 
 	private void InstanciarJogador()
@@ -99,10 +111,20 @@ public class GameManager : MonoBehaviour
 		if (life <= 0)
 		{
             animJog.SetTrigger("Morrer");
-		}
+            ReiniciarCena = true;
+        }
 	}
 
-	public void AddLife(float LifeDesejada)
+    private void RecarregarCena()
+    {
+        tempoRestartCenaAtual -= Time.deltaTime;
+        if (tempoRestartCenaAtual <= 0.0f)
+        {
+            Application.LoadLevel(cenaAtual);
+        }
+    }
+
+    public void AddLife(float LifeDesejada)
 	{
 		life += LifeDesejada;
 		SetLife();

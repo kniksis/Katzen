@@ -145,7 +145,7 @@ public class JogCharacterMov : MonoBehaviour {
     private RaycastHit hit = new RaycastHit();                  //informação sobre o ponto de hit de um raycast
     public GameObject Estilingue;
     public GameObject HUDArmas;
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 10.0f)]
     [SerializeField]
     public float sensibilidadeMiraY;
     protected Material superficeAtual;                          //Usado para fazer as decisoes de troca de audio de acordo com  terreno
@@ -554,14 +554,15 @@ public class JogCharacterMov : MonoBehaviour {
                 //Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
                 //AuxiliarMiraInimigo.transform.rotation = Quaternion.Lerp(AuxiliarMiraInimigo.transform.rotation, lookRotation, Time.deltaTime * delayGiro);
                 AuxiliarMiraInimigo.transform.LookAt(MiraAutocript.InimigoParaMirar.transform);
-                float deg = AuxiliarMiraInimigo.transform.localRotation.x * Mathf.Rad2Deg;
+                float deg = AuxiliarMiraInimigo.transform.rotation.x * Mathf.Rad2Deg;
+                Mathf.Abs(deg);
                 animChar.SetFloat("MiraX", deg * CorrecaoDeMira);
             }
             else
             {
-                
-                y += input.CameraInput.y * sensibilidadeMiraY;
-                animChar.SetFloat("MiraX", y);
+
+                y -= input.CameraInput.y * sensibilidadeMiraY;
+            animChar.SetFloat("MiraX", y);
             }
         }
 

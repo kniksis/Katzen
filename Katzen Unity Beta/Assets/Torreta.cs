@@ -37,16 +37,18 @@ public class Torreta : MonoBehaviour {
 
     public bool atirar;
 
+    float vidaTorreta;
 
     void Awake()
     {
         atirar = false;
-        JogMCGO = GameObject.Find("Katzen Character");
-        JogMCScript = JogMCGO.GetComponent<JogCharacterMov>();
+        vidaTorreta = 100;
     }
     // Use this for initialization
-    void Start () {
-
+    void Start ()
+    {
+        JogMCGO = GameObject.Find("Katzen Character");
+        JogMCScript = JogMCGO.GetComponent<JogCharacterMov>();
     }
 	
 	// Update is called once per frame
@@ -99,12 +101,23 @@ public class Torreta : MonoBehaviour {
     private Vector3 tmpContactPoint;
     private Vector3 tmpDirection;
 
+    public void SeMorreu()
+    {
+        if (vidaTorreta <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if ((other.gameObject.tag == "Garras" && JogMCScript.Atacando) || (other.gameObject.tag == "TiroJogador"))
         {
             LevarDano(other);
             Debug.Log("Levar Dano Por ENTER");
+            vidaTorreta -= 20;
+            Debug.Log(vidaTorreta);
+            SeMorreu();
         }
     }
 
@@ -115,6 +128,9 @@ public class Torreta : MonoBehaviour {
             proximoSoco = Time.time + RateCombo;
             Debug.Log("Levar Dano Por STAY");
             LevarDano(other);
+            vidaTorreta -= 20;
+            Debug.Log(vidaTorreta);
+            SeMorreu();
         }
     }
 
