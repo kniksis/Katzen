@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: 89ec24ed10f768f4dafb38c56ccc9072
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ArmaDireita
+    100002: ArmaEsqierda
+    100004: CameraParteBaixo
+    100006: CameraParteCima
+    100008: Drone1_2:CameraParteBaixo
+    100010: Drone1_2:CameraParteCima
+    100012: Drone1_2:Cerebro
+    100014: Drone1_2:HeliceFrontEsq
+    100016: Drone1_2:HeliceTrasEsq
+    100018: Drone1_2:MotorHeliceFrontEsq
+    100020: Drone1_2:MotorHeliceTrasEsq
+    100022: //RootNode
+    100024: HeliceFrontEsq
+    100026: HeliceFrontEsq 1
+    100028: HeliceFrontEsq 2
+    100030: HeliceFrontEsq 3
+    100032: HeliceFrontEsq 4
+    100034: HeliceFrontEsq 5
+    100036: HeliceFrontEsq 6
+    100038: HeliceTrasEsq
+    100040: HeliceTrasEsq 1
+    100042: HeliceTrasEsq 2
+    100044: HeliceTrasEsq 3
+    100046: HeliceTrasEsq 4
+    100048: HeliceTrasEsq 5
+    100050: HeliceTrasEsq 6
+    100052: MotorHeliceFrontEsq
+    100054: MotorHeliceFrontEsq 1
+    100056: MotorHeliceFrontEsq1
+    100058: MotorHeliceFrontEsq1 1
+    100060: MotorHeliceFrontEsq2
+    100062: MotorHeliceFrontEsq2 1
+    100064: MotorHeliceFrontEsq3
+    100066: MotorHeliceTrasEsq
+    100068: MotorHeliceTrasEsq 1
+    100070: MotorHeliceTrasEsq1
+    100072: MotorHeliceTrasEsq1 1
+    100074: MotorHeliceTrasEsq2
+    100076: MotorHeliceTrasEsq2 1
+    100078: MotorHeliceTrasEsq3
+    100080: SuporteArmaEixo
+    100082: SuporteCerebro
+    100084: SuporteHeliceDireita
+    100086: SuporteHeliceDireita1
+    100088: TorretaDeBatata1_0_3:Bateria
+    400000: ArmaDireita
+    400002: ArmaEsqierda
+    400004: CameraParteBaixo
+    400006: CameraParteCima
+    400008: Drone1_2:CameraParteBaixo
+    400010: Drone1_2:CameraParteCima
+    400012: Drone1_2:Cerebro
+    400014: Drone1_2:HeliceFrontEsq
+    400016: Drone1_2:HeliceTrasEsq
+    400018: Drone1_2:MotorHeliceFrontEsq
+    400020: Drone1_2:MotorHeliceTrasEsq
+    400022: //RootNode
+    400024: HeliceFrontEsq
+    400026: HeliceFrontEsq 1
+    400028: HeliceFrontEsq 2
+    400030: HeliceFrontEsq 3
+    400032: HeliceFrontEsq 4
+    400034: HeliceFrontEsq 5
+    400036: HeliceFrontEsq 6
+    400038: HeliceTrasEsq
+    400040: HeliceTrasEsq 1
+    400042: HeliceTrasEsq 2
+    400044: HeliceTrasEsq 3
+    400046: HeliceTrasEsq 4
+    400048: HeliceTrasEsq 5
+    400050: HeliceTrasEsq 6
+    400052: MotorHeliceFrontEsq
+    400054: MotorHeliceFrontEsq 1
+    400056: MotorHeliceFrontEsq1
+    400058: MotorHeliceFrontEsq1 1
+    400060: MotorHeliceFrontEsq2
+    400062: MotorHeliceFrontEsq2 1
+    400064: MotorHeliceFrontEsq3
+    400066: MotorHeliceTrasEsq
+    400068: MotorHeliceTrasEsq 1
+    400070: MotorHeliceTrasEsq1
+    400072: MotorHeliceTrasEsq1 1
+    400074: MotorHeliceTrasEsq2
+    400076: MotorHeliceTrasEsq2 1
+    400078: MotorHeliceTrasEsq3
+    400080: SuporteArmaEixo
+    400082: SuporteCerebro
+    400084: SuporteHeliceDireita
+    400086: SuporteHeliceDireita1
+    400088: TorretaDeBatata1_0_3:Bateria
+    2100000: Drone1_2_DroneTexura
+    2100002: TorretaDeBatata1_0_3_Torreta
+    2300000: ArmaDireita
+    2300002: ArmaEsqierda
+    2300004: CameraParteBaixo
+    2300006: CameraParteCima
+    2300008: Drone1_2:CameraParteBaixo
+    2300010: Drone1_2:CameraParteCima
+    2300012: Drone1_2:Cerebro
+    2300014: Drone1_2:HeliceFrontEsq
+    2300016: Drone1_2:HeliceTrasEsq
+    2300018: Drone1_2:MotorHeliceFrontEsq
+    2300020: Drone1_2:MotorHeliceTrasEsq
+    2300022: //RootNode
+    2300024: HeliceFrontEsq
+    2300026: HeliceFrontEsq 1
+    2300028: HeliceFrontEsq 2
+    2300030: HeliceFrontEsq 3
+    2300032: HeliceFrontEsq 4
+    2300034: HeliceFrontEsq 5
+    2300036: HeliceFrontEsq 6
+    2300038: HeliceTrasEsq
+    2300040: HeliceTrasEsq 1
+    2300042: HeliceTrasEsq 2
+    2300044: HeliceTrasEsq 3
+    2300046: HeliceTrasEsq 4
+    2300048: HeliceTrasEsq 5
+    2300050: HeliceTrasEsq 6
+    2300052: MotorHeliceFrontEsq
+    2300054: MotorHeliceFrontEsq 1
+    2300056: MotorHeliceFrontEsq1
+    2300058: MotorHeliceFrontEsq1 1
+    2300060: MotorHeliceFrontEsq2
+    2300062: MotorHeliceFrontEsq2 1
+    2300064: MotorHeliceFrontEsq3
+    2300066: MotorHeliceTrasEsq
+    2300068: MotorHeliceTrasEsq 1
+    2300070: MotorHeliceTrasEsq1
+    2300072: MotorHeliceTrasEsq1 1
+    2300074: MotorHeliceTrasEsq2
+    2300076: MotorHeliceTrasEsq2 1
+    2300078: MotorHeliceTrasEsq3
+    2300080: SuporteArmaEixo
+    2300082: SuporteCerebro
+    2300084: SuporteHeliceDireita
+    2300086: SuporteHeliceDireita1
+    2300088: TorretaDeBatata1_0_3:Bateria
+    3300000: ArmaDireita
+    3300002: ArmaEsqierda
+    3300004: CameraParteBaixo
+    3300006: CameraParteCima
+    3300008: Drone1_2:CameraParteBaixo
+    3300010: Drone1_2:CameraParteCima
+    3300012: Drone1_2:Cerebro
+    3300014: Drone1_2:HeliceFrontEsq
+    3300016: Drone1_2:HeliceTrasEsq
+    3300018: Drone1_2:MotorHeliceFrontEsq
+    3300020: Drone1_2:MotorHeliceTrasEsq
+    3300022: //RootNode
+    3300024: HeliceFrontEsq
+    3300026: HeliceFrontEsq 1
+    3300028: HeliceFrontEsq 2
+    3300030: HeliceFrontEsq 3
+    3300032: HeliceFrontEsq 4
+    3300034: HeliceFrontEsq 5
+    3300036: HeliceFrontEsq 6
+    3300038: HeliceTrasEsq
+    3300040: HeliceTrasEsq 1
+    3300042: HeliceTrasEsq 2
+    3300044: HeliceTrasEsq 3
+    3300046: HeliceTrasEsq 4
+    3300048: HeliceTrasEsq 5
+    3300050: HeliceTrasEsq 6
+    3300052: MotorHeliceFrontEsq
+    3300054: MotorHeliceFrontEsq 1
+    3300056: MotorHeliceFrontEsq1
+    3300058: MotorHeliceFrontEsq1 1
+    3300060: MotorHeliceFrontEsq2
+    3300062: MotorHeliceFrontEsq2 1
+    3300064: MotorHeliceFrontEsq3
+    3300066: MotorHeliceTrasEsq
+    3300068: MotorHeliceTrasEsq 1
+    3300070: MotorHeliceTrasEsq1
+    3300072: MotorHeliceTrasEsq1 1
+    3300074: MotorHeliceTrasEsq2
+    3300076: MotorHeliceTrasEsq2 1
+    3300078: MotorHeliceTrasEsq3
+    3300080: SuporteArmaEixo
+    3300082: SuporteCerebro
+    3300084: SuporteHeliceDireita
+    3300086: SuporteHeliceDireita1
+    3300088: TorretaDeBatata1_0_3:Bateria
+    4300000: Drorreta
+    4300002: SuporteHeliceDireita
+    4300004: MotorHeliceFrontEsq1
+    4300006: HeliceFrontEsq
+    4300008: MotorHeliceFrontEsq
+    4300010: HeliceFrontEsq
+    4300012: MotorHeliceTrasEsq2
+    4300014: HeliceTrasEsq
+    4300016: MotorHeliceTrasEsq1
+    4300018: HeliceTrasEsq
+    4300020: MotorHeliceTrasEsq
+    4300022: HeliceTrasEsq
+    4300024: Drone1_2:MotorHeliceTrasEsq
+    4300026: Drone1_2:HeliceTrasEsq
+    4300028: Drone1_2:MotorHeliceFrontEsq
+    4300030: Drone1_2:HeliceFrontEsq
+    4300032: MotorHeliceFrontEsq2
+    4300034: HeliceFrontEsq
+    4300036: SuporteHeliceDireita1
+    4300038: MotorHeliceFrontEsq1
+    4300040: HeliceFrontEsq
+    4300042: MotorHeliceFrontEsq
+    4300044: HeliceFrontEsq
+    4300046: MotorHeliceTrasEsq2
+    4300048: HeliceTrasEsq
+    4300050: MotorHeliceTrasEsq1
+    4300052: HeliceTrasEsq
+    4300054: MotorHeliceTrasEsq
+    4300056: HeliceTrasEsq
+    4300058: MotorHeliceTrasEsq3
+    4300060: HeliceTrasEsq
+    4300062: MotorHeliceFrontEsq2
+    4300064: HeliceFrontEsq
+    4300066: MotorHeliceFrontEsq3
+    4300068: HeliceFrontEsq
+    4300070: SuporteCerebro
+    4300072: Drone1_2:Cerebro
+    4300074: TorretaDeBatata1_0_3:Bateria
+    4300076: SuporteArmaEixo
+    4300078: ArmaDireita
+    4300080: ArmaEsqierda
+    4300082: CameraParteCima
+    4300084: CameraParteBaixo
+    4300086: Drone1_2:CameraParteCima
+    4300088: Drone1_2:CameraParteBaixo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
