@@ -13,6 +13,12 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public Animator animPainelFala;
     public Animator animTelaPreta;
     public Animator animFundo;
+    public Animator animAceiRecu;
+
+    public GameObject painelPreto;
+    public GameObject painelBlur;
+
+    public Button mao;
 
     public Image imagemExpressaoP1;
     public Image imagemExpressaoP2;
@@ -42,7 +48,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
         int contadorFala = 0;
-        
+
+        painelBlur.SetActive(false);
         animPainelP1.SetBool("foco", true);
         animPainelP2.SetBool("foco", false);
         animSetaP1.SetBool("aparecer", false);
@@ -63,11 +70,12 @@ public class ConversaNeiriel01 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         lerTextoArquivo();
-        if (Input.GetButtonDown("Atirar"))
+        if (Input.GetButtonDown("Atirar") && falaAtual <= 3)
         {
             avancarFala();
         }
     }
+    bool corrigiCinco = false;
 
     public void avancarFala()
     {
@@ -75,10 +83,98 @@ public class ConversaNeiriel01 : MonoBehaviour {
         falaAtual += 1;
         textoFala.text = falas[falaAtual];
         textoFalasTelaPreta.text = falas[falaAtual];
-        if (falaAtual > 2)
+
+        if (falaAtual == 3)
         {
             animTelaPreta.SetTrigger("DeixarClaro");
             animFundo.SetTrigger("TrocarCena");
+        }
+
+        if (falaAtual == 4 && corrigiCinco == false)
+        {
+            animFundo.SetTrigger("TrocarCena");
+            painelPreto.SetActive(false);
+            falaAtual = 3;
+            corrigiCinco = true;
+        }
+
+        if (falaAtual == 3 && corrigiCinco == true)
+        {
+            painelBlur.SetActive(true);
+            animPainelFala.SetBool("abrirFalas", true);
+            animSetaP1.SetBool("aparecer", true);
+            animSetaP2.SetBool("aparecer", false);
+            animPainelP1.SetTrigger("AtivarPainelPersonagem");
+            animPainelP1.SetBool("foco", true);
+            animPainelP2.SetBool("foco", false);
+            imagemExpressaoP1.sprite = expressoesP1[0];
+            fala = Fala.FalaNeiriel;
+        }
+
+        if(falaAtual == 5 && corrigiCinco == true)
+        {
+            imagemExpressaoP1.sprite = expressoesP1[2];
+            animPainelP1.SetTrigger("redarFoco");
+            animPainelP2.SetTrigger("AtivarPainelPersonagem");
+            animPainelP2.SetBool("foco", false);
+            imagemExpressaoP2.sprite = expressoesP2[1];
+        }
+
+        if(falaAtual == 8)
+        {
+            imagemExpressaoP1.sprite = expressoesP1[1];
+            animPainelP1.SetTrigger("redarFoco");
+        }
+
+        if(falaAtual == 9)
+        {
+            imagemExpressaoP2.sprite = expressoesP2[0];
+            animPainelFala.Play("TrocarFala");
+            animSetaP1.SetBool("aparecer", false);
+            animSetaP2.SetBool("aparecer", true);
+            animPainelP1.SetBool("foco", false);
+            animPainelP2.SetBool("foco", true);
+            fala = Fala.FalaKatzen;
+        }
+
+        if(falaAtual == 10)
+        {
+            animPainelFala.Play("TrocarFala");
+            animSetaP1.SetBool("aparecer", true);
+            animSetaP2.SetBool("aparecer", false);
+            animPainelP1.SetBool("foco", true);
+            animPainelP2.SetBool("foco", false);
+            imagemExpressaoP1.sprite = expressoesP1[1];
+            fala = Fala.FalaNeiriel;
+        }
+
+        if(falaAtual == 15)
+        {
+            animPainelP1.SetTrigger("redarFoco");
+            imagemExpressaoP1.sprite = expressoesP1[0];
+        }
+
+        if(falaAtual == 16)
+        {
+            imagemExpressaoP2.sprite = expressoesP2[1];
+        }
+
+        if(falaAtual == 24)
+        {
+            imagemExpressaoP1.sprite = expressoesP1[3];
+            animPainelP1.SetTrigger("redarFoco");
+        }
+
+        if(falaAtual == 26)
+        {
+            animPainelP1.SetTrigger("redarFoco");
+            imagemExpressaoP1.sprite = expressoesP1[0];
+        }
+
+        if(falaAtual == 27)
+        {
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", true);
+            mao.interactable = false;
         }
     }
 
@@ -91,8 +187,6 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animSetaP2.SetBool("aparecer", true);
             animPainelP1.SetBool("foco", false);
             animPainelP2.SetBool("foco", true);
-            imagemExpressaoP1.sprite = expressoesP1[0];
-            textoFala.text = falas[0];
             fala = Fala.FalaKatzen;
         }
 
@@ -103,8 +197,6 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animSetaP2.SetBool("aparecer", false);
             animPainelP1.SetBool("foco", true);
             animPainelP2.SetBool("foco", false);
-            imagemExpressaoP1.sprite = expressoesP1[2];
-            textoFala.text = falas[1];
             fala = Fala.FalaNeiriel;
         }
     }
@@ -112,5 +204,15 @@ public class ConversaNeiriel01 : MonoBehaviour {
     void lerTextoArquivo()
     {
         
+    }
+
+    public void aceitar(int proximaFala)
+    {
+
+    }
+
+    public void rejeitar(int proximaFala)
+    {
+
     }
 }
