@@ -206,12 +206,12 @@ public class ConversaNeiriel01 : MonoBehaviour {
         
     }
 
-    public void aceitar(int proximaFala)
+    public void aceitar()
     {
 
     }
 
-    public void rejeitar(int proximaFala)
+    public void rejeitar()
     {
 
     }
