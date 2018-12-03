@@ -11,6 +11,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public Animator animPainelP1;
     public Animator animPainelP2;
     public Animator animPainelFala;
+    public Animator animTelaPreta;
+    public Animator animFundo;
 
     public Image imagemExpressaoP1;
     public Image imagemExpressaoP2;
@@ -21,7 +23,9 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public TextAsset textFile;
 
     public Text textoFala;
+    public Text textoFalasTelaPreta;
     public string[] falas;
+    int falaAtual;
 
     [SerializeField]
     public enum Fala
@@ -38,6 +42,11 @@ public class ConversaNeiriel01 : MonoBehaviour {
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
         int contadorFala = 0;
+        
+        animPainelP1.SetBool("foco", true);
+        animPainelP2.SetBool("foco", false);
+        animSetaP1.SetBool("aparecer", false);
+        animSetaP2.SetBool("aparecer", false);
         foreach (string linha in linhasArquivo)
         {
             string[] valoresLinha = linha.Split('\t'); // quebra o caracte de TAB entre a numeração e o texto;
@@ -47,16 +56,30 @@ public class ConversaNeiriel01 : MonoBehaviour {
             falas[contadorFala] = valoresLinha[1];
             contadorFala = contadorFala + 1;
         }
-        animPainelP1.SetBool("foco", true);
-        animPainelP2.SetBool("foco", false);
-        animPainelFala.SetBool("abrirFalas", true);
-        animSetaP1.SetBool("aparecer", false);
-        animSetaP2.SetBool("aparecer", false);
+        textoFala.text = falas[0];
+        textoFalasTelaPreta.text = falas[0];
     }
 	
 	// Update is called once per frame
 	void Update () {
         lerTextoArquivo();
+        if (Input.GetButtonDown("Atirar"))
+        {
+            avancarFala();
+        }
+    }
+
+    public void avancarFala()
+    {
+        Debug.Log(falaAtual);
+        falaAtual += 1;
+        textoFala.text = falas[falaAtual];
+        textoFalasTelaPreta.text = falas[falaAtual];
+        if (falaAtual > 2)
+        {
+            animTelaPreta.SetTrigger("DeixarClaro");
+            animFundo.SetTrigger("TrocarCena");
+        }
     }
 
     public void trocarFala()

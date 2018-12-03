@@ -555,8 +555,7 @@ public class JogCharacterMov : MonoBehaviour {
                 //AuxiliarMiraInimigo.transform.rotation = Quaternion.Lerp(AuxiliarMiraInimigo.transform.rotation, lookRotation, Time.deltaTime * delayGiro);
                 AuxiliarMiraInimigo.transform.LookAt(MiraAutocript.InimigoParaMirar.transform);
                 float deg = AuxiliarMiraInimigo.transform.rotation.x * Mathf.Rad2Deg;
-                Mathf.Abs(deg);
-                animChar.SetFloat("MiraX", deg * CorrecaoDeMira);
+                animChar.SetFloat("MiraX", Mathf.Abs(deg) * CorrecaoDeMira);
             }
             else
             {

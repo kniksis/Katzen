@@ -1,0 +1,3 @@
+0	Ei você! O que faz aqui!
+1	AH!
+2	Ei! Volte aqui!
