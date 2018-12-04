@@ -81,8 +81,20 @@ public class ConversaNeiriel01 : MonoBehaviour {
     {
         Debug.Log(falaAtual);
         falaAtual += 1;
-        textoFala.text = falas[falaAtual];
-        textoFalasTelaPreta.text = falas[falaAtual];
+        if (falaAtual == 52)
+        {
+            animSetaP1.SetBool("aparecer", false);
+            animSetaP2.SetBool("aparecer", false);
+            animPainelP1.Play("FecharPainelP1");
+            animPainelP2.Play("FecharPainelP2");
+            animPainelFala.SetBool("abrirFalas", false);
+            textoFala.text = "";
+        }
+        else
+        {
+            textoFala.text = falas[falaAtual];
+            textoFalasTelaPreta.text = falas[falaAtual];
+        }
 
         if (falaAtual == 3)
         {
@@ -174,8 +186,44 @@ public class ConversaNeiriel01 : MonoBehaviour {
         if(falaAtual == 27)
         {
             animAceiRecu.SetBool("PainelAceiRecuAbrir", true);
+            imagemExpressaoP2.sprite = expressoesP2[1];
             mao.interactable = false;
         }
+        if(falaAtual == 30)
+        {
+            animSetaP1.SetBool("aparecer", false);
+            animSetaP2.SetBool("aparecer", false);
+            animPainelP1.Play("FecharPainelP1");
+            animPainelP2.Play("FecharPainelP2");
+            animPainelFala.SetBool("abrirFalas", false);
+            textoFala.text = "";
+        }
+
+        if(falaAtual == 32)
+        {
+            animSetaP1.SetBool("aparecer", false);
+            animSetaP2.SetBool("aparecer", false);
+            animPainelP1.Play("FecharPainelP1");
+            animPainelP2.Play("FecharPainelP2");
+            animPainelFala.SetBool("abrirFalas", false);
+            textoFala.text = "";
+        }
+
+        if (falaAtual == 33)
+        {
+            animPainelP1.SetTrigger("redarFoco");
+            imagemExpressaoP1.sprite = expressoesP1[1];
+            imagemExpressaoP2.sprite = expressoesP2[0];
+        }
+
+        if(falaAtual == 49)
+        {
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", true);
+            mao.interactable = false;
+            imagemExpressaoP1.sprite = expressoesP1[0];
+            imagemExpressaoP2.sprite = expressoesP2[1];
+        }
+
     }
 
     public void trocarFala()
@@ -208,11 +256,42 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     public void aceitar()
     {
+        if(falaAtual == 27)
+        {
+            falaAtual = 28;
+            avancarFala();
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", false);
+            imagemExpressaoP2.sprite = expressoesP2[2];
+            mao.interactable = true;
+        }
 
+        if(falaAtual == 49)
+        {
+            falaAtual = 30;
+            avancarFala();
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", false);
+            imagemExpressaoP2.sprite = expressoesP2[2];
+            mao.interactable = true;
+        }
     }
 
-    public void rejeitar()
+    public void recusar()
     {
+        if (falaAtual == 27)
+        {
+            falaAtual = 32;
+            avancarFala();
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", false);
+            mao.interactable = true;
+        }
 
+        if (falaAtual == 49)
+        {
+            falaAtual = 50;
+            avancarFala();
+            animAceiRecu.SetBool("PainelAceiRecuAbrir", false);
+            imagemExpressaoP2.sprite = expressoesP2[0];
+            mao.interactable = true;
+        }
     }
 }
