@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ConversaKaokaoa02 : MonoBehaviour {
+public class ConversaKaokaoa03 : MonoBehaviour {
 
     public Animator animSetaP1;
     public Animator animSetaP2;

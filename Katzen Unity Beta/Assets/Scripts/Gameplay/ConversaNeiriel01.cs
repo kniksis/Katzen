@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ConversaNeiriel01 : MonoBehaviour {
 
@@ -14,6 +16,7 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public Animator animTelaPreta;
     public Animator animFundo;
     public Animator animAceiRecu;
+    public Animator animEscurecerTela;
 
     public GameObject painelPreto;
     public GameObject painelBlur;
@@ -42,6 +45,13 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     public Fala fala = Fala.FalaNeiriel;
 
+    public GameObject loadingScreen;
+    public Slider slider;
+    public Text progressText;
+    public string ProximaFaseNome;
+    public string NivelFinal;
+    public float tempoProxCena = 10.0f;
+
     // Use this for initialization
     void Start () {
         textFile = Resources.Load<TextAsset>("Falas/Cena01_Neiriel_Katzen");
@@ -69,10 +79,26 @@ public class ConversaNeiriel01 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        lerTextoArquivo();
-        if (Input.GetButtonDown("Atirar") && falaAtual <= 3)
+        if (Input.GetButtonUp("Atirar") && falaAtual <= 3)
         {
             avancarFala();
+        }
+        if(falaAtual == 52)
+        {
+            tempoProxCena -= Time.deltaTime;
+            if (tempoProxCena <= 0.0f)
+            {
+                LoadLevel(NivelFinal);
+            }
+        }
+
+        if(falaAtual == 32 || falaAtual == 30)
+        {
+            tempoProxCena -= Time.deltaTime;
+            if (tempoProxCena <= 0.0f)
+            {
+                LoadLevel(ProximaFaseNome);
+            }
         }
     }
     bool corrigiCinco = false;
@@ -89,6 +115,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animPainelP2.Play("FecharPainelP2");
             animPainelFala.SetBool("abrirFalas", false);
             textoFala.text = "";
+            animEscurecerTela.SetTrigger("Escurecer");
+            painelBlur.SetActive(false);
         }
         else
         {
@@ -197,6 +225,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animPainelP2.Play("FecharPainelP2");
             animPainelFala.SetBool("abrirFalas", false);
             textoFala.text = "";
+            animEscurecerTela.SetTrigger("Escurecer");
+            painelBlur.SetActive(false);
         }
 
         if(falaAtual == 32)
@@ -207,6 +237,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animPainelP2.Play("FecharPainelP2");
             animPainelFala.SetBool("abrirFalas", false);
             textoFala.text = "";
+            animEscurecerTela.SetTrigger("Escurecer");
+            painelBlur.SetActive(false);
         }
 
         if (falaAtual == 33)
@@ -249,11 +281,6 @@ public class ConversaNeiriel01 : MonoBehaviour {
         }
     }
 
-    void lerTextoArquivo()
-    {
-        
-    }
-
     public void aceitar()
     {
         if(falaAtual == 27)
@@ -292,6 +319,25 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animAceiRecu.SetBool("PainelAceiRecuAbrir", false);
             imagemExpressaoP2.sprite = expressoesP2[0];
             mao.interactable = true;
+        }
+    }
+
+    public void LoadLevel(string sceneNome)
+    {
+        StartCoroutine(LoadAsynchronously(sceneNome));
+    }
+
+    private IEnumerator LoadAsynchronously(string sceneNome)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneNome);
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            progressText.text = progress * 100 + "%";
+            yield return null;
         }
     }
 }
