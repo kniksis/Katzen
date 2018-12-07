@@ -450,7 +450,6 @@ GameObject:
   - component: {fileID: 150149803}
   - component: {fileID: 150149802}
   - component: {fileID: 150149807}
-  - component: {fileID: 150149806}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -526,14 +525,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 864977218}
-  - {fileID: 254100037}
   - {fileID: 2038125057}
+  - {fileID: 254100037}
   - {fileID: 1387242746}
   - {fileID: 1430140346}
-  - {fileID: 1581732084}
   - {fileID: 1639969428}
-  - {fileID: 335642663}
   - {fileID: 1170374001}
+  - {fileID: 335642663}
+  - {fileID: 1581732084}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -542,45 +541,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &150149806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 150149801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7e9055d8f8f8f44b4342fd6b33ce1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animSetaP1: {fileID: 1176427606}
-  animSetaP2: {fileID: 602960377}
-  animPainelP1: {fileID: 1905222109}
-  animPainelP2: {fileID: 1989666219}
-  animPainelFala: {fileID: 723577715}
-  animTelaPreta: {fileID: 0}
-  animDesenhosGrandes: {fileID: 0}
-  animEscurecerTela: {fileID: 335642664}
-  painelBlur: {fileID: 254100036}
-  mao: {fileID: 816350794}
-  imagemExpressaoP1: {fileID: 1854380276}
-  imagemExpressaoP2: {fileID: 2121758343}
-  expressoesP1:
-  - {fileID: 21300000, guid: 72be202cfa8185a4a8cae0c1d07c8a38, type: 3}
-  expressoesP2:
-  - {fileID: 21300000, guid: c3ff2f06b51f2194cb51fd559029a6df, type: 3}
-  - {fileID: 21300000, guid: ff32160b9cb1c60489c4cb2475aaab43, type: 3}
-  - {fileID: 21300000, guid: daa1f9268ba8d004c8c9a4100cb87e99, type: 3}
-  - {fileID: 21300000, guid: 05fc6953694fb77478f7edb3b213efa8, type: 3}
-  textFile: {fileID: 0}
-  textoFala: {fileID: 117274621}
-  falas: []
-  fala: 0
-  loadingScreen: {fileID: 1581732083}
-  slider: {fileID: 1448795442}
-  progressText: {fileID: 486949149}
-  ProximaFaseNome: Nivel1
-  tempoProxCena: 4
 --- !u!114 &150149807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,23 +557,32 @@ MonoBehaviour:
   animPainelP1: {fileID: 1905222109}
   animPainelP2: {fileID: 1989666219}
   animPainelFala: {fileID: 723577715}
-  animTelaPreta: {fileID: 0}
-  animDesenhosGrandes: {fileID: 0}
+  animDesenhosGrandes: {fileID: 2038125060}
   animEscurecerTela: {fileID: 335642664}
+  animPainelBotoes: {fileID: 1170374002}
   painelBlur: {fileID: 254100036}
   mao: {fileID: 816350794}
   imagemExpressaoP1: {fileID: 1854380276}
   imagemExpressaoP2: {fileID: 2121758343}
-  expressoesP1: []
-  expressoesP2: []
+  expressoesP1:
+  - {fileID: 21300000, guid: a56737dab89e2214baf7890c5854dce6, type: 3}
+  - {fileID: 21300000, guid: 8a37ba10b9470414c86dc0d90fdb49e4, type: 3}
+  - {fileID: 21300000, guid: 923d4cfacd3617e45be182d9951bb564, type: 3}
+  expressoesP2:
+  - {fileID: 21300000, guid: 6fe5d8393aae34e41b925f57611b4e87, type: 3}
+  - {fileID: 21300000, guid: 7bf68a3e589617d4aa76bc7fc5ecd0a8, type: 3}
+  - {fileID: 21300000, guid: 3b0bdfec1ccb16a44844dc7d3620f448, type: 3}
+  - {fileID: 21300000, guid: 5560a06af16ab864f8481873f0139dc9, type: 3}
   textFile: {fileID: 0}
   textoFala: {fileID: 117274621}
   falas: []
+  PodeAvancarFala: 0
+  Pacifico: 0
   fala: 0
   loadingScreen: {fileID: 1581732083}
   slider: {fileID: 1448795442}
   progressText: {fileID: 486949149}
-  ProximaFaseNome: Nivel3AposBatalha
+  ProximaFaseNome: Nivel3_Sem_arvores
   tempoProxCena: 4
 --- !u!1 &247419224
 GameObject:
@@ -711,7 +680,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 150149805}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -828,7 +797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "For\xE7ar"
+  m_Text: "For\xE7ar a falar"
 --- !u!222 &337727047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1524,7 +1493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 150149806}
+      - m_Target: {fileID: 150149807}
         m_MethodName: avancarFala
         m_Mode: 1
         m_Arguments:
@@ -1970,7 +1939,7 @@ Prefab:
     - target: {fileID: 224344269305156950, guid: 678cdfca0e23c26408130a5fb5c6c27b,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224344269305156950, guid: 678cdfca0e23c26408130a5fb5c6c27b,
         type: 2}
@@ -2346,7 +2315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1170374001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2360,7 +2329,7 @@ RectTransform:
   - {fileID: 1407800830}
   - {fileID: 621180800}
   m_Father: {fileID: 150149805}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2736,7 +2705,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384930971}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150149807}
+        m_MethodName: serPacifico
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1384930971
@@ -2870,7 +2850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1387242746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3009,7 +2989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1430140346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3168,7 +3148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1379999634381830, guid: 0ccfc22156c03dd41bc1af5d58aeee39, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ccfc22156c03dd41bc1af5d58aeee39, type: 2}
@@ -3533,7 +3513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1639969428
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3547,7 +3527,7 @@ RectTransform:
   - {fileID: 354663433}
   - {fileID: 1096818926}
   m_Father: {fileID: 150149805}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -4121,7 +4101,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1921940804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150149807}
+        m_MethodName: serAgressivo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1921940804
@@ -4372,7 +4363,7 @@ RectTransform:
   m_Children:
   - {fileID: 2101302629}
   m_Father: {fileID: 150149805}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

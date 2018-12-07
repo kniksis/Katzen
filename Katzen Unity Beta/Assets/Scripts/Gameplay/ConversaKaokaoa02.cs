@@ -46,7 +46,11 @@ public class ConversaKaokaoa02 : MonoBehaviour {
     public Slider slider;
     public Text progressText;
     public string ProximaFaseNome;
+    public bool irParaProximaCena;
     public float tempoProxCena = 10.0f;
+
+    public AudioClip botaoAvancarSom;
+    public AudioSource menuSomFonte;
 
     // Use this for initialization
     void Start () {
@@ -54,7 +58,8 @@ public class ConversaKaokaoa02 : MonoBehaviour {
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
         int contadorFala = 0;
-
+        menuSomFonte = GetComponent<AudioSource>();
+        irParaProximaCena = false;
         painelBlur.SetActive(false);
         animPainelP1.SetBool("foco", true);
         animPainelP2.SetBool("foco", false);
@@ -80,19 +85,21 @@ public class ConversaKaokaoa02 : MonoBehaviour {
             avancarFala();
         }
 
-        if (falaAtual == 4)
+        if (irParaProximaCena)
         {
             tempoProxCena -= Time.deltaTime;
             if (tempoProxCena <= 0.0f)
             {
                 LoadLevel(ProximaFaseNome);
-                falaAtual = 0;
+                irParaProximaCena = false;
             }
         }
     }
 
     public void avancarFala()
     {
+        menuSomFonte.clip = botaoAvancarSom;
+        menuSomFonte.Play();
         falaAtual += 1;
         Debug.Log(falaAtual);
 
@@ -146,6 +153,7 @@ public class ConversaKaokaoa02 : MonoBehaviour {
             animPainelP1.Play("FecharPainelP1");
             animPainelP2.Play("FecharPainelP2");
             animEscurecerTela.SetTrigger("Escurecer");
+            irParaProximaCena = true;
             painelBlur.SetActive(false);
         }
     }

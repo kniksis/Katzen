@@ -17,7 +17,7 @@ using Random = UnityEngine.Random;
         [Serializable]
         public class SoundBank
         {
-            public string name;
+            public string nome;
             public AudioClip[] clips;
         }
 

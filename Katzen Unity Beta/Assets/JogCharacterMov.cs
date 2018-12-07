@@ -75,6 +75,10 @@ public class JogCharacterMov : MonoBehaviour {
     public bool podeAtirar;
     public int numPulos = 0;
     private int maxPulos = 1;
+    private bool morrerTocarAudio;
+    private bool ganharEstamina;
+
+
 
     [System.Serializable]
     public class GastosEstamina
@@ -94,13 +98,11 @@ public class JogCharacterMov : MonoBehaviour {
     [SerializeField]
     public Transform cameraOrb;
     //public GarrasMelee garrasMelee;
-    public PlayerDeAudioRandomico footstepPlayer;         // Random Audio Players used for various situations.
-    public PlayerDeAudioRandomico hurtAudioPlayer;
-    public PlayerDeAudioRandomico landingPlayer;
-    public PlayerDeAudioRandomico emoteLandingPlayer;
-    public PlayerDeAudioRandomico emoteDeathPlayer;
-    public PlayerDeAudioRandomico emoteAttackPlayer;
-    public PlayerDeAudioRandomico emoteJumpPlayer;
+    public PlayerDeAudioRandomico passosJogador;         // Random Audio Players used for various situations.
+    public PlayerDeAudioRandomico levarDanoAudioJogador;
+    public PlayerDeAudioRandomico morteAudioJogador;
+    public PlayerDeAudioRandomico ataqueAudioJogador;
+    public PlayerDeAudioRandomico pularAudioJogador;
 
     [SerializeField]
     GameObject AuxiliarMiraInimigo;
@@ -108,13 +110,13 @@ public class JogCharacterMov : MonoBehaviour {
     IdentificadorInimigos MiraAutocript;
     public float CorrecaoDeMira;
     public float delayGiro = 5;
-    AnimatorStateInfo EstadoAtualInfo;            //Information about the base layer of the animator cached.
+    AnimatorStateInfo EstadoAtualInfo;
     [SerializeField]
     protected AnimatorStateInfo ProximoEstadoInfo;
     [SerializeField]
     protected bool AnimEstaEmTransicao;
     [SerializeField]
-    protected AnimatorStateInfo EstadoAtualAnteriorInfo;    //Information about the base layer of the animator from last frame.
+    protected AnimatorStateInfo EstadoAtualAnteriorInfo;
     [SerializeField]
     protected AnimatorStateInfo ProximoEstadoDoAnteriorInfo;
     [SerializeField]
@@ -131,6 +133,7 @@ public class JogCharacterMov : MonoBehaviour {
     protected float velocidadeFoward;                           //Quao rapido o jogador esta indo.
     protected float velocidadeVertical;
     float angle;
+    public bool podeGanharEstamina;
     float y = 0;
     Vector2 ultimoMovimento;
     Vector3 movement;
@@ -160,6 +163,7 @@ public class JogCharacterMov : MonoBehaviour {
     protected bool Respawnando;
     [SerializeField]
     protected float IdleTimer;                                  //Usado para contar até o jogador considerando uma ociosidade aleatória.
+    public float tempoDarEstamina = 2.0f;
 
     //Essas constantes são usadas para garantir que o jogador se mova e se comporte adequadamente.
     //É aconselhável que não os altere sem entender completamente o que eles fazem no código.
@@ -219,18 +223,14 @@ public class JogCharacterMov : MonoBehaviour {
     {
         //garrasMelee = GetComponentInChildren<GarrasMelee>();
 
-        Transform footStepSource = transform.Find("FootstepSource");
+        Transform footStepSource = transform.Find("FootstepSom");
         if (footStepSource != null)
-            footstepPlayer = footStepSource.GetComponent<PlayerDeAudioRandomico>();
+            passosJogador = footStepSource.GetComponent<PlayerDeAudioRandomico>();
 
-        Transform hurtSource = transform.Find("HurtSource");
+        Transform hurtSource = transform.Find("SomDeDano");
         if (hurtSource != null)
-            hurtAudioPlayer = hurtSource.GetComponent<PlayerDeAudioRandomico>();
-
-        Transform landingSource = transform.Find("LandingSource");
-        if (landingSource != null)
-            landingPlayer = landingSource.GetComponent<PlayerDeAudioRandomico>();
-
+            levarDanoAudioJogador = hurtSource.GetComponent<PlayerDeAudioRandomico>();
+        
         cameraSettings = FindObjectOfType<CameraSettings>();
 
         if (cameraSettings != null)
@@ -256,6 +256,9 @@ public class JogCharacterMov : MonoBehaviour {
 
         s_Instance = this;
         SetPodeAtacar(true);
+        morrerTocarAudio = false;
+        ganharEstamina = true;
+        podeGanharEstamina = true;
     }
 
     void Start () {
@@ -265,6 +268,7 @@ public class JogCharacterMov : MonoBehaviour {
         gmScript.estamina = 100;
         input = GetComponent<JogadorInputs>();
         input.enabled = true;
+        Estilingue.SetActive(false);
         animChar = GetComponent<Animator>();
         animEstilingue = Estilingue.GetComponent<Animator>();
         animHUDArmas = HUDArmas.GetComponent<Animator>();
@@ -296,10 +300,30 @@ public class JogCharacterMov : MonoBehaviour {
                 podeAtirar = false;
                 break;
         }
+
+        if (podeGanharEstamina)
+        {
+            tempoDarEstamina -= Time.deltaTime;
+            if (tempoDarEstamina <= 0.0f)
+            {
+                ganharEstamina = true;
+            }
+        }
     }
 
     private void FixedUpdate()
     {
+        if (ganharEstamina && podeGanharEstamina)
+        {
+            gmScript.AddEstamina(gastosEstamina.gastoEstaminaCorrida);
+            if(gmScript.estamina >= 100)
+            {
+                ganharEstamina = false;
+            }
+        }
+        TocarSons();
+
+        estavaNoChao = noChao;
         CacheAnimatorState();
         animChar.SetFloat(AnimTempoDeEstado, Mathf.Repeat(animChar.GetCurrentAnimatorStateInfo(0).normalizedTime, 1f));
         
@@ -376,6 +400,23 @@ public class JogCharacterMov : MonoBehaviour {
         estavaNoChao = noChao;
     }
 
+
+    void TocarSons()
+    {
+        if (EstadoAtualInfo.shortNameHash == AnimMorte1 && EstadoAtualAnteriorInfo.shortNameHash != AnimMorte1)
+        {
+            morteAudioJogador.PlayRandomClip();
+        }
+       
+
+        if (EstadoAtualInfo.shortNameHash == AnimCombo1 && EstadoAtualAnteriorInfo.shortNameHash != AnimCombo1 ||
+                EstadoAtualInfo.shortNameHash == AnimCombo2 && EstadoAtualAnteriorInfo.shortNameHash != AnimCombo2 ||
+                EstadoAtualInfo.shortNameHash == AnimCombo3 && EstadoAtualAnteriorInfo.shortNameHash != AnimCombo3)
+        {
+            Debug.Log("TocarSomAtaque");
+            ataqueAudioJogador.PlayRandomClip();
+        }
+    }
     // Chamado no início do FixedUpdate para registrar o estado atual da camada base do animador.
     void CacheAnimatorState()
     {
@@ -391,6 +432,14 @@ public class JogCharacterMov : MonoBehaviour {
 
     void CalculaMovimentoParaFrente()
     {
+        if(!input.CorrerInput && !input.PuloInput && noChao)
+        {
+            podeGanharEstamina = true;
+        }
+        else
+        {
+            tempoDarEstamina = 2.0f;
+        }
         //Coloque em cache a entrada de movimento e limite sua magnitude em 1.
         Vector2 moveInput = input.MoveInput;
         if (moveInput.sqrMagnitude > 1f)
@@ -404,10 +453,11 @@ public class JogCharacterMov : MonoBehaviour {
         }
 
         //Seta a velocidade foward desejada para a velocidade de corrida maxima com o "Shift"
-        else if (input.CorrerInput && noChao)
+        else if (input.CorrerInput && noChao && gmScript.estamina > 1)
         {
             velocidadeFowardDesejada = moveInput.magnitude * movimentacao.velocidadeMaximaFoward;
             gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaCorrida);
+            podeGanharEstamina = false;
         }
 
         else
@@ -448,7 +498,7 @@ public class JogCharacterMov : MonoBehaviour {
             NaParede = false;
 
             // Se o pulo acontecer, O jogador está pronto para pular e não está no meio de uma combinação corpo-a-corpo ...
-            if (input.PuloInput && podePular && !Combando)
+            if (input.PuloInput && podePular && !Combando && gmScript.estamina >= 0)
             {
                 // ... em seguida, anule a velocidade vertical definida anteriormente e certifique-se de que ela não possa pular novamente.
                 velocidadeVertical = movimentacao.velocidadePulo;
@@ -456,6 +506,8 @@ public class JogCharacterMov : MonoBehaviour {
                 podePular = false;
                 pulou = true;
                 gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaPulo);
+                podeGanharEstamina = false;
+                pularAudioJogador.PlayRandomClip();
             }
         }
         else
@@ -494,6 +546,7 @@ public class JogCharacterMov : MonoBehaviour {
                 velocidadeVertical = movimentacao.velocidadePulo;
                 gmScript.DecreaseEstamina(gastosEstamina.gastoEstaminaPulo);
                 noChao = false;
+                pularAudioJogador.PlayRandomClip();
                 numPulos += 1;
                 //podePular = false;
             }
@@ -525,6 +578,7 @@ public class JogCharacterMov : MonoBehaviour {
         {
             animChar.SetBool("Armado", true);
             animChar.CrossFade("SacarEstilingue", Time.deltaTime);
+            Estilingue.SetActive(false);
             SetPodeAtacar(true);
         }
 
@@ -532,6 +586,7 @@ public class JogCharacterMov : MonoBehaviour {
         {
             animChar.SetBool("Armado", false);
             animChar.CrossFade("GuardarEstilingue", Time.deltaTime);
+            Estilingue.SetActive(true);
             SetPodeAtacar(false);
         }
     }
@@ -780,6 +835,7 @@ public class JogCharacterMov : MonoBehaviour {
 
         animChar.SetFloat(AnimLevarDanoX, localDano.x);
         animChar.SetFloat(AnimLevarDanoY, localDano.z);
+        levarDanoAudioJogador.PlayRandomClip();
 
         //Tocar audio de dano
         //if (hurtAudioPlayer != null)

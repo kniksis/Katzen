@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DerrubarArvore : MonoBehaviour {
     public Animator animArvore;
+    public AudioSource somFonte;
+    public AudioClip somClip;
     // Use this for initialization
     void Start () {
 		
@@ -18,6 +20,8 @@ public class DerrubarArvore : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("TiroJogador"))
         {
+            somFonte.clip = somClip;
+            somFonte.Play();
             animArvore.SetBool("DerrubarArvore", true);
         }
     }

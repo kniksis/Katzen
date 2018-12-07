@@ -5,33 +5,31 @@ using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class ConversaKniksis04 : MonoBehaviour {
 
     public Animator animSetaP1;
     public Animator animSetaP2;
-    public Animator animPainelP1;
-    public Animator animPainelP2;
     public Animator animPainelFala;
-    public Animator animTelaPreta;
     public Animator animDesenhosGrandes;
     public Animator animEscurecerTela;
     
     public GameObject painelBlur;
 
+    public GameObject videoGO;
+    public VideoPlayer video;
+
     public Button mao;
-
-    public Image imagemExpressaoP1;
-    public Image imagemExpressaoP2;
-
-    public Sprite[] expressoesP1;
-    public Sprite[] expressoesP2;
     
     public TextAsset textFile;
 
     public Text textoFala;
     public string[] falas;
     int falaAtual;
+    int animAtual;
+    public bool PodeAvancarFala;
+    public bool VideoTocou;
 
     [SerializeField]
     public enum Fala
@@ -46,18 +44,36 @@ public class ConversaKniksis04 : MonoBehaviour {
     public Slider slider;
     public Text progressText;
     public string ProximaFaseNome;
+    public bool irParaProximaCena;
     public float tempoProxCena = 10.0f;
+    public float tempOcultarHud = 10.0f;
+
+    public GameObject PainelFundo;
+    public GameObject PainelDesenhosGrandes;
+    public GameObject PainelFalas;
+    public GameObject PainelSetas;
+
+    public AudioClip SomAreia;
+    public AudioClip botaoAvancarSom;
+    public AudioSource menuSomFonte;
+
+    public GameObject musicaFundoGO;
+    public AudioSource musicaFundo;
 
     // Use this for initialization
     void Start () {
-        textFile = Resources.Load<TextAsset>("Falas/Cena02_Intruso_na_igreja");
+        video = videoGO.GetComponent<VideoPlayer>();
+        musicaFundo = musicaFundoGO.GetComponent<AudioSource>();
+        menuSomFonte = GetComponent<AudioSource>();
+        video.Pause();
+        VideoTocou = false;
+        PodeAvancarFala = false;
+        textFile = Resources.Load<TextAsset>("Falas/Cena04_Kniksis_Katzen");
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
         int contadorFala = 0;
 
         painelBlur.SetActive(false);
-        animPainelP1.SetBool("foco", true);
-        animPainelP2.SetBool("foco", false);
         animSetaP1.SetBool("aparecer", false);
         animSetaP2.SetBool("aparecer", false);
         foreach (string linha in linhasArquivo)
@@ -70,83 +86,125 @@ public class ConversaKniksis04 : MonoBehaviour {
             contadorFala = contadorFala + 1;
         }
         falaAtual = -1;
+        animAtual = -1;
         textoFala.text = falas[0];
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("Atirar") && falaAtual < 0)
-        {
-            avancarFala();
-        }
+        //if (Input.GetButton("Atirar") && falaAtual < 0)
+        //{
+        //    avancarFala();
+        //}
 
-        if (falaAtual == 4)
+        if (irParaProximaCena)
         {
             tempoProxCena -= Time.deltaTime;
             if (tempoProxCena <= 0.0f)
             {
                 LoadLevel(ProximaFaseNome);
                 falaAtual = 0;
+                irParaProximaCena = false;
+            }
+        }
+
+        if (VideoTocou)
+        {
+            tempOcultarHud -= Time.deltaTime;
+            if(tempOcultarHud <= 0.0f)
+            {
+                PainelFundo.SetActive(false);
+                PainelDesenhosGrandes.SetActive(false);
+                PainelFalas.SetActive(false);
+                PainelSetas.SetActive(false);
+                VideoTocou = false;
             }
         }
     }
 
     public void avancarFala()
     {
-        falaAtual += 1;
-        Debug.Log(falaAtual);
-
-        if (falaAtual > 0 && falaAtual < falas.Length)
-        textoFala.text = falas[falaAtual];
-        
-        
-        if (falaAtual == 0)
+        //Avanca as falas
+        menuSomFonte.clip = botaoAvancarSom;
+        menuSomFonte.Play();
+        if (PodeAvancarFala)
         {
-            painelBlur.SetActive(true);
-            animPainelFala.SetBool("abrirFalas", true);
-            animSetaP1.SetBool("aparecer", true);
-            animSetaP2.SetBool("aparecer", false);
-            animPainelP1.SetTrigger("AtivarPainelPersonagem");
-            animPainelP1.SetBool("foco", true);
-            animPainelP2.SetTrigger("AtivarPainelPersonagem");
-            animPainelP2.SetBool("foco", false);
-            imagemExpressaoP1.sprite = expressoesP1[0];
-            imagemExpressaoP2.sprite = expressoesP2[0];
-            fala = Fala.FalaKatzen;
+            falaAtual++;
+            Debug.Log("Fala Atual: " + falaAtual);
+
+            if (falaAtual > 0 && falaAtual < falas.Length)
+                textoFala.text = falas[falaAtual];
+
+            if(falaAtual == 0)
+            {
+                animPainelFala.SetBool("abrirFalas", true);
+                animSetaP1.SetBool("aparecer", true);
+            }
+            if (falaAtual == 1)
+            {
+
+            }
+            if (falaAtual == 2)
+            {
+
+            }
+
+            if (falaAtual == 3)
+            {
+                animSetaP1.SetBool("aparecer", false);
+                animSetaP2.SetBool("aparecer", true);
+            }
+            if(falaAtual == 4)
+            {
+                PodeAvancarFala = false;
+            }
+            if(falaAtual == 5)
+            {
+                animPainelFala.SetBool("abrirFalas", true);
+                animSetaP1.SetBool("aparecer", true);
+            }
+            if(falaAtual == 9)
+            {
+                animDesenhosGrandes.SetTrigger("AvancarEstado");
+            }
+            if(falaAtual == 11)
+            {
+                video.Play();
+                VideoTocou = true;
+                musicaFundo.Pause();
+                irParaProximaCena = true;
+            }
         }
 
-        if(falaAtual == 1)
+        //Avanca as animacoes
+        if (!PodeAvancarFala)
         {
-            animPainelP1.SetBool("foco", false);
-            animPainelP2.SetBool("foco", true);
-            animSetaP1.SetBool("aparecer", false);
-            animSetaP2.SetBool("aparecer", true);
-            imagemExpressaoP2.sprite = expressoesP2[1];
-        }
+            animAtual++;
+            Debug.Log("Animacao Atual:" + animAtual);
+            if (animAtual == 0)
+            {
+                painelBlur.SetActive(false);
+                animPainelFala.SetBool("abrirFalas", false);
+                animSetaP1.SetBool("aparecer", false);
+                animSetaP2.SetBool("aparecer", false);
+                animDesenhosGrandes.SetTrigger("AvancarEstado");
+            }
 
-
-        if (falaAtual == 2)
-        {
-            imagemExpressaoP2.sprite = expressoesP2[2];
-        }
-        if(falaAtual == 3)
-        {
-            animPainelP1.SetBool("foco", true);
-            animPainelP2.SetBool("foco", false);
-            animSetaP1.SetBool("aparecer", true);
-            animSetaP2.SetBool("aparecer", false);
-            animDesenhosGrandes.SetTrigger("ProximoEvento");
-            imagemExpressaoP2.sprite = expressoesP2[3];
-        }
-        if(falaAtual == 4)
-        {
-            animSetaP1.SetBool("aparecer", false);
-            animSetaP2.SetBool("aparecer", false);
-            animPainelFala.SetBool("abrirFalas", false);
-            animPainelP1.Play("FecharPainelP1");
-            animPainelP2.Play("FecharPainelP2");
-            animEscurecerTela.SetTrigger("Escurecer");
-            painelBlur.SetActive(false);
+            if(animAtual == 1)
+            {
+                animDesenhosGrandes.SetTrigger("AvancarEstado");
+                PodeAvancarFala = true;
+                menuSomFonte.clip = SomAreia;
+                menuSomFonte.Play();
+            }
+            if(animAtual == 2)
+            {
+                animPainelFala.SetBool("abrirFalas", false);
+                animSetaP1.SetBool("aparecer", false);
+                animSetaP2.SetBool("aparecer", false);
+                animDesenhosGrandes.SetTrigger("AvancarEstado");
+                PodeAvancarFala = true;
+            }
         }
     }
 
@@ -157,8 +215,6 @@ public class ConversaKniksis04 : MonoBehaviour {
             animPainelFala.Play("TrocarFala");
             animSetaP1.SetBool("aparecer", false);
             animSetaP2.SetBool("aparecer", true);
-            animPainelP1.SetBool("foco", false);
-            animPainelP2.SetBool("foco", true);
             fala = Fala.FalaKatzen;
         }
 
@@ -167,8 +223,6 @@ public class ConversaKniksis04 : MonoBehaviour {
             animPainelFala.Play("TrocarFala");
             animSetaP1.SetBool("aparecer", true);
             animSetaP2.SetBool("aparecer", false);
-            animPainelP1.SetBool("foco", true);
-            animPainelP2.SetBool("foco", false);
             fala = Fala.FalaKatzen;
         }
     }

@@ -81,8 +81,8 @@ public class JogAtirar : MonoBehaviour
                 ForcaAtual = ForcaMinima;
 
                 //Som atirar aqui
-                //TiroAudioOrigem.clip = CarregandoClip;
-                //TiroAudioOrigem.Play();
+                TiroAudioOrigem.clip = CarregandoClip;
+                TiroAudioOrigem.Play();
             }
 
             else if (Input.GetButton(ATIRAR_BT_NAME) && !atirou)
@@ -114,8 +114,8 @@ public class JogAtirar : MonoBehaviour
 
         tiroInstancia.velocity = ForcaAtual * respawnTiro.forward;
         //Ajustar Som
-        //TiroAudioOrigem.clip = AtirouClip;
-        //TiroAudioOrigem.Play();
+        TiroAudioOrigem.clip = AtirouClip;
+        TiroAudioOrigem.Play();
 
         animEstilingue.CrossFade("Atirar", Time.deltaTime);
         animJog.SetBool("Atirou", atirou);

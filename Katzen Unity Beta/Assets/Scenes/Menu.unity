@@ -1281,7 +1281,7 @@ MonoBehaviour:
   PrimeiroBotaoContextual: {fileID: 0}
   voltaOpcoesBotaoContextual: {fileID: 634641969}
   eventSystem: {fileID: 0}
-  CenaAtual: 
+  CenaAtual: Cutscene1
   estadoMenu: 0
 --- !u!82 &150149809
 AudioSource:
@@ -3812,7 +3812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20.640015, y: -1.3450012}
+  m_AnchoredPosition: {x: -20.640137, y: -1.3450012}
   m_SizeDelta: {x: 450.3, y: -35.08999}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &393887791
@@ -17307,7 +17307,7 @@ MonoBehaviour:
     Documentador; \r\n\r\nRaul Cardoso: Gerente do Projeto, Programador, Level Designer,
     Roteirista, Animador, Artista 2D, Artista 3D, Rigger, Sound Designer, UI Designer,
     Texturizador; \r\n\nRicardo Martins: Artista 2D, Artista 3D, UI Designer, Sound
-    Designer, Level Designer, Sound Designer;"
+    Designer, Level Designer;"
 --- !u!222 &2074248317
 CanvasRenderer:
   m_ObjectHideFlags: 0

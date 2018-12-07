@@ -13,6 +13,7 @@ public class ControleShader : MonoBehaviour {
     float quantTerra = 1.0f;
     public float AddQuantTerra;
     bool EstaSujando = false;
+    public PlayerDeAudioRandomico footstepPlayer;
 
     // Use this for initialization
     void Start () {
@@ -33,7 +34,8 @@ public class ControleShader : MonoBehaviour {
 
     void addTerra ()
     {
-        if(EstaSujando)
+        footstepPlayer.PlayRandomClip();
+        if (EstaSujando)
         {
             if(quantTerra > 0.0001)
             quantTerra = quantTerra - AddQuantTerra;

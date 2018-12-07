@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+using System.IO;
+using UnityEngine.UI;
 
 public class Drorreta : MonoBehaviour
 {
@@ -11,6 +15,10 @@ public class Drorreta : MonoBehaviour
     GameObject JogMCGO;
     [SerializeField]
     JogCharacterMov JogMCScript;
+
+    public AudioSource fonteSomTorreta;
+    public AudioClip somLevarDano;
+    public AudioClip somLancarTiro;
 
     [Header("Variaveis da mira")]
 
@@ -39,6 +47,11 @@ public class Drorreta : MonoBehaviour
     public bool atirar;
 
     public int vidaDrorreta;
+
+    public GameObject loadingScreen;
+    public Slider slider;
+    public Text progressText;
+    public string ProximaFaseNome;
 
     void Awake()
     {
@@ -71,7 +84,8 @@ public class Drorreta : MonoBehaviour
             {
                 nextFire = Time.time + fireRate;
                 Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
-
+                fonteSomTorreta.clip = somLancarTiro;
+                fonteSomTorreta.Play();
                 tiroInstancia.velocity = (forcaAtual + JogadorDistancia / 2.5f) * respawnTiro.forward;
                 //Time.timeScale = 0.4f;
                 animator.SetTrigger("Atirar");
@@ -108,7 +122,7 @@ public class Drorreta : MonoBehaviour
     {
         if (vidaDrorreta <=0)
         {
-            Destroy(gameObject);
+            LoadLevel(ProximaFaseNome);
         }
     }
 
@@ -118,7 +132,9 @@ public class Drorreta : MonoBehaviour
         {
             LevarDano(other);
             Debug.Log("Levar Dano Por ENTER");
-            vidaDrorreta -= 20;
+            vidaDrorreta -= 15;
+            fonteSomTorreta.clip = somLevarDano;
+            fonteSomTorreta.Play();
             Debug.Log(vidaDrorreta);
             SeMorreu();
         }
@@ -130,8 +146,10 @@ public class Drorreta : MonoBehaviour
         {
             proximoSoco = Time.time + RateCombo;
             Debug.Log("Levar Dano Por STAY");
-            vidaDrorreta -= 20;
+            vidaDrorreta -= 15;
             Debug.Log(vidaDrorreta);
+            fonteSomTorreta.clip = somLevarDano;
+            fonteSomTorreta.Play();
             LevarDano(other);
             SeMorreu();
         }
@@ -144,5 +162,24 @@ public class Drorreta : MonoBehaviour
 
         Instantiate<GameObject>(particulaDano, tmpContactPoint, transform.rotation);
         animator.SetTrigger("LevarDano");
+    }
+    
+    public void LoadLevel(string sceneNome)
+    {
+        StartCoroutine(LoadAsynchronously(sceneNome));
+    }
+
+    private IEnumerator LoadAsynchronously(string sceneNome)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneNome);
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            progressText.text = progress * 100 + "%";
+            yield return null;
+        }
     }
 }

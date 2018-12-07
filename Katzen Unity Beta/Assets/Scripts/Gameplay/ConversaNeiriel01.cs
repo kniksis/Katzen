@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class ConversaNeiriel01 : MonoBehaviour {
 
@@ -20,6 +20,17 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     public GameObject painelPreto;
     public GameObject painelBlur;
+    public GameObject videoGO;
+    public VideoPlayer video;
+    public bool VideoTocou;
+    
+    public GameObject PainelFundo;
+    public GameObject PainelPersonagens;
+    public GameObject PainelEscurecer;
+    public GameObject PainelAceiRecu;
+    public GameObject PainelFalas;
+    public GameObject PainelSetas;
+    public GameObject PainelPreto;
 
     public Button mao;
 
@@ -50,14 +61,31 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public Text progressText;
     public string ProximaFaseNome;
     public string NivelFinal;
-    public float tempoProxCena = 10.0f;
+    public bool irParaProximaCenaFinal;
+    public bool irParaProximaCenaNormal;
+    public float tempoProxCenaFinal = 10.0f;
+    public float tempoProxCena = 4.0f;
+    public float tempOcultarHud = 10.0f;
+    
+    public AudioClip botaoAvancarSom;
+    public AudioSource menuSomFonte;
+
+    public GameObject musicaFundoGO;
+    public AudioSource musicaFundo;
 
     // Use this for initialization
     void Start () {
+        video = videoGO.GetComponent<VideoPlayer>();
+        musicaFundo = musicaFundoGO.GetComponent<AudioSource>();
+        menuSomFonte = GetComponent<AudioSource>();
+        video.Pause();
+        VideoTocou = false;
         textFile = Resources.Load<TextAsset>("Falas/Cena01_Neiriel_Katzen");
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
         int contadorFala = 0;
+
+        irParaProximaCenaNormal = false;
 
         painelBlur.SetActive(false);
         animPainelP1.SetBool("foco", true);
@@ -83,21 +111,41 @@ public class ConversaNeiriel01 : MonoBehaviour {
         {
             avancarFala();
         }
-        if(falaAtual == 52)
+
+        if (irParaProximaCenaFinal)
         {
-            tempoProxCena -= Time.deltaTime;
-            if (tempoProxCena <= 0.0f)
+            tempoProxCenaFinal -= Time.deltaTime;
+            if (tempoProxCenaFinal <= 0.0f)
             {
                 LoadLevel(NivelFinal);
+                falaAtual = 0;
+                irParaProximaCenaFinal = false;
             }
         }
 
-        if(falaAtual == 32 || falaAtual == 30)
+        if (VideoTocou)
+        {
+            tempOcultarHud -= Time.deltaTime;
+            if (tempOcultarHud <= 0.0f)
+            {
+                PainelFundo.SetActive(false);
+                PainelEscurecer.SetActive(false);
+                PainelFalas.SetActive(false);
+                PainelSetas.SetActive(false);
+                PainelPersonagens.SetActive(false);
+                PainelAceiRecu.SetActive(false);
+                PainelPreto.SetActive(false);
+                VideoTocou = false;
+            }
+        }
+
+        if (irParaProximaCenaNormal)
         {
             tempoProxCena -= Time.deltaTime;
             if (tempoProxCena <= 0.0f)
             {
                 LoadLevel(ProximaFaseNome);
+                irParaProximaCenaNormal = false;
             }
         }
     }
@@ -105,6 +153,8 @@ public class ConversaNeiriel01 : MonoBehaviour {
 
     public void avancarFala()
     {
+        menuSomFonte.clip = botaoAvancarSom;
+        menuSomFonte.Play();
         Debug.Log(falaAtual);
         falaAtual += 1;
         if (falaAtual == 52)
@@ -226,6 +276,7 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animPainelFala.SetBool("abrirFalas", false);
             textoFala.text = "";
             animEscurecerTela.SetTrigger("Escurecer");
+            irParaProximaCenaNormal = true;
             painelBlur.SetActive(false);
         }
 
@@ -238,6 +289,7 @@ public class ConversaNeiriel01 : MonoBehaviour {
             animPainelFala.SetBool("abrirFalas", false);
             textoFala.text = "";
             animEscurecerTela.SetTrigger("Escurecer");
+            irParaProximaCenaNormal = true;
             painelBlur.SetActive(false);
         }
 
@@ -256,6 +308,13 @@ public class ConversaNeiriel01 : MonoBehaviour {
             imagemExpressaoP2.sprite = expressoesP2[1];
         }
 
+        if(falaAtual == 52)
+        {
+            video.Play();
+            VideoTocou = true;
+            musicaFundo.Pause();
+            irParaProximaCenaFinal = true;
+        }
     }
 
     public void trocarFala()

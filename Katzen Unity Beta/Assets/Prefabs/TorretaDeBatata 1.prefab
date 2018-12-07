@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 54198699490208844}
   - component: {fileID: 65134238071150814}
   - component: {fileID: 65990265448833554}
+  - component: {fileID: 82552069623331026}
   m_Layer: 0
   m_Name: TorretaDeBatata 1
   m_TagString: Inimigo
@@ -426,8 +427,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1378694755613184}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 15.03, y: 0, z: 93.71999}
+  m_LocalRotation: {x: 0.0015883946, y: 0.9065066, z: -0.003410648, w: 0.42217493}
+  m_LocalPosition: {x: 25.63, y: 9.2, z: 20.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4745989019481750}
@@ -921,6 +922,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44, y: 0.58, z: 1.03}
   m_Center: {x: 0, y: 0.28, z: -0.06}
+--- !u!82 &82552069623331026
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378694755613184}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95328960334259130
 Animator:
   serializedVersion: 3
@@ -953,6 +1049,9 @@ MonoBehaviour:
   animator: {fileID: 95328960334259130}
   JogMCGO: {fileID: 0}
   JogMCScript: {fileID: 0}
+  fonteSomTorreta: {fileID: 82552069623331026}
+  somLevarDano: {fileID: 8300000, guid: 2d8048e847fadbc43a9f718ade2f208d, type: 3}
+  somLancarTiro: {fileID: 8300000, guid: 5425a27b5cee37142bee398cec41fb9a, type: 3}
   MiraDaTorretaScript: {fileID: 114717238633334516}
   CorrecaoDeMira: 2
   apontar: {fileID: 1974424163071774}

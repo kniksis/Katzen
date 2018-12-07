@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4278405233641018}
   - component: {fileID: 33676626615002314}
   - component: {fileID: 23775622123912480}
+  - component: {fileID: 136532917263452082}
   - component: {fileID: 136227191475381192}
   - component: {fileID: 54688424109597190}
   - component: {fileID: 114325757307434074}
@@ -125,7 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 15
+  jogadorGO: {fileID: 0}
+  jogScript: {fileID: 0}
   lifeTime: 10
+  direcao: {x: 0, y: 0, z: 0}
+  danoSource: {x: 0, y: 0, z: 0}
 --- !u!136 &136227191475381192
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -135,7 +140,20 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.035
+  m_Radius: 0.06
+  m_Height: 0.12
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.0000000037252903}
+--- !u!136 &136532917263452082
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042629063591114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.04
   m_Height: 0.12
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.0000000037252903}

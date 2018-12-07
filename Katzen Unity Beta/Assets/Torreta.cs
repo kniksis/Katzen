@@ -11,6 +11,10 @@ public class Torreta : MonoBehaviour {
     [SerializeField]
     JogCharacterMov JogMCScript;
 
+    public AudioSource fonteSomTorreta;
+    public AudioClip somLevarDano;
+    public AudioClip somLancarTiro;
+
     [Header("Variaveis da mira")]
     
     public JogEntrouMira MiraDaTorretaScript;
@@ -69,7 +73,8 @@ public class Torreta : MonoBehaviour {
             {
                 nextFire = Time.time + fireRate;
                 Rigidbody tiroInstancia = Instantiate(tiro, respawnTiro.position, respawnTiro.rotation) as Rigidbody;
-
+                fonteSomTorreta.clip = somLancarTiro;
+                fonteSomTorreta.Play();
                 tiroInstancia.velocity = (forcaAtual + JogadorDistancia / 2.5f) * respawnTiro.forward;
                 //Time.timeScale = 0.4f;
                 animator.SetTrigger("Atirar");
@@ -115,7 +120,9 @@ public class Torreta : MonoBehaviour {
         {
             LevarDano(other);
             Debug.Log("Levar Dano Por ENTER");
-            vidaTorreta -= 20;
+            vidaTorreta -= 10;
+            fonteSomTorreta.clip = somLevarDano;
+            fonteSomTorreta.Play();
             Debug.Log(vidaTorreta);
             SeMorreu();
         }
@@ -128,7 +135,9 @@ public class Torreta : MonoBehaviour {
             proximoSoco = Time.time + RateCombo;
             Debug.Log("Levar Dano Por STAY");
             LevarDano(other);
-            vidaTorreta -= 20;
+            vidaTorreta -= 10;
+            fonteSomTorreta.clip = somLevarDano;
+            fonteSomTorreta.Play();
             Debug.Log(vidaTorreta);
             SeMorreu();
         }

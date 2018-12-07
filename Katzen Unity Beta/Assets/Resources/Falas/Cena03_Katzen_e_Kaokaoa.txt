@@ -1,4 +1,4 @@
-0	Então você realmente pensou que pudesse escapar de mim, né? Kaokaoa.
+0	Então você realmente pensou que pudesse escapar de mim, né? Kaokaoa...
 1	O que? Quem é você?
 2	Como sabe o meu nome?
 3	Não importa! Só sei que você é um palhaço que acha que pode passar por cima da igreja.
@@ -11,14 +11,14 @@
 10	NÃO!!! ME SOLTA!!!
 11	ME SOLTAAAAAAAAAAAAAA!!!!
 12	...
-13	Vamos Kaokaoa, eu não vou te machucar.
+13	Vamos Kaokaoa, não precisa ser assim.
 14	Que tal a gente começar isso de outra forma?
 15	"Pera" aí, como você sabe o meu nome?
-16	E o quem é você?
+16	E quem é você?
 17	Sou Katzen!
 18	Você não é conhecido por aqui?
 19	Só duas pessoas me chamam de Kaokaoa...
-20	Bem... Não importa.
+20	Bem... er...
 21	Apenas pegue na minha mão e levante-se, preciso que me leve ao trapiche dos Dareias.
 22	NÃO VOU TE LEVAR A LUGAR ALGUM! NÃO! FICA LONGE DE MIM!!!
 23	Vamos amigo, segure a minha mão! Eu não mordo!

@@ -36,7 +36,7 @@ public class mataJogadorCol : MonoBehaviour {
         {
             jogScript.ReceberDano(danoSource);
             gmScript.DecreaseLife(dano);
-            Destroy (gameObject);
+            Destroy(gameObject);
         }
     }
 }
