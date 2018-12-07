@@ -54,6 +54,7 @@ public class ConversaKaokaoa02 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Cursor.lockState = CursorLockMode.None;
         textFile = Resources.Load<TextAsset>("Falas/Cena02_Intruso_na_igreja");
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
         falas = new string[linhasArquivo.Length];
@@ -83,6 +84,11 @@ public class ConversaKaokaoa02 : MonoBehaviour {
         if (Input.GetButton("Atirar") && falaAtual < 0)
         {
             avancarFala();
+        }
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
 
         if (irParaProximaCena)

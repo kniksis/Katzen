@@ -51,8 +51,12 @@ public class ConversaKaokaoa03 : MonoBehaviour {
     public string ProximaFaseNome;
     public float tempoProxCena = 10.0f;
 
+    public AudioClip botaoAvancarSom;
+    public AudioSource menuSomFonte;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        Cursor.lockState = CursorLockMode.None;
         PodeAvancarFala = true;
         textFile = Resources.Load<TextAsset>("Falas/Cena03_Katzen_e_Kaokaoa");
         string[] linhasArquivo = textFile.text.Split('\n'); // quebra por linhaso arquivo e atribui a uma lista de strings
@@ -86,6 +90,10 @@ public class ConversaKaokaoa03 : MonoBehaviour {
         //    avancarFala();
         //}
 
+        if (Input.GetButtonDown("Pause"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
         if (animAtual == 4)
         {
             tempoProxCena -= Time.deltaTime;
@@ -99,6 +107,8 @@ public class ConversaKaokaoa03 : MonoBehaviour {
 
     public void avancarFala()
     {
+        menuSomFonte.clip = botaoAvancarSom;
+        menuSomFonte.Play();
         if (PodeAvancarFala)
         {
             falaAtual++;

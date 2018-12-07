@@ -106,6 +106,9 @@ public class JogCharacterMov : MonoBehaviour {
 
     [SerializeField]
     GameObject AuxiliarMiraInimigo;
+
+    [SerializeField]
+    GameObject MiraEstilingue;
     [SerializeField]
     IdentificadorInimigos MiraAutocript;
     public float CorrecaoDeMira;
@@ -609,14 +612,16 @@ public class JogCharacterMov : MonoBehaviour {
                 //Quaternion lookRotation = Quaternion.LookRotation(dirFromToTarget);
                 //AuxiliarMiraInimigo.transform.rotation = Quaternion.Lerp(AuxiliarMiraInimigo.transform.rotation, lookRotation, Time.deltaTime * delayGiro);
                 AuxiliarMiraInimigo.transform.LookAt(MiraAutocript.InimigoParaMirar.transform);
+
+                MiraEstilingue.transform.LookAt(MiraAutocript.InimigoParaMirar.transform);
                 float deg = AuxiliarMiraInimigo.transform.rotation.x * Mathf.Rad2Deg;
                 animChar.SetFloat("MiraX", Mathf.Abs(deg) * CorrecaoDeMira);
             }
             else
             {
-
+                MiraEstilingue.transform.rotation = Quaternion.identity;
                 y -= input.CameraInput.y * sensibilidadeMiraY;
-            animChar.SetFloat("MiraX", y);
+                animChar.SetFloat("MiraX", y);
             }
         }
 

@@ -74,7 +74,9 @@ public class ConversaNeiriel01 : MonoBehaviour {
     public AudioSource musicaFundo;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        Cursor.lockState = CursorLockMode.None;
         video = videoGO.GetComponent<VideoPlayer>();
         musicaFundo = musicaFundoGO.GetComponent<AudioSource>();
         menuSomFonte = GetComponent<AudioSource>();
@@ -110,6 +112,10 @@ public class ConversaNeiriel01 : MonoBehaviour {
         if (Input.GetButtonUp("Atirar") && falaAtual <= 3)
         {
             avancarFala();
+        }
+        if (Input.GetButtonDown("Pause"))
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
 
         if (irParaProximaCenaFinal)

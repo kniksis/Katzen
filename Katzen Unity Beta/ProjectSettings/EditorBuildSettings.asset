@@ -36,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel3.unity
     guid: 929832aaf77bc3e468fb32e817bb50e1
   - enabled: 1
-    path: Assets/Scenes/Nivel3_Sem_arvores.unity
-    guid: 81d00ed878e8d67489bdae7b079e83cd
+    path: Assets/Scenes/Nivel4.unity
+    guid: 6f215cfe82da63b43a6d4abb437e8662
   m_configObjects: {}
